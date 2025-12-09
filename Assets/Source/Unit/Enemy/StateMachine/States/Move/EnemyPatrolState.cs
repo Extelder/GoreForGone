@@ -8,6 +8,7 @@ public class EnemyPatrolState : EnemyState
     [SerializeField] private EnemyNavMeshMove _enemyNavMeshMove;
     [SerializeField] private float _randomPointRange;
     [SerializeField] private float _maxRandomWaitTime;
+    [SerializeField] private float _destinationReachThreshhold;
     [SerializeField] private NavMeshAgent _agent;
 
     public override void Enter()
@@ -37,9 +38,14 @@ public class EnemyPatrolState : EnemyState
 
             yield return new WaitForSeconds(0.2f);
             yield return new WaitUntil(() => AgentReachedDestination());
-            EnemyAnimator.Idle();
+            OnDestinationReached();
             yield return new WaitForSeconds(Random.Range(0, _maxRandomWaitTime));
         }
+    }
+
+    public virtual void OnDestinationReached()
+    {
+        EnemyAnimator.Idle();
     }
 
     public bool GetRandomPointOnNavMesh(Vector3 center, float radius, out Vector3 result)
@@ -58,5 +64,5 @@ public class EnemyPatrolState : EnemyState
         return false;
     }
 
-    private bool AgentReachedDestination() => _agent.remainingDistance <= 0.2f;
+    private bool AgentReachedDestination() => _agent.remainingDistance <= _destinationReachThreshhold;
 }

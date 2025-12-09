@@ -1861,7 +1861,7 @@ MonoBehaviour:
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 1
-  <PrefabId>k__BackingField: 1
+  <PrefabId>k__BackingField: 2
   <SpawnableCollectionId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 5213782315602490691
   <SceneId>k__BackingField: 0
@@ -2118,6 +2118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 1225629203006681363}
+  _fpsAnimator: {fileID: 0}
   _speed: 5
   _character: {fileID: 9153910927864380487}
 --- !u!114 &6626394759318695960

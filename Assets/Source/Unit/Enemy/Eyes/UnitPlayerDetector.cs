@@ -138,13 +138,16 @@ public class UnitPlayerDetector : NetworkBehaviour
 
             if (!_isSeeingPlayer && _seeTimer >= _inspectTime)
             {
+                Transform target = _character.PlayerTransform;
+                Debug.Log("INSPECT");
                 _isSeeingPlayer = true;
-                //  _stateMachine?.Inspect(PlayerCharacter.Instance.PlayerTransform.position);
+                _stateMachine?.Inspect(target.position);
             }
 
             if (_seeTimer >= _chaseTime)
             {
                 _stateMachine?.Chase(_character.PlayerTransform);
+                Debug.Log("CHASE");
             }
         }
         else
