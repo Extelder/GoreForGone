@@ -941,7 +941,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 1965270239}
   _networkObjectCache: {fileID: 0}
-  _horizontalRays: 15
+  _horizontalRays: 30
   _verticalRays: 15
   _horizontalFov: 110
   _verticalFov: 22.5
