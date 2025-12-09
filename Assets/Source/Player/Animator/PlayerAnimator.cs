@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UniRx;
 using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
+    [SerializeField] private Animator _fpsAnimator;
     [SerializeField] private float _speed;
 
     [SerializeField] private PlayerCharacter _character;
@@ -41,6 +43,48 @@ public class PlayerAnimator : MonoBehaviour
             _animator.SetFloat("XVelocity", _finalVector.x);
             _animator.SetFloat("YVelocity", _finalVector.z);
         }).AddTo(_disposable);
+    }
+
+    public void SetAnimationBoolAndDisableOthers(string name, bool value)
+    {
+        DisableAll();
+        _animator.SetBool(name, value);
+        _fpsAnimator.SetBool(name, value);
+    }
+
+    public void SetAnimationBool(string name, bool value)
+    {
+        _animator.SetBool(name, value);
+        _fpsAnimator.SetBool(name, value);
+    }
+
+    public void SetAnimationTrigger(string name)
+    {
+        _animator.SetTrigger(name);
+        _fpsAnimator.SetTrigger(name);
+    }
+
+    public void SetAnimationTriggerAndDisableOthers(string name)
+    {
+        DisableAll();
+        _animator.SetTrigger(name);
+        _fpsAnimator.SetTrigger(name);
+    }
+
+    public void ResetAnimationTrigger(string name)
+    {
+        _animator.ResetTrigger(name);
+        _fpsAnimator.ResetTrigger(name);
+    }
+
+    public void DisableAll()
+    {
+        
+    }
+
+    public void SetLocomotionBlendTreeSpeed(float speed)
+    {
+        _animator.SetFloat("BlendTreeSpeed", speed);
     }
 
     private void OnDestroy()

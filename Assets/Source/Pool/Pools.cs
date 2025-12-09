@@ -16,12 +16,6 @@ public class Pools : MonoBehaviour
         Debug.LogError("Theres one more Pools");
     }
     
-    [field:SerializeField] public Pool TrailPool { get; private set; }
-    [field:SerializeField] public Pool DefaultProjectilePool { get; private set; }
-    [field:SerializeField] public Pool TurretMachineGunProjectilePool { get; private set; }
-    [field:SerializeField] public Pool TurretRPGProjectilePool { get; private set; }
-    [field:SerializeField] public Pool ExplodeKamikzaePool { get; private set; }
-    [field:SerializeField] public Pool FlyEnemyProjectilePool { get; private set; }
-    [field:SerializeField] public Pool CoinPool { get; private set; }
-    [field:SerializeField] public Pool BloodExplodeDecalPool { get; private set; }
+    [field:SerializeField] public Pool BloodExplodePool { get; private set; }
+    [field:SerializeField] public Pool BloodPool { get; private set; }
 }

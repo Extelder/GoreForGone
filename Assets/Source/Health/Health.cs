@@ -1,14 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FishNet.Object;
 using UnityEngine;
 
-public abstract class Health : MonoBehaviour
+public abstract class Health : NetworkBehaviour
 {
     [field: SerializeField] public float MaxValue { get; set; }
-    protected float CurrentValue { get; set; }
+    [field: SerializeField] protected float CurrentValue { get; set; }
 
-    public event Action<float> HealthValueChanged;
+    public Action<float> HealthValueChanged;
     public event Action<float> OnHealedToMax;
     public event Action<float> Damaged;
     public event Action<float> Healed;
@@ -20,7 +21,7 @@ public abstract class Health : MonoBehaviour
     }
 
     public virtual void VirtualStart()
-    {
+    {    
         CurrentValue = MaxValue;
     }
 
@@ -31,11 +32,13 @@ public abstract class Health : MonoBehaviour
 
         if (CurrentValue - value > 0)
         {
+            Debug.Log("Damaged" + gameObject.name + " " + CurrentValue);
             ChangeHealthValue(CurrentValue - value);
             Damaged?.Invoke(CurrentValue);
             return;
         }
 
+        CurrentValue = 0;
         Damaged?.Invoke(CurrentValue);
 
         Dead?.Invoke();
@@ -83,6 +86,8 @@ public abstract class Health : MonoBehaviour
             HealthValueChanged?.Invoke(CurrentValue);
         }
     }
+
+    public float GetCurrentValue() => CurrentValue;
 
     public void SetCurrentValue(float value)
     {
