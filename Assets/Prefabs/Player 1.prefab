@@ -626,8 +626,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1194493199516843908}
   m_HandleRect: {fileID: 8459356589963003404}
   m_Direction: 2
-  m_Value: 0.9999998
-  m_Size: 0.4322412
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6585,6 +6585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 1225629203006681363}
+  _fpsAnimator: {fileID: 0}
   _speed: 5
   _character: {fileID: 9153910927864380487}
 --- !u!114 &6626394759318695960

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Reflection;
 using UniRx;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAnimator : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-    [SerializeField] private Animator _fpsAnimator;
     [SerializeField] private float _speed;
 
     [SerializeField] private PlayerCharacter _character;
@@ -32,6 +32,9 @@ public class PlayerAnimator : MonoBehaviour
 
         _binds = _character.Binds;
 
+        _binds.Character.Crouch.started += OnCrouchStarted;
+        _binds.Character.Crouch.canceled += OnCrouchCanceled;
+
         Observable.EveryUpdate().Subscribe(_ =>
         {
             _inputVector = new Vector3(_binds.Character.Horizontal.ReadValue<float>(), 0,
@@ -40,46 +43,51 @@ public class PlayerAnimator : MonoBehaviour
             _finalVector.x = Mathf.Lerp(_finalVector.x, _inputVector.x, _speed * Time.deltaTime);
             _finalVector.z = Mathf.Lerp(_finalVector.z, _inputVector.z, _speed * Time.deltaTime);
 
+            SetAnimationBool("Move", _inputVector.x > 0 || _inputVector.z > 0);
             _animator.SetFloat("XVelocity", _finalVector.x);
             _animator.SetFloat("YVelocity", _finalVector.z);
         }).AddTo(_disposable);
+    }
+
+    private void OnCrouchCanceled(InputAction.CallbackContext obj)
+    {
+        SetAnimationBool("Crouch", false);
+    }
+
+    private void OnCrouchStarted(InputAction.CallbackContext obj)
+    {
+        SetAnimationBool("Crouch", true);
     }
 
     public void SetAnimationBoolAndDisableOthers(string name, bool value)
     {
         DisableAll();
         _animator.SetBool(name, value);
-        _fpsAnimator.SetBool(name, value);
     }
 
     public void SetAnimationBool(string name, bool value)
     {
         _animator.SetBool(name, value);
-        _fpsAnimator.SetBool(name, value);
     }
 
     public void SetAnimationTrigger(string name)
     {
         _animator.SetTrigger(name);
-        _fpsAnimator.SetTrigger(name);
     }
 
     public void SetAnimationTriggerAndDisableOthers(string name)
     {
         DisableAll();
         _animator.SetTrigger(name);
-        _fpsAnimator.SetTrigger(name);
     }
 
     public void ResetAnimationTrigger(string name)
     {
         _animator.ResetTrigger(name);
-        _fpsAnimator.ResetTrigger(name);
     }
 
     public void DisableAll()
     {
-        
     }
 
     public void SetLocomotionBlendTreeSpeed(float speed)
@@ -89,6 +97,12 @@ public class PlayerAnimator : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (_character.IsOwner)
+        {
+            _binds.Character.Crouch.canceled -= OnCrouchCanceled;
+            _binds.Character.Crouch.started -= OnCrouchStarted;
+        }
+
         _character.ClientStarted -= OnClienStarted;
         _disposable?.Clear();
     }
