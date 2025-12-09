@@ -21,45 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 2D.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 2D.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 3D Normal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 3D Normal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 3D Rigidbodies.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 3D Rigidbodies.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Cubes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Cubes.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Rigidbodies.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Rigidbodies.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Moving.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Moving.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Static.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Static.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prediction/CharacterController/Prefabs/CharacterControllerPrediction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Prediction/CharacterController/Prefabs/CharacterControllerPrediction.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prediction/Rigidbody/Prefabs/RigidbodyPrediction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Prediction/Rigidbody/Prefabs/RigidbodyPrediction.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerOld.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerOld.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/IGORYAVA.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IGORYAVA.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Animator/EnemyAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Animator/EnemyAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Animator/EnemyDoubleChaseAnimator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Animator/EnemyDoubleChaseAnimator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitPlayerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitPlayerDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitRandomPlayerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitRandomPlayerDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyAttackState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyAttackState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyChaseState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyChaseState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyNavMeshMoveState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyNavMeshMoveState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyPatrolState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyPatrolState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +34,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Sound/Sound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Sound/Play/PlayerSoundPlay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/Move/EnemyPatrolAndIdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyIdleStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Sound/Play/SoundsPlay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Sound/Noice/SoundMakeNoise.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -103,6 +71,14 @@
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitPlayerDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/Move/EnemyInspectState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Sound/Noice/SoundMakeNoice.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Hear/Hear.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Hear/EnemyHear.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Sound/Noice/SoundMakeNoise.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Sound/Play/SoundsPlay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Sound/Sound.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Sound/PlayerSound.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Sound/Play/PlayerSoundPlay.cs" />
       </list>
     </option>
   </component>
@@ -145,7 +121,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765281327037</updated>
-      <workItem from="1765281345209" duration="11263000" />
+      <workItem from="1765281345209" duration="14479000" />
     </task>
     <servers />
   </component>
@@ -166,10 +142,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="567" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1765289745146">
+    <state x="567" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1765295498927">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="567" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1765289745146" />
+    <state x="567" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1765295498927" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1765289600483">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -1638,6 +1638,12 @@
             <e p="Rotation" t="Include">
               <e p="PlayerRotation.cs" t="Include" />
             </e>
+            <e p="Sound" t="Include">
+              <e p="Play" t="Include">
+                <e p="PlayerSoundPlay.cs" t="Include" />
+              </e>
+              <e p="PlayerSound.cs" t="Include" />
+            </e>
             <e p="Wallet" t="Include">
               <e p="PlayerWallet.cs" t="Include" />
               <e p="PlayerWalletAnimations.cs" t="Include" />
@@ -1676,6 +1682,15 @@
               <e p="MusicVolumeSettings.cs" t="Include" />
               <e p="SoundVolumeSettings.cs" t="Include" />
             </e>
+          </e>
+          <e p="Sound" t="Include">
+            <e p="Noice" t="Include">
+              <e p="SoundMakeNoise.cs" t="Include" />
+            </e>
+            <e p="Play" t="Include">
+              <e p="SoundsPlay.cs" t="Include" />
+            </e>
+            <e p="Sound.cs" t="Include" />
           </e>
           <e p="StateMachine" t="Include">
             <e p="State.cs" t="Include" />
@@ -1718,6 +1733,9 @@
               </e>
               <e p="Health" t="Include">
                 <e p="EnemyHealth.cs" t="Include" />
+              </e>
+              <e p="Hear" t="Include">
+                <e p="EnemyHear.cs" t="Include" />
               </e>
               <e p="HitBox" t="Include">
                 <e p="EnemyHitBox.cs" t="Include" />
