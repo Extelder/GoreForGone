@@ -43,7 +43,7 @@ public class PlayerAnimator : MonoBehaviour
             _finalVector.x = Mathf.Lerp(_finalVector.x, _inputVector.x, _speed * Time.deltaTime);
             _finalVector.z = Mathf.Lerp(_finalVector.z, _inputVector.z, _speed * Time.deltaTime);
 
-            SetAnimationBool("Move", _inputVector.x > 0 || _inputVector.z > 0);
+            SetAnimationBool("Move", Mathf.Abs(_inputVector.x) > 0 || Mathf.Abs(_inputVector.z) > 0);
             _animator.SetFloat("XVelocity", _finalVector.x);
             _animator.SetFloat("YVelocity", _finalVector.z);
         }).AddTo(_disposable);

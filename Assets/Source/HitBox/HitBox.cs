@@ -4,6 +4,6 @@ using System.Collections.Generic;
 using FishNet.Object;
 using UnityEngine;
 
-public class HitBox : NetworkBehaviour, IWeaponVisitor
+public class HitBox : NetworkBehaviour
 {
 }

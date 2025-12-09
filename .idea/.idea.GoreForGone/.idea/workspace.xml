@@ -20,15 +20,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Y Bot.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Y Bot.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/YBot.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/YBot.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Item/Interact/IInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Item/Interact/IInteractable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/GroundChecker/GroundChecker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/GroundChecker/GroundChecker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/InventoryItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/InventoryItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/InventoryItemUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/InventoryItemUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/Items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/Items/ItemData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/Items/ItemData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/PlayerInventory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/PlayerInventory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/PlayerInventoryItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/PlayerInventoryItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimatorEventHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimatorEventHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemTakeUp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemTakeUp.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sway.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sway/WeaponSway.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sway/WeaponSway.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons/Damagable.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons/Damagable/IWeaponVisitor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons/Damagable/IWeaponVisitor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Jump.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Jump/PlayerJump.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Jump/PlayerJump.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Movement.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Movement/PlayerMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Movement/PlayerMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWallet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWallet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWalletAnimations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWalletAnimations.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWalletUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWalletUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Trail.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Trail/ResetTrail.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Trail/ResetTrail.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,26 +82,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Jump/PlayerJump.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/DDOL.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/MovementEffects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyIfNoOwner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Movement/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Item/PickUp/PickUpableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyWithoutOwner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Item/Interact/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Utility/Performance/DefaultObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/DDOL.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/MovementEffects.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyWithoutOwner.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/HitBox/EnemyHitBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/HitBox/UnitHitBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons/Damagable/IWeaponVisitor.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/StateMachine/StateMachine.cs" />
@@ -69,6 +113,7 @@
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyChaseState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" />
       </list>
     </option>
   </component>
