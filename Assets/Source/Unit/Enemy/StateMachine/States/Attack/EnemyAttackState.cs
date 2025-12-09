@@ -20,12 +20,11 @@ public class EnemyAttackState : EnemyState
         if (!base.IsServer)
             return;
         CanChanged = false;
+        Debug.Log("ATTACK");
         EnemyAnimator.Attack();
         _agent.isStopped = _stopNavMesh;
         if (!_agent.isStopped)
-        {
             StartCoroutine(_chaseState.ChasingWithoutAnimation());
-        }
     }
 
     public override void Exit()

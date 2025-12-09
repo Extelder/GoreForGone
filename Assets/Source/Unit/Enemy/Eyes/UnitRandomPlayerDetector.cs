@@ -30,16 +30,16 @@ public class UnitRandomPlayerDetector : NetworkBehaviour
     {
         while (true)
         {
-            // yield return new WaitUntil(() => PlayerCharacter.Instance != null);
-            // PlayerCharacter randomCharacter =
-            //     PlayerCharacter.Instance.Characters[Random.Range(0, PlayerCharacter.Instance.Characters.Count)];
-            //
-            // Observable.Interval(TimeSpan.FromSeconds(_playerUpdateRate)).Subscribe(_ =>
-            // {
-            //     _enemyStateMachine?.Chase(randomCharacter.PlayerMovement.transform);
-            // }).AddTo(_disposable);
-            // yield return new WaitForSeconds(Random.Range(_randomDelay.x, _randomDelay.y));
-            // _disposable?.Clear();
+            yield return new WaitUntil(() => PlayerCharacter.Instance != null);
+            PlayerCharacter randomCharacter =
+                PlayerCharacter.Instance.Characters[Random.Range(0, PlayerCharacter.Instance.Characters.Count)];
+            
+            Observable.Interval(TimeSpan.FromSeconds(_playerUpdateRate)).Subscribe(_ =>
+            {
+                _enemyStateMachine?.Chase(randomCharacter.PlayerTransform);
+            }).AddTo(_disposable);
+            yield return new WaitForSeconds(Random.Range(_randomDelay.x, _randomDelay.y));
+            _disposable?.Clear();
         }
     }
 

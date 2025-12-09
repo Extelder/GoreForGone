@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerCharacter : NetworkBehaviour
 {
+    [field: SerializeField] public List<PlayerCharacter> Characters { get; private set; }
     [field: SerializeField] public Transform DropPoint { get; private set; }
     [field: SerializeField] public PlayerBinds Binds;
     [field: SerializeField] public Transform PlayerTransform;
