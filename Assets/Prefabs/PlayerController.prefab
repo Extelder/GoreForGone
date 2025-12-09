@@ -1833,6 +1833,8 @@ GameObject:
   - component: {fileID: 8850203819785511499}
   - component: {fileID: 8894797833157323738}
   - component: {fileID: 8252059856875809613}
+  - component: {fileID: 5154392339956821574}
+  - component: {fileID: 5155498346024855214}
   m_Layer: 6
   m_Name: PlayerController
   m_TagString: GameController
@@ -1972,6 +1974,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
+  <Characters>k__BackingField: []
   <DropPoint>k__BackingField: {fileID: 0}
   PlayerTransform: {fileID: 8562933988281219265}
   _thirdPerson:
@@ -2075,6 +2078,40 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
+--- !u!114 &5154392339956821574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511069914338435829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98da81e194d9a840973acae544c9212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  _health: {fileID: 5155498346024855214}
+  _notActiveDelayAfterSpawn: 0
+--- !u!114 &5155498346024855214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511069914338435829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6886e204aa5964983af99fc8dce466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  <MaxValue>k__BackingField: 100
+  <CurrentValue>k__BackingField: 100
 --- !u!1 &2646380747378875919
 GameObject:
   m_ObjectHideFlags: 0
