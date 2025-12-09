@@ -22,7 +22,6 @@ public class PlayerJump : NetworkBehaviour
         if(!base.IsOwner)
             return;
         _binds = _character.Binds;
-        _rigidbody = _character.Rigidbody;
 
         _binds.Character.Jump.started += JumpKeyDowned;
     }

@@ -31,7 +31,7 @@ public class PlayerMovement : NetworkBehaviour
         if(!base.IsOwner)
             return;
         
-        _rigidbody = _character.Rigidbody;
+        //_rigidbody = _character.Rigidbody;
         _binds = _character.Binds;
 
         Vector3 inputVector = new Vector3(0, 0, 0);
