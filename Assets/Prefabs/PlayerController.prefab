@@ -1927,9 +1927,11 @@ MonoBehaviour:
   SensetivityMultiplier: 1
   characterController: {fileID: 0}
   moveDirection: {x: 0, y: 0, z: 0}
-  isCrough: 0
+  isCrough:
+    value: 0
   isRunning: 0
-  Moving: 0
+  Moving:
+    value: 0
   vertical: 0
   horizontal: 0
   Lookvertical: 0
@@ -1975,6 +1977,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
+  <PlayerController>k__BackingField: {fileID: 6075849525127307848}
   <Characters>k__BackingField: []
   <DropPoint>k__BackingField: {fileID: 0}
   PlayerTransform: {fileID: 8562933988281219265}
@@ -2125,6 +2128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3156388276c1374a825cd014fd92ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _camera: {fileID: 81716164454465600}
   _capsuleHeight: 0.05
   _capsuleRadius: 0.31
@@ -2680,6 +2686,13 @@ GameObject:
   - component: {fileID: 88367585307181891}
   - component: {fileID: 7322817708848602955}
   - component: {fileID: 5523033757423955452}
+  - component: {fileID: 6404712434890083650}
+  - component: {fileID: 2379199125106380215}
+  - component: {fileID: 6721857396306552242}
+  - component: {fileID: 8084293451361396022}
+  - component: {fileID: 1142884246365371962}
+  - component: {fileID: 4225821475361007860}
+  - component: {fileID: 6846807900578132324}
   m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
@@ -2737,6 +2750,133 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295a836eedca61e4e9b0a6745b0d8279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveAndReturnTransform
+--- !u!114 &6404712434890083650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb42cb444c744bd409361899dc184501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  _notStartOnEnable: 0
+  _startState: {fileID: 6721857396306552242}
+  _character: {fileID: 8850203819785511499}
+  _idleState: {fileID: 6721857396306552242}
+  _moveState: {fileID: 8084293451361396022}
+  _attackState: {fileID: 1142884246365371962}
+  _chargeAttackState: {fileID: 4225821475361007860}
+  _waitForStartChargingTime: 0.2
+--- !u!114 &2379199125106380215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a9ee94ab603ec47b7d3d09b3cd80cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  <Animator>k__BackingField: {fileID: 7322817708848602955}
+  _moveBool: IsMoving
+  _attackBoolName: IsAttacking
+  _chargingAttackBoolName: IsCharging
+  _chargeAttackTriggerName: IsChargeAttacking
+--- !u!114 &6721857396306552242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef9c1d3808d9e40489c5fa049e4f8d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  CanChanged: 1
+  <Animator>k__BackingField: {fileID: 2379199125106380215}
+--- !u!114 &8084293451361396022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4cd02e2a404f148b564e6b630a6f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  CanChanged: 1
+  <Animator>k__BackingField: {fileID: 2379199125106380215}
+--- !u!114 &1142884246365371962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f22588527d7cd44a851a54c3c7bedd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  CanChanged: 1
+  <Animator>k__BackingField: {fileID: 2379199125106380215}
+  _continueAttackCheckRate: 0.05
+--- !u!114 &4225821475361007860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eab09576dcaafb49a0184df27b2d77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  CanChanged: 1
+  <Animator>k__BackingField: {fileID: 2379199125106380215}
+--- !u!114 &6846807900578132324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097adf329613fde418d477b3fe16088d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7322817708848602955}
+  _crouchAnimationBoolName: IsCrouching
+  _character: {fileID: 8850203819785511499}
 --- !u!1 &3505214368931765122
 GameObject:
   m_ObjectHideFlags: 0

@@ -1578,6 +1578,7 @@
               <e p="InteractItem.cs" t="Include" />
             </e>
             <e p="Item.cs" t="Include" />
+            <e p="ItemData.cs" t="Include" />
             <e p="PickUp" t="Include">
               <e p="PickUpableItem.cs" t="Include" />
             </e>
@@ -1591,9 +1592,6 @@
             </e>
             <e p="DestroyIfNoOwner.cs" t="Include" />
             <e p="DestroyWithoutOwner.cs" t="Include" />
-            <e p="GroundChecker" t="Include">
-              <e p="GroundChecker.cs" t="Include" />
-            </e>
             <e p="Health" t="Include">
               <e p="PlayerHealth.cs" t="Include" />
               <e p="PlayerHealthUI.cs" t="Include" />
@@ -1604,35 +1602,34 @@
             <e p="Interact" t="Include">
               <e p="PlayerInteract.cs" t="Include" />
             </e>
-            <e p="Inventory" t="Include">
-              <e p="InventoryItem.cs" t="Include" />
-              <e p="InventoryItemUI.cs" t="Include" />
-              <e p="Items" t="Include">
-                <e p="ItemData.cs" t="Include" />
-              </e>
-              <e p="PlayerInventory.cs" t="Include" />
-              <e p="PlayerInventoryItem.cs" t="Include" />
-            </e>
             <e p="Items" t="Include">
-              <e p="Animator" t="Include">
-                <e p="ItemAnimator.cs" t="Include" />
-                <e p="ItemAnimatorEventHandler.cs" t="Include" />
-                <e p="ItemTakeUp.cs" t="Include" />
-              </e>
-              <e p="Sway" t="Include">
-                <e p="WeaponSway.cs" t="Include" />
-              </e>
-              <e p="Weapons" t="Include">
-                <e p="Damagable" t="Include">
-                  <e p="IWeaponVisitor.cs" t="Include" />
+              <e p="Base" t="Include">
+                <e p="Animator" t="Include">
+                  <e p="ItemAnimator.cs" t="Include" />
+                  <e p="ItemCrouchHandler.cs" t="Include" />
+                </e>
+                <e p="StateMachine" t="Include">
+                  <e p="ItemState.cs" t="Include" />
+                  <e p="ItemStateMachine.cs" t="Include" />
+                  <e p="State" t="Include">
+                    <e p="IdleItemState.cs" t="Include" />
+                    <e p="MoveItemState.cs" t="Include" />
+                  </e>
                 </e>
               </e>
-            </e>
-            <e p="Jump" t="Include">
-              <e p="PlayerJump.cs" t="Include" />
-            </e>
-            <e p="Movement" t="Include">
-              <e p="PlayerMovement.cs" t="Include" />
+              <e p="Sword" t="Include">
+                <e p="Animator" t="Include">
+                  <e p="SwordAnimator.cs" t="Include" />
+                </e>
+                <e p="StateMachine" t="Include">
+                  <e p="State" t="Include">
+                    <e p="SwordAttackState.cs" t="Include" />
+                    <e p="SwordChargeAttackState.cs" t="Include" />
+                    <e p="SwordState.cs" t="Include" />
+                  </e>
+                  <e p="SwordStateMachine.cs" t="Include" />
+                </e>
+              </e>
             </e>
             <e p="PlayerCharacter.cs" t="Include" />
             <e p="Rotation" t="Include">
@@ -1643,11 +1640,6 @@
                 <e p="PlayerSoundPlay.cs" t="Include" />
               </e>
               <e p="PlayerSound.cs" t="Include" />
-            </e>
-            <e p="Wallet" t="Include">
-              <e p="PlayerWallet.cs" t="Include" />
-              <e p="PlayerWalletAnimations.cs" t="Include" />
-              <e p="PlayerWalletUI.cs" t="Include" />
             </e>
           </e>
           <e p="Pool" t="Include">
@@ -1708,12 +1700,15 @@
                 <e p="RaycastSettings.cs" t="Include" />
               </e>
             </e>
+            <e p="Raycaster" t="Include">
+              <e p="RaycastBehaviour.cs" t="Include" />
+            </e>
+            <e p="Trail" t="Include">
+              <e p="ResetTrail.cs" t="Include" />
+            </e>
             <e p="Transform" t="Include">
               <e p="SaveAndReturnTransform.cs" t="Include" />
             </e>
-          </e>
-          <e p="Trail" t="Include">
-            <e p="ResetTrail.cs" t="Include" />
           </e>
           <e p="Unit" t="Include">
             <e p="Animator" t="Include">
@@ -1722,7 +1717,6 @@
             <e p="Enemy" t="Include">
               <e p="Animator" t="Include">
                 <e p="EnemyAnimator.cs" t="Include" />
-                <e p="EnemyDoubleChaseAnimator.cs" t="Include" />
               </e>
               <e p="Damage" t="Include">
                 <e p="EnemyDamage.cs" t="Include" />
@@ -1756,13 +1750,23 @@
                 <e p="EnemySpawnObjectsWithDelay.cs" t="Include" />
               </e>
               <e p="StateMachine" t="Include">
+                <e p="EnemyIdleStateMachine.cs" t="Include" />
                 <e p="EnemyStateMachine.cs" t="Include" />
                 <e p="States" t="Include">
-                  <e p="EnemyAttackState.cs" t="Include" />
-                  <e p="EnemyChaseState.cs" t="Include" />
-                  <e p="EnemyNavMeshMoveState.cs" t="Include" />
-                  <e p="EnemyPatrolState.cs" t="Include" />
+                  <e p="Attack" t="Include">
+                    <e p="EnemyAttackState.cs" t="Include" />
+                  </e>
                   <e p="EnemyState.cs" t="Include" />
+                  <e p="Idle" t="Include">
+                    <e p="EnemyIdleState.cs" t="Include" />
+                  </e>
+                  <e p="Move" t="Include">
+                    <e p="EnemyChaseState.cs" t="Include" />
+                    <e p="EnemyInspectState.cs" t="Include" />
+                    <e p="EnemyNavMeshMoveState.cs" t="Include" />
+                    <e p="EnemyPatrolAndIdleState.cs" t="Include" />
+                    <e p="EnemyPatrolState.cs" t="Include" />
+                  </e>
                 </e>
               </e>
             </e>
@@ -2445,6 +2449,65 @@
               </e>
               <e p="Version.cs" t="Include" />
             </e>
+          </e>
+          <e p="com.unity.ai.navigation@1.1.7" t="Include">
+            <e p="Editor" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="ConversionSystem" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="converter_editor.uss" t="Include" />
+                <e p="converter_editor.uxml" t="Include" />
+                <e p="converter_widget.uss" t="Include" />
+                <e p="converter_widget.uxml" t="Include" />
+                <e p="converter_widget_item.uxml" t="Include" />
+                <e p="ConverterItemDescriptor.cs" t="Include" />
+                <e p="ConverterItemInfo.cs" t="Include" />
+                <e p="EditorStyles.cs" t="Include" />
+                <e p="InitializeConverterContext.cs" t="Include" />
+                <e p="RunItemContext.cs" t="Include" />
+                <e p="SystemConverter.cs" t="Include" />
+                <e p="SystemConverterContainer.cs" t="Include" />
+                <e p="SystemConvertersEditor.cs" t="Include" />
+                <e p="Unity.AI.Navigation.Editor.ConversionSystem.asmdef" t="Include" />
+              </e>
+              <e p="NavigationOverlay.cs" t="Include" />
+              <e p="NavigationPreferences.cs" t="Include" />
+              <e p="NavigationWindow.cs" t="Include" />
+              <e p="NavMeshAssetManager.cs" t="Include" />
+              <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+              <e p="NavMeshLinkEditor.cs" t="Include" />
+              <e p="NavMeshModifierEditor.cs" t="Include" />
+              <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+              <e p="NavMeshSurfaceEditor.cs" t="Include" />
+              <e p="ObsoleteNavigationWindowMenuEntry.cs" t="Include" />
+              <e p="Unity.AI.Navigation.Editor.asmdef" t="Include" />
+              <e p="Updater" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="BuiltInToNavMeshSurfaceConverterContainer.cs" t="Include" />
+                <e p="NavMeshSceneConverter.cs" t="Include" />
+                <e p="NavMeshUpdaterEditor.cs" t="Include" />
+                <e p="NavMeshUpdaterUtility.cs" t="Include" />
+                <e p="Unity.AI.Navigation.Updater.asmdef" t="Include" />
+              </e>
+            </e>
+            <e p="package.json" t="Include" />
+            <e p="Runtime" t="Include">
+              <e p="HelpUrls.cs" t="Include" />
+              <e p="NavMeshLink.cs" t="Include" />
+              <e p="NavMeshModifier.cs" t="Include" />
+              <e p="NavMeshModifierVolume.cs" t="Include" />
+              <e p="NavMeshSurface.cs" t="Include" />
+              <e p="Unity.AI.Navigation.asmdef" t="Include" />
+            </e>
+            <e p="Tests" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Unity.AI.Navigation.Editor.Tests.asmdef" t="Include" />
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="Unity.AI.Navigation.Tests.asmdef" t="Include" />
+              </e>
+            </e>
+            <e p="ValidationExceptions.json" t="Include" />
           </e>
           <e p="com.unity.animation.rigging@1.2.1" t="Include">
             <e p="DocCodeExamples" t="Include">
@@ -8135,6 +8198,13 @@
       <e p="UniRx.Examples.csproj" t="IncludeRecursive" />
       <e p="UniRx.Examples.Player.csproj" t="IncludeRecursive" />
       <e p="UniRx.Player.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Editor.ConversionSystem.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Editor.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Player.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Updater.csproj" t="IncludeRecursive" />
       <e p="Unity.Animation.Rigging.csproj" t="IncludeRecursive" />
       <e p="Unity.Animation.Rigging.DocCodeExamples.csproj" t="IncludeRecursive" />
       <e p="Unity.Animation.Rigging.DocCodeExamples.Player.csproj" t="IncludeRecursive" />

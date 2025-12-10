@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using FishNet.Object;
+using UniRx;
 using UnityEngine;
 
 namespace EvolveGames
@@ -50,14 +51,14 @@ namespace EvolveGames
 
         [HideInInspector] public CharacterController characterController;
         [HideInInspector] public Vector3 moveDirection = Vector3.zero;
-        public bool isCrough = false;
+        public ReactiveProperty<bool> isCrough = new ReactiveProperty<bool>();
         float InstallCroughHeight;
         float rotationX = 0;
         [HideInInspector] public bool isRunning = false;
         Vector3 InstallCameraMovement;
         float InstallFOV;
         Camera cam;
-        [HideInInspector] public bool Moving;
+        [HideInInspector] public ReactiveProperty<bool> Moving = new ReactiveProperty<bool>();
         [HideInInspector] public float vertical;
         [HideInInspector] public float horizontal;
         [HideInInspector] public float Lookvertical;
@@ -70,7 +71,7 @@ namespace EvolveGames
         public bool HelpCrouching;
 
         public bool Crouching;
-        
+
         public override void OnStartClient()
         {
             if (!base.IsOwner)
@@ -105,7 +106,7 @@ namespace EvolveGames
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
 
-            isRunning = !isCrough ? (CanRunning ? Input.GetKey(KeyCode.LeftShift) : false) : false;
+            isRunning = !isCrough.Value ? (CanRunning ? Input.GetKey(KeyCode.LeftShift) : false) : false;
 
             Vector3 direction = (forward * Input.GetAxis("Vertical")) + (right * Input.GetAxis("Horizontal"));
             if (direction.magnitude > 1f) direction.Normalize();
@@ -128,7 +129,7 @@ namespace EvolveGames
 
             characterController.Move(moveDirection * Time.deltaTime);
 
-            Moving = direction.magnitude > 0.1f;
+            Moving.Value = direction.magnitude > 0.1f;
 
             if (Cursor.lockState == CursorLockMode.Locked && canMove)
             {
@@ -140,7 +141,7 @@ namespace EvolveGames
                 Camera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
                 transform.rotation *= Quaternion.Euler(0, Lookhorizontal * lookSpeed, 0);
 
-                if (isRunning && Moving)
+                if (isRunning && Moving.Value)
                     cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, RunningFOV, SpeedToFOV * Time.deltaTime);
                 else
                     cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, InstallFOV, SpeedToFOV * Time.deltaTime);
@@ -148,7 +149,7 @@ namespace EvolveGames
 
             if (Input.GetKey(CroughKey) || Crouching == true)
             {
-                isCrough = true;
+                isCrough.Value = true;
                 float Height = Mathf.Lerp(characterController.height, CroughHeight, 5 * Time.deltaTime);
                 characterController.height = Height;
                 WalkingValue = Mathf.Lerp(WalkingValue, CroughSpeed, 6 * Time.deltaTime);
@@ -158,7 +159,7 @@ namespace EvolveGames
             {
                 if (characterController.height != InstallCroughHeight)
                 {
-                    isCrough = false;
+                    isCrough.Value = false;
                     float Height = Mathf.Lerp(characterController.height, InstallCroughHeight, 6 * Time.deltaTime);
                     characterController.height = Height;
                     WalkingValue = Mathf.Lerp(WalkingValue, walkingSpeed, 4 * Time.deltaTime);
@@ -179,7 +180,7 @@ namespace EvolveGames
         public void Crouch()
         {
             Crouching = true;
-            isCrough = true;
+            isCrough.Value = true;
             characterController.height = CroughHeight;
             WalkingValue = CroughSpeed;
             StartCoroutine(RecoverCrouch());

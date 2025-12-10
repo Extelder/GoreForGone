@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using EvolveGames;
 using FishNet.Object;
 using UnityEngine;
 
 public class PlayerCharacter : NetworkBehaviour
 {
+    [field: SerializeField] public PlayerController PlayerController { get; private set; }
     [field: SerializeField] public List<PlayerCharacter> Characters { get; private set; }
     [field: SerializeField] public Transform DropPoint { get; private set; }
     [field: SerializeField] public PlayerBinds Binds;
@@ -42,6 +44,11 @@ public class PlayerCharacter : NetworkBehaviour
         }
 
         ClientStarted?.Invoke();
+    }
+
+    public override void OnStopClient()
+    {
+        
     }
 
     [ServerRpc(RequireOwnership = false)]

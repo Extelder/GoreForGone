@@ -480,14 +480,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.3166667
-    functionName: ChargeReady
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.4333333
-    functionName: AnimationEndWithoutChecking
+    functionName: ChargeCompleate
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

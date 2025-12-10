@@ -4,20 +4,16 @@ using UnityEngine;
 public class StateMachine : NetworkBehaviour
 {
     [SerializeField] private bool _notStartOnEnable;
-    [SerializeField] private State _startState;
-    public State CurrentState { get; private set; }
+    [SerializeField] protected State _startState;
+    public State CurrentState { get; protected set; }
 
     public void DefaultState()
     {
-        if (!base.IsServer)
-            return;
         ChangeState(_startState);
     }
 
-    public override void OnStartClient()
+    public void Init()
     {
-        if (!base.IsServer)
-            return;
         if (_notStartOnEnable)
         {
             CurrentState = _startState;
@@ -29,11 +25,14 @@ public class StateMachine : NetworkBehaviour
         CurrentState.Enter();
     }
 
+    public override void OnStartClient()
+    {
+        Init();
+    }
+
 
     public void ChangeState(State state)
     {
-        if (!base.IsServer)
-            return;
         if (CurrentState.CanChanged && CurrentState != state)
         {
             CurrentState.Exit();

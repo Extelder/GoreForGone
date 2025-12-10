@@ -1206,9 +1206,11 @@ MonoBehaviour:
   SensetivityMultiplier: 1
   characterController: {fileID: 0}
   moveDirection: {x: 0, y: 0, z: 0}
-  isCrough: 0
+  isCrough:
+    value: 0
   isRunning: 0
-  Moving: 0
+  Moving:
+    value: 0
   vertical: 0
   horizontal: 0
   Lookvertical: 0

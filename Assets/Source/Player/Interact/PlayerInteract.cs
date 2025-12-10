@@ -1,8 +1,9 @@
 using System;
+using FishNet.Object;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInteract : MonoBehaviour
+public class PlayerInteract : NetworkBehaviour
 {
     [SerializeField] private Transform _camera;
     [SerializeField] private float _capsuleHeight;
@@ -15,8 +16,10 @@ public class PlayerInteract : MonoBehaviour
 
     private Vector3 _interactPosition;
 
-    private void Start()
+    public override void OnStartClient()
     {
+        if (!base.IsOwner)
+            return;
         PlayerCharacter.Instance.Binds.Character.Interact.performed += TryInteract;
     }
 
@@ -30,6 +33,8 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnDisable()
     {
+        if (!base.IsOwner)
+            return;
         PlayerCharacter.Instance.Binds.Character.Interact.performed -= TryInteract;
     }
 
@@ -58,7 +63,7 @@ public class PlayerInteract : MonoBehaviour
                             _interactable.Lost();
                         }
                     }
-                    
+
                     _interactable = interactable;
                     _interactable.Detected();
                     if (interactable is MonoBehaviour awawf)
