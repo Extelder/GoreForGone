@@ -20,57 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Player/Sound/INoiceMakeable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Sound/Play/AnySoundPlay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/HeadBob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/HeadBob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Item/Interact/IInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Item/Interact/IInteractable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/GroundChecker/GroundChecker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/GroundChecker/GroundChecker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/InventoryItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/InventoryItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/InventoryItemUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/InventoryItemUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/Items/ItemData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/Items/ItemData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/PlayerInventory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/PlayerInventory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/PlayerInventoryItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Inventory/PlayerInventoryItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimatorEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimatorEventHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemTakeUp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemTakeUp.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sway.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sway/WeaponSway.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sway/WeaponSway.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons/Damagable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons/Damagable/IWeaponVisitor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons/Damagable/IWeaponVisitor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Jump.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Jump/PlayerJump.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Jump/PlayerJump.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Movement.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Movement/PlayerMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Movement/PlayerMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWallet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWallet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWalletAnimations.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWalletAnimations.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWalletUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Wallet/PlayerWalletUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Trail.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Trail/ResetTrail.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Trail/ResetTrail.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Main.mixer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Main.mixer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Sound/Play/PlayerSoundPlay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Sound/Play/PlayerSoundPlay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Sound/PlayerSound.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Sound/PlayerSound.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Sound/INoiceMakeable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sound/Play/SoundsPlay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sound/Play/SoundsPlay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sound/Play/AnySoundPlay.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,21 +45,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyIfNoOwner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Item/PickUp/PickUpableItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Item/Interact/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Utility/Performance/DefaultObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/DDOL.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/MovementEffects.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Sound/Play/PlayerSoundPlayAndMix.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Sound/Play/SoundPlay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyIfNoOwner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/System/Overlap/DrawSphere/DrawSphere.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Item/PickUp/PickUpableItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Sound/INoiceMakeable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Item/Interact/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/DDOL.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Utility/Performance/DefaultObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyWithoutOwner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -114,6 +81,19 @@
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Sound/Play/SoundsPlay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Sound/Play/AllSoundPlay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Sound/Play/AnySoundPlay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Sound/PlayerSound.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Sound/Noice/SoundMakeNoise.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Sound/IPlayerSound.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/System/Overlap/DrawSphere/DrawSphere.cs" />
+        <option value="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/HeadBob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Sound/Play/SoundPlay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Sound/INoiceMakeable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Sound/Play/PlayerSoundPlay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Sound/Play/PlayerSoundPlayAndMix.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Sound/FootStep/PlayerFootstepSounds.cs" />
       </list>
     </option>
   </component>
@@ -135,16 +115,22 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -156,6 +142,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765281327037</updated>
       <workItem from="1765281345209" duration="2712000" />
+      <workItem from="1765369562679" duration="8669000" />
     </task>
     <servers />
   </component>
@@ -175,5 +162,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1765371110900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1765371110900" />
+    <state x="565" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1765371312391">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="565" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1765371312391" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1765378016227">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1765378016227" />
   </component>
 </project>
