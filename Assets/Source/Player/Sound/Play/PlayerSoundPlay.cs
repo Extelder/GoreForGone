@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using FishNet.Object;
+using NaughtyAttributes;
 using UnityEngine;
 
-public class PlayerSoundPlay : PlayerSound
+[RequireComponent(typeof(DrawSphere), typeof(AudioSource))]
+public class PlayerSoundPlay : SoundPlay, INoiceMakeable
 {
-    [ServerRpc(RequireOwnership = false)]
-    public void SoundPlayServer()
+    public override void OnSoundPlayServer()
     {
-        SoundPlayObserver();
     }
 
-    [ObserversRpc]
-    public void SoundPlayObserver()
+    public override void OnSoundPlayObserver()
     {
-        if (MakeNoice)
-            SoundMakeNoise.MakeNoise(OverlapSettings);
-        Source?.Play();
-        StartCoroutine(WaitToDespawn());
+        if (!MakeNoice)
+            return;
+        SoundMakeNoise.MakeNoise(OverlapSettings);
     }
+
+    [field: SerializeField]  public bool MakeNoice { get; set; }
+    [field: SerializeField]  public OverlapSettings OverlapSettings { get; set; }
 }

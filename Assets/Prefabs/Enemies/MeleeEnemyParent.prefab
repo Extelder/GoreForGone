@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 8786117670856416494}
   - component: {fileID: 350021505898762571}
   - component: {fileID: 1103130285486992525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
