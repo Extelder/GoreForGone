@@ -2761,6 +2761,8 @@ GameObject:
   - component: {fileID: 6846807900578132324}
   - component: {fileID: 5535369931849835367}
   - component: {fileID: 5730667865821055410}
+  - component: {fileID: 6024647691525676535}
+  - component: {fileID: 8533996127482048919}
   m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
@@ -2861,7 +2863,8 @@ MonoBehaviour:
   _attackBoolName: IsAttacking
   _randomAttackIntName: AttackRandom
   _chargingAttackBoolName: IsCharging
-  _chargeAttackTriggerName: IsChargeAttacking
+  _chargeAttackBoolName: IsChargeAttacking
+  _hittedObjectBool: Hitted
 --- !u!114 &6721857396306552242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2931,6 +2934,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 0}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 2379199125106380215}
+  _swordChargeAttack: {fileID: 6024647691525676535}
 --- !u!114 &6846807900578132324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2979,8 +2983,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1fc293f81d5078449ac148d65fd288d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shakePreset: {fileID: 11400000, guid: 4c8b354c97338384cac190918b3619d3, type: 2}
-  _attack: {fileID: 5535369931849835367}
+  _attackShakes:
+  - <Attack>k__BackingField: {fileID: 5535369931849835367}
+    <Preset>k__BackingField: {fileID: 11400000, guid: 613692a7efd43104c863ff02fe78fcc5,
+      type: 2}
+  - <Attack>k__BackingField: {fileID: 6024647691525676535}
+    <Preset>k__BackingField: {fileID: 11400000, guid: 4c8b354c97338384cac190918b3619d3,
+      type: 2}
+--- !u!114 &6024647691525676535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _raycastSettings:
+    <Origin>k__BackingField: {fileID: 81716164454465600}
+    <MaxDistance>k__BackingField: 3
+    <LayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 1
+--- !u!114 &8533996127482048919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de39628d232bfb541b1f1a46e18f4370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shakePreset: {fileID: 11400000, guid: f51c5861189c18042ba4252f3ead58c3, type: 2}
+  _raycastAttack: {fileID: 6024647691525676535}
 --- !u!1 &3505214368931765122
 GameObject:
   m_ObjectHideFlags: 0

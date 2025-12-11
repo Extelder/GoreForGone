@@ -9,7 +9,8 @@ public class SwordAnimator : ItemAnimator
     [SerializeField] private string _attackBoolName;
     [SerializeField] private string _randomAttackIntName;
     [SerializeField] private string _chargingAttackBoolName;
-    [SerializeField] private string _chargeAttackTriggerName;
+    [SerializeField] private string _chargeAttackBoolName;
+    [SerializeField] private string _hittedObjectBool;
 
     private int _currentAttackInt;
 
@@ -18,13 +19,18 @@ public class SwordAnimator : ItemAnimator
         base.DisableAllBools();
         SetAnimationBool(_attackBoolName, false);
         SetAnimationBool(_chargingAttackBoolName, false);
-        ResetAnimationTrigger(_chargeAttackTriggerName);
+        SetAnimationBool(_chargeAttackBoolName, false);
     }
 
     public void RandomizeAtackAnimation()
     {
         _currentAttackInt = _currentAttackInt == 1 ? 0 : 1;
         SetAnimationInt(_randomAttackIntName, _currentAttackInt);
+    }
+
+    public void SetHittedObjectBool(bool value)
+    {
+        SetAnimationBool(_hittedObjectBool, value);
     }
 
     public void Attack()
@@ -40,7 +46,7 @@ public class SwordAnimator : ItemAnimator
 
     public void ChargeAttack()
     {
-        SetAnimationTrigger(_chargeAttackTriggerName);
+        SetAnimationBoolAndDisableOther(_chargeAttackBoolName);
     }
 
     public void StopCharging()

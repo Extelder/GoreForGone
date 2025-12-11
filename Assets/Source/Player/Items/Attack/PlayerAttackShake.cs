@@ -4,23 +4,45 @@ using System.Collections.Generic;
 using MilkShake;
 using UnityEngine;
 
-public class PlayerAttackShake : MonoBehaviour
+[Serializable]
+public class AttackShake
 {
-    [SerializeField] private ShakePreset _shakePreset;
-    [SerializeField] private PlayerAttack _attack;
+    [field: SerializeField] public PlayerAttack Attack { get; private set; }
+    [field: SerializeField] public ShakePreset Preset { get; private set; }
 
-    private void OnEnable()
+    public void Subscribe()
     {
-        _attack.Performed += OnAttackPerformed;
+        Attack.Performed += OnAttackPerformed;
     }
 
     private void OnAttackPerformed()
     {
-        PlayerCharacter.Instance.Shaker.Shake(_shakePreset);
+        PlayerCharacter.Instance.Shaker.Shake(Preset);
+    }
+
+    public void Describe()
+    {
+        Attack.Performed -= OnAttackPerformed;
+    }
+}
+
+public class PlayerAttackShake : MonoBehaviour
+{
+    [SerializeField] private AttackShake[] _attackShakes;
+
+    private void OnEnable()
+    {
+        for (int i = 0; i < _attackShakes.Length; i++)
+        {
+            _attackShakes[i].Subscribe();
+        }
     }
 
     private void OnDisable()
     {
-        _attack.Performed -= OnAttackPerformed;
+        for (int i = 0; i < _attackShakes.Length; i++)
+        {
+            _attackShakes[i].Describe();
+        }
     }
 }
