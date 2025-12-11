@@ -14,7 +14,7 @@ public class PickUpableItem : Item
 
     public override void Interact()
     {
-        if (PlayerCharacter.Instance.PlayerInventory.TryAddItem(_item))
+        // if (PlayerCharacter.Instance.PlayerInventory.TryAddItem(_item))
         {
             _interactItem.DespawnObject();
         }

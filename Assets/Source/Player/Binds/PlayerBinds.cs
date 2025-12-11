@@ -153,6 +153,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Crouch"",
+                    ""type"": ""Button"",
+                    ""id"": ""b7dd793b-b57f-49f3-88f8-750168b4d3a5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -276,6 +285,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""OpenPanel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2b6e954e-cd21-48d7-9cb7-6a9166c48a0f"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -297,6 +317,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_SecondaryShoot = m_Character.FindAction("SecondaryShoot", throwIfNotFound: true);
         m_Character_Interact = m_Character.FindAction("Interact", throwIfNotFound: true);
         m_Character_OpenPanel = m_Character.FindAction("OpenPanel", throwIfNotFound: true);
+        m_Character_Crouch = m_Character.FindAction("Crouch", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -384,6 +405,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_SecondaryShoot;
     private readonly InputAction m_Character_Interact;
     private readonly InputAction m_Character_OpenPanel;
+    private readonly InputAction m_Character_Crouch;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -423,6 +445,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Character/OpenPanel".
         /// </summary>
         public InputAction @OpenPanel => m_Wrapper.m_Character_OpenPanel;
+        /// <summary>
+        /// Provides access to the underlying input action "Character/Crouch".
+        /// </summary>
+        public InputAction @Crouch => m_Wrapper.m_Character_Crouch;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -470,6 +496,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @OpenPanel.started += instance.OnOpenPanel;
             @OpenPanel.performed += instance.OnOpenPanel;
             @OpenPanel.canceled += instance.OnOpenPanel;
+            @Crouch.started += instance.OnCrouch;
+            @Crouch.performed += instance.OnCrouch;
+            @Crouch.canceled += instance.OnCrouch;
         }
 
         /// <summary>
@@ -502,6 +531,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @OpenPanel.started -= instance.OnOpenPanel;
             @OpenPanel.performed -= instance.OnOpenPanel;
             @OpenPanel.canceled -= instance.OnOpenPanel;
+            @Crouch.started -= instance.OnCrouch;
+            @Crouch.performed -= instance.OnCrouch;
+            @Crouch.canceled -= instance.OnCrouch;
         }
 
         /// <summary>
@@ -604,5 +636,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnOpenPanel(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Crouch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCrouch(InputAction.CallbackContext context);
     }
 }

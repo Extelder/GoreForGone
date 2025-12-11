@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using EvolveGames;
 using FishNet.Object;
 using UnityEngine;
 
 public class PlayerCharacter : NetworkBehaviour
 {
+    [field: SerializeField] public PlayerController PlayerController { get; private set; }
+    [field: SerializeField] public List<PlayerCharacter> Characters { get; private set; }
     [field: SerializeField] public Transform DropPoint { get; private set; }
-    [field: SerializeField] public Rigidbody Rigidbody;
     [field: SerializeField] public PlayerBinds Binds;
     [field: SerializeField] public Transform PlayerTransform;
     [field: SerializeField] public GameObject[] _thirdPerson;
-    [field: SerializeField] public GameObject _inventory;
-    [field: SerializeField] public PlayerInventory PlayerInventory { get; private set; }
 
     public static PlayerCharacter Instance { get; private set; }
 
@@ -42,12 +42,13 @@ public class PlayerCharacter : NetworkBehaviour
 
             Instance = this;
         }
-        else
-        {
-            _inventory.SetActive(false);
-        }
 
         ClientStarted?.Invoke();
+    }
+
+    public override void OnStopClient()
+    {
+        
     }
 
     [ServerRpc(RequireOwnership = false)]
