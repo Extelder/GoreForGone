@@ -4456,6 +4456,7 @@ GameObject:
   - component: {fileID: 5907417655829426867}
   - component: {fileID: 8349281239787911763}
   - component: {fileID: 2650088462327085553}
+  - component: {fileID: 1991425701681019153}
   m_Layer: 0
   m_Name: dog
   m_TagString: Untagged
@@ -4522,6 +4523,27 @@ MonoBehaviour:
   _moveAnimationBoolName: daw
   _runAnimationBoolName: daw
   _attackAnimationBoolName: daw
+--- !u!95 &1991425701681019153
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534878793639995401}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30c2c4668bba87a45bfb8fb74744ae70, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6536375852044818378
 GameObject:
   m_ObjectHideFlags: 0
