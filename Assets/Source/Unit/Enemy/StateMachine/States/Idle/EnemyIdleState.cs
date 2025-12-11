@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyIdleState : EnemyState
 {
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
-    [SerializeField] private float _maxRandomTimeToPatrol;
+    [SerializeField] private float _maxRandomTimeToStartPatrolling;
 
     public override void Enter()
     {
@@ -14,7 +14,8 @@ public class EnemyIdleState : EnemyState
 
     private IEnumerator Idling()
     {
-        yield return new WaitForSeconds(Random.Range(0, _maxRandomTimeToPatrol));
+        EnemyAnimator.Idle();
+        yield return new WaitForSeconds(Random.Range(0, _maxRandomTimeToStartPatrolling));
         _enemyStateMachine.Patrol();
     }
 

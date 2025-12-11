@@ -1,14 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class EnemyStateMachine : StateMachine
 {
+    [SerializeField] private bool _canReact;
+
+    [ShowIf(nameof(_canReact))] [SerializeField]
+    private EnemyState _react;
     [SerializeField] private EnemyState _attack;
     [SerializeField] private EnemyState _patrol;
     [SerializeField] private EnemyChaseState _chase;
     [SerializeField] private EnemyInspectState _inspect;
 
+    public void React()
+    {
+        if (!base.IsServer)
+            return;
+        if (!_canReact)
+            return;
+        CurrentState.CanChanged = true;
+        ChangeState(_react);
+    }
+    
     public void Inspect(Vector3 targetPosition)
     {
         if (!base.IsServer)
@@ -21,6 +36,9 @@ public class EnemyStateMachine : StateMachine
     {
         if (!base.IsServer)
             return;
+        if (CurrentState == _attack)
+            return;
+        CurrentState.CanChanged = true;
         ChangeState(_attack);
     }
 

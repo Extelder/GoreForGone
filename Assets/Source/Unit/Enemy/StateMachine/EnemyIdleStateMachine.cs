@@ -8,6 +8,8 @@ public class EnemyIdleStateMachine : EnemyStateMachine
     
     public void Idle()
     {
+        if (!base.IsServer)
+            return;
         ChangeState(_idle);
     }
 }

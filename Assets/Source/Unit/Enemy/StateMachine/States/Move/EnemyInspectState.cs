@@ -8,7 +8,8 @@ public class EnemyInspectState : EnemyState
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
     [SerializeField] private float _updateTargetRate;
     [SerializeField] private float _lostTime;
-    
+
+    private Coroutine _inspectingCoroutine;
     private Vector3 _target;
     
     public void ChangeTarget(Vector3 target)
@@ -22,7 +23,7 @@ public class EnemyInspectState : EnemyState
     {
         if (!base.IsServer)
             return;
-        StartCoroutine(Inspecting());
+        _inspectingCoroutine = StartCoroutine(Inspecting());
         StartCoroutine(WaitingTimeForLost());
     }
 
@@ -40,7 +41,7 @@ public class EnemyInspectState : EnemyState
     private IEnumerator WaitingTimeForLost()
     {
         yield return new WaitForSeconds(_lostTime);
-        StopCoroutine(Inspecting());
+        StopCoroutine(_inspectingCoroutine);
         _enemyStateMachine.Patrol();
     }
 

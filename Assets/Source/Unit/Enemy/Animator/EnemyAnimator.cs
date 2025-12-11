@@ -7,31 +7,27 @@ using Random = UnityEngine.Random;
 
 public class EnemyAnimator : UnitAnimator
 {
-    [SerializeField] private string _moveAnimationBoolName, _runAnimationBoolName, _attackAnimationBoolName;
-    private void Start()
-    {
-        Idle();
-    }
+    [field: SerializeField] public string MoveAnimationBoolName, RunAnimationBoolName, AttackAnimationBoolName;
 
     public override void DisableAllBools()
     {
-        SetAnimationBool(_moveAnimationBoolName, false);
-        SetAnimationBool(_attackAnimationBoolName, false);
-        SetAnimationBool(_runAnimationBoolName, false);
+        SetAnimationBool(MoveAnimationBoolName, false);
+        SetAnimationBool(AttackAnimationBoolName, false);
+        SetAnimationBool(RunAnimationBoolName, false);
     }
 
-    public void Move()
+    public virtual void Move()
     {
-        SetAnimationBoolAndDisableOther(_moveAnimationBoolName);
+        SetAnimationBoolAndDisableOther(MoveAnimationBoolName);
     }
 
-    public void Run()
+    public virtual void Run()
     {
-        SetAnimationBoolAndDisableOther(_runAnimationBoolName);
+        SetAnimationBoolAndDisableOther(RunAnimationBoolName);
     }
     
-    public void Attack()
+    public virtual void Attack()
     {
-        SetAnimationBoolAndDisableOther(_attackAnimationBoolName);
+        SetAnimationBoolAndDisableOther(AttackAnimationBoolName);
     }
 }

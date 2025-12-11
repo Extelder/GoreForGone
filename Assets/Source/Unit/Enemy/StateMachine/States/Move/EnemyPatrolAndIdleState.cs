@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyPatrolAndIdleState : EnemyPatrolState
 {
-    [SerializeField] private EnemyIdleStateMachine _enemyIdleStateMachine;
+    [SerializeField] private EnemyIdleStateMachine enemyIdleStateMachine;
     
     public override void OnDestinationReached()
     {
-        _enemyIdleStateMachine.Idle();
+        enemyIdleStateMachine.Idle();
     }
 }
