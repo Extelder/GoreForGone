@@ -7,7 +7,6 @@ public class EnemyPatrolState : EnemyState
 {
     [SerializeField] private EnemyNavMeshMove _enemyNavMeshMove;
     [SerializeField] private float _randomPointRange;
-    [SerializeField] private float _maxRandomWaitTime;
     [SerializeField] private float _destinationReachThreshhold;
     [SerializeField] private NavMeshAgent _agent;
 
@@ -39,7 +38,6 @@ public class EnemyPatrolState : EnemyState
             yield return new WaitForSeconds(0.2f);
             yield return new WaitUntil(() => AgentReachedDestination());
             OnDestinationReached();
-            yield return new WaitForSeconds(Random.Range(0, _maxRandomWaitTime));
         }
     }
 
