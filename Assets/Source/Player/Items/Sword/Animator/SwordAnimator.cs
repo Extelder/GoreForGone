@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SwordAnimator : ItemAnimator
 {
     [SerializeField] private string _attackBoolName;
+    [SerializeField] private string _randomAttackIntName;
     [SerializeField] private string _chargingAttackBoolName;
     [SerializeField] private string _chargeAttackTriggerName;
+
+    private int _currentAttackInt;
 
     public override void DisableAllBools()
     {
@@ -16,8 +21,15 @@ public class SwordAnimator : ItemAnimator
         ResetAnimationTrigger(_chargeAttackTriggerName);
     }
 
+    public void RandomizeAtackAnimation()
+    {
+        _currentAttackInt = _currentAttackInt == 1 ? 0 : 1;
+        SetAnimationInt(_randomAttackIntName, _currentAttackInt);
+    }
+
     public void Attack()
     {
+        RandomizeAtackAnimation();
         SetAnimationBoolAndDisableOther(_attackBoolName);
     }
 
