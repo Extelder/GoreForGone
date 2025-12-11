@@ -1800,6 +1800,7 @@
                   <e p="EnemyState.cs" t="Include" />
                   <e p="Idle" t="Include">
                     <e p="EnemyIdleState.cs" t="Include" />
+                    <e p="EnemyReactState.cs" t="Include" />
                   </e>
                   <e p="Move" t="Include">
                     <e p="EnemyChaseState.cs" t="Include" />

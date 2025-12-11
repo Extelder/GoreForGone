@@ -12,7 +12,10 @@ public class UnitHitBox : HitBox
     public void HitWithRaycast(float damage, Vector3 point, Vector3 normal)
     {
         HitWithRaycastObsrever(damage, point, normal);
+        OnHitWithRaycastServer();
     }
+
+    public virtual void OnHitWithRaycastServer(){}
 
     [ObserversRpc]
     public void HitWithRaycastObsrever(float damage, Vector3 point, Vector3 normal)
@@ -25,7 +28,10 @@ public class UnitHitBox : HitBox
     public void Hit(float damage, Vector3 bloodPoint)
     {
         HitObsrever(damage, bloodPoint);
+        OnHitServer();
     }
+    
+    public virtual void OnHitServer(){}
 
     [ObserversRpc]
     public void HitObsrever(float damage, Vector3 bloodPoint)
