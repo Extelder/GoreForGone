@@ -1629,6 +1629,11 @@
               <e p="PlayerInteract.cs" t="Include" />
             </e>
             <e p="Items" t="Include">
+              <e p="Attack" t="Include">
+                <e p="OverlapAttack.cs" t="Include" />
+                <e p="PlayerAttack.cs" t="Include" />
+                <e p="PlayerAttackShake.cs" t="Include" />
+              </e>
               <e p="Base" t="Include">
                 <e p="Animator" t="Include">
                   <e p="ItemAnimator.cs" t="Include" />

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using EvolveGames;
 using FishNet.Object;
+using MilkShake;
 using UnityEngine;
 
 public class PlayerCharacter : NetworkBehaviour
@@ -12,6 +13,8 @@ public class PlayerCharacter : NetworkBehaviour
     [field: SerializeField] public Transform DropPoint { get; private set; }
     [field: SerializeField] public PlayerBinds Binds;
     [field: SerializeField] public Transform PlayerTransform;
+    [field: SerializeField] public Transform Camera;
+    [field: SerializeField] public Shaker Shaker { get; private set; }
     [field: SerializeField] public GameObject[] _thirdPerson;
 
     public static PlayerCharacter Instance { get; private set; }
@@ -48,7 +51,6 @@ public class PlayerCharacter : NetworkBehaviour
 
     public override void OnStopClient()
     {
-        
     }
 
     [ServerRpc(RequireOwnership = false)]
