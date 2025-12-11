@@ -1014,6 +1014,32 @@
             <e p="UpgradeFromMirrorMenu.cs" t="Include" />
           </e>
         </e>
+        <e p="MilkShake" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="CameraDistance.cs" t="Include" />
+              <e p="CameraSwitcher.cs" t="Include" />
+              <e p="CustomShake.cs" t="Include" />
+              <e p="ShakeButton.cs" t="Include" />
+              <e p="ShakeClicker.cs" t="Include" />
+              <e p="ToggleAudio.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Documentation" t="Include">
+            <e p="README.txt" t="Include" />
+            <e p="Simple Setup.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="IShakeParameters.cs" t="Include" />
+            <e p="ShakeInstance.cs" t="Include" />
+            <e p="ShakeParameters.cs" t="Include" />
+            <e p="ShakePreset.cs" t="Include" />
+            <e p="Shaker.cs" t="Include" />
+            <e p="ShakeResult.cs" t="Include" />
+            <e p="ShakeState.cs" t="Include" />
+            <e p="ShakeType.cs" t="Include" />
+          </e>
+        </e>
         <e p="NaughtyAttributes" t="Include">
           <e p="package.json" t="Include" />
           <e p="Scripts" t="Include">
@@ -1636,10 +1662,14 @@
               <e p="PlayerRotation.cs" t="Include" />
             </e>
             <e p="Sound" t="Include">
+              <e p="FootStep" t="Include">
+                <e p="PlayerFootstepSounds.cs" t="Include" />
+              </e>
+              <e p="INoiceMakeable.cs" t="Include" />
               <e p="Play" t="Include">
                 <e p="PlayerSoundPlay.cs" t="Include" />
+                <e p="PlayerSoundPlayAndMix.cs" t="Include" />
               </e>
-              <e p="PlayerSound.cs" t="Include" />
             </e>
           </e>
           <e p="Pool" t="Include">
@@ -1680,7 +1710,8 @@
               <e p="SoundMakeNoise.cs" t="Include" />
             </e>
             <e p="Play" t="Include">
-              <e p="SoundsPlay.cs" t="Include" />
+              <e p="AnySoundPlay.cs" t="Include" />
+              <e p="SoundPlay.cs" t="Include" />
             </e>
             <e p="Sound.cs" t="Include" />
           </e>
@@ -1690,6 +1721,9 @@
           </e>
           <e p="System" t="Include">
             <e p="Overlap" t="Include">
+              <e p="DrawSphere" t="Include">
+                <e p="DrawSphere.cs" t="Include" />
+              </e>
               <e p="OverlapSettings.cs" t="Include" />
             </e>
             <e p="Particle" t="Include">
@@ -1713,6 +1747,7 @@
           <e p="Unit" t="Include">
             <e p="Animator" t="Include">
               <e p="UnitAnimator.cs" t="Include" />
+              <e p="UnitMultiAnimator.cs" t="Include" />
             </e>
             <e p="Enemy" t="Include">
               <e p="Animator" t="Include">

@@ -51,5 +51,9 @@ public class SwordAttackState : SwordState
     public void AttackAnimationEnd()
     {
         CanChanged = !_conntinueAttacking;
+        if (CanChanged == false)
+        {
+            Animator.RandomizeAtackAnimation();
+        }
     }
 }

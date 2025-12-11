@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemAnimator : UnitAnimator
+public class ItemAnimator : UnitMultiAnimator
 {
     [SerializeField] private string _moveBool;
 
