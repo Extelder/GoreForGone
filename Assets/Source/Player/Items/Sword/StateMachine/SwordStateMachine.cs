@@ -35,6 +35,7 @@ public class SwordStateMachine : ItemStateMachine
         if (!base.IsOwner)
             return;
         OnPlayerStarted();
+        CurrentState.CanChanged = true;
     }
 
 

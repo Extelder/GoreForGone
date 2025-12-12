@@ -20,16 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Packages/bz-soft.ragdoll-helper.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Animations/Hands/BothHands.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Animations/Hands/BothHands.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Animations/Hands/SwitchBothHands.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Animations/Hands/SwitchBothHands.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,9 +114,9 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/ItemSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" />
       </list>
     </option>
   </component>
@@ -174,7 +165,7 @@
       <workItem from="1765281345209" duration="2712000" />
       <workItem from="1765368775795" duration="8353000" />
       <workItem from="1765449364724" duration="12424000" />
-      <workItem from="1765538154303" duration="6863000" />
+      <workItem from="1765538154303" duration="7119000" />
     </task>
     <servers />
   </component>
