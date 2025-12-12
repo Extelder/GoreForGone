@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FishNet.Object;
@@ -6,37 +7,37 @@ using UnityEngine;
 
 public class UnitHitBox : HitBox
 {
-    [SerializeField] private EnemyHealth _enemyHealth;
-    
+    [field :SerializeField] public EnemyHealth EnemyHealth;
+
     [ServerRpc(RequireOwnership = false)]
     public void HitWithRaycast(float damage, Vector3 point, Vector3 normal)
     {
         HitWithRaycastObsrever(damage, point, normal);
-        OnHitWithRaycastServer();
+        OnHitWithRaycastServer(point, normal);
     }
 
-    public virtual void OnHitWithRaycastServer(){}
+    public virtual void OnHitWithRaycastServer(Vector3 point, Vector3 normal){}
 
     [ObserversRpc]
     public void HitWithRaycastObsrever(float damage, Vector3 point, Vector3 normal)
     {
-        _enemyHealth.TakeDamage(damage);
+        EnemyHealth.TakeDamage(damage);
         Pools.Instance.BloodPool.GetFreeElement(point, Quaternion.LookRotation(normal));
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void Hit(float damage, Vector3 bloodPoint)
+    public void Hit(Transform overlapCenter, float damage, Vector3 bloodPoint)
     {
-        HitObsrever(damage, bloodPoint);
-        OnHitServer();
+        HitObsrever(overlapCenter ,damage, bloodPoint);
+        OnHitServer(overlapCenter);
     }
     
-    public virtual void OnHitServer(){}
+    public virtual void OnHitServer(Transform overlapCenter){}
 
     [ObserversRpc]
-    public void HitObsrever(float damage, Vector3 bloodPoint)
+    public void HitObsrever(Transform overlapCenter, float damage, Vector3 bloodPoint)
     {
-        _enemyHealth.TakeDamage(damage);
+        EnemyHealth.TakeDamage(damage);
         Pools.Instance.BloodPool.GetFreeElement(bloodPoint, quaternion.identity);
     }
 }
