@@ -1629,6 +1629,13 @@
               <e p="PlayerInteract.cs" t="Include" />
             </e>
             <e p="Items" t="Include">
+              <e p="Attack" t="Include">
+                <e p="OverlapAttack.cs" t="Include" />
+                <e p="PlayerAttack.cs" t="Include" />
+                <e p="PlayerAttackShake.cs" t="Include" />
+                <e p="RaycastAttack.cs" t="Include" />
+                <e p="RaycastHitAttackShake.cs" t="Include" />
+              </e>
               <e p="Base" t="Include">
                 <e p="Animator" t="Include">
                   <e p="ItemAnimator.cs" t="Include" />
@@ -1752,6 +1759,7 @@
             <e p="Enemy" t="Include">
               <e p="Animator" t="Include">
                 <e p="EnemyAnimator.cs" t="Include" />
+                <e p="MeleeEnemyAnimator.cs" t="Include" />
               </e>
               <e p="Damage" t="Include">
                 <e p="EnemyDamage.cs" t="Include" />
@@ -1794,6 +1802,7 @@
                   <e p="EnemyState.cs" t="Include" />
                   <e p="Idle" t="Include">
                     <e p="EnemyIdleState.cs" t="Include" />
+                    <e p="EnemyReactState.cs" t="Include" />
                   </e>
                   <e p="Move" t="Include">
                     <e p="EnemyChaseState.cs" t="Include" />

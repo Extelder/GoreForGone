@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using FishNet.Object;
 using UnityEngine;
@@ -17,6 +18,9 @@ public class UnitPlayerDetector : NetworkBehaviour
 
     [SerializeField] private float _chaseTime = 0.3f;
     [SerializeField] private EnemyStateMachine _stateMachine;
+
+    public event Action PlayerDetected;
+    public event Action PlayerLost;
 
     private Transform _player;
     private bool _isSeeingPlayer;
@@ -87,6 +91,7 @@ public class UnitPlayerDetector : NetworkBehaviour
             if (_rayGrid == null || _gridDirty) GenerateRayGrid();
 
             bool detected = false;
+            PlayerLost?.Invoke();
             if (_player == null)
             {
                 var pc = FindObjectOfType<PlayerCharacter>();
@@ -107,6 +112,7 @@ public class UnitPlayerDetector : NetworkBehaviour
                             if (hit.collider.TryGetComponent<PlayerCharacter>(out PlayerCharacter PlayerCharacter))
                             {
                                 _character = PlayerCharacter;
+                                PlayerDetected?.Invoke();
                                 detected = true;
                                 Debug.DrawRay(origin, dir * hit.distance, Color.red, 0.05f);
                             }

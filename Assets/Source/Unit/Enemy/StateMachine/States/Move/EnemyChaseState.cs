@@ -7,15 +7,23 @@ using UnityEngine.AI;
 public class EnemyChaseState : EnemyState
 {
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
-
-    [SerializeField] private float _lostTime;
-
     [SerializeField] private EnemyAttackState _enemyAttackState;
-
     [SerializeField] private EnemyNavMeshMove _enemyNavMeshMove;
-
+    [SerializeField] private UnitPlayerDetector _unitPlayerDetector;
+    
+    [SerializeField] private float _lostTime;
     [SerializeField] private float _updateTargetRate;
     public Transform Target { get; private set; }
+    private Coroutine _losingPlayerCoroutine;
+
+    public override void OnStartClient()
+    {
+        if (!base.IsServer)
+            return;
+        base.OnStartClient();
+        _unitPlayerDetector.PlayerLost += OnPlayerLost;
+        _unitPlayerDetector.PlayerDetected += OnPlayerDetected;
+    }
 
     public void ChangeTarget(Transform target)
     {
@@ -23,6 +31,24 @@ public class EnemyChaseState : EnemyState
             return;
         Target = target;
         _enemyAttackState.AttackAnimationEnded += OnAttackAnimationEnded;
+    }
+
+    private void OnPlayerDetected()
+    {
+        StopCoroutine(_losingPlayerCoroutine);
+    }
+
+    private void OnPlayerLost()
+    {
+        _losingPlayerCoroutine = StartCoroutine(LosingPlayer());
+    }
+
+    private IEnumerator LosingPlayer()
+    {
+        yield return new WaitForSeconds(_lostTime);
+        Exit();
+        CanChanged = true;
+        _enemyStateMachine.Patrol();
     }
 
     private void OnAttackAnimationEnded()
@@ -36,14 +62,11 @@ public class EnemyChaseState : EnemyState
             return;
         StopAllCoroutines();
         StartCoroutine(Chasing());
-        StartCoroutine(WaitingTimeForLost());
+        CanChanged = false;
     }
 
     public override void Exit()
     {
-        if (!base.IsServer)
-            return;
-        EnemyAnimator.Idle();
         StopAllCoroutines();
     }
 
@@ -52,16 +75,12 @@ public class EnemyChaseState : EnemyState
         if (!base.IsServer)
             return;
         _enemyAttackState.AttackAnimationEnded -= OnAttackAnimationEnded;
+        _unitPlayerDetector.PlayerLost -= OnPlayerLost;
+        _unitPlayerDetector.PlayerDetected -= OnPlayerDetected;
 
         StopAllCoroutines();
     }
-
-    private IEnumerator WaitingTimeForLost()
-    {
-        yield return new WaitForSeconds(_lostTime);
-        _enemyStateMachine.Patrol();
-    }
-
+    
     private IEnumerator Chasing()
     {
         while (true)

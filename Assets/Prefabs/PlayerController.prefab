@@ -1121,6 +1121,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1787036980336098626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7984960380014090722}
+  m_Layer: 6
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7984960380014090722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787036980336098626}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.037, y: -0.105, z: 0.436}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 88367585307181891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1913034700035047664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,6 +2045,8 @@ MonoBehaviour:
   <Characters>k__BackingField: []
   <DropPoint>k__BackingField: {fileID: 2162771873653310200}
   PlayerTransform: {fileID: 8562933988281219265}
+  Camera: {fileID: 81716164454465600}
+  <Shaker>k__BackingField: {fileID: 2576062093146024649}
   _thirdPerson:
   - {fileID: 1264268251834009377}
   - {fileID: 9008977730705404757}
@@ -2726,6 +2759,10 @@ GameObject:
   - component: {fileID: 1142884246365371962}
   - component: {fileID: 4225821475361007860}
   - component: {fileID: 6846807900578132324}
+  - component: {fileID: 5535369931849835367}
+  - component: {fileID: 5730667865821055410}
+  - component: {fileID: 6024647691525676535}
+  - component: {fileID: 8533996127482048919}
   m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
@@ -2748,6 +2785,7 @@ Transform:
   m_Children:
   - {fileID: 3480087660356438961}
   - {fileID: 482536710588428925}
+  - {fileID: 7984960380014090722}
   m_Father: {fileID: 1305891989135535504}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7322817708848602955
@@ -2825,7 +2863,8 @@ MonoBehaviour:
   _attackBoolName: IsAttacking
   _randomAttackIntName: AttackRandom
   _chargingAttackBoolName: IsCharging
-  _chargeAttackTriggerName: IsChargeAttacking
+  _chargeAttackBoolName: IsChargeAttacking
+  _hittedObjectBool: Hitted
 --- !u!114 &6721857396306552242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2895,6 +2934,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 0}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 2379199125106380215}
+  _swordChargeAttack: {fileID: 6024647691525676535}
 --- !u!114 &6846807900578132324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2910,6 +2950,78 @@ MonoBehaviour:
   _animator: {fileID: 7322817708848602955}
   _crouchAnimationBoolName: IsCrouching
   _character: {fileID: 8850203819785511499}
+--- !u!114 &5535369931849835367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a1f403e33c153499649218f8df6db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overlapSettings:
+    <Origin>k__BackingField: {fileID: 482536710588428925}
+    <LayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 1
+    <SphereRadius>k__BackingField: 0.77
+    <Size>k__BackingField: 3
+  _testAttackShit: {fileID: 8461417888642342839, guid: 98134a5fc3494e144b8419510b6e4a29,
+    type: 3}
+--- !u!114 &5730667865821055410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fc293f81d5078449ac148d65fd288d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackShakes:
+  - <Attack>k__BackingField: {fileID: 5535369931849835367}
+    <Preset>k__BackingField: {fileID: 11400000, guid: 613692a7efd43104c863ff02fe78fcc5,
+      type: 2}
+  - <Attack>k__BackingField: {fileID: 6024647691525676535}
+    <Preset>k__BackingField: {fileID: 11400000, guid: 4c8b354c97338384cac190918b3619d3,
+      type: 2}
+--- !u!114 &6024647691525676535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _raycastSettings:
+    <Origin>k__BackingField: {fileID: 81716164454465600}
+    <MaxDistance>k__BackingField: 3
+    <LayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 1
+--- !u!114 &8533996127482048919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de39628d232bfb541b1f1a46e18f4370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shakePreset: {fileID: 11400000, guid: f51c5861189c18042ba4252f3ead58c3, type: 2}
+  _raycastAttack: {fileID: 6024647691525676535}
 --- !u!1 &3505214368931765122
 GameObject:
   m_ObjectHideFlags: 0

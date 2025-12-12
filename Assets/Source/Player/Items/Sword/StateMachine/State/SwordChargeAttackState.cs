@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class SwordChargeAttackState : SwordState
 {
+    [SerializeField] private RaycastAttack _swordChargeAttack;
+
     private CompositeDisposable _disposable = new CompositeDisposable();
 
     private bool _charged = false;
@@ -33,12 +35,12 @@ public class SwordChargeAttackState : SwordState
 
     public void OnChargeAttackAnimationEnded()
     {
-        Animator.DisableAllBools();
         CanChanged = true;
     }
 
     private void OnMainShootCanceled(InputAction.CallbackContext obj)
     {
+        Animator.SetHittedObjectBool(_swordChargeAttack.HittedNonDamagableObject());
         PlayerCharacter.Instance.Binds.Character.MainShoot.canceled -= OnMainShootCanceled;
         if (_charged)
         {

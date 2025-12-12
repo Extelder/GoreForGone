@@ -5,11 +5,12 @@ using UnityEngine.AI;
 
 public class EnemyPatrolState : EnemyState
 {
+    [SerializeField] private Transform[] _patrolPoints;
     [SerializeField] private EnemyNavMeshMove _enemyNavMeshMove;
-    [SerializeField] private float _randomPointRange;
-    [SerializeField] private float _maxRandomWaitTime;
     [SerializeField] private float _destinationReachThreshhold;
     [SerializeField] private NavMeshAgent _agent;
+
+    private int _pointIndex;
 
     public override void Enter()
     {
@@ -28,40 +29,24 @@ public class EnemyPatrolState : EnemyState
 
     private IEnumerator Patroling()
     {
+        EnemyAnimator.Move();
         while (true)
         {
-            if (GetRandomPointOnNavMesh(transform.position, _randomPointRange, out Vector3 point))
-            {
-                EnemyAnimator.Move();
-                _enemyNavMeshMove.SetDestinationServer(point);
-            }
-
+            _enemyNavMeshMove.SetDestinationServer(_patrolPoints[_pointIndex].position);
             yield return new WaitForSeconds(0.2f);
             yield return new WaitUntil(() => AgentReachedDestination());
             OnDestinationReached();
-            yield return new WaitForSeconds(Random.Range(0, _maxRandomWaitTime));
+            _pointIndex++;
+            if (_pointIndex >= _patrolPoints.Length)
+            {
+                _pointIndex = 0;
+            }
         }
     }
 
     public virtual void OnDestinationReached()
     {
         EnemyAnimator.Idle();
-    }
-
-    public bool GetRandomPointOnNavMesh(Vector3 center, float radius, out Vector3 result)
-    {
-        Vector3 randomDirection = Random.insideUnitSphere * radius;
-        Vector3 randomPoint = center + randomDirection;
-
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, radius, NavMesh.AllAreas))
-        {
-            result = hit.position;
-            return true;
-        }
-
-        result = Vector3.zero;
-        return false;
     }
 
     private bool AgentReachedDestination() => _agent.remainingDistance <= _destinationReachThreshhold;
