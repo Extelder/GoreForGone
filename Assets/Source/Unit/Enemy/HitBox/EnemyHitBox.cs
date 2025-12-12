@@ -9,15 +9,15 @@ public class EnemyHitBox : UnitHitBox
 {
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
     
-    public override void OnHitWithRaycastServer()
+    public override void OnHitWithRaycastServer(Vector3 point, Vector3 normal)
     {
-        base.OnHitWithRaycastServer();
+        base.OnHitWithRaycastServer(point, normal);
         _enemyStateMachine.React();
     }
 
-    public override void OnHitServer()
+    public override void OnHitServer(Transform overlapCenter)
     {
-        base.OnHitServer();
+        base.OnHitServer(overlapCenter);
         _enemyStateMachine.React();
     }
 }

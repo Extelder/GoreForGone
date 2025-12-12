@@ -27,7 +27,10 @@ public class SwordStateMachine : ItemStateMachine
 
     protected override void OnPlayerStarted()
     {
+        if (!base.IsOwner)
+            return;
         base.OnPlayerStarted();
+
         playerCharacter.Binds.Character.MainShoot.started += OnMainShootStarted;
         playerCharacter.Binds.Character.MainShoot.canceled += OnMainShootCanceled;
     }
@@ -35,6 +38,8 @@ public class SwordStateMachine : ItemStateMachine
 
     protected override void OnDisableVirtual()
     {
+        if (!base.IsOwner)
+            return;
         playerCharacter.Binds.Character.MainShoot.started -= OnMainShootStarted;
         playerCharacter.Binds.Character.MainShoot.canceled -= OnMainShootCanceled;
     }

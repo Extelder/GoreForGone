@@ -1,36 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using FishNet.Object;
+using UniRx;
 using Unity.Mathematics;
 using UnityEngine;
 
 public class EnemyHealth : Health
 {
-    [SerializeField] private NetworkObject _object;
-
-    private bool _dead;
+    public ReactiveProperty<bool> Dead { get; private set; } = new ReactiveProperty<bool>();
 
     public override void Death()
     {
-        if (_dead)
+        if (Dead.Value)
             return;
-        _dead = true;
-        OnDestroYServer();
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void OnDestroYServer()
-    {
-        OnDestroYObserver();
-    }
-
-    [ObserversRpc]
-    public void OnDestroYObserver()
-    {
-        Pools.Instance.BloodExplodePool.GetFreeElement(transform.position + new Vector3(0, 1f, 0), Quaternion.identity,
-            () =>
-            {
-                if (_object != null) _object.Despawn();
-            });
+        Dead.Value = true;
     }
 }
