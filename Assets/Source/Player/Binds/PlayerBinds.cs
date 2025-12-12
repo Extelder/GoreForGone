@@ -180,6 +180,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""7a3b732c-5d44-4941-82c2-f3f299264f97"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -336,6 +345,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""SwitchSword"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e374b782-28fb-4244-9ef0-b8830751f4cd"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -360,6 +380,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_Crouch = m_Character.FindAction("Crouch", throwIfNotFound: true);
         m_Character_SwitchInventory = m_Character.FindAction("SwitchInventory", throwIfNotFound: true);
         m_Character_SwitchSword = m_Character.FindAction("SwitchSword", throwIfNotFound: true);
+        m_Character_Reload = m_Character.FindAction("Reload", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -450,6 +471,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Crouch;
     private readonly InputAction m_Character_SwitchInventory;
     private readonly InputAction m_Character_SwitchSword;
+    private readonly InputAction m_Character_Reload;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -501,6 +523,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Character/SwitchSword".
         /// </summary>
         public InputAction @SwitchSword => m_Wrapper.m_Character_SwitchSword;
+        /// <summary>
+        /// Provides access to the underlying input action "Character/Reload".
+        /// </summary>
+        public InputAction @Reload => m_Wrapper.m_Character_Reload;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -557,6 +583,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchSword.started += instance.OnSwitchSword;
             @SwitchSword.performed += instance.OnSwitchSword;
             @SwitchSword.canceled += instance.OnSwitchSword;
+            @Reload.started += instance.OnReload;
+            @Reload.performed += instance.OnReload;
+            @Reload.canceled += instance.OnReload;
         }
 
         /// <summary>
@@ -598,6 +627,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchSword.started -= instance.OnSwitchSword;
             @SwitchSword.performed -= instance.OnSwitchSword;
             @SwitchSword.canceled -= instance.OnSwitchSword;
+            @Reload.started -= instance.OnReload;
+            @Reload.performed -= instance.OnReload;
+            @Reload.canceled -= instance.OnReload;
         }
 
         /// <summary>
@@ -721,5 +753,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchSword(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Reload" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnReload(InputAction.CallbackContext context);
     }
 }
