@@ -16,7 +16,7 @@ public abstract class ItemStateMachine : StateMachine
 
     public abstract void OnInitializeted();
 
-    private void Start()
+    private void Awake()
     {
         Init();
         playerCharacter = _character;
@@ -44,6 +44,8 @@ public abstract class ItemStateMachine : StateMachine
 
     private void OnDisable()
     {
+        if (!base.IsOwner)
+            return;
         _disposable.Clear();
         playerCharacter.ClientStarted -= OnPlayerStarted;
         OnDisableVirtual();

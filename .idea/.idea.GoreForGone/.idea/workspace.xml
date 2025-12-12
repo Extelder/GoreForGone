@@ -22,15 +22,31 @@
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Sword/Sword.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Sword/Sword.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Sword/SwordCharge.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Sword/SwordCharge.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Sword/SwordChargeAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Sword/SwordChargeAttack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Player/Shake/Punch.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Player/Shake/Punch.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 2D.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 2D.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 3D Normal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 3D Normal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 3D Rigidbodies.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark 3D Rigidbodies.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Cubes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Cubes.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Rigidbodies.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Rigidbodies.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/ColliderRollback/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Moving.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Moving.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Static.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Static.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prediction/CharacterController/Prefabs/CharacterControllerPrediction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Prediction/CharacterController/Prefabs/CharacterControllerPrediction.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Prediction/Rigidbody/Prefabs/RigidbodyPrediction.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Prediction/Rigidbody/Prefabs/RigidbodyPrediction.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager (Old Examples)/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/SceneManager/Additive Scenes/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Up.mask" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Up.mask" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Y Bot.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Y Bot.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Y Bot@Sword And Shield Slash.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Y Bot@Sword And Shield Slash.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/YBot.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/YBot.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/DogEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/DogEnemyParent.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttackShake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttackShake.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/Animator/SwordAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/Animator/SwordAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordChargeAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordChargeAttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IGORYAVA.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IGORYAVA.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +81,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/DDOL.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/MovementEffects.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Rebind/Key Rebind/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/TPSItemAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/State/IdleItemState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Sound/Noice/SoundMakeNoise.cs" root0="FORCE_HIGHLIGHTING" />
@@ -89,7 +107,6 @@
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/StateMachine/ItemState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/StateMachine/ItemStateMachine.cs" />
@@ -98,8 +115,6 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/SwordStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/StateMachine/StateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Animator/UnitMultiAnimator.cs" />
@@ -113,6 +128,10 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordChargeAttackState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/RaycastAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/RaycastHitAttackShake.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/TPSItemAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" />
       </list>
     </option>
   </component>
@@ -161,6 +180,7 @@
       <workItem from="1765281345209" duration="2712000" />
       <workItem from="1765368775795" duration="8353000" />
       <workItem from="1765449364724" duration="12424000" />
+      <workItem from="1765538154303" duration="2532000" />
     </task>
     <servers />
   </component>

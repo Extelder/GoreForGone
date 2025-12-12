@@ -1640,6 +1640,7 @@
                 <e p="Animator" t="Include">
                   <e p="ItemAnimator.cs" t="Include" />
                   <e p="ItemCrouchHandler.cs" t="Include" />
+                  <e p="TPSItemAnimator.cs" t="Include" />
                 </e>
                 <e p="StateMachine" t="Include">
                   <e p="ItemState.cs" t="Include" />
