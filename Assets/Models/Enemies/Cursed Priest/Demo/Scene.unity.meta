@@ -1,14 +1,7 @@
 fileFormatVersion: 2
-guid: a03e19889af0fe845a26642800865ed1
+guid: d302c8279b9721944a7f15354e4734bc
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 167606
-  packageName: Cursed Priest
-  packageVersion: 1.0
-  assetPath: Assets/Cursed Priest/Demo/Scene.unity
-  uploadId: 369212
