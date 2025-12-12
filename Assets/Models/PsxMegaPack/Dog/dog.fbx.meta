@@ -3,7 +3,17 @@ guid: 22eb3202beae70942ad1256c68df3a02
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: German_Shorthaired_Pointer_Whiskers.001
+    second: {fileID: 2100000, guid: 20cb37fa6bd870c4fb4e0bd1e72ea8f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 426d2cab3201ad34aaf529ebaf63ea6f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
