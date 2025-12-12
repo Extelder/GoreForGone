@@ -13,13 +13,22 @@ public class ItemCrouchHandler : MonoBehaviour
 
     private CompositeDisposable _disposable = new CompositeDisposable();
 
+    private bool _initialized;
+
     private void OnEnable()
     {
+        if (_initialized)
+        {
+            _character.PlayerController.isCrough.Subscribe(_ => { _animator.SetBool(_crouchAnimationBoolName, _); })
+                .AddTo(_disposable);
+        }
+
         _character.ClientStarted += OnClientStarted;
     }
 
     private void OnClientStarted()
     {
+        _initialized = true;
         _character.PlayerController.isCrough.Subscribe(_ => { _animator.SetBool(_crouchAnimationBoolName, _); })
             .AddTo(_disposable);
     }

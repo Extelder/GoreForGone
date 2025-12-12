@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 
 public class EquipableItem : MonoBehaviour
 {
-    [SerializeField] private GameObject _itemObject;
-    [SerializeField] private AnimatorItemSwitcher _itemSwitcher;
+    [SerializeField] protected GameObject itemObject;
+    [SerializeField] protected AnimatorItemSwitcher _itemSwitcher;
     [SerializeField] private string _actionName;
 
     private void Start()
@@ -20,9 +20,10 @@ public class EquipableItem : MonoBehaviour
         _itemSwitcher.Character.Binds.FindAction(_actionName, true).performed += OnEquipActionPerformed;
     }
 
-    private void OnEquipActionPerformed(InputAction.CallbackContext obj)
+    protected virtual void OnEquipActionPerformed(InputAction.CallbackContext obj)
     {
-        _itemSwitcher.SwitchItem(_itemObject);
+        if (_itemSwitcher.GetCurrentItem() != itemObject)
+            _itemSwitcher.SwitchItem(itemObject);
     }
 
     private void OnDisable()

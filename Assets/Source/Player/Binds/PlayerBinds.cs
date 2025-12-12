@@ -189,6 +189,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchSteamyl"",
+                    ""type"": ""Button"",
+                    ""id"": ""2e741c96-54c3-4549-9e4e-8d118068c15c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -356,6 +365,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9f2f878-9ad7-4d6f-860e-17188ce13301"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchSteamyl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -381,6 +401,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_SwitchInventory = m_Character.FindAction("SwitchInventory", throwIfNotFound: true);
         m_Character_SwitchSword = m_Character.FindAction("SwitchSword", throwIfNotFound: true);
         m_Character_Reload = m_Character.FindAction("Reload", throwIfNotFound: true);
+        m_Character_SwitchSteamyl = m_Character.FindAction("SwitchSteamyl", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -472,6 +493,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_SwitchInventory;
     private readonly InputAction m_Character_SwitchSword;
     private readonly InputAction m_Character_Reload;
+    private readonly InputAction m_Character_SwitchSteamyl;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -527,6 +549,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Character/Reload".
         /// </summary>
         public InputAction @Reload => m_Wrapper.m_Character_Reload;
+        /// <summary>
+        /// Provides access to the underlying input action "Character/SwitchSteamyl".
+        /// </summary>
+        public InputAction @SwitchSteamyl => m_Wrapper.m_Character_SwitchSteamyl;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -586,6 +612,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Reload.started += instance.OnReload;
             @Reload.performed += instance.OnReload;
             @Reload.canceled += instance.OnReload;
+            @SwitchSteamyl.started += instance.OnSwitchSteamyl;
+            @SwitchSteamyl.performed += instance.OnSwitchSteamyl;
+            @SwitchSteamyl.canceled += instance.OnSwitchSteamyl;
         }
 
         /// <summary>
@@ -630,6 +659,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Reload.started -= instance.OnReload;
             @Reload.performed -= instance.OnReload;
             @Reload.canceled -= instance.OnReload;
+            @SwitchSteamyl.started -= instance.OnSwitchSteamyl;
+            @SwitchSteamyl.performed -= instance.OnSwitchSteamyl;
+            @SwitchSteamyl.canceled -= instance.OnSwitchSteamyl;
         }
 
         /// <summary>
@@ -760,5 +792,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnReload(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchSteamyl" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchSteamyl(InputAction.CallbackContext context);
     }
 }

@@ -9,7 +9,7 @@ public class GunsStateMachine : ItemStateMachine
     [SerializeField] private GunState _attackState;
     [SerializeField] private GunState _reloadState;
 
-    private bool _initialized;
+    [SerializeField] private bool _initialized;
 
     public override void OnInitializeted()
     {
@@ -19,6 +19,7 @@ public class GunsStateMachine : ItemStateMachine
     {
         ChangeState(_attackState);
     }
+
     public void ReloadState()
     {
         ChangeState(_reloadState);

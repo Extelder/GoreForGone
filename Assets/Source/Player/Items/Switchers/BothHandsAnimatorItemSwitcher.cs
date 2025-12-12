@@ -25,8 +25,22 @@ public class BothHandsAnimatorItemSwitcher : AnimatorItemSwitcher
         base.SwitchItem(itemToSwitch);
     }
 
+    public void ReturnToPreviousItems()
+    {
+        DisableCurrentItem();
+        for (int i = 0; i < _otherHandsSwitchers.Length; i++)
+        {
+            _otherHandsSwitchers[i].EnableCurrentItem();
+            _otherHandsSwitchers[i].PlaySwitchAnim();
+        }
+
+        _currentItem = null;
+    }
+
     private void OnItemSwitched()
     {
+        if (_currentItem == null)
+            return;
         if (GetCurrentItem().activeInHierarchy == false)
             return;
         DisableCurrentItem();
@@ -35,6 +49,8 @@ public class BothHandsAnimatorItemSwitcher : AnimatorItemSwitcher
             _otherHandsSwitchers[i].EnableCurrentItem();
             _otherHandsSwitchers[i].PlaySwitchAnim();
         }
+
+        _currentItem = null;
     }
 
     private void OnDisable()

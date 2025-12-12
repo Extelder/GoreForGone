@@ -9,7 +9,7 @@ public class AnimatorItemSwitcher : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private string _switchItemTriggerName = "Switch";
 
-    [SerializeField] private GameObject _currentItem;
+    [SerializeField] protected GameObject _currentItem;
 
     private GameObject _prevItem;
 
@@ -42,11 +42,11 @@ public class AnimatorItemSwitcher : MonoBehaviour
 
     public void EnableCurrentItem()
     {
-        _currentItem.SetActive(true);
+        _currentItem?.SetActive(true);
     }
 
     public void DisableCurrentItem()
     {
-        _currentItem.SetActive(false);
+        _currentItem?.SetActive(false);
     }
 }
