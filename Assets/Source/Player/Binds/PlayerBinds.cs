@@ -162,6 +162,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchInventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""c37e2b3e-b479-4463-b6ef-bfda84ee251e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -296,6 +305,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""Crouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eead29ea-aa6c-4442-8d50-9a4a308cfb61"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchInventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -318,6 +338,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_Interact = m_Character.FindAction("Interact", throwIfNotFound: true);
         m_Character_OpenPanel = m_Character.FindAction("OpenPanel", throwIfNotFound: true);
         m_Character_Crouch = m_Character.FindAction("Crouch", throwIfNotFound: true);
+        m_Character_SwitchInventory = m_Character.FindAction("SwitchInventory", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -406,6 +427,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Interact;
     private readonly InputAction m_Character_OpenPanel;
     private readonly InputAction m_Character_Crouch;
+    private readonly InputAction m_Character_SwitchInventory;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -449,6 +471,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Character/Crouch".
         /// </summary>
         public InputAction @Crouch => m_Wrapper.m_Character_Crouch;
+        /// <summary>
+        /// Provides access to the underlying input action "Character/SwitchInventory".
+        /// </summary>
+        public InputAction @SwitchInventory => m_Wrapper.m_Character_SwitchInventory;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -499,6 +525,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Crouch.started += instance.OnCrouch;
             @Crouch.performed += instance.OnCrouch;
             @Crouch.canceled += instance.OnCrouch;
+            @SwitchInventory.started += instance.OnSwitchInventory;
+            @SwitchInventory.performed += instance.OnSwitchInventory;
+            @SwitchInventory.canceled += instance.OnSwitchInventory;
         }
 
         /// <summary>
@@ -534,6 +563,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Crouch.started -= instance.OnCrouch;
             @Crouch.performed -= instance.OnCrouch;
             @Crouch.canceled -= instance.OnCrouch;
+            @SwitchInventory.started -= instance.OnSwitchInventory;
+            @SwitchInventory.performed -= instance.OnSwitchInventory;
+            @SwitchInventory.canceled -= instance.OnSwitchInventory;
         }
 
         /// <summary>
@@ -643,5 +675,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCrouch(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchInventory" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchInventory(InputAction.CallbackContext context);
     }
 }

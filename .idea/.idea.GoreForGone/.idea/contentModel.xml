@@ -1651,6 +1651,15 @@
                   </e>
                 </e>
               </e>
+              <e p="Inventory" t="Include">
+                <e p="InventorySwitch.cs" t="Include" />
+              </e>
+              <e p="Switchers" t="Include">
+                <e p="AnimatorItemSwitcher.cs" t="Include" />
+                <e p="BothHandsAnimatorItemSwitcher.cs" t="Include" />
+                <e p="BothHandsSwitcher.cs" t="Include" />
+                <e p="EquipableItem.cs" t="Include" />
+              </e>
               <e p="Sword" t="Include">
                 <e p="Animator" t="Include">
                   <e p="SwordAnimator.cs" t="Include" />
