@@ -96,7 +96,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 39760b92fd5510446a15488b6f43634a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 963c088ca2eb55346aa56d98b4e5af17, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -147,7 +147,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: fc36f4355e37621469ae25fda86e91bc, type: 2}
+  m_Motion: {fileID: 7400000, guid: ba406cacbc1a2ec468248c756ef107cf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -173,7 +173,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2941abbec0a1db740b825da95e773498, type: 2}
+  m_Motion: {fileID: 7400000, guid: 604bc4542365fa842b6a2f476193dbaa, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -257,7 +257,7 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Run Layer
+    m_Name: Base Layer
     m_StateMachine: {fileID: 8377632548448048098}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -288,7 +288,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 84a2b76a42cf24040a13807235f56101, type: 2}
+  m_Motion: {fileID: 7400000, guid: 00dcdd8a0377d0641ab080ca2f2fdcec, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -339,7 +339,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f3b4ffd6201b14449900654cef1d6f50, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2eef27838bff3974381f32be5e1bc9ff, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -352,7 +352,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Run Layer
+  m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -8915440149337036099}
