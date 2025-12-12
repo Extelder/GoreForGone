@@ -171,6 +171,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchSword"",
+                    ""type"": ""Button"",
+                    ""id"": ""e5e1db84-7c9e-46f6-8b72-b6f9d0759391"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -316,6 +325,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""SwitchInventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""160c586f-a1c8-4ba3-9b22-5131af1092d2"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchSword"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -339,6 +359,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_OpenPanel = m_Character.FindAction("OpenPanel", throwIfNotFound: true);
         m_Character_Crouch = m_Character.FindAction("Crouch", throwIfNotFound: true);
         m_Character_SwitchInventory = m_Character.FindAction("SwitchInventory", throwIfNotFound: true);
+        m_Character_SwitchSword = m_Character.FindAction("SwitchSword", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -428,6 +449,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_OpenPanel;
     private readonly InputAction m_Character_Crouch;
     private readonly InputAction m_Character_SwitchInventory;
+    private readonly InputAction m_Character_SwitchSword;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -475,6 +497,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Character/SwitchInventory".
         /// </summary>
         public InputAction @SwitchInventory => m_Wrapper.m_Character_SwitchInventory;
+        /// <summary>
+        /// Provides access to the underlying input action "Character/SwitchSword".
+        /// </summary>
+        public InputAction @SwitchSword => m_Wrapper.m_Character_SwitchSword;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -528,6 +554,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchInventory.started += instance.OnSwitchInventory;
             @SwitchInventory.performed += instance.OnSwitchInventory;
             @SwitchInventory.canceled += instance.OnSwitchInventory;
+            @SwitchSword.started += instance.OnSwitchSword;
+            @SwitchSword.performed += instance.OnSwitchSword;
+            @SwitchSword.canceled += instance.OnSwitchSword;
         }
 
         /// <summary>
@@ -566,6 +595,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchInventory.started -= instance.OnSwitchInventory;
             @SwitchInventory.performed -= instance.OnSwitchInventory;
             @SwitchInventory.canceled -= instance.OnSwitchInventory;
+            @SwitchSword.started -= instance.OnSwitchSword;
+            @SwitchSword.performed -= instance.OnSwitchSword;
+            @SwitchSword.canceled -= instance.OnSwitchSword;
         }
 
         /// <summary>
@@ -682,5 +714,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchInventory(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchSword" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchSword(InputAction.CallbackContext context);
     }
 }

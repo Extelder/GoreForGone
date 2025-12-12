@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\aferi\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\aferi\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_GoreForGone.686436049.00" t="ExcludeRecursive" />
-    <e p="C:\Users\aferi\AppData\Roaming\JetBrains\Rider2020.2\consoles\ide" t="IncludeRecursive" />
-    <e p="C:\Users\aferi\Documents\Project222\GoreForGone" t="IncludeRecursive">
+    <e p="C:\Users\Nikola\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Nikola\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_GoreForGone.1305621880.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Nikola\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
+    <e p="D:\adobe\UnityProjects\GoreForGone" t="IncludeRecursive">
       <e p="AmimalWorld.csproj" t="IncludeRecursive" />
       <e p="AmimalWorld.Player.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />

@@ -14,20 +14,35 @@ public class AnimatorItemSwitcher : MonoBehaviour
     private GameObject _prevItem;
 
     public event Action ItemSwitched;
+    public event Action ItemBeginSwitched;
 
-    public void SwitchItem(GameObject itemToSwitch)
+    public virtual void SwitchItem(GameObject itemToSwitch)
     {
+        ItemBeginSwitched?.Invoke();
         _prevItem = _currentItem;
-        _currentItem.SetActive(false);
+        if (_currentItem != null)
+            _currentItem.SetActive(false);
         _currentItem = itemToSwitch;
         _animator.SetTrigger(_switchItemTriggerName);
         _currentItem.SetActive(true);
         ItemSwitched?.Invoke();
     }
 
+    public void PlaySwitchAnim()
+    {
+        _animator.SetTrigger(_switchItemTriggerName);
+    }
+
+    public GameObject GetCurrentItem() => _currentItem;
+
     public void ReturnToPrevItem()
     {
         SwitchItem(_prevItem);
+    }
+
+    public void EnableCurrentItem()
+    {
+        _currentItem.SetActive(true);
     }
 
     public void DisableCurrentItem()

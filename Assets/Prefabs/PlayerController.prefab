@@ -1453,7 +1453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1106376622585699524}
   - component: {fileID: 810258848597941139}
-  - component: {fileID: 5115528788354960655}
+  - component: {fileID: 4937011902172155157}
   m_Layer: 6
   m_Name: BothHands
   m_TagString: Untagged
@@ -1498,7 +1498,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5115528788354960655
+--- !u!114 &4937011902172155157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1507,13 +1507,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2166425052484098631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cecba08be13f38946bc26ea5e2ef8961, type: 3}
+  m_Script: {fileID: 11500000, guid: 8864a54e357e80443b20c712ff2f0257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 8850203819785511499}
   _animator: {fileID: 810258848597941139}
   _switchItemTriggerName: Switch
-  _currentItem: {fileID: 0}
+  _currentItem: {fileID: 8893040682827964136}
+  _otherHandsSwitchers:
+  - {fileID: 183955970474002974}
+  - {fileID: 8198087532832823545}
 --- !u!1 &2428152621402115415
 GameObject:
   m_ObjectHideFlags: 0
@@ -4861,7 +4864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemObject: {fileID: 8893040682827964136}
-  _itemSwitcher: {fileID: 5115528788354960655}
+  _itemSwitcher: {fileID: 4937011902172155157}
   _actionName: SwitchInventory
 --- !u!1 &7903733132689327407
 GameObject:
@@ -5010,6 +5013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1992735341189688160}
+  - component: {fileID: 3959848556196091400}
   m_Layer: 6
   m_Name: SwordEquipItem
   m_TagString: Untagged
@@ -5033,6 +5037,21 @@ Transform:
   - {fileID: 1305891989135535504}
   m_Father: {fileID: 4190321083725587984}
   m_LocalEulerAnglesHint: {x: -13.201, y: -5.684, z: 4.135}
+--- !u!114 &3959848556196091400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106118197138040957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a0e2427eac6354b838141665df1c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemObject: {fileID: 1962854676415007543}
+  _itemSwitcher: {fileID: 8198087532832823545}
+  _actionName: SwitchSword
 --- !u!1 &8143891625263117665
 GameObject:
   m_ObjectHideFlags: 0

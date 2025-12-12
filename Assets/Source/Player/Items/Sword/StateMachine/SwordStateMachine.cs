@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class SwordStateMachine : ItemStateMachine
     [SerializeField] private SwordState _chargeAttackState;
 
     [SerializeField] private float _waitForStartChargingTime;
+
+    private bool _initialized;
 
     public override void OnInitializeted()
     {
@@ -25,12 +28,23 @@ public class SwordStateMachine : ItemStateMachine
         ChangeState(_chargeAttackState);
     }
 
+    private void OnEnable()
+    {
+        if (!_initialized)
+            return;
+        if (!base.IsOwner)
+            return;
+        OnPlayerStarted();
+    }
+
+
     protected override void OnPlayerStarted()
     {
         if (!base.IsOwner)
             return;
         base.OnPlayerStarted();
 
+        _initialized = true;
         playerCharacter.Binds.Character.MainShoot.started += OnMainShootStarted;
         playerCharacter.Binds.Character.MainShoot.canceled += OnMainShootCanceled;
     }
