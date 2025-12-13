@@ -22,7 +22,13 @@
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Albedo.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Albedo.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Emission.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Emission.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Height.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Height.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Metallic.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Metallic.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Normal.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Normal.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Occlusion.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Player/Sword/Sword_initialShadingGroup_Occlusion.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +52,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttackShake.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/TrailTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/OverlapAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Rebind/Key Rebind/ReBindUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -91,13 +98,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/State/IdleItemState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Drakkar/GameUtils/VISUALS/Trails/DrakkarTrail.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyWithoutOwner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/StateMachine/ItemState.cs" />
@@ -148,6 +155,7 @@
         <option value="$PROJECT_DIR$/Assets/Source/Rebind/Key Rebind/ReBindUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Rebind/Key Rebind/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/QuickInventoryItem/QuickInventoryItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/TrailTest.cs" />
       </list>
     </option>
   </component>
@@ -199,7 +207,7 @@
       <workItem from="1765538154303" duration="7119000" />
       <workItem from="1765551273333" duration="2856000" />
       <workItem from="1765624048589" duration="3133000" />
-      <workItem from="1765652861859" duration="2716000" />
+      <workItem from="1765652861859" duration="3605000" />
     </task>
     <servers />
   </component>

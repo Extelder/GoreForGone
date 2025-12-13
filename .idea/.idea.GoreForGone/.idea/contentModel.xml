@@ -12,6 +12,72 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Drakkar" t="Include">
+          <e p="Common" t="Include">
+            <e p="Attributes" t="Include">
+              <e p="ConditionalShowingAttribute.cs" t="Include" />
+              <e p="Il2CppSetOptionAttribute.cs" t="Include" />
+              <e p="ToggleBool Attribute.cs" t="Include" />
+            </e>
+            <e p="Classes" t="Include">
+              <e p="DrakkarAssets.cs" t="Include" />
+              <e p="DrakkarMath.cs" t="Include" />
+              <e p="DrakkarTime.cs" t="Include" />
+            </e>
+            <e p="Components" t="Include">
+              <e p="Updater" t="Include">
+                <e p="DrakkarUpdater.cs" t="Include" />
+                <e p="DrakkarUpdaterPost.cs" t="Include" />
+                <e p="DrakkarUpdaterPre.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Data Types" t="Include">
+              <e p="DataTypes.cs" t="Include" />
+              <e p="StaticList.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="DrakkarAssetsContainer.cs" t="Include" />
+              <e p="DrakkarEditor.cs" t="Include" />
+              <e p="DrakkarUpdaterEditor.cs" t="Include" />
+              <e p="Drawers" t="Include">
+                <e p="ToggleBool Drawer.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Drakkar.asmdef" t="Include" />
+          <e p="GameUtils" t="Include">
+            <e p="GameUtils.asmdef" t="Include" />
+            <e p="VISUALS" t="Include">
+              <e p="Trails" t="Include">
+                <e p="Actions" t="Include">
+                  <e p="Sources" t="Include">
+                    <e p="TrailFeedAction.cs" t="Include" />
+                    <e p="TrailFeedClearAction.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="DrakkarTrail.cs" t="Include" />
+                <e p="DrakkarTrails Examples" t="Include">
+                  <e p="Assets" t="Include">
+                    <e p="Trail Shader Alpha.shader" t="Include" />
+                    <e p="Trail Shader.shader" t="Include" />
+                  </e>
+                  <e p="Scripts" t="Include">
+                    <e p="AnimationEvents.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Plugins" t="Include">
+            <e p="Drakkar" t="Include">
+              <e p="Classes" t="Include">
+                <e p="Extensions" t="Include">
+                  <e p="ArrayExtension.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="EvolveGames" t="Include">
           <e p="RealisticFPSController" t="Include">
             <e p="Documentation.txt" t="Include" />
@@ -1650,6 +1716,7 @@
                 <e p="PlayerAttackShake.cs" t="Include" />
                 <e p="RaycastAttack.cs" t="Include" />
                 <e p="RaycastHitAttackShake.cs" t="Include" />
+                <e p="TrailTest.cs" t="Include" />
               </e>
               <e p="Base" t="Include">
                 <e p="Animator" t="Include">
@@ -1966,6 +2033,8 @@
       <e p="com.rlabrecque.steamworks.net.Player.csproj" t="IncludeRecursive" />
       <e p="com.unity.cinemachine.editor.csproj" t="IncludeRecursive" />
       <e p="DocCodeExamples.csproj" t="IncludeRecursive" />
+      <e p="Drakkar.csproj" t="IncludeRecursive" />
+      <e p="Drakkar.Player.csproj" t="IncludeRecursive" />
       <e p="FishNet.Codegen.Cecil.csproj" t="IncludeRecursive" />
       <e p="FishNet.Demos.csproj" t="IncludeRecursive" />
       <e p="FishNet.Demos.Player.csproj" t="IncludeRecursive" />
@@ -1973,6 +2042,8 @@
       <e p="FishNet.Runtime.Player.csproj" t="IncludeRecursive" />
       <e p="GameKit.Dependencies.csproj" t="IncludeRecursive" />
       <e p="GameKit.Dependencies.Player.csproj" t="IncludeRecursive" />
+      <e p="GameUtils.csproj" t="IncludeRecursive" />
+      <e p="GameUtils.Player.csproj" t="IncludeRecursive" />
       <e p="GoreForGone.sln" t="IncludeFlat" />
       <e p="Heathen.Core.csproj" t="IncludeRecursive" />
       <e p="Heathen.Core.Editor.csproj" t="IncludeRecursive" />
