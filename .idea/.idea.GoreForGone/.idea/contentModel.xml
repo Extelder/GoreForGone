@@ -1669,6 +1669,7 @@
                 <e p="BothHandsAnimatorItemSwitcher.cs" t="Include" />
                 <e p="BothHandsSwitcher.cs" t="Include" />
                 <e p="EquipableItem.cs" t="Include" />
+                <e p="TPSItemSwitch.cs" t="Include" />
               </e>
               <e p="Sword" t="Include">
                 <e p="Animator" t="Include">

@@ -600,7 +600,7 @@ MonoBehaviour:
   _componentIndexCache: 6
   _addedNetworkObject: {fileID: 7310859964512096409}
   _networkObjectCache: {fileID: 7310859964512096409}
-  _enemyHealth: {fileID: 594967075639881903}
+  EnemyHealth: {fileID: 0}
   _enemyStateMachine: {fileID: 4939999432092044139}
 --- !u!114 &594967075639881903
 MonoBehaviour:
@@ -619,7 +619,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 7310859964512096409}
   <MaxValue>k__BackingField: 100
   <CurrentValue>k__BackingField: 0
-  _object: {fileID: 812996035624695267}
 --- !u!1 &7100978367174214741
 GameObject:
   m_ObjectHideFlags: 0

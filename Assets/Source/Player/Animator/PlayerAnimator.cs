@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using FishNet.Object;
 using UniRx;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerAnimator : MonoBehaviour
+public class PlayerAnimator : NetworkBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private float _speed;
@@ -84,6 +85,24 @@ public class PlayerAnimator : MonoBehaviour
     public void ResetAnimationTrigger(string name)
     {
         _animator.ResetTrigger(name);
+    }
+
+    public void Equip(int id)
+    {
+        EquipServer(id);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void EquipServer(int id)
+    {
+        EquipObserver(id);
+    }
+
+    [ObserversRpc]
+    public void EquipObserver(int id)
+    {
+        _animator.SetInteger("EquipId", id);
+        _animator.SetTrigger("Equip");
     }
 
     public void DisableAll()

@@ -8,27 +8,21 @@ namespace MilkShake
     [CreateAssetMenu(fileName = "New Shake Preset", menuName = "MilkShake/Shake Preset")]
     public class ShakePreset : ScriptableObject, IShakeParameters
     {
-        [Header("Shake Type")]
-        [SerializeField]
+        [Header("Shake Type")] [SerializeField]
         private ShakeType shakeType;
 
-        [Header("Shake Strength")]
-        [SerializeField]
+        [Header("Shake Strength")] [SerializeField]
         private float strength;
-        [SerializeField]
-        private float roughness;
 
-        [Header("Fade")]
-        [SerializeField]
-        private float fadeIn;
-        [SerializeField]
-        private float fadeOut;
+        [SerializeField] private float roughness;
 
-        [Header("Shake Influence")]
-        [SerializeField]
+        [Header("Fade")] [SerializeField] private float fadeIn;
+        [SerializeField] private float fadeOut;
+
+        [Header("Shake Influence")] [SerializeField]
         private Vector3 positionInfluence;
-        [SerializeField]
-        private Vector3 rotationInfluence;
+
+        [SerializeField] private Vector3 rotationInfluence;
 
         /// <summary>
         /// The type of shake (One-Shot or Sustained)
@@ -58,6 +52,9 @@ namespace MilkShake
             set { roughness = value; }
         }
 
+        [field: SerializeField] public int Seed { get; set; }
+       
+
         /// <summary>
         /// The time, in seconds, for the shake to fade in.
         /// </summary>
@@ -66,6 +63,7 @@ namespace MilkShake
             get { return fadeIn; }
             set { fadeIn = value; }
         }
+
         /// <summary>
         /// The time, in seconds, for the shake to fade out.
         /// </summary>
@@ -84,6 +82,7 @@ namespace MilkShake
             get { return positionInfluence; }
             set { positionInfluence = value; }
         }
+
         /// <summary>
         /// How much influence the shake has over the camera's rotation.
         /// All values are valid, even numbers greater than 1 and negative numbers.
@@ -95,4 +94,3 @@ namespace MilkShake
         }
     }
 }
-

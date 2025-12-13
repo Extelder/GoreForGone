@@ -144,7 +144,7 @@ namespace MilkShake
         /// <returns>A ShakeInstance which can be used to stop the shake or modify the shake parameters.</returns>
         public ShakeInstance Shake(IShakeParameters shakeData, int? seed = null)
         {
-            ShakeInstance shakeInstance = new ShakeInstance(shakeData, seed);
+            ShakeInstance shakeInstance = new ShakeInstance(shakeData, shakeData.Seed);
             AddShake(shakeInstance);
             return shakeInstance;
         }
