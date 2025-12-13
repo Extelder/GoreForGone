@@ -11,6 +11,7 @@ public class PlayerCharacter : NetworkBehaviour
     [field: SerializeField] public PlayerController PlayerController { get; private set; }
     [field: SerializeField] public List<PlayerCharacter> Characters { get; private set; }
     [field: SerializeField] public Transform DropPoint { get; private set; }
+    [field: SerializeField] public Transform LookAtPoint { get; private set; }
     [field: SerializeField] public PlayerBinds Binds;
     [field: SerializeField] public Transform PlayerTransform;
     [field: SerializeField] public Transform Camera;

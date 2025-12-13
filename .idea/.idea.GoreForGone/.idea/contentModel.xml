@@ -1763,6 +1763,11 @@
             <e p="StateMachine.cs" t="Include" />
           </e>
           <e p="System" t="Include">
+            <e p="LookAt" t="Include">
+              <e p="Player" t="Include">
+                <e p="LookAtClosestPlayer.cs" t="Include" />
+              </e>
+            </e>
             <e p="Overlap" t="Include">
               <e p="DrawSphere" t="Include">
                 <e p="DrawSphere.cs" t="Include" />

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
@@ -40,6 +41,11 @@ public class EnemyStateMachine : StateMachine
             return;
         CurrentState.CanChanged = true;
         ChangeState(_attack);
+    }
+
+    private void Update()
+    {
+        Debug.Log(CurrentState);
     }
 
     public void Patrol()

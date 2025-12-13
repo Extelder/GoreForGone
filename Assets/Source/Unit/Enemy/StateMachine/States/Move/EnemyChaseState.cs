@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyChaseState : EnemyState
 {
+    [SerializeField] private LookAtClosestPlayer _lookAtClosestPlayer;
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
     [SerializeField] private EnemyAttackState _enemyAttackState;
     [SerializeField] private EnemyNavMeshMove _enemyNavMeshMove;
@@ -22,7 +23,6 @@ public class EnemyChaseState : EnemyState
             return;
         base.OnStartClient();
         _unitPlayerDetector.PlayerLost += OnPlayerLost;
-        _unitPlayerDetector.PlayerDetected += OnPlayerDetected;
     }
 
     public void ChangeTarget(Transform target)
@@ -30,36 +30,19 @@ public class EnemyChaseState : EnemyState
         if (!base.IsServer)
             return;
         Target = target;
-        _enemyAttackState.AttackAnimationEnded += OnAttackAnimationEnded;
-    }
-
-    private void OnPlayerDetected()
-    {
-        StopCoroutine(_losingPlayerCoroutine);
     }
 
     private void OnPlayerLost()
     {
-        _losingPlayerCoroutine = StartCoroutine(LosingPlayer());
-    }
-
-    private IEnumerator LosingPlayer()
-    {
-        yield return new WaitForSeconds(_lostTime);
-        Exit();
         CanChanged = true;
         _enemyStateMachine.Patrol();
-    }
-
-    private void OnAttackAnimationEnded()
-    {
-        Enter();
     }
 
     public override void Enter()
     {
         if (!base.IsServer)
             return;
+        _lookAtClosestPlayer.StartLookAt();
         StopAllCoroutines();
         StartCoroutine(Chasing());
         CanChanged = false;
@@ -67,6 +50,7 @@ public class EnemyChaseState : EnemyState
 
     public override void Exit()
     {
+        _lookAtClosestPlayer.StopLookAt();
         StopAllCoroutines();
     }
 
@@ -74,9 +58,7 @@ public class EnemyChaseState : EnemyState
     {
         if (!base.IsServer)
             return;
-        _enemyAttackState.AttackAnimationEnded -= OnAttackAnimationEnded;
         _unitPlayerDetector.PlayerLost -= OnPlayerLost;
-        _unitPlayerDetector.PlayerDetected -= OnPlayerDetected;
 
         StopAllCoroutines();
     }

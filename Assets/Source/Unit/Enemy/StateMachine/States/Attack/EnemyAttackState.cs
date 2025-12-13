@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyAttackState : EnemyState
 {
+    [SerializeField] private EnemyStateMachine _enemyStateMachine;
+    [SerializeField] private LookAtClosestPlayer _lookAtClosestPlayer;
     [SerializeField] private EnemyChaseState _chaseState;
     [SerializeField] private bool _stopNavMesh = true;
     [SerializeField] private NavMeshAgent _agent;
@@ -13,12 +15,11 @@ public class EnemyAttackState : EnemyState
 
     public PlayerHitBox PlayerHitBox { get; private set; }
 
-    public event Action AttackAnimationEnded;
-
     public override void Enter()
     {
         if (!base.IsServer)
             return;
+        _lookAtClosestPlayer.StartLookAt();
         CanChanged = false;
         Debug.Log("ATTACK");
         EnemyAnimator.Attack();
@@ -29,6 +30,7 @@ public class EnemyAttackState : EnemyState
 
     public override void Exit()
     {
+        _lookAtClosestPlayer.StopLookAt();
         _chaseState.StopAllCoroutines();
     }
 
@@ -53,6 +55,8 @@ public class EnemyAttackState : EnemyState
         if (_stopNavMesh)
             _agent.isStopped = false;
         CanChanged = true;
-        AttackAnimationEnded?.Invoke();
+        if (_chaseState.Target == null)
+            return;
+        _enemyStateMachine.Chase(_chaseState.Target);
     }
 }
