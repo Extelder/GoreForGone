@@ -649,89 +649,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2114656647
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.799999
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.08404255
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.2217026
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828922019108324600, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2666665440864816844, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: WasActiveDuringEdit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2666665440864816844, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: <SceneId>k__BackingField
-      value: 4261412638
-      objectReference: {fileID: 0}
-    - target: {fileID: 5321795895709937702, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: <SceneId>k__BackingField
-      value: 3204377567
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784249351811926416, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: m_Name
-      value: MeleeEnemyParent
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b2d727d4ccb0c404f9126afb03219bd2, type: 3}
 --- !u!1001 &1194622932227213871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -740,10 +657,120 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 822160079736258560, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 911446601068769875, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 911446601068769875, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: <EnemyAnimator>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608106652244185912, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608106652244185912, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: <EnemyAnimator>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975113228036107266, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046748152486490482, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235381363073585919, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251303931789843650, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: <EnemyAnimator>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607044128974167468, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyAnimator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763429169768551031, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763429169768551031, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: <EnemyAnimator>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773467984410531964, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3685032996049896506, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: <EnemyAnimator>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883275249253385911, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336809251396825589, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342776185444858396, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: <StateMachine>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515082668265910315, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024894341277583328, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252560741318120365, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5431822323827494482, guid: 750dab647802aef4783efc3b4bff32c9,
         type: 3}
       propertyPath: <SceneId>k__BackingField
       value: 4261343102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431822323827494482, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: NetworkBehaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431822323827494482, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: NetworkBehaviours.Array.data[9]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5934861228107460953, guid: 750dab647802aef4783efc3b4bff32c9,
         type: 3}
@@ -755,10 +782,60 @@ PrefabInstance:
       propertyPath: <SceneId>k__BackingField
       value: 3221221198
       objectReference: {fileID: 0}
+    - target: {fileID: 6057627089984692456, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyIdleStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057627089984692456, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: <EnemyAnimator>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256852015633506182, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830499102180491986, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861974370642790233, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _stateMachine
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7932412964687144870, guid: 750dab647802aef4783efc3b4bff32c9,
         type: 3}
       propertyPath: m_Name
       value: RangeEnemyParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011538326762099391, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592808331344791808, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _stateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612785143949049088, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617125090139562284, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679968610607934703, guid: 750dab647802aef4783efc3b4bff32c9,
+        type: 3}
+      propertyPath: _enemyStateMachine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8826268121383151685, guid: 750dab647802aef4783efc3b4bff32c9,
         type: 3}
@@ -825,6 +902,5 @@ SceneRoots:
   - {fileID: 1038707128}
   - {fileID: 47447451}
   - {fileID: 1705195818}
-  - {fileID: 2114656647}
   - {fileID: 1194622932227213871}
   - {fileID: 709092968}

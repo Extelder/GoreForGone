@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using FishNet.Object;
+using NaughtyAttributes;
 using UnityEngine;
 
 [ExecuteAlways]
@@ -13,12 +14,13 @@ public class UnitPlayerDetector : NetworkBehaviour
     [SerializeField] private float _viewDistance = 20f;
     [SerializeField] private LayerMask _visionMask;
     [SerializeField] private Transform _eyesPoint;
-
     [Space(20)] [SerializeField] private float _inspectTime = 0.2f;
 
     [SerializeField] private float _chaseTime = 0.3f;
     [SerializeField] private EnemyStateMachine _stateMachine;
 
+    private RaycastHit _hit;
+    
     public event Action PlayerDetected;
     public event Action PlayerLost;
 
@@ -107,18 +109,18 @@ public class UnitPlayerDetector : NetworkBehaviour
                     for (int x = 0; x < _horizontalRays; x++)
                     {
                         Vector3 dir = transform.rotation * _rayGrid[x, y];
-                        if (Physics.Raycast(origin, dir, out RaycastHit hit, _viewDistance, _visionMask))
+                        if (Physics.Raycast(origin, dir, out _hit, _viewDistance, _visionMask))
                         {
-                            if (hit.collider.TryGetComponent<PlayerCharacter>(out PlayerCharacter PlayerCharacter))
+                            if (_hit.collider.TryGetComponent<PlayerCharacter>(out PlayerCharacter PlayerCharacter))
                             {
                                 _character = PlayerCharacter;
-                                PlayerDetected?.Invoke();
                                 detected = true;
-                                Debug.DrawRay(origin, dir * hit.distance, Color.red, 0.05f);
+                                PlayerDetected?.Invoke();
+                                Debug.DrawRay(origin, dir * _hit.distance, Color.red, 0.05f);
                             }
                             else
                             {
-                                Debug.DrawRay(origin, dir * hit.distance, Color.gray, 0.05f);
+                                Debug.DrawRay(origin, dir * _hit.distance, Color.gray, 0.05f);
                             }
                         }
                         else
@@ -152,8 +154,7 @@ public class UnitPlayerDetector : NetworkBehaviour
 
             if (_seeTimer >= _chaseTime)
             {
-                _stateMachine?.Chase(_character.PlayerTransform);
-                Debug.Log("CHASE");
+                Chase(_hit);
             }
         }
         else
@@ -161,6 +162,11 @@ public class UnitPlayerDetector : NetworkBehaviour
             _isSeeingPlayer = false;
             _seeTimer = 0f;
         }
+    }
+
+    public virtual void Chase(RaycastHit hit)
+    {
+        _stateMachine?.Chase(_character.PlayerTransform);
     }
 
     private void OnDrawGizmosSelected()

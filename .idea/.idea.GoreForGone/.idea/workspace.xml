@@ -22,18 +22,52 @@
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Steamyl/Reload.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Steamyl/Reload.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Steamyl/Shoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Steamyl/Shoot.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Steamyl/Steamyl.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Steamyl/Steamyl.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Player/BackPack/textures/BackPack.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Player/BackPack/textures/BackPack.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunsStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunsStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Idle Looking Ver. 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Idle Looking Ver. 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Idle Looking Ver_ 2.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Idle Looking Ver_ 2.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Melee Attack Backhand.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Melee Attack Backhand.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Melee Attack Downward.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Melee Attack Downward.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Melee Combo Attack Ver. 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Melee Combo Attack Ver. 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing React Large Gut.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing React Large Gut.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Taunt Battlecry.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Taunt Battlecry.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Taunt Chest Thump.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Standing Taunt Chest Thump.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Talking.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Talking.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Walking.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Walking.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Zombie Run.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Prient1 (2)@Zombie Run.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Idle Looking Ver. 2.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Idle Looking Ver. 2.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Melee Attack Backhand.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Melee Attack Backhand.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Melee Attack Downward.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Melee Attack Downward.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Melee Combo Attack Ver. 3.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Melee Combo Attack Ver. 3.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing React Large Gut.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing React Large Gut.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Taunt Battlecry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Taunt Battlecry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Taunt Chest Thump.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Standing Taunt Chest Thump.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Talking.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Talking.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Walking.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Walking.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Zombie Run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Zombie Run.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/RangeEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/RangeEnemyParent.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IGORYAVA.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IGORYAVA.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitPlayerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitPlayerDetector.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,69 +78,58 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Animator/UnitMultiAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Enemy/Animator/RangeEnemyAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Animator/UnitAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/Attack/EnemyShootState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Item/PickUp/PickUpableItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordAttackState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordChargeAttackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Managing/Logging/LevelLoggingConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyIfNoOwner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyRangeStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/Animator/SwordAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/RaycastAttack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttackShake.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Sound/Noice/SoundMakeNoise.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Rebind/Key Rebind/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Animator/UnitMultiAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/RaycastHitAttackShake.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/State/IdleItemState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/MovementEffects.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttackShake.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyIfNoOwner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/HeadBob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/OverlapAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/MovementEffects.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Rebind/Key Rebind/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryEquipableItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Sound/Noice/SoundMakeNoise.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Animator/UnitAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordAttackState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunReloadState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/Animator/SwordAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunAttackState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunsStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Item/PickUp/PickUpableItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/RaycastHitAttackShake.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/Move/EnemyMoveToRandomPointState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Item/Interact/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/HeadBob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Utility/Performance/DefaultObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordChargeAttackState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/HandsSmooth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/DDOL.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/TPSItemAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Cursor/GameCursor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/State/IdleItemState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitShootPlayerDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Utility/Performance/DefaultObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyRangeIdleStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/DestroyWithoutOwner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/HitBox/EnemyHitBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/HitBox/UnitHitBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons/Damagable/IWeaponVisitor.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitRandomPlayerDetector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitPlayerDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Pool/Pools.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/EnemyChaseState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Animator/ItemAnimator.cs" />
@@ -118,12 +141,12 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/StateMachine/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Animator/UnitMultiAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordAttackState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/OverlapAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttackShake.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/Animator/SwordAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordChargeAttackState.cs" />
@@ -134,18 +157,24 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/ItemSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunAttackState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunReloadState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunsStateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryEquipableItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Animator/RangeEnemyAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitPlayerDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitShootPlayerDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/Attack/EnemyShootState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyRangeStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/Move/EnemyMoveToRandomPointState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyRangeIdleStateMachine.cs" />
       </list>
     </option>
   </component>
@@ -186,7 +215,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -202,6 +231,7 @@
       <workItem from="1765449364724" duration="12424000" />
       <workItem from="1765538154303" duration="7119000" />
       <workItem from="1765551273333" duration="2856000" />
+      <workItem from="1765558346355" duration="4790000" />
     </task>
     <servers />
   </component>
@@ -238,9 +268,5 @@
       <screen x="0" y="0" width="2560" height="1394" />
     </state>
     <state x="684" y="317" key="run.anything.popup/-1440.534.1440.854/0.0.2560.1394@0.0.2560.1394" timestamp="1765374420528" />
-    <state x="689" y="-2" width="1177" height="1976" key="search.everywhere.popup" timestamp="1765560788062">
-      <screen x="0" y="0" width="2560" height="1394" />
-    </state>
-    <state x="689" y="-2" width="1177" height="1976" key="search.everywhere.popup/-1440.534.1440.854/0.0.2560.1394@0.0.2560.1394" timestamp="1765560788062" />
   </component>
 </project>
