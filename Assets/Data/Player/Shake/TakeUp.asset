@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 955f6c9be248dc249a31bad716cc6963, type: 3}
-  m_Name: Punch 1
+  m_Name: TakeUp
   m_EditorClassIdentifier: 
   shakeType: 0
-  strength: 5
-  roughness: 2.3
-  fadeIn: 0.05
-  fadeOut: 0.3
-  positionInfluence: {x: 0, y: 0, z: 0}
-  rotationInfluence: {x: 3, y: 4, z: 1}
+  strength: 2
+  roughness: 1
+  fadeIn: 0.03
+  fadeOut: 0.5
+  positionInfluence: {x: -0.2, y: -0.16, z: -0.2}
+  rotationInfluence: {x: -3, y: 2, z: -3}
   <Seed>k__BackingField: 0

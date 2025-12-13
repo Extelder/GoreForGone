@@ -2654,6 +2654,7 @@ GameObject:
   - component: {fileID: 6024647691525676535}
   - component: {fileID: 8533996127482048919}
   - component: {fileID: 8537175094023747150}
+  - component: {fileID: 1989014784684823443}
   m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
@@ -2927,6 +2928,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 0
   _animator: {fileID: 7753987564216776635}
+--- !u!114 &1989014784684823443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e326a2884e9f8d4badc3870dbf6c63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shaker: {fileID: 2576062093146024649}
+  _shakePreset: {fileID: 11400000, guid: e4781d541c8159e4494981eeb6481910, type: 2}
 --- !u!1 &3505214368931765122
 GameObject:
   m_ObjectHideFlags: 0
@@ -5773,6 +5788,7 @@ GameObject:
   - component: {fileID: 1757310414816766003}
   - component: {fileID: 7416742223122146957}
   - component: {fileID: 8470412651926805851}
+  - component: {fileID: 2499035054513874896}
   m_Layer: 6
   m_Name: Steamyl
   m_TagString: Untagged
@@ -5987,6 +6003,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 1
   _animator: {fileID: 7753987564216776635}
+--- !u!114 &2499035054513874896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705086290949544445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e326a2884e9f8d4badc3870dbf6c63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shaker: {fileID: 2576062093146024649}
+  _shakePreset: {fileID: 11400000, guid: e4781d541c8159e4494981eeb6481910, type: 2}
 --- !u!1 &8708044670003183317
 GameObject:
   m_ObjectHideFlags: 0
@@ -6116,6 +6146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7500881749728903303}
   - component: {fileID: 6080875388620631936}
+  - component: {fileID: 8531769421114126137}
   m_Layer: 6
   m_Name: InventoryEquipItem
   m_TagString: Untagged
@@ -6153,6 +6184,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: -1
   _animator: {fileID: 7753987564216776635}
+--- !u!114 &8531769421114126137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893040682827964136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e326a2884e9f8d4badc3870dbf6c63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shaker: {fileID: 2576062093146024649}
+  _shakePreset: {fileID: 11400000, guid: e4781d541c8159e4494981eeb6481910, type: 2}
 --- !u!1 &8974649291165669379
 GameObject:
   m_ObjectHideFlags: 0
@@ -8962,6 +9007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
+      propertyPath: m_Text
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
+        type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -8984,6 +9034,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436316379741576201, guid: c2a26e3e9dd552f41beef151c79bd92d,
+        type: 3}
+      propertyPath: inputBinding.m_Id
+      value: 160c586f-a1c8-4ba3-9b22-5131af1092d2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436316379741576201, guid: c2a26e3e9dd552f41beef151c79bd92d,
+        type: 3}
+      propertyPath: inputBinding.m_Path
+      value: <Keyboard>/1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436316379741576201, guid: c2a26e3e9dd552f41beef151c79bd92d,
+        type: 3}
+      propertyPath: inputActionReference
+      value: 
+      objectReference: {fileID: 2951419639324635965, guid: 666205ec11e7883439f031951012a2d8,
+        type: 3}
+    - target: {fileID: 8436316379741576201, guid: c2a26e3e9dd552f41beef151c79bd92d,
+        type: 3}
+      propertyPath: inputBinding.m_Action
+      value: SwitchSword
       objectReference: {fileID: 0}
     - target: {fileID: 9114899988341961123, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
