@@ -75,6 +75,8 @@ namespace MilkShake
             set { roughness = value; }
         }
 
+        public int Seed { get; set; }
+
         /// <summary>
         /// The time, in seconds, for the shake to fade in.
         /// </summary>

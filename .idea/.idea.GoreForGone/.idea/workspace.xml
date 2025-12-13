@@ -20,17 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Static.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Static.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/YBot.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/YBot.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/DogEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/DogEnemyParent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/RangeEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/RangeEnemyParent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MilkShake/Scripts/IShakeParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MilkShake/Scripts/IShakeParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakeParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakeParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakePreset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakePreset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MilkShake/Scripts/Shaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MilkShake/Scripts/Shaker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +52,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Rebind/Key Rebind/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryEquipableItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MilkShake/Scripts/IShakeParameters.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Sound/Noice/SoundMakeNoise.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakeInstance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MilkShake/Scripts/Shaker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/TPSItemSwitch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakeParameters.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Animator/UnitAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordAttackState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakePreset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunReloadState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -96,9 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/HitBox/EnemyHitBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Unit/HitBox/UnitHitBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Weapons/Damagable/IWeaponVisitor.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitRandomPlayerDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitPlayerDetector.cs" />
@@ -121,11 +117,9 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/OverlapAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttackShake.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/Animator/SwordAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordChargeAttackState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/RaycastAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/RaycastHitAttackShake.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/TPSItemAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Interact/PlayerInteract.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" />
@@ -145,6 +139,13 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/TPSItemSwitch.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/RaycastHitAttackShake.cs" />
+        <option value="$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakeInstance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Attack/PlayerAttackShake.cs" />
+        <option value="$PROJECT_DIR$/Assets/MilkShake/Scripts/Shaker.cs" />
+        <option value="$PROJECT_DIR$/Assets/MilkShake/Scripts/IShakeParameters.cs" />
+        <option value="$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakeParameters.cs" />
+        <option value="$PROJECT_DIR$/Assets/MilkShake/Scripts/ShakePreset.cs" />
       </list>
     </option>
   </component>
@@ -195,6 +196,7 @@
       <workItem from="1765449364724" duration="12424000" />
       <workItem from="1765538154303" duration="7119000" />
       <workItem from="1765551273333" duration="2856000" />
+      <workItem from="1765624048589" duration="691000" />
     </task>
     <servers />
   </component>
