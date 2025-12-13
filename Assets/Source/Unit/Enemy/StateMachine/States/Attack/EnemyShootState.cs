@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class EnemyShootState : EnemyState
 {
-    [SerializeField] private EnemyChaseState _chaseState;
     [SerializeField] private bool _stopNavMesh = true;
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private GameObject _objectToSpawn;
@@ -19,23 +18,18 @@ public class EnemyShootState : EnemyState
         if (!base.IsServer)
             return;
         CanChanged = false;
-        EnemyAnimator.Attack();
+        EnemyAnimator.Shoot();
         _agent.isStopped = _stopNavMesh;
     }
-
-    public override void Exit()
-    {
-        _chaseState.StopAllCoroutines();
-    }
-
-    public void PerformAttack()
+    
+    public void PerformShoot()
     {
         if (!base.IsServer)
             return;
         PlayerCharacter.Instance.ServerSpawnObject(_objectToSpawn, _shootOrigin.position, _shootOrigin.rotation);
     }
 
-    public void AttackAnimationEnd()
+    public void ShootAnimationEnd()
     {
         if (!base.IsServer)
             return;

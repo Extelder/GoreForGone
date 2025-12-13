@@ -56,4 +56,7 @@ public class EnemyStateMachine : StateMachine
         _chase.ChangeTarget(targetPosition);
         ChangeState(_chase);
     }
+
+    public virtual void Idle()
+    {}
 }

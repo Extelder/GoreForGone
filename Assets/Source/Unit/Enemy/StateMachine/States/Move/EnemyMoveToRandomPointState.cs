@@ -6,8 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyMoveToRandomPointState : EnemyState
 {
-    [SerializeField] private bool _shoot;
-    [ShowIf(nameof(_shoot))] [SerializeField]
+    [SerializeField] private bool _canShoot;
+    [ShowIf(nameof(_canShoot))] [SerializeField]
     private EnemyRangeStateMachine _enemyRangeStateMachine;
     [SerializeField] private EnemyNavMeshMove _enemyNavMeshMove;
     [SerializeField] private float _randomPointRange;
@@ -17,6 +17,7 @@ public class EnemyMoveToRandomPointState : EnemyState
     {
         StartCoroutine(MovingToRandomPoint());
         CanChanged = false;
+        EnemyAnimator.Move();
     }
 
     public override void Exit()
@@ -38,7 +39,8 @@ public class EnemyMoveToRandomPointState : EnemyState
             yield return new WaitForSeconds(0.2f);
             yield return new WaitUntil(() => AgentReachedDestination());
             CanChanged = true;
-            _enemyRangeStateMachine.Shoot();
+            if (_canShoot)
+                _enemyRangeStateMachine.Shoot();
         }
     }
 

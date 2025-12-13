@@ -6,7 +6,7 @@ public class EnemyIdleStateMachine : EnemyStateMachine
 {
     [SerializeField] private EnemyState _idle;
     
-    public void Idle()
+    public override void Idle()
     {
         if (!base.IsServer)
             return;

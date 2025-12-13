@@ -51,7 +51,6 @@ namespace EvolveGames
         private void CheckMotion()
         {
             float speed = new Vector3(player.velocity.x, 0, player.velocity.z).magnitude;
-            Debug.Log(speed <= 0);
             Moving.Value = speed > 0;
             if (speed < ToggleSpeed)
                 return;

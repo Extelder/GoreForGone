@@ -11,9 +11,6 @@ public class EnemyRangeStateMachine : EnemyStateMachine
     {
         if (!base.IsServer)
             return;
-        if (CurrentState == _shoot)
-            return;
-        CurrentState.CanChanged = true;
         ChangeState(_shoot);
     }
 
