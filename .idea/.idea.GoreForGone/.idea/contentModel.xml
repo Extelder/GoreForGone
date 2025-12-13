@@ -1580,6 +1580,18 @@
             <e p="PSX-VertexLitTransparentCutout.shader" t="Include" />
           </e>
         </e>
+        <e p="QuickOutline" t="Include">
+          <e p="README.txt" t="Include" />
+          <e p="Resources" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="OutlineFill.shader" t="Include" />
+              <e p="OutlineMask.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Outline.cs" t="Include" />
+          </e>
+        </e>
         <e p="Source" t="Include">
           <e p="Bootstrap" t="Include">
             <e p="BootstrapManager.cs" t="Include" />
@@ -1663,6 +1675,9 @@
                 <e p="InventoryItem.cs" t="Include" />
                 <e p="InventoryLookAt.cs" t="Include" />
                 <e p="InventorySwitch.cs" t="Include" />
+                <e p="QuickInventoryItem" t="Include">
+                  <e p="QuickInventoryItem.cs" t="Include" />
+                </e>
               </e>
               <e p="Switchers" t="Include">
                 <e p="AnimatorItemSwitcher.cs" t="Include" />

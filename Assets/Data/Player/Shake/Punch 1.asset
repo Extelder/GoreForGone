@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Punch 1
   m_EditorClassIdentifier: 
   shakeType: 0
-  strength: 4
+  strength: 5
   roughness: 2.3
   fadeIn: 0.05
   fadeOut: 0.3

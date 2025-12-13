@@ -29,9 +29,15 @@ public class EquipableItem : NetworkBehaviour
 
     protected virtual void OnEquipActionPerformed(InputAction.CallbackContext obj)
     {
+        Equip();
+    }
+
+    public void Equip()
+    {
         if (itemObject.activeInHierarchy == false)
             _itemSwitcher.SwitchItem(itemObject);
     }
+
 
     private void OnDisable()
     {
