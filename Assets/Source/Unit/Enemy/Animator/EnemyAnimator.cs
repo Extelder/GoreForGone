@@ -36,4 +36,7 @@ public class EnemyAnimator : UnitAnimator
     {
         SetAnimationBoolAndDisableOther(AttackAnimationBoolName);
     }
+
+    public virtual void Shoot()
+    {}
 }

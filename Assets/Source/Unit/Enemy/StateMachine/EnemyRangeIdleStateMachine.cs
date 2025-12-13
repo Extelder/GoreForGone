@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyIdleStateMachine : EnemyStateMachine
+public class EnemyRangeIdleStateMachine : EnemyRangeStateMachine
 {
     [SerializeField] private EnemyState _idle;
     
@@ -11,5 +12,10 @@ public class EnemyIdleStateMachine : EnemyStateMachine
         if (!base.IsServer)
             return;
         ChangeState(_idle);
+    }
+
+    private void Update()
+    {
+        Debug.Log(CurrentState);
     }
 }
