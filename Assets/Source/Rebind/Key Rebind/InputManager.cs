@@ -19,12 +19,6 @@ public class InputManager : MonoBehaviour
             inputActions = new PlayerBinds();
     }
 
-    public static void Init()
-    {
-        if (inputActions == null)
-            inputActions = new PlayerBinds();
-    }
-
     public static void StartRebind(string actionName, int bindingIndex, Text statusText, bool excludeMouse)
     {
         InputAction action = inputActions.asset.FindAction(actionName);
@@ -42,6 +36,29 @@ public class InputManager : MonoBehaviour
         }
         else
             DoRebind(action, bindingIndex, statusText, false, excludeMouse);
+    }
+
+    public static void StartRebind(string actionName, int bindingIndex, Text statusText, bool excludeMouse,
+        out InputActionRebindingExtensions.RebindingOperation rebindingOperation)
+    {
+        rebindingOperation = null;
+        InputAction action = inputActions.asset.FindAction(actionName);
+        if (action == null || action.bindings.Count <= bindingIndex)
+        {
+            Debug.Log("Couldn't find action or binding");
+            return;
+        }
+        
+        statusText.text = $"Press a {action.expectedControlType}";
+
+        if (action.bindings[bindingIndex].isComposite)
+        {
+            var firstPartIndex = bindingIndex + 1;
+            if (firstPartIndex < action.bindings.Count && action.bindings[firstPartIndex].isComposite)
+                DoRebind(action, bindingIndex, statusText, true, excludeMouse, out rebindingOperation);
+        }
+        else
+            DoRebind(action, bindingIndex, statusText, false, excludeMouse, out rebindingOperation);
     }
 
     private static void DoRebind(InputAction actionToRebind, int bindingIndex, Text statusText, bool allCompositeParts,
@@ -90,6 +107,53 @@ public class InputManager : MonoBehaviour
         rebind.Start(); //actually starts the rebinding process
     }
 
+    private static void DoRebind(InputAction actionToRebind, int bindingIndex, Text statusText, bool allCompositeParts,
+        bool excludeMouse, out InputActionRebindingExtensions.RebindingOperation rebindingOperation)
+    {
+        rebindingOperation = null;
+        if (actionToRebind == null || bindingIndex < 0)
+            return;
+
+       // statusText.text = $"Press a {actionToRebind.expectedControlType}";
+
+        actionToRebind.Disable();
+
+        rebindingOperation = actionToRebind.PerformInteractiveRebinding(bindingIndex);
+
+        rebindingOperation.OnComplete(operation =>
+        {
+            actionToRebind.Enable();
+            operation.Dispose();
+
+            if (allCompositeParts)
+            {
+                var nextBindingIndex = bindingIndex + 1;
+                if (nextBindingIndex < actionToRebind.bindings.Count &&
+                    actionToRebind.bindings[nextBindingIndex].isComposite)
+                    DoRebind(actionToRebind, nextBindingIndex, statusText, allCompositeParts, excludeMouse);
+            }
+
+            SaveBindingOverride(actionToRebind);
+            rebindComplete?.Invoke();
+        });
+
+        rebindingOperation.OnCancel(operation =>
+        {
+            actionToRebind.Enable();
+            operation.Dispose();
+
+            rebindCanceled?.Invoke();
+        });
+
+        rebindingOperation.WithCancelingThrough("<Keyboard>/escape");
+
+        if (excludeMouse)
+            rebindingOperation.WithControlsExcluding("Mouse");
+
+        rebindStarted?.Invoke(actionToRebind, bindingIndex);
+        rebindingOperation.Start(); //actually starts the rebinding process
+    }
+
     public static string GetBindingName(string actionName, int bindingIndex)
     {
         if (inputActions == null)
@@ -109,7 +173,6 @@ public class InputManager : MonoBehaviour
 
     public static void LoadBindingOverride(string actionName)
     {
-        Debug.LogError(actionName);
         if (actionName == null)
             return;
 
@@ -120,7 +183,6 @@ public class InputManager : MonoBehaviour
 
         for (int i = 0; i < action.bindings.Count; i++)
         {
-            Debug.Log(PlayerPrefs.GetString(action.actionMap + action.name + i));
             if (!string.IsNullOrEmpty(PlayerPrefs.GetString(action.actionMap + action.name + i)))
                 action.ApplyBindingOverride(i, PlayerPrefs.GetString(action.actionMap + action.name + i));
         }

@@ -15,7 +15,8 @@ MonoBehaviour:
   shakeType: 0
   strength: 1
   roughness: 3
-  fadeIn: 0.5
+  fadeIn: 0
   fadeOut: 0.3
   positionInfluence: {x: 0, y: 0, z: 0}
   rotationInfluence: {x: 0.1, y: 0.57, z: 0}
+  <Seed>k__BackingField: 0
