@@ -9,9 +9,12 @@ public class QuickInventoryItem : MonoBehaviour
     [SerializeField] private GameObject _rebindCanvas;
     [SerializeField] private EquipableItem _equipableItem;
 
+    [SerializeField] private GameObject _activeRebindObject;
+
     private void OnMouseDown()
     {
-        Equip();
+        if (!_activeRebindObject.activeInHierarchy)
+            Equip();
     }
 
     private void OnMouseEnter()
