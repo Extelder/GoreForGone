@@ -1592,6 +1592,9 @@
             <e p="Outline.cs" t="Include" />
           </e>
         </e>
+        <e p="SkySeries Freebie" t="Include">
+          <e p="Hdri setup.txt" t="Include" />
+        </e>
         <e p="Source" t="Include">
           <e p="Bootstrap" t="Include">
             <e p="BootstrapManager.cs" t="Include" />
