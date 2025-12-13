@@ -5919,7 +5919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attackShakes:
   - <Attack>k__BackingField: {fileID: 281646376648966845}
-    <Preset>k__BackingField: {fileID: 11400000, guid: 4c8b354c97338384cac190918b3619d3,
+    <Preset>k__BackingField: {fileID: 11400000, guid: 98d98d94c3a5d8346bade0539210ef0b,
       type: 2}
 --- !u!114 &281646376648966845
 MonoBehaviour:
