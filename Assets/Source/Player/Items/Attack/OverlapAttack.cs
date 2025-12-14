@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class OverlapAttack : PlayerAttack
 {
+    [SerializeField] private Transform _attackOrigin;
+
     [SerializeField] private OverlapSettings _overlapSettings;
 
     [SerializeField] private GameObject _testAttackShit;
@@ -26,9 +28,9 @@ public class OverlapAttack : PlayerAttack
         {
             if (other == null)
                 continue;
-            Vector3 hitPoint = other.ClosestPoint(PlayerCharacter.Instance.Camera.position);
+            Vector3 hitPoint = other.ClosestPointOnBounds(_attackOrigin.position);
             Vector3 normal = (hitPoint - _overlapSettings.Origin.position).normalized;
-            Instantiate(_testAttackShit, hitPoint, Quaternion.identity);
+            Instantiate(_testAttackShit, hitPoint, Quaternion.LookRotation(normal));
         }
     }
 

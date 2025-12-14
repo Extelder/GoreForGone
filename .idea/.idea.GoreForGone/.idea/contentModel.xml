@@ -1690,6 +1690,7 @@
               <e p="PickUpableItem.cs" t="Include" />
             </e>
           </e>
+          <e p="MeleeTracer.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="Animator" t="Include">
               <e p="PlayerAnimator.cs" t="Include" />
@@ -2025,6 +2026,37 @@
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
             <e p="EmojiOne.json" t="Include" />
+          </e>
+        </e>
+        <e p="UnityTechnologies" t="Include">
+          <e p="EffectExamples" t="Include">
+            <e p="Editor" t="Include">
+              <e p="PackageManagerAssembly" t="Include">
+                <e p="PackageImportList.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Shared" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="DecalDestroyer.cs" t="Include" />
+                <e p="ExtinguishableFire.cs" t="Include" />
+                <e p="GunAim.cs" t="Include" />
+                <e p="GunShoot.cs" t="Include" />
+                <e p="ParticleCollision.cs" t="Include" />
+                <e p="ParticleExamples.cs" t="Include" />
+                <e p="ParticleMenu.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="SurfaceShader_VC.shader" t="Include" />
+              </e>
+            </e>
+            <e p="TutorialInfo" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="ReadmeEditor.cs" t="Include" />
+                </e>
+                <e p="Readme.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
       </e>
@@ -5064,6 +5096,584 @@
               </e>
             </e>
           </e>
+          <e p="com.unity.render-pipelines.core@14.0.12" t="Include">
+            <e p="Editor" t="Include">
+              <e p="AdditionalPropertiesPreferences.cs" t="Include" />
+              <e p="AdditionalPropertiesState.cs" t="Include" />
+              <e p="Analytics" t="Include">
+                <e p="AnalyticsUtils.cs" t="Include" />
+                <e p="BuildTargetAnalytic.cs" t="Include" />
+                <e p="DebugManagerWidgetUsedAnalytic.cs" t="Include" />
+                <e p="DebugManagerWindowLifetimeAnalytic.cs" t="Include" />
+                <e p="VolumePriorityUsageAnalytic.cs" t="Include" />
+                <e p="VolumeProfileOverridesAnalytic.cs" t="Include" />
+                <e p="VolumeProfileUsageAnalytic.cs" t="Include" />
+              </e>
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="AssetDatabaseHelper.cs" t="Include" />
+              <e p="BuildTargetExtensions.cs" t="Include" />
+              <e p="Camera" t="Include">
+                <e p="CameraUI.Drawers.cs" t="Include" />
+                <e p="CameraUI.Environment.Drawers.cs" t="Include" />
+                <e p="CameraUI.Environment.Skin.cs" t="Include" />
+                <e p="CameraUI.Output.Drawers.cs" t="Include" />
+                <e p="CameraUI.Output.Skin.cs" t="Include" />
+                <e p="CameraUI.PhysicalCamera.Drawers.cs" t="Include" />
+                <e p="CameraUI.PhysicalCamera.Skin.cs" t="Include" />
+                <e p="CameraUI.Rendering.Drawers.cs" t="Include" />
+                <e p="CameraUI.Rendering.Skin.cs" t="Include" />
+                <e p="CameraUI.Skin.cs" t="Include" />
+                <e p="ISerializedCamera.cs" t="Include" />
+              </e>
+              <e p="CameraEditorUtils.cs" t="Include" />
+              <e p="ContextualMenuDispatcher.cs" t="Include" />
+              <e p="CoreEditorDrawers.cs" t="Include" />
+              <e p="CoreEditorStyles.cs" t="Include" />
+              <e p="CoreEditorUtils.cs" t="Include" />
+              <e p="CoreRenderPipelinePreferences.cs" t="Include" />
+              <e p="CustomRenderTexture" t="Include">
+                <e p="CustomRenderTextureMenuItem.cs" t="Include" />
+                <e p="CustomRenderTextureShader.template" t="Include" />
+              </e>
+              <e p="Debugging" t="Include">
+                <e p="DebugState.cs" t="Include" />
+                <e p="DebugUIDrawer.Builtins.cs" t="Include" />
+                <e p="DebugUIDrawer.cs" t="Include" />
+                <e p="DebugUIHandlerCanvasEditor.cs" t="Include" />
+                <e p="DebugWindow.cs" t="Include" />
+                <e p="UIFoldoutEditor.cs" t="Include" />
+              </e>
+              <e p="Deprecated.cs" t="Include" />
+              <e p="EditorPrefBool.cs" t="Include" />
+              <e p="EditorPrefBoolFlags.cs" t="Include" />
+              <e p="EditorWindowWithHelpButton.cs" t="Include" />
+              <e p="ExpandedState.cs" t="Include" />
+              <e p="FilterWindow.cs" t="Include" />
+              <e p="Gizmo" t="Include">
+                <e p="GizmoUtility.cs" t="Include" />
+                <e p="HierarchicalBox.cs" t="Include" />
+                <e p="HierarchicalSphere.cs" t="Include" />
+                <e p="UnlitGizmo.shader" t="Include" />
+              </e>
+              <e p="ICoreRenderPipelinePreferencesProvider.cs" t="Include" />
+              <e p="InspectorCurveEditor.cs" t="Include" />
+              <e p="Lighting" t="Include">
+                <e p="CoreLightEditorUtilities.cs" t="Include" />
+                <e p="IESEngine.cs" t="Include" />
+                <e p="IESImporter.cs" t="Include" />
+                <e p="IESImporterEditor.cs" t="Include" />
+                <e p="IESObject.cs" t="Include" />
+                <e p="IESReader.cs" t="Include" />
+                <e p="ISerializedLight.cs" t="Include" />
+                <e p="LightAnchorEditor.cs" t="Include" />
+                <e p="LightAnchorEditorTool.cs" t="Include" />
+                <e p="LightAnchorHandles.cs" t="Include" />
+                <e p="LightUI.Drawers.cs" t="Include" />
+                <e p="LightUI.Skin.cs" t="Include" />
+                <e p="LightUnit" t="Include">
+                  <e p="LightUnitSlider.cs" t="Include" />
+                  <e p="LightUnitSliderSettings.cs" t="Include" />
+                  <e p="TemperatureSlider.cs" t="Include" />
+                </e>
+                <e p="ProbeVolume" t="Include">
+                  <e p="ProbeGIBaking.cs" t="Include" />
+                  <e p="ProbeGIBaking.Dilate.cs" t="Include" />
+                  <e p="ProbeGIBaking.Dilate.cs.hlsl" t="Include" />
+                  <e p="ProbeGIBaking.Invalidation.cs" t="Include" />
+                  <e p="ProbeGIBaking.VirtualOffset.cs" t="Include" />
+                  <e p="ProbePlacement.cs" t="Include" />
+                  <e p="ProbePlacement.cs.hlsl" t="Include" />
+                  <e p="ProbeReferenceVolumeProfileEditor.cs" t="Include" />
+                  <e p="ProbeSubdivisionContext.cs" t="Include" />
+                  <e p="ProbeSubdivisionResult.cs" t="Include" />
+                  <e p="ProbeTouchupVolumeEditor.cs" t="Include" />
+                  <e p="ProbeVolumeAssetEditor.cs" t="Include" />
+                  <e p="ProbeVolumeBakingProcessSettingsDrawer.cs" t="Include" />
+                  <e p="ProbeVolumeBakingWindow.cs" t="Include" />
+                  <e p="ProbeVolumeCellDilation.compute" t="Include" />
+                  <e p="ProbeVolumeEditor.cs" t="Include" />
+                  <e p="ProbeVolumeSubdivide.compute" t="Include" />
+                  <e p="ProbeVolumeUI.Drawer.cs" t="Include" />
+                  <e p="ProbeVolumeUI.Skin.cs" t="Include" />
+                  <e p="SerializedProbeTouchupVolume.cs" t="Include" />
+                  <e p="SerializedProbeVolume.cs" t="Include" />
+                  <e p="VoxelizeScene.hlsl" t="Include" />
+                  <e p="VoxelizeScene.shader" t="Include" />
+                </e>
+                <e p="Shadow" t="Include">
+                  <e p="ShadowCascadeGUI.cs" t="Include" />
+                </e>
+              </e>
+              <e p="LookDev" t="Include">
+                <e p="CameraController.cs" t="Include" />
+                <e p="CameraState.cs" t="Include" />
+                <e p="ComparisonGizmoController.cs" t="Include" />
+                <e p="ComparisonGizmoState.cs" t="Include" />
+                <e p="Compositor.cs" t="Include" />
+                <e p="Compositor.shader" t="Include" />
+                <e p="Context.cs" t="Include" />
+                <e p="CubeToLatlong.shader" t="Include" />
+                <e p="DisplayWindow-PersonalSkin.uss" t="Include" />
+                <e p="DisplayWindow.cs" t="Include" />
+                <e p="DisplayWindow.DebugSidePanel.cs" t="Include" />
+                <e p="DisplayWindow.EnvironmentLibrarySidePanel.cs" t="Include" />
+                <e p="DisplayWindow.uss" t="Include" />
+                <e p="DropArea.cs" t="Include" />
+                <e p="Environment.cs" t="Include" />
+                <e p="EnvironmentLibrary.cs" t="Include" />
+                <e p="Inspectors.uss" t="Include" />
+                <e p="LookDev.cs" t="Include" />
+                <e p="LookDevRenderer.cs" t="Include" />
+                <e p="Stage.cs" t="Include" />
+                <e p="ToolbarRadio.cs" t="Include" />
+              </e>
+              <e p="Material" t="Include">
+                <e p="AssetReimportUtils.cs" t="Include" />
+                <e p="MaterialEditorExtension.cs" t="Include" />
+                <e p="MaterialHeaderScope.cs" t="Include" />
+                <e p="MaterialHeaderScopeItem.cs" t="Include" />
+                <e p="MaterialHeaderScopeList.cs" t="Include" />
+              </e>
+              <e p="MaterialUpgrader.cs" t="Include" />
+              <e p="MenuManager.cs" t="Include" />
+              <e p="PostProcessing" t="Include">
+                <e p="LensFlareComponentSRPEditor.cs" t="Include" />
+                <e p="LensFlareDataSRPEditor.cs" t="Include" />
+                <e p="LensFlareEditor.cs" t="Include" />
+                <e p="LensFlareEditorUtils.cs" t="Include" />
+                <e p="LensFlareResource" t="Include">
+                  <e p="LensFlareDataDrivenPreview.shader" t="Include" />
+                </e>
+              </e>
+              <e p="ProjectorEditor.cs" t="Include" />
+              <e p="PropertyFetcher.cs" t="Include" />
+              <e p="QuaternionPropertyDrawer.cs" t="Include" />
+              <e p="RemoveAdditionalDataUtils.cs" t="Include" />
+              <e p="RemoveComponentUtils.cs" t="Include" />
+              <e p="RenderGraph" t="Include">
+                <e p="RenderGraphViewer.cs" t="Include" />
+              </e>
+              <e p="RenderPipeline" t="Include">
+                <e p="ISerializedRenderPipelineGlobalSettings.cs" t="Include" />
+                <e p="RenderPipelineGlobalSettingsUI.Drawers.cs" t="Include" />
+                <e p="RenderPipelineGlobalSettingsUI.Skin.cs" t="Include" />
+                <e p="RenderPipelineResourcesEditor.cs" t="Include" />
+              </e>
+              <e p="SerializedPropertyExtension.cs" t="Include" />
+              <e p="Settings" t="Include">
+                <e p="RenderPipelineGlobalSettingsProvider.cs" t="Include" />
+                <e p="SettingsProviderGUIScope.cs" t="Include" />
+              </e>
+              <e p="ShaderGenerator" t="Include">
+                <e p="CSharpToHLSL.cs" t="Include" />
+                <e p="ShaderGeneratorMenu.cs" t="Include" />
+                <e p="ShaderTypeGeneration.cs" t="Include" />
+              </e>
+              <e p="ShaderStripping" t="Include">
+                <e p="IVariantStripper.cs" t="Include" />
+                <e p="ShaderExtensions.cs" t="Include" />
+                <e p="ShaderPreprocessor.cs" t="Include" />
+                <e p="ShaderStrippingReport.cs" t="Include" />
+                <e p="ShaderStrippingWatcher.cs" t="Include" />
+              </e>
+              <e p="SpeedTree8MaterialUpgrader.cs" t="Include" />
+              <e p="StringExtensions.cs" t="Include" />
+              <e p="Unity.RenderPipelines.Core.Editor.asmdef" t="Include" />
+              <e p="Utilities" t="Include">
+                <e p="EditorMaterialQuality.cs" t="Include" />
+                <e p="SceneRenderPipelineEditor.cs" t="Include" />
+                <e p="SerializedBitArray.cs" t="Include" />
+                <e p="TimedScope.cs" t="Include" />
+              </e>
+              <e p="Volume" t="Include">
+                <e p="Drawers" t="Include">
+                  <e p="BoolParameterDrawer.cs" t="Include" />
+                  <e p="ColorParameterDrawer.cs" t="Include" />
+                  <e p="FloatParameterDrawer.cs" t="Include" />
+                  <e p="IntParameterDrawer.cs" t="Include" />
+                  <e p="TextureParameterDrawer.cs" t="Include" />
+                  <e p="Vector4ParameterDrawer.cs" t="Include" />
+                </e>
+                <e p="SerializedDataParameter.cs" t="Include" />
+                <e p="VolumeAdditionalGizmo.cs" t="Include" />
+                <e p="VolumeComponentEditor.cs" t="Include" />
+                <e p="VolumeComponentListEditor.cs" t="Include" />
+                <e p="VolumeComponentProvider.cs" t="Include" />
+                <e p="VolumeEditor.cs" t="Include" />
+                <e p="VolumeGizmoDrawer.cs" t="Include" />
+                <e p="VolumeMenuItems.cs" t="Include" />
+                <e p="VolumeParameterDrawer.cs" t="Include" />
+                <e p="VolumeProfileEditor.cs" t="Include" />
+                <e p="VolumeProfileFactory.cs" t="Include" />
+                <e p="VolumesPreferences.cs" t="Include" />
+              </e>
+            </e>
+            <e p="package.json" t="Include" />
+            <e p="Runtime" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="Camera" t="Include">
+                <e p="CameraSwitcher.cs" t="Include" />
+                <e p="FreeCamera.cs" t="Include" />
+              </e>
+              <e p="Common" t="Include">
+                <e p="CommandBufferPool.cs" t="Include" />
+                <e p="CommonStructs.cs" t="Include" />
+                <e p="ComponentSingleton.cs" t="Include" />
+                <e p="ConstantBuffer.cs" t="Include" />
+                <e p="CoreAttributes.cs" t="Include" />
+                <e p="CoreProfileId.cs" t="Include" />
+                <e p="CoreUnsafeUtils.cs" t="Include" />
+                <e p="DynamicArray.cs" t="Include" />
+                <e p="DynamicResolutionHandler.cs" t="Include" />
+                <e p="GlobalDynamicResolutionSettings.cs" t="Include" />
+                <e p="IAdditionalData.cs" t="Include" />
+                <e p="IVirtualTexturingEnabledRenderPipeline.cs" t="Include" />
+                <e p="ListBuffer.cs" t="Include" />
+                <e p="ObjectPools.cs" t="Include" />
+                <e p="ObservableList.cs" t="Include" />
+                <e p="RemoveRange.Extensions.cs" t="Include" />
+                <e p="SerializableEnum.cs" t="Include" />
+                <e p="SerializedDictionary.cs" t="Include" />
+                <e p="Swap.Extensions.cs" t="Include" />
+                <e p="XRGraphics.cs" t="Include" />
+              </e>
+              <e p="Debugging" t="Include">
+                <e p="DebugDisplaySettings.cs" t="Include" />
+                <e p="DebugDisplaySettingsPanel.cs" t="Include" />
+                <e p="DebugDisplaySettingsUI.cs" t="Include" />
+                <e p="DebugDisplaySettingsVolumes.cs" t="Include" />
+                <e p="DebugFrameTiming.cs" t="Include" />
+                <e p="DebugManager.Actions.cs" t="Include" />
+                <e p="DebugManager.cs" t="Include" />
+                <e p="DebugManager.UIState.cs" t="Include" />
+                <e p="DebugShapes.cs" t="Include" />
+                <e p="DebugUI.Containers.cs" t="Include" />
+                <e p="DebugUI.cs" t="Include" />
+                <e p="DebugUI.Fields.cs" t="Include" />
+                <e p="DebugUI.Panel.cs" t="Include" />
+                <e p="DebugUpdater.cs" t="Include" />
+                <e p="FrameTiming" t="Include">
+                  <e p="FrameTimeBottleneck.cs" t="Include" />
+                  <e p="FrameTimeSample.cs" t="Include" />
+                </e>
+                <e p="IDebugDisplaySettings.cs" t="Include" />
+                <e p="IDebugDisplaySettingsData.cs" t="Include" />
+                <e p="IDebugDisplaySettingsPanel.cs" t="Include" />
+                <e p="IDebugDisplaySettingsQuery.cs" t="Include" />
+                <e p="IVolumeDebugSettings.cs" t="Include" />
+                <e p="MousePositionDebug.cs" t="Include" />
+                <e p="Prefabs" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="DebugUIHandlerBitField.cs" t="Include" />
+                    <e p="DebugUIHandlerButton.cs" t="Include" />
+                    <e p="DebugUIHandlerCanvas.cs" t="Include" />
+                    <e p="DebugUIHandlerColor.cs" t="Include" />
+                    <e p="DebugUIHandlerContainer.cs" t="Include" />
+                    <e p="DebugUIHandlerEnumField.cs" t="Include" />
+                    <e p="DebugUIHandlerEnumHistory.cs" t="Include" />
+                    <e p="DebugUIHandlerField.cs" t="Include" />
+                    <e p="DebugUIHandlerFloatField.cs" t="Include" />
+                    <e p="DebugUIHandlerFoldout.cs" t="Include" />
+                    <e p="DebugUIHandlerGroup.cs" t="Include" />
+                    <e p="DebugUIHandlerHBox.cs" t="Include" />
+                    <e p="DebugUIHandlerIndirectFloatField.cs" t="Include" />
+                    <e p="DebugUIHandlerIndirectToggle.cs" t="Include" />
+                    <e p="DebugUIHandlerIntField.cs" t="Include" />
+                    <e p="DebugUIHandlerMessageBox.cs" t="Include" />
+                    <e p="DebugUIHandlerObject.cs" t="Include" />
+                    <e p="DebugUIHandlerObjectList.cs" t="Include" />
+                    <e p="DebugUIHandlerObjectPopupField.cs" t="Include" />
+                    <e p="DebugUIHandlerPanel.cs" t="Include" />
+                    <e p="DebugUIHandlerPersistentCanvas.cs" t="Include" />
+                    <e p="DebugUIHandlerProgressBar.cs" t="Include" />
+                    <e p="DebugUIHandlerRow.cs" t="Include" />
+                    <e p="DebugUIHandlerToggle.cs" t="Include" />
+                    <e p="DebugUIHandlerToggleHistory.cs" t="Include" />
+                    <e p="DebugUIHandlerUIntField.cs" t="Include" />
+                    <e p="DebugUIHandlerValue.cs" t="Include" />
+                    <e p="DebugUIHandlerValueTuple.cs" t="Include" />
+                    <e p="DebugUIHandlerVBox.cs" t="Include" />
+                    <e p="DebugUIHandlerVector2.cs" t="Include" />
+                    <e p="DebugUIHandlerVector3.cs" t="Include" />
+                    <e p="DebugUIHandlerVector4.cs" t="Include" />
+                    <e p="DebugUIHandlerWidget.cs" t="Include" />
+                    <e p="UIFoldout.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="ProfilingScope.cs" t="Include" />
+                <e p="ShaderDebugPrintManager.cs" t="Include" />
+                <e p="VolumeDebugSettings.cs" t="Include" />
+              </e>
+              <e p="Deprecated.cs" t="Include" />
+              <e p="Documentation.cs" t="Include" />
+              <e p="Inputs" t="Include">
+                <e p="InputRegistering.cs" t="Include" />
+              </e>
+              <e p="Lighting" t="Include">
+                <e p="ProbeVolume" t="Include">
+                  <e p="DecodeSH.hlsl" t="Include" />
+                  <e p="ProbeBrickIndex.cs" t="Include" />
+                  <e p="ProbeBrickPool.cs" t="Include" />
+                  <e p="ProbeIndexOfIndices.cs" t="Include" />
+                  <e p="ProbeReferenceVolume.cs" t="Include" />
+                  <e p="ProbeReferenceVolume.Debug.cs" t="Include" />
+                  <e p="ProbeReferenceVolume.Debug.cs.hlsl" t="Include" />
+                  <e p="ProbeReferenceVolume.ReflProbeNormalization.cs" t="Include" />
+                  <e p="ProbeReferenceVolume.Streaming.cs" t="Include" />
+                  <e p="ProbeReferenceVolumeProfile.cs" t="Include" />
+                  <e p="ProbeTouchupVolume.cs" t="Include" />
+                  <e p="ProbeVolume.cs" t="Include" />
+                  <e p="ProbeVolume.hlsl" t="Include" />
+                  <e p="ProbeVolume.Migration.cs" t="Include" />
+                  <e p="ProbeVolumeAsset.cs" t="Include" />
+                  <e p="ProbeVolumeBakingProcessSettings.cs" t="Include" />
+                  <e p="ProbeVolumeBlendStates.hlsl" t="Include" />
+                  <e p="ProbeVolumeGIContributor.cs" t="Include" />
+                  <e p="ProbeVolumePerSceneData.cs" t="Include" />
+                  <e p="ProbeVolumePositioning.cs" t="Include" />
+                  <e p="ProbeVolumeSceneData.cs" t="Include" />
+                  <e p="ShaderVariablesProbeVolumes.cs" t="Include" />
+                  <e p="ShaderVariablesProbeVolumes.cs.hlsl" t="Include" />
+                </e>
+                <e p="SphericalHarmonics.cs" t="Include" />
+              </e>
+              <e p="Lights" t="Include">
+                <e p="LightAnchor.cs" t="Include" />
+              </e>
+              <e p="LookDev" t="Include">
+                <e p="IDataProvider.cs" t="Include" />
+              </e>
+              <e p="PostProcessing" t="Include">
+                <e p="HDROutputDefines.cs" t="Include" />
+                <e p="HDROutputDefines.cs.hlsl" t="Include" />
+                <e p="LensFlareCommonSRP.cs" t="Include" />
+                <e p="LensFlareComponentSRP.cs" t="Include" />
+                <e p="LensFlareDataSRP.cs" t="Include" />
+                <e p="Shaders" t="Include">
+                  <e p="ffx" t="Include">
+                    <e p="ffx_a.hlsl" t="Include" />
+                    <e p="ffx_cas.hlsl" t="Include" />
+                    <e p="ffx_fsr1.hlsl" t="Include" />
+                    <e p="ffx_lpm.hlsl" t="Include" />
+                  </e>
+                  <e p="FSRCommon.hlsl" t="Include" />
+                  <e p="LensFlareCommon.hlsl" t="Include" />
+                </e>
+              </e>
+              <e p="RenderGraph" t="Include">
+                <e p="RenderGraph.cs" t="Include" />
+                <e p="RenderGraphBuilder.cs" t="Include" />
+                <e p="RenderGraphDefaultResources.cs" t="Include" />
+                <e p="RenderGraphLogger.cs" t="Include" />
+                <e p="RenderGraphObjectPool.cs" t="Include" />
+                <e p="RenderGraphPass.cs" t="Include" />
+                <e p="RenderGraphProfileId.cs" t="Include" />
+                <e p="RenderGraphResourceComputeBuffer.cs" t="Include" />
+                <e p="RenderGraphResourcePool.cs" t="Include" />
+                <e p="RenderGraphResourceRegistry.cs" t="Include" />
+                <e p="RenderGraphResourceRendererList.cs" t="Include" />
+                <e p="RenderGraphResources.cs" t="Include" />
+                <e p="RenderGraphResourceTexture.cs" t="Include" />
+              </e>
+              <e p="RenderPipeline" t="Include">
+                <e p="ICloudBackground.cs" t="Include" />
+                <e p="IShaderVariantSettings.cs" t="Include" />
+                <e p="IVolumetricCloud.cs" t="Include" />
+                <e p="RenderPipelineResources.cs" t="Include" />
+              </e>
+              <e p="RenderPipelineResources" t="Include">
+                <e p="FallbackShader.shader" t="Include" />
+              </e>
+              <e p="ShaderGenerator" t="Include">
+                <e p="ShaderGeneratorAttributes.cs" t="Include" />
+              </e>
+              <e p="ShaderLibrary" t="Include">
+                <e p="Sampling" t="Include">
+                  <e p="Hammersley.cs" t="Include" />
+                  <e p="Hammersley.cs.hlsl" t="Include" />
+                </e>
+              </e>
+              <e p="Textures" t="Include">
+                <e p="BufferedRTHandleSystem.cs" t="Include" />
+                <e p="DepthBits.cs" t="Include" />
+                <e p="MSAASamples.cs" t="Include" />
+                <e p="PowerOfTwoTextureAtlas.cs" t="Include" />
+                <e p="RTHandle.cs" t="Include" />
+                <e p="RTHandles.cs" t="Include" />
+                <e p="RTHandleSystem.cs" t="Include" />
+                <e p="Texture2DAtlas.cs" t="Include" />
+                <e p="Texture2DAtlasDynamic.cs" t="Include" />
+                <e p="TextureXR.cs" t="Include" />
+              </e>
+              <e p="Unity.RenderPipelines.Core.Runtime.asmdef" t="Include" />
+              <e p="Utilities" t="Include">
+                <e p="ArrayExtensions.cs" t="Include" />
+                <e p="BatchRendererGroupGlobals.cs" t="Include" />
+                <e p="BitArray.cs" t="Include" />
+                <e p="Blit.hlsl" t="Include" />
+                <e p="BlitColorAndDepth.hlsl" t="Include" />
+                <e p="Blitter.cs" t="Include" />
+                <e p="CameraCaptureBridge.cs" t="Include" />
+                <e p="ColorSpaceUtils.cs" t="Include" />
+                <e p="ColorUtils.cs" t="Include" />
+                <e p="CoreMatrixUtils.cs" t="Include" />
+                <e p="CoreRenderPipelinePreferences.cs" t="Include" />
+                <e p="CoreUtils.cs" t="Include" />
+                <e p="DelegateUtility.cs" t="Include" />
+                <e p="FSRUtils.cs" t="Include" />
+                <e p="HableCurve.cs" t="Include" />
+                <e p="HaltonSequence.cs" t="Include" />
+                <e p="HashFNV1A32.cs" t="Include" />
+                <e p="HDROutputUtils.cs" t="Include" />
+                <e p="MaterialQuality.cs" t="Include" />
+                <e p="MeshGizmo.cs" t="Include" />
+                <e p="ResourceReloader.cs" t="Include" />
+                <e p="SceneRenderPipeline.cs" t="Include" />
+                <e p="TextureCurve.cs" t="Include" />
+                <e p="TileLayoutUtils.cs" t="Include" />
+                <e p="XRUtils.cs" t="Include" />
+              </e>
+              <e p="Volume" t="Include">
+                <e p="IVolume.cs" t="Include" />
+                <e p="KeyframeUtility.cs" t="Include" />
+                <e p="Volume.cs" t="Include" />
+                <e p="VolumeComponent.cs" t="Include" />
+                <e p="VolumeComponent.EditorOnly.cs" t="Include" />
+                <e p="VolumeDebugData.cs" t="Include" />
+                <e p="VolumeManager.cs" t="Include" />
+                <e p="VolumeParameter.cs" t="Include" />
+                <e p="VolumeProfile.cs" t="Include" />
+                <e p="VolumeStack.cs" t="Include" />
+              </e>
+              <e p="XR" t="Include">
+                <e p="XRBuiltinShaderConstants.cs" t="Include" />
+                <e p="XRGraphicsAutomatedTests.cs" t="Include" />
+                <e p="XRLayout.cs" t="Include" />
+                <e p="XRMirrorView.cs" t="Include" />
+                <e p="XROcclusionMesh.cs" t="Include" />
+                <e p="XRPass.cs" t="Include" />
+                <e p="XRSystem.cs" t="Include" />
+                <e p="XRView.cs" t="Include" />
+              </e>
+            </e>
+            <e p="ShaderLibrary" t="Include">
+              <e p="ACES.hlsl" t="Include" />
+              <e p="API" t="Include">
+                <e p="D3D11.hlsl" t="Include" />
+                <e p="FoveatedRendering_Metal.hlsl" t="Include" />
+                <e p="GLCore.hlsl" t="Include" />
+                <e p="GLES2.hlsl" t="Include" />
+                <e p="GLES3.hlsl" t="Include" />
+                <e p="Metal.hlsl" t="Include" />
+                <e p="Switch.hlsl" t="Include" />
+                <e p="Validate.hlsl" t="Include" />
+                <e p="Vulkan.hlsl" t="Include" />
+              </e>
+              <e p="AreaLighting.hlsl" t="Include" />
+              <e p="BC6H.hlsl" t="Include" />
+              <e p="BSDF.hlsl" t="Include" />
+              <e p="Color.hlsl" t="Include" />
+              <e p="Common.hlsl" t="Include" />
+              <e p="CommonDeprecated.hlsl" t="Include" />
+              <e p="CommonLighting.hlsl" t="Include" />
+              <e p="CommonMaterial.hlsl" t="Include" />
+              <e p="CommonShadow.hlsl" t="Include" />
+              <e p="Debug.hlsl" t="Include" />
+              <e p="DummyShaderLibrary.cs" t="Include" />
+              <e p="EntityLighting.hlsl" t="Include" />
+              <e p="Filtering.hlsl" t="Include" />
+              <e p="FoveatedRendering.hlsl" t="Include" />
+              <e p="FoveatedRenderingKeywords.hlsl" t="Include" />
+              <e p="GeometricTools.hlsl" t="Include" />
+              <e p="GlobalSamplers.hlsl" t="Include" />
+              <e p="GraniteShaderLibBase.hlsl" t="Include" />
+              <e p="Hashes.hlsl" t="Include" />
+              <e p="HDROutput.hlsl" t="Include" />
+              <e p="ImageBasedLighting.hlsl" t="Include" />
+              <e p="Macros.hlsl" t="Include" />
+              <e p="MetaPass.hlsl" t="Include" />
+              <e p="MostRepresentativePoint.hlsl" t="Include" />
+              <e p="NormalSurfaceGradient.hlsl" t="Include" />
+              <e p="Packing.hlsl" t="Include" />
+              <e p="ParallaxMapping.hlsl" t="Include" />
+              <e p="PerPixelDisplacement.hlsl" t="Include" />
+              <e p="PhysicalCamera.hlsl" t="Include" />
+              <e p="Random.hlsl" t="Include" />
+              <e p="Refraction.hlsl" t="Include" />
+              <e p="Sampling" t="Include">
+                <e p="Fibonacci.hlsl" t="Include" />
+                <e p="Hammersley.hlsl" t="Include" />
+                <e p="SampleUVMapping.hlsl" t="Include" />
+                <e p="SampleUVMappingInternal.hlsl" t="Include" />
+                <e p="SampleUVMappingNormalInternal.hlsl" t="Include" />
+                <e p="Sampling.hlsl" t="Include" />
+              </e>
+              <e p="ScreenCoordOverride.hlsl" t="Include" />
+              <e p="SDF2D.hlsl" t="Include" />
+              <e p="ShaderDebugPrint.hlsl" t="Include" />
+              <e p="Shadow" t="Include">
+                <e p="ShadowSamplingTent.hlsl" t="Include" />
+              </e>
+              <e p="SpaceFillingCurves.hlsl" t="Include" />
+              <e p="SpaceTransforms.hlsl" t="Include" />
+              <e p="SphericalHarmonics.hlsl" t="Include" />
+              <e p="Tessellation.hlsl" t="Include" />
+              <e p="Texture.hlsl" t="Include" />
+              <e p="TextureStack.hlsl" t="Include" />
+              <e p="Unity.RenderPipelines.Core.ShaderLibrary.asmdef" t="Include" />
+              <e p="UnityDOTSInstancing.hlsl" t="Include" />
+              <e p="UnityInstancing.hlsl" t="Include" />
+              <e p="Version.hlsl" t="Include" />
+              <e p="VertexCubeSlicing.hlsl" t="Include" />
+              <e p="VirtualTexturing.hlsl" t="Include" />
+              <e p="VolumeRendering.hlsl" t="Include" />
+            </e>
+            <e p="Tests" t="Include">
+              <e p="Editor" t="Include">
+                <e p="ShaderStripping" t="Include">
+                  <e p="DummyPipelineShader.shader" t="Include" />
+                  <e p="Results" t="Include">
+                    <e p="UI_Default_0_0.json" t="Include" />
+                    <e p="UI_Default_Sprites_Default_5_0.5.json" t="Include" />
+                    <e p="UI_Default_Sprites_Default_5_0.json" t="Include" />
+                  </e>
+                </e>
+                <e p="Unity.RenderPipelines.Core.Editor.Tests.asmdef" t="Include" />
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="Unity.RenderPipelines.Core.Runtime.Tests.asmdef" t="Include" />
+              </e>
+            </e>
+            <e p="ValidationConfig.json" t="Include" />
+          </e>
+          <e p="com.unity.searcher@4.9.2" t="Include">
+            <e p="Editor" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="Resources" t="Include">
+                <e p="Searcher.uss" t="Include" />
+                <e p="SearcherItem.uxml" t="Include" />
+                <e p="SearcherWindow.uxml" t="Include" />
+              </e>
+              <e p="Searcher" t="Include">
+                <e p="Searcher.cs" t="Include" />
+                <e p="SearcherAdapter.cs" t="Include" />
+                <e p="SearcherControl.cs" t="Include" />
+                <e p="SearcherDatabase.cs" t="Include" />
+                <e p="SearcherDatabaseBase.cs" t="Include" />
+                <e p="SearcherHighlighter.cs" t="Include" />
+                <e p="SearcherItem.cs" t="Include" />
+                <e p="SearcherTreeUtility.cs" t="Include" />
+                <e p="SearcherWindow.cs" t="Include" />
+              </e>
+              <e p="Unity.Searcher.Editor.asmdef" t="Include" />
+            </e>
+            <e p="package.json" t="Include" />
+            <e p="Tests" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Unity.Searcher.EditorTests.asmdef" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="com.unity.settings-manager@2.1.0" t="Include">
             <e p="Editor" t="Include">
               <e p="Attributes.cs" t="Include" />
@@ -5088,6 +5698,1046 @@
               </e>
             </e>
             <e p="ValidationExceptions.json" t="Include" />
+          </e>
+          <e p="com.unity.shadergraph@14.0.12" t="Include">
+            <e p="Editor" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="AssetCallbacks" t="Include">
+                <e p="CreateShaderGraph.cs" t="Include" />
+                <e p="CreateShaderSubGraph.cs" t="Include" />
+                <e p="CreateVFXShaderGraph.cs" t="Include" />
+              </e>
+              <e p="Data" t="Include">
+                <e p="Actions" t="Include">
+                  <e p="GraphViewActions.cs" t="Include" />
+                </e>
+                <e p="Attributes" t="Include">
+                  <e p="BuiltinKeywordAttribute.cs" t="Include" />
+                  <e p="ContextFilterableAttribute.cs" t="Include" />
+                  <e p="InspectableAttribute.cs" t="Include" />
+                  <e p="NeverAllowedByTargetAttribute.cs" t="Include" />
+                  <e p="SGPropertyDrawerAttribute.cs" t="Include" />
+                  <e p="SRPFilterAttribute.cs" t="Include" />
+                  <e p="SubTargetFilterAttribute.cs" t="Include" />
+                </e>
+                <e p="ContextData.cs" t="Include" />
+                <e p="Enumerations" t="Include">
+                  <e p="Precision.cs" t="Include" />
+                </e>
+                <e p="Graphs" t="Include">
+                  <e p="AbstractShaderProperty.cs" t="Include" />
+                  <e p="BitangentMaterialSlot.cs" t="Include" />
+                  <e p="BooleanMaterialSlot.cs" t="Include" />
+                  <e p="BooleanShaderProperty.cs" t="Include" />
+                  <e p="CategoryData.cs" t="Include" />
+                  <e p="ColorMaterialSlot.cs" t="Include" />
+                  <e p="ColorRGBMaterialSlot.cs" t="Include" />
+                  <e p="ColorShaderProperty.cs" t="Include" />
+                  <e p="CubemapInputMaterialSlot.cs" t="Include" />
+                  <e p="CubemapMaterialSlot.cs" t="Include" />
+                  <e p="CubemapShaderProperty.cs" t="Include" />
+                  <e p="DataStore.cs" t="Include" />
+                  <e p="DynamicMatrixMaterialSlot.cs" t="Include" />
+                  <e p="DynamicValueMaterialSlot.cs" t="Include" />
+                  <e p="DynamicVectorMaterialSlot.cs" t="Include" />
+                  <e p="GradientInputMaterialSlot.cs" t="Include" />
+                  <e p="GradientMaterialSlot.cs" t="Include" />
+                  <e p="GradientShaderProperty.cs" t="Include" />
+                  <e p="GraphConcretization.cs" t="Include" />
+                  <e p="GraphData.cs" t="Include" />
+                  <e p="GraphDataReadOnly.cs" t="Include" />
+                  <e p="GraphDataUtils.cs" t="Include" />
+                  <e p="GraphSetup.cs" t="Include" />
+                  <e p="GraphValidation.cs" t="Include" />
+                  <e p="GroupData.cs" t="Include" />
+                  <e p="IMaterialGraphAsset.cs" t="Include" />
+                  <e p="IMaterialSlotHasValue.cs" t="Include" />
+                  <e p="LightmappingShaderProperties.cs" t="Include" />
+                  <e p="MaterialSlot.cs" t="Include" />
+                  <e p="Matrix2MaterialSlot.cs" t="Include" />
+                  <e p="Matrix2ShaderProperty.cs" t="Include" />
+                  <e p="Matrix3MaterialSlot.cs" t="Include" />
+                  <e p="Matrix3ShaderProperty.cs" t="Include" />
+                  <e p="Matrix4MaterialSlot.cs" t="Include" />
+                  <e p="Matrix4ShaderProperty.cs" t="Include" />
+                  <e p="MatrixShaderProperty.cs" t="Include" />
+                  <e p="MinimalGraphData.cs" t="Include" />
+                  <e p="NormalMaterialSlot.cs" t="Include" />
+                  <e p="ParentGroupChange.cs" t="Include" />
+                  <e p="PositionMaterialSlot.cs" t="Include" />
+                  <e p="PreviewMode.cs" t="Include" />
+                  <e p="PreviewProperty.cs" t="Include" />
+                  <e p="PropertyConnectionStateMaterialSlot.cs" t="Include" />
+                  <e p="SamplerStateMaterialSlot.cs" t="Include" />
+                  <e p="SamplerStateShaderProperty.cs" t="Include" />
+                  <e p="ScreenPositionMaterialSlot.cs" t="Include" />
+                  <e p="SerializableCubemap.cs" t="Include" />
+                  <e p="SerializableGuid.cs" t="Include" />
+                  <e p="SerializableMesh.cs" t="Include" />
+                  <e p="SerializableTexture.cs" t="Include" />
+                  <e p="SerializableTextureArray.cs" t="Include" />
+                  <e p="SerializableVirtualTexture.cs" t="Include" />
+                  <e p="ShaderDropdown.cs" t="Include" />
+                  <e p="ShaderGraphRequirements.cs" t="Include" />
+                  <e p="ShaderInput.cs" t="Include" />
+                  <e p="ShaderKeyword.cs" t="Include" />
+                  <e p="SpaceMaterialSlot.cs" t="Include" />
+                  <e p="StickyNoteData.cs" t="Include" />
+                  <e p="TangentMaterialSlot.cs" t="Include" />
+                  <e p="Texture2DArrayInputMaterialSlot.cs" t="Include" />
+                  <e p="Texture2DArrayMaterialSlot.cs" t="Include" />
+                  <e p="Texture2DArrayShaderProperty.cs" t="Include" />
+                  <e p="Texture2DInputMaterialSlot.cs" t="Include" />
+                  <e p="Texture2DMaterialSlot.cs" t="Include" />
+                  <e p="Texture2DShaderProperty.cs" t="Include" />
+                  <e p="Texture3DInputMaterialSlot.cs" t="Include" />
+                  <e p="Texture3DMaterialSlot.cs" t="Include" />
+                  <e p="Texture3DShaderProperty.cs" t="Include" />
+                  <e p="TextureSamplerState.cs" t="Include" />
+                  <e p="UVMaterialSlot.cs" t="Include" />
+                  <e p="Vector1MaterialSlot.cs" t="Include" />
+                  <e p="Vector1ShaderProperty.cs" t="Include" />
+                  <e p="Vector2MaterialSlot.cs" t="Include" />
+                  <e p="Vector2ShaderProperty.cs" t="Include" />
+                  <e p="Vector3MaterialSlot.cs" t="Include" />
+                  <e p="Vector3ShaderProperty.cs" t="Include" />
+                  <e p="Vector4MaterialSlot.cs" t="Include" />
+                  <e p="Vector4ShaderProperty.cs" t="Include" />
+                  <e p="VectorShaderProperty.cs" t="Include" />
+                  <e p="VertexColorMaterialSlot.cs" t="Include" />
+                  <e p="ViewDirectionMaterialSlot.cs" t="Include" />
+                  <e p="VirtualTextureInputMaterialSlot.cs" t="Include" />
+                  <e p="VirtualTextureMaterialSlot.cs" t="Include" />
+                  <e p="VirtualTextureShaderProperty.cs" t="Include" />
+                </e>
+                <e p="Implementation" t="Include">
+                  <e p="Edge.cs" t="Include" />
+                  <e p="GraphObject.cs" t="Include" />
+                  <e p="HasDependenciesAttribute.cs" t="Include" />
+                  <e p="IHasDependencies.cs" t="Include" />
+                  <e p="NodeUtils.cs" t="Include" />
+                  <e p="SlotType.cs" t="Include" />
+                </e>
+                <e p="Interfaces" t="Include">
+                  <e p="GenerationMode.cs" t="Include" />
+                  <e p="Graph" t="Include">
+                    <e p="DrawState.cs" t="Include" />
+                    <e p="GraphDrawingData.cs" t="Include" />
+                    <e p="IEdge.cs" t="Include" />
+                    <e p="INode.cs" t="Include" />
+                    <e p="IOnAssetEnabled.cs" t="Include" />
+                    <e p="SlotReference.cs" t="Include" />
+                  </e>
+                  <e p="ICanChangeShaderGUI.cs" t="Include" />
+                  <e p="IGeneratesBodyCode.cs" t="Include" />
+                  <e p="IGeneratesFunction.cs" t="Include" />
+                  <e p="IGraphDataAction.cs" t="Include" />
+                  <e p="IGroupItem.cs" t="Include" />
+                  <e p="IHasCustomDeprecationMessage.cs" t="Include" />
+                  <e p="IInspectable.cs" t="Include" />
+                  <e p="IMayRequireBitangent.cs" t="Include" />
+                  <e p="IMayRequireCameraOpaqueTexture.cs" t="Include" />
+                  <e p="IMayRequireDepthTexture.cs" t="Include" />
+                  <e p="IMayRequireFaceSign.cs" t="Include" />
+                  <e p="IMayRequireMeshUV.cs" t="Include" />
+                  <e p="IMayRequireNormal.cs" t="Include" />
+                  <e p="IMayRequirePosition.cs" t="Include" />
+                  <e p="IMayRequirePositionPredisplacement.cs" t="Include" />
+                  <e p="IMayRequireScreenPosition.cs" t="Include" />
+                  <e p="IMayRequireTangent.cs" t="Include" />
+                  <e p="IMayRequireTime.cs" t="Include" />
+                  <e p="IMayRequireTransform.cs" t="Include" />
+                  <e p="IMayRequireVertexColor.cs" t="Include" />
+                  <e p="IMayRequireVertexID.cs" t="Include" />
+                  <e p="IMayRequireVertexSkinning.cs" t="Include" />
+                  <e p="IMayRequireViewDirection.cs" t="Include" />
+                  <e p="IMaySupportVFX.cs" t="Include" />
+                  <e p="IPropertyDrawer.cs" t="Include" />
+                  <e p="NeededCoordinateSpace.cs" t="Include" />
+                  <e p="PositionSource.cs" t="Include" />
+                </e>
+                <e p="Legacy" t="Include">
+                  <e p="AbstractMaterialNode0.cs" t="Include" />
+                  <e p="Edge0.cs" t="Include" />
+                  <e p="GraphData0.cs" t="Include" />
+                  <e p="GroupData0.cs" t="Include" />
+                  <e p="ILegacyTarget.cs" t="Include" />
+                  <e p="IMasterNode1.cs" t="Include" />
+                  <e p="PBRMasterNode1.cs" t="Include" />
+                  <e p="SerializableGuid.cs" t="Include" />
+                  <e p="ShaderInput0.cs" t="Include" />
+                  <e p="SlotReference0.cs" t="Include" />
+                  <e p="SpriteLitMasterNode1.cs" t="Include" />
+                  <e p="SpriteUnlitMasterNode1.cs" t="Include" />
+                  <e p="StickyNoteData0.cs" t="Include" />
+                  <e p="UnlitMasterNode1.cs" t="Include" />
+                  <e p="VisualEffectMasterNode1.cs" t="Include" />
+                </e>
+                <e p="Nodes" t="Include">
+                  <e p="AbstractMaterialNode.cs" t="Include" />
+                  <e p="Artistic" t="Include">
+                    <e p="Adjustment" t="Include">
+                      <e p="ChannelMixerNode.cs" t="Include" />
+                      <e p="ContrastNode.cs" t="Include" />
+                      <e p="HueNode.cs" t="Include" />
+                      <e p="InvertColorsNode.cs" t="Include" />
+                      <e p="ReplaceColorNode.cs" t="Include" />
+                      <e p="SaturationNode.cs" t="Include" />
+                      <e p="WhiteBalanceNode.cs" t="Include" />
+                    </e>
+                    <e p="Blend" t="Include">
+                      <e p="BlendMode.cs" t="Include" />
+                      <e p="BlendNode.cs" t="Include" />
+                    </e>
+                    <e p="Filter" t="Include">
+                      <e p="DitherNode.cs" t="Include" />
+                      <e p="FadeTransitionNode.cs" t="Include" />
+                    </e>
+                    <e p="Mask" t="Include">
+                      <e p="ChannelMaskNode.cs" t="Include" />
+                      <e p="ColorMaskNode.cs" t="Include" />
+                    </e>
+                    <e p="Normal" t="Include">
+                      <e p="NormalBlendNode.cs" t="Include" />
+                      <e p="NormalFromHeightNode.cs" t="Include" />
+                      <e p="NormalFromTextureNode.cs" t="Include" />
+                      <e p="NormalReconstructZNode.cs" t="Include" />
+                      <e p="NormalStrengthNode.cs" t="Include" />
+                      <e p="NormalUnpackNode.cs" t="Include" />
+                    </e>
+                    <e p="Utility" t="Include">
+                      <e p="ColorspaceConversion.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="BlockNode.cs" t="Include" />
+                  <e p="Channel" t="Include">
+                    <e p="CombineNode.cs" t="Include" />
+                    <e p="FlipNode.cs" t="Include" />
+                    <e p="SplitNode.cs" t="Include" />
+                    <e p="SwizzleNode.cs" t="Include" />
+                  </e>
+                  <e p="CodeFunctionNode.cs" t="Include" />
+                  <e p="FormerNameAttribute.cs" t="Include" />
+                  <e p="FunctionMultiInput.cs" t="Include" />
+                  <e p="GeometryNode.cs" t="Include" />
+                  <e p="GuidEncoder.cs" t="Include" />
+                  <e p="Input" t="Include">
+                    <e p="Basic" t="Include">
+                      <e p="BooleanNode.cs" t="Include" />
+                      <e p="ColorNode.cs" t="Include" />
+                      <e p="ConstantNode.cs" t="Include" />
+                      <e p="IntegerNode.cs" t="Include" />
+                      <e p="SliderNode.cs" t="Include" />
+                      <e p="TimeNode.cs" t="Include" />
+                      <e p="Vector1Node.cs" t="Include" />
+                      <e p="Vector2Node.cs" t="Include" />
+                      <e p="Vector3Node.cs" t="Include" />
+                      <e p="Vector4Node.cs" t="Include" />
+                    </e>
+                    <e p="CustomInterpolatorNode.cs" t="Include" />
+                    <e p="Geometry" t="Include">
+                      <e p="BitangentVectorNode.cs" t="Include" />
+                      <e p="InstanceIDNode.cs" t="Include" />
+                      <e p="NormalVectorNode.cs" t="Include" />
+                      <e p="PositionNode.cs" t="Include" />
+                      <e p="ScreenPositionNode.cs" t="Include" />
+                      <e p="TangentVectorNode.cs" t="Include" />
+                      <e p="UVNode.cs" t="Include" />
+                      <e p="VertexColorNode.cs" t="Include" />
+                      <e p="VertexIDNode.cs" t="Include" />
+                      <e p="ViewDirectionNode.cs" t="Include" />
+                      <e p="ViewVectorNode.cs" t="Include" />
+                    </e>
+                    <e p="Gradient" t="Include">
+                      <e p="BlackbodyNode.cs" t="Include" />
+                      <e p="GradientNode.cs" t="Include" />
+                      <e p="SampleGradientNode.cs" t="Include" />
+                    </e>
+                    <e p="Lighting" t="Include">
+                      <e p="AmbientNode.cs" t="Include" />
+                      <e p="BakedGINode.cs" t="Include" />
+                      <e p="MainLightDirectionNode.cs" t="Include" />
+                      <e p="ReflectionProbeNode.cs" t="Include" />
+                    </e>
+                    <e p="Matrix" t="Include">
+                      <e p="Matrix2Node.cs" t="Include" />
+                      <e p="Matrix3Node.cs" t="Include" />
+                      <e p="Matrix4Node.cs" t="Include" />
+                      <e p="TransformationMatrixNode.cs" t="Include" />
+                    </e>
+                    <e p="PBR" t="Include">
+                      <e p="DielectricSpecularNode.cs" t="Include" />
+                      <e p="MetalReflectanceNode.cs" t="Include" />
+                    </e>
+                    <e p="PropertyNode.cs" t="Include" />
+                    <e p="Scene" t="Include">
+                      <e p="CameraNode.cs" t="Include" />
+                      <e p="EyeIndexNode.cs" t="Include" />
+                      <e p="FogNode.cs" t="Include" />
+                      <e p="ObjectNode.cs" t="Include" />
+                      <e p="SceneColorNode.cs" t="Include" />
+                      <e p="SceneDepthDifferenceNode.cs" t="Include" />
+                      <e p="SceneDepthNode.cs" t="Include" />
+                      <e p="ScreenNode.cs" t="Include" />
+                    </e>
+                    <e p="Texture" t="Include">
+                      <e p="CalculateLevelOfDetailTexture2DNode.cs" t="Include" />
+                      <e p="CubemapAssetNode.cs" t="Include" />
+                      <e p="GatherTexture2DNode.cs" t="Include" />
+                      <e p="ProceduralVirtualTextureNode.cs" t="Include" />
+                      <e p="SampleCubemapNode.cs" t="Include" />
+                      <e p="SampleRawCubemapNode.cs" t="Include" />
+                      <e p="SamplerStateNode.cs" t="Include" />
+                      <e p="SampleTexture2DArrayNode.cs" t="Include" />
+                      <e p="SampleTexture2DLODNode.cs" t="Include" />
+                      <e p="SampleTexture2DNode.cs" t="Include" />
+                      <e p="SampleTexture3DNode.cs" t="Include" />
+                      <e p="SampleVirtualTextureNode.cs" t="Include" />
+                      <e p="TexelSizeNode.cs" t="Include" />
+                      <e p="Texture2DArrayAssetNode.cs" t="Include" />
+                      <e p="Texture2DAssetNode.cs" t="Include" />
+                      <e p="Texture3DAssetNode.cs" t="Include" />
+                      <e p="TextureStackNode.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="IPropertyFromNode.cs" t="Include" />
+                  <e p="LegacyUnknownTypeNode.cs" t="Include" />
+                  <e p="Math" t="Include">
+                    <e p="Advanced" t="Include">
+                      <e p="AbsoluteNode.cs" t="Include" />
+                      <e p="ExponentialNode.cs" t="Include" />
+                      <e p="LengthNode.cs" t="Include" />
+                      <e p="LogNode.cs" t="Include" />
+                      <e p="ModuloNode.cs" t="Include" />
+                      <e p="NegateNode.cs" t="Include" />
+                      <e p="NormalizeNode.cs" t="Include" />
+                      <e p="PosterizeNode.cs" t="Include" />
+                      <e p="ReciprocalNode.cs" t="Include" />
+                      <e p="ReciprocalSquareRootNode.cs" t="Include" />
+                    </e>
+                    <e p="Basic" t="Include">
+                      <e p="AddNode.cs" t="Include" />
+                      <e p="DivideNode.cs" t="Include" />
+                      <e p="MultiplyNode.cs" t="Include" />
+                      <e p="PowerNode.cs" t="Include" />
+                      <e p="SquareRootNode.cs" t="Include" />
+                      <e p="SubtractNode.cs" t="Include" />
+                    </e>
+                    <e p="Derivative" t="Include">
+                      <e p="DDXNode.cs" t="Include" />
+                      <e p="DDXYNode.cs" t="Include" />
+                      <e p="DDYNode.cs" t="Include" />
+                    </e>
+                    <e p="Interpolation" t="Include">
+                      <e p="InverseLerpNode.cs" t="Include" />
+                      <e p="LerpNode.cs" t="Include" />
+                      <e p="SmoothstepNode.cs" t="Include" />
+                    </e>
+                    <e p="Matrix" t="Include">
+                      <e p="MatrixConstructionNode.cs" t="Include" />
+                      <e p="MatrixDeterminantNode.cs" t="Include" />
+                      <e p="MatrixSplitNode.cs" t="Include" />
+                      <e p="MatrixTransposeNode.cs" t="Include" />
+                    </e>
+                    <e p="Range" t="Include">
+                      <e p="ClampNode.cs" t="Include" />
+                      <e p="FractionNode.cs" t="Include" />
+                      <e p="MaximumNode.cs" t="Include" />
+                      <e p="MinimumNode.cs" t="Include" />
+                      <e p="OneMinusNode.cs" t="Include" />
+                      <e p="RandomRangeNode.cs" t="Include" />
+                      <e p="RemapNode.cs" t="Include" />
+                      <e p="SaturateNode.cs" t="Include" />
+                    </e>
+                    <e p="Round" t="Include">
+                      <e p="CeilingNode.cs" t="Include" />
+                      <e p="FloorNode.cs" t="Include" />
+                      <e p="RoundNode.cs" t="Include" />
+                      <e p="SignNode.cs" t="Include" />
+                      <e p="StepNode.cs" t="Include" />
+                      <e p="TruncateNode.cs" t="Include" />
+                    </e>
+                    <e p="Trigonometry" t="Include">
+                      <e p="ArccosineNode.cs" t="Include" />
+                      <e p="ArcsineNode.cs" t="Include" />
+                      <e p="Arctangent2Node.cs" t="Include" />
+                      <e p="ArctangentNode.cs" t="Include" />
+                      <e p="CosineNode.cs" t="Include" />
+                      <e p="DegreesToRadiansNode.cs" t="Include" />
+                      <e p="HyperbolicCosineNode.cs" t="Include" />
+                      <e p="HyperbolicSineNode.cs" t="Include" />
+                      <e p="HyperbolicTangentNode.cs" t="Include" />
+                      <e p="RadiansToDegreesNode.cs" t="Include" />
+                      <e p="SineNode.cs" t="Include" />
+                      <e p="TangentNode.cs" t="Include" />
+                    </e>
+                    <e p="Vector" t="Include">
+                      <e p="CrossProductNode.cs" t="Include" />
+                      <e p="DistanceNode.cs" t="Include" />
+                      <e p="DotProductNode.cs" t="Include" />
+                      <e p="FresnelEffectNode.cs" t="Include" />
+                      <e p="ProjectionNode.cs" t="Include" />
+                      <e p="ReflectionNode.cs" t="Include" />
+                      <e p="RefractNode.cs" t="Include" />
+                      <e p="RejectionNode.cs" t="Include" />
+                      <e p="RotateAboutAxisNode.cs" t="Include" />
+                      <e p="SphereMaskNode.cs" t="Include" />
+                      <e p="TransformNode.cs" t="Include" />
+                    </e>
+                    <e p="Wave" t="Include">
+                      <e p="NoiseSineWaveNode.cs" t="Include" />
+                      <e p="SawtoothWaveNode.cs" t="Include" />
+                      <e p="SquareWaveNode.cs" t="Include" />
+                      <e p="TriangleWaveNode.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="MeshDeformation" t="Include">
+                    <e p="ComputeDeformNode.cs" t="Include" />
+                    <e p="LinearBlendSkinningNode.cs" t="Include" />
+                  </e>
+                  <e p="NodeClassCache.cs" t="Include" />
+                  <e p="NormalMapSpace.cs" t="Include" />
+                  <e p="Procedural" t="Include">
+                    <e p="CheckerboardNode.cs" t="Include" />
+                    <e p="Noise" t="Include">
+                      <e p="GradientNoiseNode.cs" t="Include" />
+                      <e p="SimpleNoiseNode.cs" t="Include" />
+                      <e p="VoronoiNode.cs" t="Include" />
+                    </e>
+                    <e p="Shape" t="Include">
+                      <e p="EllipseNode.cs" t="Include" />
+                      <e p="PolygonNode.cs" t="Include" />
+                      <e p="RectangleNode.cs" t="Include" />
+                      <e p="RoundedPolygonNode.cs" t="Include" />
+                      <e p="RoundedRectangleNode.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="RedirectNode.cs" t="Include" />
+                  <e p="ShaderStage.cs" t="Include" />
+                  <e p="SlotValue.cs" t="Include" />
+                  <e p="TitleAttribute.cs" t="Include" />
+                  <e p="Utility" t="Include">
+                    <e p="CustomFunctionNode.cs" t="Include" />
+                    <e p="DropdownNode.cs" t="Include" />
+                    <e p="KeywordNode.cs" t="Include" />
+                    <e p="Logic" t="Include">
+                      <e p="AllNode.cs" t="Include" />
+                      <e p="AndNode.cs" t="Include" />
+                      <e p="AnyNode.cs" t="Include" />
+                      <e p="BranchNode.cs" t="Include" />
+                      <e p="BranchOnInputConnection.cs" t="Include" />
+                      <e p="ComparisonNode.cs" t="Include" />
+                      <e p="IsFrontFaceNode.cs" t="Include" />
+                      <e p="IsInfiniteNode.cs" t="Include" />
+                      <e p="IsNanNode.cs" t="Include" />
+                      <e p="NandNode.cs" t="Include" />
+                      <e p="NotNode.cs" t="Include" />
+                      <e p="OrNode.cs" t="Include" />
+                    </e>
+                    <e p="PreviewNode.cs" t="Include" />
+                    <e p="RedirectNodeData.cs" t="Include" />
+                    <e p="RedirectNodeView.cs" t="Include" />
+                    <e p="SplitTextureTransformNode.cs" t="Include" />
+                    <e p="SubGraphNode.cs" t="Include" />
+                  </e>
+                  <e p="UV" t="Include">
+                    <e p="FlipbookNode.cs" t="Include" />
+                    <e p="ParallaxMappingNode.cs" t="Include" />
+                    <e p="ParallaxOcclusionMappingNode.cs" t="Include" />
+                    <e p="PolarCoordinatesNode.cs" t="Include" />
+                    <e p="RadialShearNode.cs" t="Include" />
+                    <e p="RotateNode.cs" t="Include" />
+                    <e p="SpherizeNode.cs" t="Include" />
+                    <e p="TilingAndOffsetNode.cs" t="Include" />
+                    <e p="TriplanarNode.cs" t="Include" />
+                    <e p="TwirlNode.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="SubGraph" t="Include">
+                  <e p="SubGraphAsset.cs" t="Include" />
+                  <e p="SubGraphOutputNode.cs" t="Include" />
+                </e>
+                <e p="Util" t="Include">
+                  <e p="FunctionRegistry.cs" t="Include" />
+                  <e p="GradientUtil.cs" t="Include" />
+                  <e p="GraphUtil.cs" t="Include" />
+                  <e p="Identifier.cs" t="Include" />
+                  <e p="KeywordCollector.cs" t="Include" />
+                  <e p="KeywordDependentCollection.cs" t="Include" />
+                  <e p="KeywordUtil.cs" t="Include" />
+                  <e p="Logging.cs" t="Include" />
+                  <e p="MipSamplingModes.cs" t="Include" />
+                  <e p="PooledHashSet.cs" t="Include" />
+                  <e p="PooledList.cs" t="Include" />
+                  <e p="PrecisionUtil.cs" t="Include" />
+                  <e p="PropertyUtil.cs" t="Include" />
+                  <e p="RGBANodeOutput.cs" t="Include" />
+                  <e p="ScreenSpaceType.cs" t="Include" />
+                  <e p="SerializationHelper.cs" t="Include" />
+                  <e p="ShaderGraphRequirementsPerKeyword.cs" t="Include" />
+                  <e p="SlotValueTypeUtil.cs" t="Include" />
+                  <e p="SpaceTransformUtil.cs" t="Include" />
+                  <e p="StackPool.cs" t="Include" />
+                  <e p="TextUtil.cs" t="Include" />
+                  <e p="UvChannel.cs" t="Include" />
+                </e>
+              </e>
+              <e p="DefaultShaderIncludes.cs" t="Include" />
+              <e p="Drawing" t="Include">
+                <e p="Blackboard" t="Include">
+                  <e p="BlackboardInputInfo.cs" t="Include" />
+                  <e p="BlackboardUtils.cs" t="Include" />
+                  <e p="SGBlackboard.cs" t="Include" />
+                  <e p="SGBlackboardCategory.cs" t="Include" />
+                  <e p="SGBlackboardField.cs" t="Include" />
+                  <e p="SGBlackboardRow.cs" t="Include" />
+                </e>
+                <e p="Colors" t="Include">
+                  <e p="CategoryColors.cs" t="Include" />
+                  <e p="ColorManager.cs" t="Include" />
+                  <e p="CustomColorData.cs" t="Include" />
+                  <e p="IColorProvider.cs" t="Include" />
+                  <e p="NoColors.cs" t="Include" />
+                  <e p="PrecisionColors.cs" t="Include" />
+                  <e p="UserColors.cs" t="Include" />
+                </e>
+                <e p="Controllers" t="Include">
+                  <e p="BlackboardCategoryController.cs" t="Include" />
+                  <e p="BlackboardController.cs" t="Include" />
+                  <e p="SGController.cs" t="Include" />
+                  <e p="ShaderInputViewController.cs" t="Include" />
+                </e>
+                <e p="Controls" t="Include">
+                  <e p="ButtonControl.cs" t="Include" />
+                  <e p="ChannelEnumControl.cs" t="Include" />
+                  <e p="ChannelEnumMaskControl.cs" t="Include" />
+                  <e p="ChannelMixerControl.cs" t="Include" />
+                  <e p="ColorControl.cs" t="Include" />
+                  <e p="CubemapControl.cs" t="Include" />
+                  <e p="DefaultControl.cs" t="Include" />
+                  <e p="DielectricSpecularControl.cs" t="Include" />
+                  <e p="EnumControl.cs" t="Include" />
+                  <e p="EnumConversionControl.cs" t="Include" />
+                  <e p="GradientControl.cs" t="Include" />
+                  <e p="IControlAttribute.cs" t="Include" />
+                  <e p="IdentifierControl.cs" t="Include" />
+                  <e p="IntegerControl.cs" t="Include" />
+                  <e p="ObjectControl.cs" t="Include" />
+                  <e p="PopupControl.cs" t="Include" />
+                  <e p="SliderControl.cs" t="Include" />
+                  <e p="TextControl.cs" t="Include" />
+                  <e p="Texture3DControl.cs" t="Include" />
+                  <e p="TextureArrayControl.cs" t="Include" />
+                  <e p="TextureControl.cs" t="Include" />
+                  <e p="ToggleControl.cs" t="Include" />
+                  <e p="VectorControl.cs" t="Include" />
+                </e>
+                <e p="EdgeConnectorListener.cs" t="Include" />
+                <e p="INodeModificationListener.cs" t="Include" />
+                <e p="Inspector" t="Include">
+                  <e p="InspectorView.cs" t="Include" />
+                  <e p="MasterPreviewView.cs" t="Include" />
+                  <e p="PropertyDrawers" t="Include">
+                    <e p="AbstractMaterialNodePropertyDrawer.cs" t="Include" />
+                    <e p="BoolPropertyDrawer.cs" t="Include" />
+                    <e p="ColorPropertyDrawer.cs" t="Include" />
+                    <e p="CubemapPropertyDrawer.cs" t="Include" />
+                    <e p="CustomFunctionNodePropertyDrawer.cs" t="Include" />
+                    <e p="DropdownPropertyDrawer.cs" t="Include" />
+                    <e p="EnumPropertyDrawer.cs" t="Include" />
+                    <e p="FloatPropertyDrawer.cs" t="Include" />
+                    <e p="GradientPropertyDrawer.cs" t="Include" />
+                    <e p="GraphDataPropertyDrawer.cs" t="Include" />
+                    <e p="IntegerPropertyDrawer.cs" t="Include" />
+                    <e p="IShaderPropertyDrawer.cs" t="Include" />
+                    <e p="MatrixPropertyDrawer.cs" t="Include" />
+                    <e p="PositionNodePropertyDrawer.cs" t="Include" />
+                    <e p="ProceduralVirtualTextureNodePropertyDrawer.cs" t="Include" />
+                    <e p="SamplerStateNodePropertyDrawer.cs" t="Include" />
+                    <e p="SampleTexture2DArrayNodePropertyDrawer.cs" t="Include" />
+                    <e p="SampleTexture2DNodePropertyDrawer.cs" t="Include" />
+                    <e p="SampleTexture3DNodePropertyDrawer.cs" t="Include" />
+                    <e p="SampleVirtualTextureNodePropertyDrawer.cs" t="Include" />
+                    <e p="ShaderInputPropertyDrawer.cs" t="Include" />
+                    <e p="SubGraphOutputNodePropertyDrawer.cs" t="Include" />
+                    <e p="TextPropertyDrawer.cs" t="Include" />
+                    <e p="Texture2DArrayPropertyDrawer.cs" t="Include" />
+                    <e p="Texture2DPropertyDrawer.cs" t="Include" />
+                    <e p="Texture3DPropertyDrawer.cs" t="Include" />
+                    <e p="ToggleDataPropertyDrawer.cs" t="Include" />
+                    <e p="TransformNodePropertyDrawer.cs" t="Include" />
+                    <e p="TriplanarNodePropertyDrawer.cs" t="Include" />
+                    <e p="Vector2PropertyDrawer.cs" t="Include" />
+                    <e p="Vector3PropertyDrawer.cs" t="Include" />
+                    <e p="Vector4PropertyDrawer.cs" t="Include" />
+                  </e>
+                  <e p="PropertyDrawerUtils.cs" t="Include" />
+                  <e p="TabbedView" t="Include">
+                    <e p="TabbedView.cs" t="Include" />
+                    <e p="TabButton.cs" t="Include" />
+                  </e>
+                  <e p="WindowDockingLayout.cs" t="Include" />
+                </e>
+                <e p="Interfaces" t="Include">
+                  <e p="IRectInterface.cs" t="Include" />
+                  <e p="IResizable.cs" t="Include" />
+                  <e p="ISGControlledElement.cs" t="Include" />
+                  <e p="ISGViewModel.cs" t="Include" />
+                  <e p="IShaderInputObserver.cs" t="Include" />
+                </e>
+                <e p="Manipulators" t="Include">
+                  <e p="Draggable.cs" t="Include" />
+                  <e p="ElementResizer.cs" t="Include" />
+                  <e p="ResizeBorderFrame.cs" t="Include" />
+                  <e p="ResizeSideHandle.cs" t="Include" />
+                  <e p="Scrollable.cs" t="Include" />
+                  <e p="WindowDraggable.cs" t="Include" />
+                </e>
+                <e p="MaterialEditor" t="Include">
+                  <e p="ShaderGraphPropertyDrawers.cs" t="Include" />
+                </e>
+                <e p="MaterialGraphEditWindow.cs" t="Include" />
+                <e p="MaterialGraphPreviewGenerator.cs" t="Include" />
+                <e p="PreviewManager.cs" t="Include" />
+                <e p="SearchWindowAdapter.cs" t="Include" />
+                <e p="SearchWindowProvider.cs" t="Include" />
+                <e p="ViewModels" t="Include">
+                  <e p="BlackboardCategoryViewModel.cs" t="Include" />
+                  <e p="BlackboardViewModel.cs" t="Include" />
+                  <e p="InspectorViewModel.cs" t="Include" />
+                  <e p="ShaderInputViewModel.cs" t="Include" />
+                </e>
+                <e p="Views" t="Include">
+                  <e p="ContextView.cs" t="Include" />
+                  <e p="FloatField.cs" t="Include" />
+                  <e p="GradientEdge.cs" t="Include" />
+                  <e p="GraphEditorView.cs" t="Include" />
+                  <e p="GraphSubWindow.cs" t="Include" />
+                  <e p="HelpBoxRow.cs" t="Include" />
+                  <e p="HlslFunctionView.cs" t="Include" />
+                  <e p="IdentifierField.cs" t="Include" />
+                  <e p="IShaderNodeView.cs" t="Include" />
+                  <e p="MaterialGraphView.cs" t="Include" />
+                  <e p="MaterialNodeView.cs" t="Include" />
+                  <e p="NodeSettingsView.cs" t="Include" />
+                  <e p="PortInputView.cs" t="Include" />
+                  <e p="PreviewSceneResources.cs" t="Include" />
+                  <e p="PropertyNodeView.cs" t="Include" />
+                  <e p="PropertyRow.cs" t="Include" />
+                  <e p="PropertySheet.cs" t="Include" />
+                  <e p="ReorderableSlotListView.cs" t="Include" />
+                  <e p="ReorderableTextListView.cs" t="Include" />
+                  <e p="ResizableElement.cs" t="Include" />
+                  <e p="ShaderGroup.cs" t="Include" />
+                  <e p="ShaderPort.cs" t="Include" />
+                  <e p="Slots" t="Include">
+                    <e p="BooleanSlotControlView.cs" t="Include" />
+                    <e p="ColorRGBSlotControlView.cs" t="Include" />
+                    <e p="ColorSlotControlView.cs" t="Include" />
+                    <e p="CubemapSlotControlView.cs" t="Include" />
+                    <e p="GradientSlotControlView.cs" t="Include" />
+                    <e p="LabelSlotControlView.cs" t="Include" />
+                    <e p="MultiFloatSlotControlView.cs" t="Include" />
+                    <e p="MultiIntegerSlotControlView.cs" t="Include" />
+                    <e p="PropertyConnectionStateSlotControlView.cs" t="Include" />
+                    <e p="ScreenPositionSlotControlView.cs" t="Include" />
+                    <e p="Texture3DSlotControlView.cs" t="Include" />
+                    <e p="TextureArraySlotControlView.cs" t="Include" />
+                    <e p="TextureSlotControlView.cs" t="Include" />
+                    <e p="UVSlotControlView.cs" t="Include" />
+                  </e>
+                  <e p="StickyNote.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Extensions" t="Include">
+                <e p="FieldExtensions.cs" t="Include" />
+                <e p="IConditionalExtensions.cs" t="Include" />
+                <e p="StencilExtensions.cs" t="Include" />
+              </e>
+              <e p="Generation" t="Include">
+                <e p="Attributes" t="Include">
+                  <e p="GenerateBlocksAttribute.cs" t="Include" />
+                </e>
+                <e p="Collections" t="Include">
+                  <e p="AdditionalCommandCollection.cs" t="Include" />
+                  <e p="AssetCollection.cs" t="Include" />
+                  <e p="DefineCollection.cs" t="Include" />
+                  <e p="DependencyCollection.cs" t="Include" />
+                  <e p="FieldCollection.cs" t="Include" />
+                  <e p="IncludeCollection.cs" t="Include" />
+                  <e p="KernelCollection.cs" t="Include" />
+                  <e p="KeywordCollection.cs" t="Include" />
+                  <e p="PassCollection.cs" t="Include" />
+                  <e p="PragmaCollection.cs" t="Include" />
+                  <e p="RenderStateCollection.cs" t="Include" />
+                  <e p="StructCollection.cs" t="Include" />
+                </e>
+                <e p="Contexts" t="Include">
+                  <e p="TargetActiveBlockContext.cs" t="Include" />
+                  <e p="TargetFieldContext.cs" t="Include" />
+                  <e p="TargetPropertyGUIContext.cs" t="Include" />
+                  <e p="TargetSetupContext.cs" t="Include" />
+                </e>
+                <e p="Controls.cs" t="Include" />
+                <e p="Data" t="Include">
+                  <e p="ConditionalField.cs" t="Include" />
+                  <e p="DropdownEntry.cs" t="Include" />
+                  <e p="FieldCondition.cs" t="Include" />
+                  <e p="FieldDependency.cs" t="Include" />
+                  <e p="KeywordEntry.cs" t="Include" />
+                </e>
+                <e p="Descriptors" t="Include">
+                  <e p="AdditionalCommandDescriptor.cs" t="Include" />
+                  <e p="BlockFieldDescriptor.cs" t="Include" />
+                  <e p="FieldDescriptor.cs" t="Include" />
+                  <e p="IncludeDescriptor.cs" t="Include" />
+                  <e p="KernelDescriptor.cs" t="Include" />
+                  <e p="KeywordDescriptor.cs" t="Include" />
+                  <e p="PassDescriptor.cs" t="Include" />
+                  <e p="PragmaDescriptor.cs" t="Include" />
+                  <e p="RenderStateDescriptor.cs" t="Include" />
+                  <e p="StencilDescriptor.cs" t="Include" />
+                  <e p="StructDescriptor.cs" t="Include" />
+                  <e p="SubShaderDescriptor.cs" t="Include" />
+                </e>
+                <e p="Enumerations" t="Include">
+                  <e p="Blend.cs" t="Include" />
+                  <e p="BlendOp.cs" t="Include" />
+                  <e p="Cull.cs" t="Include" />
+                  <e p="DisableBatching.cs" t="Include" />
+                  <e p="IncludeLocation.cs" t="Include" />
+                  <e p="InstancingOptions.cs" t="Include" />
+                  <e p="KeywordDefinition.cs" t="Include" />
+                  <e p="KeywordScope.cs" t="Include" />
+                  <e p="KeywordShaderStage.cs" t="Include" />
+                  <e p="KeywordType.cs" t="Include" />
+                  <e p="NormalDropOffSpace.cs" t="Include" />
+                  <e p="Platform.cs" t="Include" />
+                  <e p="PropertyType.cs" t="Include" />
+                  <e p="RenderQueue.cs" t="Include" />
+                  <e p="RenderType.cs" t="Include" />
+                  <e p="ShaderModel.cs" t="Include" />
+                  <e p="ShaderValueType.cs" t="Include" />
+                  <e p="StructFieldOptions.cs" t="Include" />
+                  <e p="ZTest.cs" t="Include" />
+                  <e p="ZWrite.cs" t="Include" />
+                </e>
+                <e p="GraphCode.cs" t="Include" />
+                <e p="IHasMetaData.cs" t="Include" />
+                <e p="OutputMetadata.cs" t="Include" />
+                <e p="Processors" t="Include">
+                  <e p="ActiveFields.cs" t="Include" />
+                  <e p="CustomInterpolatorUtils.cs" t="Include" />
+                  <e p="GenerationUtils.cs" t="Include" />
+                  <e p="Generator.cs" t="Include" />
+                  <e p="GraphCompilationResult.cs" t="Include" />
+                  <e p="MatrixNames.cs" t="Include" />
+                  <e p="PropertyCollector.cs" t="Include" />
+                  <e p="ShaderGeneratorNames.cs" t="Include" />
+                  <e p="ShaderSpliceUtil.cs" t="Include" />
+                  <e p="ShaderStringBuilder.cs" t="Include" />
+                </e>
+                <e p="ShaderGraphVfxAsset.cs" t="Include" />
+                <e p="SubTarget.cs" t="Include" />
+                <e p="Target.cs" t="Include" />
+                <e p="TargetResources" t="Include">
+                  <e p="BlockFields.cs" t="Include" />
+                  <e p="FieldDependencies.cs" t="Include" />
+                  <e p="Fields.cs" t="Include" />
+                  <e p="StructFields.cs" t="Include" />
+                  <e p="Structs.cs" t="Include" />
+                </e>
+                <e p="Targets" t="Include">
+                  <e p="BuiltIn" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="AssetPostProcessors" t="Include">
+                        <e p="MaterialPostprocessor.cs" t="Include" />
+                        <e p="ShaderGraphMaterialsUpdater.cs" t="Include" />
+                      </e>
+                      <e p="AssetVersion.cs" t="Include" />
+                      <e p="ShaderGraph" t="Include">
+                        <e p="AssetCallbacks" t="Include">
+                          <e p="CreateLitShaderGraph.cs" t="Include" />
+                          <e p="CreateUnlitShaderGraph.cs" t="Include" />
+                        </e>
+                        <e p="BuiltInFields.cs" t="Include" />
+                        <e p="BuiltInMetadata.cs" t="Include" />
+                        <e p="BuiltInProperties.cs" t="Include" />
+                        <e p="BuiltInStructFields.cs" t="Include" />
+                        <e p="BuiltInStructs.cs" t="Include" />
+                        <e p="Includes" t="Include">
+                          <e p="BuildInputData.hlsl" t="Include" />
+                          <e p="DepthOnlyPass.hlsl" t="Include" />
+                          <e p="LegacyBuilding.hlsl" t="Include" />
+                          <e p="LegacySurfaceVertex.hlsl" t="Include" />
+                          <e p="LightingMetaPass.hlsl" t="Include" />
+                          <e p="PBRDeferredPass.hlsl" t="Include" />
+                          <e p="PBRForwardAddPass.hlsl" t="Include" />
+                          <e p="PBRForwardPass.hlsl" t="Include" />
+                          <e p="PBRGBufferPass.hlsl" t="Include" />
+                          <e p="ShaderPass.hlsl" t="Include" />
+                          <e p="ShadowCasterPass.hlsl" t="Include" />
+                          <e p="SpriteUnlitPass.hlsl" t="Include" />
+                          <e p="UnlitPass.hlsl" t="Include" />
+                          <e p="Varyings.hlsl" t="Include" />
+                        </e>
+                        <e p="Targets" t="Include">
+                          <e p="BuiltInLitSubTarget.cs" t="Include" />
+                          <e p="BuiltInSubTarget.cs" t="Include" />
+                          <e p="BuiltInTarget.cs" t="Include" />
+                          <e p="BuiltInUnlitSubTarget.cs" t="Include" />
+                        </e>
+                        <e p="Templates" t="Include">
+                          <e p="ShaderPass.template" t="Include" />
+                          <e p="SharedCode.template.hlsl" t="Include" />
+                        </e>
+                      </e>
+                      <e p="ShaderGUI" t="Include">
+                        <e p="BaseShaderGUI.cs" t="Include" />
+                        <e p="BuiltInLitGUI.cs" t="Include" />
+                        <e p="BuiltInUnlitGUI.cs" t="Include" />
+                        <e p="MaterialAssemblyReference" t="Include">
+                          <e p="MaterialAssemblyReference.asmref" t="Include" />
+                          <e p="RawRenderQueue.cs" t="Include" />
+                        </e>
+                      </e>
+                      <e p="ShaderPreprocessor.cs" t="Include" />
+                      <e p="ShaderUtils.cs" t="Include" />
+                    </e>
+                    <e p="ShaderLibrary" t="Include">
+                      <e p="Core.hlsl" t="Include" />
+                      <e p="DeclareDepthTexture.hlsl" t="Include" />
+                      <e p="DeclareNormalsTexture.hlsl" t="Include" />
+                      <e p="DeclareOpaqueTexture.hlsl" t="Include" />
+                      <e p="Deprecated.hlsl" t="Include" />
+                      <e p="Input.hlsl" t="Include" />
+                      <e p="Lighting.hlsl" t="Include" />
+                      <e p="MetaInput.hlsl" t="Include" />
+                      <e p="Particles.hlsl" t="Include" />
+                      <e p="ParticlesInstancing.hlsl" t="Include" />
+                      <e p="ShaderGraphFunctions.hlsl" t="Include" />
+                      <e p="ShaderTypes.cs.hlsl" t="Include" />
+                      <e p="ShaderVariablesFunctions.deprecated.hlsl" t="Include" />
+                      <e p="ShaderVariablesFunctions.hlsl" t="Include" />
+                      <e p="Shadows.hlsl" t="Include" />
+                      <e p="Shim" t="Include">
+                        <e p="AutoLightShim.hlsl" t="Include" />
+                        <e p="HLSLSupportShim.hlsl" t="Include" />
+                        <e p="InputsShim.hlsl" t="Include" />
+                        <e p="Shims.hlsl" t="Include" />
+                        <e p="SurfaceShaderProxy.hlsl" t="Include" />
+                        <e p="UnityShadowLibraryShim.hlsl" t="Include" />
+                      </e>
+                      <e p="SSAO.hlsl" t="Include" />
+                      <e p="SurfaceData.hlsl" t="Include" />
+                      <e p="SurfaceInput.hlsl" t="Include" />
+                      <e p="UnityGBuffer.hlsl" t="Include" />
+                      <e p="UnityInput.hlsl" t="Include" />
+                    </e>
+                  </e>
+                  <e p="CustomRenderTexture" t="Include">
+                    <e p="CreateCustomRenderTextureShaderGraph.cs" t="Include" />
+                    <e p="CustomRenderTextureTarget.cs" t="Include" />
+                    <e p="CustomTexture.hlsl" t="Include" />
+                    <e p="CustomTextureGraph.hlsl" t="Include" />
+                    <e p="CustomTextureSelf.cs" t="Include" />
+                    <e p="CustomTextureSize.cs" t="Include" />
+                    <e p="CustomTextureSlice.cs" t="Include" />
+                    <e p="CustomTextureSubShader.template" t="Include" />
+                    <e p="CustomTextureSubTarget.cs" t="Include" />
+                  </e>
+                  <e p="Fullscreen" t="Include">
+                    <e p="FullscreenData.cs" t="Include" />
+                    <e p="FullscreenMetaData.cs" t="Include" />
+                    <e p="FullscreenShaderGUI.cs" t="Include" />
+                    <e p="FullscreenSubTarget.cs" t="Include" />
+                    <e p="Includes" t="Include">
+                      <e p="CustomRenderTexture.hlsl" t="Include" />
+                      <e p="FullscreenBlit.hlsl" t="Include" />
+                      <e p="FullscreenCommon.hlsl" t="Include" />
+                      <e p="FullscreenDrawProcedural.hlsl" t="Include" />
+                      <e p="FullscreenShaderPass.cs" t="Include" />
+                      <e p="FullscreenShaderPass.cs.hlsl" t="Include" />
+                    </e>
+                    <e p="Templates" t="Include">
+                      <e p="ShaderPass.template" t="Include" />
+                      <e p="SharedCode.template.hlsl" t="Include" />
+                    </e>
+                  </e>
+                  <e p="PreviewTarget.cs" t="Include" />
+                  <e p="VFXTarget.cs" t="Include" />
+                </e>
+                <e p="Templates" t="Include">
+                  <e p="BuildSurfaceDescriptionInputs.template.hlsl" t="Include" />
+                  <e p="BuildVertexDescriptionInputs.template.hlsl" t="Include" />
+                  <e p="PassMesh.template" t="Include" />
+                </e>
+                <e p="Utils" t="Include">
+                  <e p="TargetUtils.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Importers" t="Include">
+                <e p="ShaderGraphAssetPostProcessor.cs" t="Include" />
+                <e p="ShaderGraphImporter.cs" t="Include" />
+                <e p="ShaderGraphImporterEditor.cs" t="Include" />
+                <e p="ShaderGraphMetadata.cs" t="Include" />
+                <e p="ShaderSubGraphImporter.cs" t="Include" />
+                <e p="ShaderSubGraphImporterEditor.cs" t="Include" />
+                <e p="ShaderSubGraphMetadata.cs" t="Include" />
+              </e>
+              <e p="Interface" t="Include">
+                <e p="IConditional.cs" t="Include" />
+                <e p="IRequiresData.cs" t="Include" />
+              </e>
+              <e p="Resources" t="Include">
+                <e p="Resizable.uss" t="Include" />
+                <e p="Selectable.uss" t="Include" />
+                <e p="Shaders" t="Include">
+                  <e p="BlitNoAlpha.shader" t="Include" />
+                  <e p="Checkerboard.shader" t="Include" />
+                  <e p="FallbackError.shader" t="Include" />
+                </e>
+                <e p="StickyNote.uss" t="Include" />
+                <e p="Styles" t="Include">
+                  <e p="ColorMode.uss" t="Include" />
+                  <e p="Controls" t="Include">
+                    <e p="BooleanSlotControlView.uss" t="Include" />
+                    <e p="ChannelEnumControlView.uss" t="Include" />
+                    <e p="ChannelEnumMaskControlView.uss" t="Include" />
+                    <e p="ChannelMixerControlView.uss" t="Include" />
+                    <e p="ColorControlView.uss" t="Include" />
+                    <e p="ColorRGBASlotControlView.uss" t="Include" />
+                    <e p="ColorRGBSlotControlView.uss" t="Include" />
+                    <e p="CubemapSlotControlView.uss" t="Include" />
+                    <e p="DielectricSpecularControlView.uss" t="Include" />
+                    <e p="EnumControlView.uss" t="Include" />
+                    <e p="EnumConversionControlView.uss" t="Include" />
+                    <e p="GradientControlView.uss" t="Include" />
+                    <e p="GradientSlotControlView.uss" t="Include" />
+                    <e p="IntegerControlView.uss" t="Include" />
+                    <e p="MultiFloatControlView.uss" t="Include" />
+                    <e p="MultiFloatSlotControlView.uss" t="Include" />
+                    <e p="MultiIntegerSlotControlView.uss" t="Include" />
+                    <e p="PopupControlView.uss" t="Include" />
+                    <e p="ScreenPositionSlotControlView.uss" t="Include" />
+                    <e p="SliderControlView.uss" t="Include" />
+                    <e p="TextControlView.uss" t="Include" />
+                    <e p="Texture3DSlotControlView.uss" t="Include" />
+                    <e p="TextureArraySlotControlView.uss" t="Include" />
+                    <e p="TextureSlotControlView.uss" t="Include" />
+                    <e p="ToggleControlView.uss" t="Include" />
+                    <e p="UVSlotControlView.uss" t="Include" />
+                  </e>
+                  <e p="CustomSlotLabelField.uss" t="Include" />
+                  <e p="GraphEditorView.uss" t="Include" />
+                  <e p="GraphSubWindow.uss" t="Include" />
+                  <e p="HelpBoxRow.uss" t="Include" />
+                  <e p="HlslFunctionView.uss" t="Include" />
+                  <e p="InspectorView.uss" t="Include" />
+                  <e p="MasterPreviewView.uss" t="Include" />
+                  <e p="MaterialGraph.uss" t="Include" />
+                  <e p="MaterialGraphView.uss" t="Include" />
+                  <e p="MaterialNodeView.uss" t="Include" />
+                  <e p="NodeSettings.uss" t="Include" />
+                  <e p="PixelCacheProfiler.uss" t="Include" />
+                  <e p="PortInputView.uss" t="Include" />
+                  <e p="PropertyNameReferenceField.uss" t="Include" />
+                  <e p="PropertyNodeView.uss" t="Include" />
+                  <e p="PropertyRow.uss" t="Include" />
+                  <e p="PropertySheet.uss" t="Include" />
+                  <e p="RedirectNode.uss" t="Include" />
+                  <e p="ReorderableSlotListView.uss" t="Include" />
+                  <e p="SGBlackboard.uss" t="Include" />
+                  <e p="ShaderPort.uss" t="Include" />
+                  <e p="TabbedView.uss" t="Include" />
+                  <e p="TabButtonStyles.uss" t="Include" />
+                </e>
+                <e p="UXML" t="Include">
+                  <e p="Blackboard" t="Include">
+                    <e p="SGBlackboard.uxml" t="Include" />
+                    <e p="SGBlackboardCategory.uxml" t="Include" />
+                    <e p="SGBlackboardField.uxml" t="Include" />
+                    <e p="SGBlackboardRow.uxml" t="Include" />
+                  </e>
+                  <e p="GraphInspector.uxml" t="Include" />
+                  <e p="GraphSubWindow.uxml" t="Include" />
+                  <e p="NodeSettings.uxml" t="Include" />
+                  <e p="PixelCacheProfiler.uxml" t="Include" />
+                  <e p="Resizable.uxml" t="Include" />
+                  <e p="StickyNote.uxml" t="Include" />
+                  <e p="TabButton.uxml" t="Include" />
+                </e>
+              </e>
+              <e p="Serialization" t="Include">
+                <e p="FakeJsonObject.cs" t="Include" />
+                <e p="JsonData.cs" t="Include" />
+                <e p="JsonObject.cs" t="Include" />
+                <e p="JsonRef.cs" t="Include" />
+                <e p="MultiJson.cs" t="Include" />
+                <e p="MultiJsonEntry.cs" t="Include" />
+                <e p="MultiJsonInternal.cs" t="Include" />
+                <e p="RefDataEnumerable.cs" t="Include" />
+                <e p="RefValueEnumerable.cs" t="Include" />
+                <e p="SerializationExtensions.cs" t="Include" />
+              </e>
+              <e p="ShaderGraphAnalytics.cs" t="Include" />
+              <e p="ShaderGraphDataExtension.cs" t="Include" />
+              <e p="ShaderGraphNodeValidationExtension.cs" t="Include" />
+              <e p="ShaderGraphPreferences.cs" t="Include" />
+              <e p="ShaderGraphProjectSettings.cs" t="Include" />
+              <e p="ShaderGraphShortcuts.cs" t="Include" />
+              <e p="ShaderGraphToolbarExtension.cs" t="Include" />
+              <e p="ShaderGUI" t="Include">
+                <e p="GenericShaderGraphMaterialGUI.cs" t="Include" />
+              </e>
+              <e p="Unity.ShaderGraph.Editor.asmdef" t="Include" />
+              <e p="Util" t="Include">
+                <e p="AssertHelpers.cs" t="Include" />
+                <e p="CompatibilityExtensions.cs" t="Include" />
+                <e p="CopyPasteGraph.cs" t="Include" />
+                <e p="CreateSerializableGraph.cs" t="Include" />
+                <e p="Documentation.cs" t="Include" />
+                <e p="FileUtilities.cs" t="Include" />
+                <e p="IndexSet.cs" t="Include" />
+                <e p="ListUtilities.cs" t="Include" />
+                <e p="MessageManager.cs" t="Include" />
+                <e p="TypeMapper.cs" t="Include" />
+                <e p="TypeMapping.cs" t="Include" />
+                <e p="UIUtilities.cs" t="Include" />
+                <e p="ValueUtilities.cs" t="Include" />
+              </e>
+              <e p="Utilities" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="EnumInfo.cs" t="Include" />
+                <e p="GenerationAPIAttribute.cs" t="Include" />
+                <e p="StringBuilderExtensions.cs" t="Include" />
+                <e p="Unity.ShaderGraph.Utilities.asmdef" t="Include" />
+              </e>
+            </e>
+            <e p="package.json" t="Include" />
+            <e p="ShaderGraphLibrary" t="Include">
+              <e p="DummyShaderGraphLibrary.cs" t="Include" />
+              <e p="Functions.hlsl" t="Include" />
+              <e p="GeometricTools.hlsl" t="Include" />
+              <e p="LODDitheringTransition.hlsl" t="Include" />
+              <e p="Nature" t="Include">
+                <e p="SpeedTree8Wind.hlsl" t="Include" />
+                <e p="SpeedTreeCommon.hlsl" t="Include" />
+              </e>
+              <e p="PreviewPass.hlsl" t="Include" />
+              <e p="PreviewVaryings.hlsl" t="Include" />
+              <e p="ShaderConfig.cs.hlsl" t="Include" />
+              <e p="ShaderVariables.hlsl" t="Include" />
+              <e p="ShaderVariablesFunctions.hlsl" t="Include" />
+              <e p="ShaderVariablesMatrixDefsLegacyUnity.hlsl" t="Include" />
+              <e p="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.asmdef" t="Include" />
+            </e>
+            <e p="Tests" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Unity.ShaderGraph.Editor.Tests.asmdef" t="Include" />
+              </e>
+            </e>
+            <e p="ValidationConfig.json" t="Include" />
           </e>
           <e p="com.unity.sysroot.linux-x86_64@2.0.9" t="Include">
             <e p="Editor" t="Include">
@@ -8437,9 +10087,23 @@
       <e p="Unity.Postprocessing.Runtime.csproj" t="IncludeRecursive" />
       <e p="Unity.Postprocessing.Runtime.Player.csproj" t="IncludeRecursive" />
       <e p="Unity.Postprocessing.Runtime.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.RenderPipelines.Core.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.RenderPipelines.Core.Editor.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.RenderPipelines.Core.Runtime.csproj" t="IncludeRecursive" />
+      <e p="Unity.RenderPipelines.Core.Runtime.Player.csproj" t="IncludeRecursive" />
+      <e p="Unity.RenderPipelines.Core.Runtime.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.RenderPipelines.Core.ShaderLibrary.csproj" t="IncludeRecursive" />
+      <e p="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj" t="IncludeRecursive" />
+      <e p="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj" t="IncludeRecursive" />
+      <e p="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj" t="IncludeRecursive" />
       <e p="Unity.Rider.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.Searcher.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.Searcher.EditorTests.csproj" t="IncludeRecursive" />
       <e p="Unity.Settings.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.Settings.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.ShaderGraph.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.ShaderGraph.Editor.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.ShaderGraph.Utilities.csproj" t="IncludeRecursive" />
       <e p="Unity.Sysroot.EditorTests.csproj" t="IncludeRecursive" />
       <e p="Unity.Sysroot.Linux_x86_64.csproj" t="IncludeRecursive" />
       <e p="Unity.Sysroot.Linux_x86_64.EditorTests.csproj" t="IncludeRecursive" />
