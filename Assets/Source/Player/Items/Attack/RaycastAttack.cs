@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RaycastAttack : PlayerAttack
 {
+    [SerializeField] private GameObject _hitEffect;
     [SerializeField] private RaycastSettings _raycastSettings;
 
     public override event Action Performed;
@@ -33,6 +34,7 @@ public class RaycastAttack : PlayerAttack
         if (Physics.Raycast(_raycastSettings.Origin.position, _raycastSettings.Origin.forward, out _hit,
             _raycastSettings.MaxDistance, _raycastSettings.LayerMask))
         {
+            Instantiate(_hitEffect, _hit.point, Quaternion.identity);
             Hitted?.Invoke();
         }
     }
