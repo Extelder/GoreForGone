@@ -13,9 +13,4 @@ public class EnemyRangeIdleStateMachine : EnemyRangeStateMachine
             return;
         ChangeState(_idle);
     }
-
-    private void Update()
-    {
-        Debug.Log(CurrentState);
-    }
 }

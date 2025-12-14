@@ -8,11 +8,9 @@ public class EnemyChaseState : EnemyState
 {
     [SerializeField] private LookAtClosestPlayer _lookAtClosestPlayer;
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
-    [SerializeField] private EnemyAttackState _enemyAttackState;
     [SerializeField] private EnemyNavMeshMove _enemyNavMeshMove;
     [SerializeField] private UnitPlayerDetector _unitPlayerDetector;
     
-    [SerializeField] private float _lostTime;
     [SerializeField] private float _updateTargetRate;
     public Transform Target { get; private set; }
     private Coroutine _losingPlayerCoroutine;

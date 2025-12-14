@@ -63,6 +63,19 @@ public class EnemyStateMachine : StateMachine
         ChangeState(_chase);
     }
 
+    public void ChaseLastDetectedCreature()
+    {
+        if (!base.IsServer)
+            return;
+        if (_chase.Target == null)
+        {
+            Patrol();
+            return;
+        }
+        _chase.ChangeTarget(_chase.Target);
+        ChangeState(_chase);
+    }
+
     public virtual void Idle()
     {}
 }

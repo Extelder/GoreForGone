@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyShootState : EnemyState
 {
+    [SerializeField] private EnemyRangeStateMachine _enemyRangeStateMachine;
+    [SerializeField] private LookAtClosestPlayer _lookAtClosestPlayer;
     [SerializeField] private bool _stopNavMesh = true;
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private GameObject _objectToSpawn;
@@ -17,6 +19,7 @@ public class EnemyShootState : EnemyState
     {
         if (!base.IsServer)
             return;
+        _lookAtClosestPlayer.StartLookAt();
         CanChanged = false;
         EnemyAnimator.Shoot();
         _agent.isStopped = _stopNavMesh;
@@ -37,5 +40,11 @@ public class EnemyShootState : EnemyState
             _agent.isStopped = false;
         CanChanged = true;
         ShootAnimationEnded?.Invoke();
+        _enemyRangeStateMachine.MoveToRandomPoint();
+    }
+
+    public override void Exit()
+    {
+        _lookAtClosestPlayer.StopLookAt();
     }
 }

@@ -326,6 +326,37 @@ Transform:
   - {fileID: 7640746058185722274}
   m_Father: {fileID: 7463867984201627886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &154180839994097100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3317669659998933933}
+  m_Layer: 0
+  m_Name: LookAtConstraint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3317669659998933933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154180839994097100}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 557731868388771085}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &267348764444191552
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 19
+  _componentIndexCache: 20
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -701,6 +732,7 @@ GameObject:
   - component: {fileID: 2251303931789843650}
   - component: {fileID: 3860379163906930713}
   - component: {fileID: 6276899158115556426}
+  - component: {fileID: 1582701487199571075}
   m_Layer: 0
   m_Name: Prient1 (2)@Standing Idle Looking Ver. 2
   m_TagString: Untagged
@@ -726,6 +758,7 @@ Transform:
   - {fileID: 1505152376054224021}
   - {fileID: 6602322313642978559}
   - {fileID: 5502708922381896961}
+  - {fileID: 557731868388771085}
   m_Father: {fileID: 5769701117671835531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6070784542374125603
@@ -769,6 +802,8 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5431822323827494482}
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
+  _enemyRangeStateMachine: {fileID: 1730478988304149002}
+  _lookAtClosestPlayer: {fileID: 6933815877199090194}
   _stopNavMesh: 1
   _agent: {fileID: 6312057831647223199}
   _objectToSpawn: {fileID: 0}
@@ -790,10 +825,12 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5431822323827494482}
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
+  _enemyStateMachine: {fileID: 1730478988304149002}
+  _lookAtClosestPlayer: {fileID: 6933815877199090194}
   _chaseState: {fileID: 911446601068769875}
   _stopNavMesh: 1
   _agent: {fileID: 6312057831647223199}
-  <Damage>k__BackingField: {fileID: 2628528566158488699}
+  <Damage>k__BackingField: {fileID: 5504305155340245222}
 --- !u!114 &2251303931789843650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,6 +930,22 @@ MonoBehaviour:
   - {fileID: 8141196076124229159}
   - {fileID: 9090221110062641758}
   - {fileID: 2270934934866427017}
+--- !u!114 &1582701487199571075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781100512120395623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RigLayers:
+  - m_Rig: {fileID: 2821458991065058627}
+    m_Active: 1
+  m_Effectors: []
 --- !u!1 &945620304832764480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 21
+  _componentIndexCache: 22
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -1561,12 +1614,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 27
+  _componentIndexCache: 28
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 0}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
+--- !u!1 &2363283938974992901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 557731868388771085}
+  - component: {fileID: 2821458991065058627}
+  m_Layer: 0
+  m_Name: Rig 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &557731868388771085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363283938974992901}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3317669659998933933}
+  m_Father: {fileID: 4528869698230002673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2821458991065058627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363283938974992901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b342d8ce5c2fd48b8fa3147d48d1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weight: 1
+  m_Effectors: []
 --- !u!1 &2472501087116152559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,6 +1999,7 @@ MonoBehaviour:
   _eyesPoint: {fileID: 522484446647177420}
   _inspectTime: 0.2
   _chaseTime: 0.4
+  _timeToUndetect: 0.6
   _stateMachine: {fileID: 1730478988304149002}
   _enemyRangeStateMachine: {fileID: 1730478988304149002}
   _shootDistance: 15
@@ -2109,7 +2210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 25
+  _componentIndexCache: 26
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -2295,7 +2396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 29
+  _componentIndexCache: 30
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -2476,7 +2577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 26
+  _componentIndexCache: 27
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -2707,6 +2808,7 @@ Transform:
   - {fileID: 4299481522399134409}
   - {fileID: 7932858791044521294}
   - {fileID: 7987767350543156508}
+  - {fileID: 3000996674868596401}
   m_Father: {fileID: 3205836839251728625}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4457143378800058118
@@ -2855,7 +2957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 30
+  _componentIndexCache: 31
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -2893,6 +2995,54 @@ Transform:
   - {fileID: 5964663965580717692}
   m_Father: {fileID: 4864932555267463763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4789978758037836627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3000996674868596401}
+  - component: {fileID: 6933815877199090194}
+  m_Layer: 0
+  m_Name: LookAtPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3000996674868596401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789978758037836627}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.051766336, y: 0.42282468, z: -0.045028124, w: 0.9036105}
+  m_LocalPosition: {x: 0.184, y: 1.3215864, z: 0.25379324}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5769701117671835531}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6933815877199090194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789978758037836627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f7e5ba376e417441a787257f0a93b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 16
+  _addedNetworkObject: {fileID: 5431822323827494482}
+  _networkObjectCache: {fileID: 5431822323827494482}
+  _lookAtUpdateRate: 0.02
 --- !u!1 &4835103125224298487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +3219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 28
+  _componentIndexCache: 29
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -3219,7 +3369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 24
+  _componentIndexCache: 25
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -3369,7 +3519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 17
+  _componentIndexCache: 18
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -3519,11 +3669,11 @@ GameObject:
   - component: {fileID: 911446601068769875}
   - component: {fileID: 5587162818836434686}
   - component: {fileID: 6313323006063990987}
-  - component: {fileID: 2628528566158488699}
   - component: {fileID: 6312057831647223199}
   - component: {fileID: 5639973978490894316}
   - component: {fileID: 726295946740061288}
   - component: {fileID: 2607044128974167468}
+  - component: {fileID: 5504305155340245222}
   m_Layer: 0
   m_Name: RangeEnemy
   m_TagString: Untagged
@@ -3604,10 +3754,11 @@ MonoBehaviour:
   - {fileID: 2607044128974167468}
   - {fileID: 6070784542374125603}
   - {fileID: 6578613877132025434}
-  - {fileID: 0}
+  - {fileID: 3685032996049896506}
   - {fileID: 2251303931789843650}
   - {fileID: 8592808331344791808}
   - {fileID: 4342776185444858396}
+  - {fileID: 6933815877199090194}
   - {fileID: 2046748152486490482}
   - {fileID: 5252560741318120365}
   - {fileID: 8679968610607934703}
@@ -3701,7 +3852,7 @@ MonoBehaviour:
   _enemyNavMeshMove: {fileID: 6313323006063990987}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _updateTargetRate: 0.2
-  _lostTime: 5
+  _lostTime: 2
 --- !u!114 &1608106652244185912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3739,11 +3890,10 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5431822323827494482}
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
+  _lookAtClosestPlayer: {fileID: 6933815877199090194}
   _enemyStateMachine: {fileID: 1730478988304149002}
-  _enemyAttackState: {fileID: 3685032996049896506}
   _enemyNavMeshMove: {fileID: 6313323006063990987}
   _unitPlayerDetector: {fileID: 8592808331344791808}
-  _lostTime: 5
   _updateTargetRate: 0.2
 --- !u!114 &5587162818836434686
 MonoBehaviour:
@@ -3762,10 +3912,12 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5431822323827494482}
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
+  _lookAtClosestPlayer: {fileID: 6933815877199090194}
   _canShoot: 1
   _enemyRangeStateMachine: {fileID: 1730478988304149002}
+  _unitPlayerDetector: {fileID: 0}
   _enemyNavMeshMove: {fileID: 6313323006063990987}
-  _randomPointRange: 10
+  _randomPointRange: 12
   _agent: {fileID: 6312057831647223199}
 --- !u!114 &6313323006063990987
 MonoBehaviour:
@@ -3783,19 +3935,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <Agent>k__BackingField: {fileID: 6312057831647223199}
---- !u!114 &2628528566158488699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5593438967731303971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb1581be57d49d4fae9aa256c312639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 10
 --- !u!195 &6312057831647223199
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3807,9 +3946,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 1000
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 1000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -3878,6 +4017,19 @@ MonoBehaviour:
   _enemyParent: {fileID: 5934861228107460953}
   _ragdollOperations: {fileID: 6276899158115556426}
   _explosionForce: 100
+--- !u!114 &5504305155340245222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5593438967731303971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb1581be57d49d4fae9aa256c312639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 10
 --- !u!1 &5707196593561349292
 GameObject:
   m_ObjectHideFlags: 0
@@ -4338,7 +4490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 18
+  _componentIndexCache: 19
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -4505,7 +4657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 16
+  _componentIndexCache: 17
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -4653,7 +4805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 22
+  _componentIndexCache: 23
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -4962,7 +5114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 23
+  _componentIndexCache: 24
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -5239,7 +5391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 20
+  _componentIndexCache: 21
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}

@@ -55,8 +55,6 @@ public class EnemyAttackState : EnemyState
         if (_stopNavMesh)
             _agent.isStopped = false;
         CanChanged = true;
-        if (_chaseState.Target == null)
-            return;
-        _enemyStateMachine.Chase(_chaseState.Target);
+        _enemyStateMachine.ChaseLastDetectedCreature();
     }
 }

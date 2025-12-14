@@ -28,7 +28,7 @@ public class UnitPlayerDetector : NetworkBehaviour
     private Transform _player;
     private PlayerCharacter _character;
 
-    private bool _detected;
+    public bool Detected { get; private set; }
     private bool _playerVisibleThisTick;
     private bool _isSeeingPlayer;
 
@@ -132,9 +132,9 @@ public class UnitPlayerDetector : NetworkBehaviour
         {
             _timeSinceLastSeen = 0f;
 
-            if (!_detected)
+            if (!Detected)
             {
-                _detected = true;
+                Detected = true;
                 PlayerDetected?.Invoke();
             }
 
@@ -144,9 +144,9 @@ public class UnitPlayerDetector : NetworkBehaviour
         {
             _timeSinceLastSeen += 0.05f;
 
-            if (_detected && _timeSinceLastSeen >= _timeToUndetect)
+            if (Detected && _timeSinceLastSeen >= _timeToUndetect)
             {
-                _detected = false;
+                Detected = false;
                 PlayerLost?.Invoke();
             }
 
@@ -174,8 +174,13 @@ public class UnitPlayerDetector : NetworkBehaviour
 
         if (_seeTimer >= _chaseTime)
         {
-            _stateMachine?.Chase(_character.PlayerTransform);
+            Chase(_hit);
         }
+    }
+
+    public virtual void Chase(RaycastHit hit)
+    {
+        _stateMachine?.Chase(_character.PlayerTransform);
     }
 
 
