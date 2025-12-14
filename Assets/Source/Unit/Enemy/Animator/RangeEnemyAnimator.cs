@@ -11,6 +11,7 @@ public class RangeEnemyAnimator : EnemyAnimator
     {
         base.DisableAllBools();
         SetAnimationBool(_idleAnimationBool, false);
+        SetAnimationBool(_secondAttackAnimationBool, false);
     }
     
     public override void Idle()

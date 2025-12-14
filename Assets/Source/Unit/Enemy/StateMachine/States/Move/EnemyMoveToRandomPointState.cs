@@ -6,9 +6,11 @@ using UnityEngine.AI;
 
 public class EnemyMoveToRandomPointState : EnemyState
 {
+    [SerializeField] private LookAtClosestPlayer _lookAtClosestPlayer;
     [SerializeField] private bool _canShoot;
     [ShowIf(nameof(_canShoot))] [SerializeField]
     private EnemyRangeStateMachine _enemyRangeStateMachine;
+    [ShowIf(nameof(_canShoot))] [SerializeField] private UnitShootPlayerDetector _unitPlayerDetector;
     [SerializeField] private EnemyNavMeshMove _enemyNavMeshMove;
     [SerializeField] private float _randomPointRange;
     [SerializeField] private NavMeshAgent _agent;
@@ -16,6 +18,7 @@ public class EnemyMoveToRandomPointState : EnemyState
     public override void Enter()
     {
         StartCoroutine(MovingToRandomPoint());
+        _lookAtClosestPlayer.StartLookAt();
         CanChanged = false;
         EnemyAnimator.Move();
     }
@@ -23,6 +26,7 @@ public class EnemyMoveToRandomPointState : EnemyState
     public override void Exit()
     {
         StopAllCoroutines();
+        _lookAtClosestPlayer.StopLookAt();
         base.Exit();
     }
 
@@ -39,6 +43,16 @@ public class EnemyMoveToRandomPointState : EnemyState
             yield return new WaitForSeconds(0.2f);
             yield return new WaitUntil(() => AgentReachedDestination());
             CanChanged = true;
+            if (!_unitPlayerDetector.Detected)
+            {
+                _enemyRangeStateMachine.Patrol();
+                break;
+            }
+            if (!_unitPlayerDetector.CanShootNow)
+            {
+                _enemyRangeStateMachine.ChaseLastDetectedCreature();
+                break;
+            }
             if (_canShoot)
                 _enemyRangeStateMachine.Shoot();
         }
@@ -60,5 +74,5 @@ public class EnemyMoveToRandomPointState : EnemyState
         return false;
     }
 
-    private bool AgentReachedDestination() => _agent.remainingDistance <= 0.2f;
+    private bool AgentReachedDestination() => _agent.remainingDistance <= 0.1f;
 }
