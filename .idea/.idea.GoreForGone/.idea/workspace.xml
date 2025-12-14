@@ -26,6 +26,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Rigidbodies.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Prefabs/NetworkTransform Benchmark Rigidbodies.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Static.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Demos/HashGrid/Prefabs/HashGrid_Static.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Range/Gunplay.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemies/Cursed Priest/Animations/Range/Gunplay.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/PsxMegaPack/Dog/DogAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PsxMegaPack/Dog/DogAnimator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/PsxMegaPack/Dog/pointer.001_pointer.001_pointer_atttack 8.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PsxMegaPack/Dog/pointer.001_pointer.001_pointer_atttack 8.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/DogEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/DogEnemyParent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/RangeEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/RangeEnemyParent.prefab" afterDir="false" />
@@ -221,7 +223,7 @@
       <workItem from="1765551273333" duration="2856000" />
       <workItem from="1765624048589" duration="3133000" />
       <workItem from="1765710271958" duration="6430000" />
-      <workItem from="1765718970791" duration="1435000" />
+      <workItem from="1765718970791" duration="2029000" />
     </task>
     <servers />
   </component>
