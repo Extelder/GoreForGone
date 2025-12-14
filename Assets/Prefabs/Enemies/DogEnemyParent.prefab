@@ -446,7 +446,7 @@ MonoBehaviour:
   _enemyNavMeshMove: {fileID: 7048932342598449487}
   _destinationReachThreshhold: 0.2
   _agent: {fileID: 5124775916028336358}
-  _stateMachine: {fileID: 0}
+  _stateMachine: {fileID: 4939999432092044139}
 --- !u!114 &8420273568562126504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,8 +507,10 @@ MonoBehaviour:
   <EnemyAnimator>k__BackingField: {fileID: 4460148357399550991}
   _lookAtClosestPlayer: {fileID: 0}
   _enemyStateMachine: {fileID: 4939999432092044139}
+  _enemyAttackState: {fileID: 7372304453194087123}
   _enemyNavMeshMove: {fileID: 7048932342598449487}
   _unitPlayerDetector: {fileID: 1887584541405589266}
+  _lostTime: 5
   _updateTargetRate: 0.2
 --- !u!114 &7048932342598449487
 MonoBehaviour:
@@ -599,7 +601,7 @@ MonoBehaviour:
   _componentIndexCache: 6
   _addedNetworkObject: {fileID: 7310859964512096409}
   _networkObjectCache: {fileID: 7310859964512096409}
-  EnemyHealth: {fileID: 0}
+  EnemyHealth: {fileID: 594967075639881903}
   _enemyStateMachine: {fileID: 4939999432092044139}
 --- !u!114 &594967075639881903
 MonoBehaviour:
@@ -617,7 +619,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 7310859964512096409}
   _networkObjectCache: {fileID: 7310859964512096409}
   <MaxValue>k__BackingField: 100
-  <CurrentValue>k__BackingField: 0
+  <CurrentValue>k__BackingField: 100
 --- !u!1 &7100978367174214741
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +979,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 7310859964512096409}
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 4460148357399550991}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 4939999432092044139}
   _lookAtClosestPlayer: {fileID: 0}
   _chaseState: {fileID: 5829829092126119617}
   _stopNavMesh: 1
