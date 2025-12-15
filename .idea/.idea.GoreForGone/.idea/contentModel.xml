@@ -1961,6 +1961,7 @@
                     <e p="EnemyReactState.cs" t="Include" />
                   </e>
                   <e p="Move" t="Include">
+                    <e p="EnemyChaseShootState.cs" t="Include" />
                     <e p="EnemyChaseState.cs" t="Include" />
                     <e p="EnemyInspectState.cs" t="Include" />
                     <e p="EnemyMoveToRandomPointState.cs" t="Include" />

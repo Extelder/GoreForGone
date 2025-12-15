@@ -43,11 +43,6 @@ public class EnemyStateMachine : StateMachine
         ChangeState(_attack);
     }
 
-    private void Update()
-    {
-        Debug.Log(CurrentState);
-    }
-
     public void Patrol()
     {
         if (!base.IsServer)

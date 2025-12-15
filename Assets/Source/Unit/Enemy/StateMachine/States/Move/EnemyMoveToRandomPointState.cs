@@ -1,12 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class EnemyMoveToRandomPointState : EnemyState
 {
     [SerializeField] private LookAtClosestPlayer _lookAtClosestPlayer;
+    [SerializeField] private Transform _centerOriginal;
     [SerializeField] private bool _canShoot;
     [ShowIf(nameof(_canShoot))] [SerializeField]
     private EnemyRangeStateMachine _enemyRangeStateMachine;
@@ -17,6 +20,9 @@ public class EnemyMoveToRandomPointState : EnemyState
     
     public override void Enter()
     {
+        if (!base.IsServer)
+            return;
+        Debug.Log("START RANDOMING");
         StartCoroutine(MovingToRandomPoint());
         _lookAtClosestPlayer.StartLookAt();
         CanChanged = false;
@@ -27,16 +33,16 @@ public class EnemyMoveToRandomPointState : EnemyState
     {
         StopAllCoroutines();
         _lookAtClosestPlayer.StopLookAt();
-        base.Exit();
+        Debug.Log("STOP RANDOMING");
     }
 
     private IEnumerator MovingToRandomPoint()
     {
+        EnemyAnimator.Move();
         while (true)
         {
-            if (GetRandomPointOnNavMesh(transform.position, _randomPointRange, out Vector3 point))
+            if (GetRandomPointOnNavMesh(_centerOriginal.position, _randomPointRange, out Vector3 point))
             {
-                EnemyAnimator.Move();
                 _enemyNavMeshMove.SetDestinationServer(point);
             }
 
@@ -72,6 +78,11 @@ public class EnemyMoveToRandomPointState : EnemyState
 
         result = Vector3.zero;
         return false;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(_centerOriginal.position, _randomPointRange);
     }
 
     private bool AgentReachedDestination() => _agent.remainingDistance <= 0.1f;
