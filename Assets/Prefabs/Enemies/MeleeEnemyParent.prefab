@@ -1255,9 +1255,11 @@ MonoBehaviour:
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 7312812686504036354}
   _lookAtClosestPlayer: {fileID: 7020393845379415118}
+  _agent: {fileID: 5409855760871100213}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyNavMeshMove: {fileID: 3627517761201370934}
   _unitPlayerDetector: {fileID: 147415221156776103}
+  _chaseSpeedMultiplier: 2
   _updateTargetRate: 0.2
 --- !u!114 &3627517761201370934
 MonoBehaviour:

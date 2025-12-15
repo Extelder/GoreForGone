@@ -13,14 +13,15 @@ public class LookAtClosestPlayer : NetworkBehaviour
     private CompositeDisposable _disposable = new CompositeDisposable();
     public override void OnStartClient()
     {
-        base.OnStartClient();
         if (!base.IsServer)
             return;
+        base.OnStartClient();
         _startPoint = transform;
     }
 
     public void StartLookAt()
     {
+        _disposable.Clear();
         Observable.Interval(TimeSpan.FromSeconds(_lookAtUpdateRate)).Subscribe(_ =>
         {
             PlayerCharacter nearestCharacter = FindNearestPlayerCharacter(transform.position);

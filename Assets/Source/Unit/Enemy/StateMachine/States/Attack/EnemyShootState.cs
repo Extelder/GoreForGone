@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UniRx;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyShootState : EnemyState
 {
     [SerializeField] private EnemyRangeStateMachine _enemyRangeStateMachine;
+    [SerializeField] private LookAtClosestPlayerNotIK _lookAtClosestPlayerNotIK;
     [SerializeField] private LookAtClosestPlayer _lookAtClosestPlayer;
     [SerializeField] private bool _stopNavMesh = true;
     [SerializeField] private NavMeshAgent _agent;
@@ -19,10 +21,13 @@ public class EnemyShootState : EnemyState
     {
         if (!base.IsServer)
             return;
-        _lookAtClosestPlayer.StartLookAt();
         CanChanged = false;
+        Debug.Log("START SHOOTING");
         EnemyAnimator.Shoot();
         _agent.isStopped = _stopNavMesh;
+        _agent.enabled = false;
+        _lookAtClosestPlayerNotIK.StartLookAt();
+        _lookAtClosestPlayer.StartLookAt();
     }
     
     public void PerformShoot()
@@ -45,6 +50,9 @@ public class EnemyShootState : EnemyState
 
     public override void Exit()
     {
+        _lookAtClosestPlayerNotIK.StopLookAt();
         _lookAtClosestPlayer.StopLookAt();
+        _agent.enabled = true;
+        Debug.Log("STOP SHOOTING");
     }
 }

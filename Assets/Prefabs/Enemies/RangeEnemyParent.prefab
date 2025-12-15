@@ -335,6 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3317669659998933933}
+  - component: {fileID: 1290022034827135271}
   m_Layer: 0
   m_Name: LookAtConstraint
   m_TagString: Untagged
@@ -357,6 +358,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 557731868388771085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1290022034827135271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154180839994097100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c430f382484144e925c097c2d33cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weight: 1
+  m_Data:
+    m_ConstrainedObject: {fileID: 8141825113498103474}
+    m_SourceObjects:
+      m_Length: 1
+      m_Item0:
+        transform: {fileID: 3000996674868596401}
+        weight: 1
+      m_Item1:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item2:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item3:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item4:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item5:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item6:
+        transform: {fileID: 0}
+        weight: 0
+      m_Item7:
+        transform: {fileID: 0}
+        weight: 0
+    m_Offset: {x: 0, y: 0, z: 0}
+    m_MinLimit: -80
+    m_MaxLimit: 80
+    m_AimAxis: 4
+    m_UpAxis: 2
+    m_WorldUpType: 0
+    m_WorldUpObject: {fileID: 0}
+    m_WorldUpAxis: 2
+    m_MaintainOffset: 0
+    m_ConstrainedAxes:
+      x: 1
+      y: 1
+      z: 1
 --- !u!1 &267348764444191552
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +812,10 @@ Transform:
   - {fileID: 5310055318730754312}
   - {fileID: 1505152376054224021}
   - {fileID: 6602322313642978559}
+  - {fileID: 1468167224052845714}
+  - {fileID: 7987767350543156508}
+  - {fileID: 4299481522399134409}
+  - {fileID: 522484446647177420}
   - {fileID: 5502708922381896961}
   - {fileID: 557731868388771085}
   m_Father: {fileID: 5769701117671835531}
@@ -803,6 +862,7 @@ MonoBehaviour:
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
   _enemyRangeStateMachine: {fileID: 1730478988304149002}
+  _lookAtClosestPlayerNotIK: {fileID: 4558837428846327332}
   _lookAtClosestPlayer: {fileID: 6933815877199090194}
   _stopNavMesh: 1
   _agent: {fileID: 6312057831647223199}
@@ -827,7 +887,7 @@ MonoBehaviour:
   <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _lookAtClosestPlayer: {fileID: 6933815877199090194}
-  _chaseState: {fileID: 911446601068769875}
+  _chaseState: {fileID: 3301590952156455937}
   _stopNavMesh: 1
   _agent: {fileID: 6312057831647223199}
   <Damage>k__BackingField: {fileID: 5504305155340245222}
@@ -1437,12 +1497,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144749641684879659}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2850001, z: 0.705}
+  m_LocalRotation: {x: 0.0000000037252899, y: -0, z: -0.0000000037252899, w: 1}
+  m_LocalPosition: {x: 0, y: 1.2850001, z: 0.7049999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5769701117671835531}
+  m_Father: {fileID: 4528869698230002673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4342776185444858396
 MonoBehaviour:
@@ -1966,12 +2026,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2817335578124592175}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7850001, z: 0.527}
+  m_LocalRotation: {x: 0.0000000037252899, y: -0, z: -0.0000000037252899, w: 1}
+  m_LocalPosition: {x: 0, y: 1.7850001, z: 0.52699995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5769701117671835531}
+  m_Father: {fileID: 4528869698230002673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8592808331344791808
 MonoBehaviour:
@@ -1985,24 +2045,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd09921fdca919f4085e2fd8a61003ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 14
+  _componentIndexCache: 16
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   _horizontalRays: 30
   _verticalRays: 15
   _horizontalFov: 110
   _verticalFov: 22.5
-  _viewDistance: 20
+  _viewDistance: 25
   _visionMask:
     serializedVersion: 2
     m_Bits: 65
   _eyesPoint: {fileID: 522484446647177420}
   _inspectTime: 0.2
   _chaseTime: 0.4
-  _timeToUndetect: 0.6
+  _timeToUndetect: 5
   _stateMachine: {fileID: 1730478988304149002}
   _enemyRangeStateMachine: {fileID: 1730478988304149002}
-  _shootDistance: 15
+  _shootDistance: 10
 --- !u!1 &3032919500311259802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,12 +2699,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3732405041274037133}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.0000000037252899, y: -0, z: -0.0000000037252899, w: 1}
   m_LocalPosition: {x: 0, y: 1.25, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5769701117671835531}
+  m_Father: {fileID: 4528869698230002673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3959993925527946984
 GameObject:
@@ -2804,10 +2864,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4528869698230002673}
-  - {fileID: 522484446647177420}
-  - {fileID: 4299481522399134409}
   - {fileID: 7932858791044521294}
-  - {fileID: 7987767350543156508}
   - {fileID: 3000996674868596401}
   m_Father: {fileID: 3205836839251728625}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2963,6 +3020,37 @@ MonoBehaviour:
   EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 0}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
+--- !u!1 &4549354726750162793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468167224052845714}
+  m_Layer: 0
+  m_Name: RandomPointOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468167224052845714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549354726750162793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000000037252899, y: -0, z: -0.0000000037252899, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4528869698230002673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4566414702343472127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,8 +3108,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4789978758037836627}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.051766336, y: 0.42282468, z: -0.045028124, w: 0.9036105}
-  m_LocalPosition: {x: 0.184, y: 1.3215864, z: 0.25379324}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.229, y: 1.449, z: 0.649}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3039,7 +3127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7e5ba376e417441a787257f0a93b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 16
+  _componentIndexCache: 14
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   _lookAtUpdateRate: 0.02
@@ -3666,14 +3754,15 @@ GameObject:
   - component: {fileID: 6057627089984692456}
   - component: {fileID: 2763429169768551031}
   - component: {fileID: 1608106652244185912}
-  - component: {fileID: 911446601068769875}
-  - component: {fileID: 5587162818836434686}
+  - component: {fileID: 3301590952156455937}
   - component: {fileID: 6313323006063990987}
   - component: {fileID: 6312057831647223199}
   - component: {fileID: 5639973978490894316}
   - component: {fileID: 726295946740061288}
   - component: {fileID: 2607044128974167468}
   - component: {fileID: 5504305155340245222}
+  - component: {fileID: 8301035083743728307}
+  - component: {fileID: 4558837428846327332}
   m_Layer: 0
   m_Name: RangeEnemy
   m_TagString: Untagged
@@ -3718,10 +3807,10 @@ MonoBehaviour:
   _react: {fileID: 2251303931789843650}
   _attack: {fileID: 3685032996049896506}
   _patrol: {fileID: 6057627089984692456}
-  _chase: {fileID: 911446601068769875}
+  _chase: {fileID: 3301590952156455937}
   _inspect: {fileID: 2763429169768551031}
   _shoot: {fileID: 6578613877132025434}
-  _moveToRandomPoint: {fileID: 5587162818836434686}
+  _moveToRandomPoint: {fileID: 8301035083743728307}
   _idle: {fileID: 1608106652244185912}
 --- !u!114 &5431822323827494482
 MonoBehaviour:
@@ -3746,19 +3835,19 @@ MonoBehaviour:
   - {fileID: 6057627089984692456}
   - {fileID: 2763429169768551031}
   - {fileID: 1608106652244185912}
-  - {fileID: 911446601068769875}
-  - {fileID: 5587162818836434686}
+  - {fileID: 0}
   - {fileID: 6313323006063990987}
   - {fileID: 5639973978490894316}
   - {fileID: 726295946740061288}
   - {fileID: 2607044128974167468}
+  - {fileID: 8301035083743728307}
   - {fileID: 6070784542374125603}
   - {fileID: 6578613877132025434}
   - {fileID: 3685032996049896506}
   - {fileID: 2251303931789843650}
-  - {fileID: 8592808331344791808}
-  - {fileID: 4342776185444858396}
   - {fileID: 6933815877199090194}
+  - {fileID: 4342776185444858396}
+  - {fileID: 0}
   - {fileID: 2046748152486490482}
   - {fileID: 5252560741318120365}
   - {fileID: 8679968610607934703}
@@ -3873,7 +3962,7 @@ MonoBehaviour:
   _agent: {fileID: 6312057831647223199}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _maxRandomTimeToStartPatrolling: 6
---- !u!114 &911446601068769875
+--- !u!114 &3301590952156455937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3882,43 +3971,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 5593438967731303971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52f745b72d5a66a4a809984e3ac5f56f, type: 3}
+  m_Script: {fileID: 11500000, guid: 850d9dc48c439004ea8772c93bde44c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 4
+  _componentIndexCache: 255
   _addedNetworkObject: {fileID: 5431822323827494482}
-  _networkObjectCache: {fileID: 5431822323827494482}
+  _networkObjectCache: {fileID: 0}
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
   _lookAtClosestPlayer: {fileID: 6933815877199090194}
+  _agent: {fileID: 0}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyNavMeshMove: {fileID: 6313323006063990987}
   _unitPlayerDetector: {fileID: 8592808331344791808}
+  _chaseSpeedMultiplier: 0
   _updateTargetRate: 0.2
---- !u!114 &5587162818836434686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5593438967731303971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b56c7210d201b943999cf968f3ffb7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 5
-  _addedNetworkObject: {fileID: 5431822323827494482}
-  _networkObjectCache: {fileID: 5431822323827494482}
-  CanChanged: 1
-  <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
-  _lookAtClosestPlayer: {fileID: 6933815877199090194}
-  _canShoot: 1
+  _unitShootPlayerDetector: {fileID: 8592808331344791808}
   _enemyRangeStateMachine: {fileID: 1730478988304149002}
-  _unitPlayerDetector: {fileID: 0}
-  _enemyNavMeshMove: {fileID: 6313323006063990987}
-  _randomPointRange: 12
-  _agent: {fileID: 6312057831647223199}
 --- !u!114 &6313323006063990987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3931,7 +4000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f4c3958dfd78746bc45be4f23d48f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 6
+  _componentIndexCache: 5
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <Agent>k__BackingField: {fileID: 6312057831647223199}
@@ -3969,7 +4038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88e30ab7cb18174398b803afc952c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 7
+  _componentIndexCache: 6
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <MaxValue>k__BackingField: 100
@@ -3986,7 +4055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459eee27ecdfe414e8487e14c5ed9a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 8
+  _componentIndexCache: 7
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
 --- !u!114 &2607044128974167468
@@ -4001,7 +4070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbf02ea83fc9b0488201422d3cb049b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 9
+  _componentIndexCache: 8
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   _setActiveObject: {fileID: 726295946740061288}
@@ -4030,6 +4099,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
+--- !u!114 &8301035083743728307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5593438967731303971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b56c7210d201b943999cf968f3ffb7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 9
+  _addedNetworkObject: {fileID: 5431822323827494482}
+  _networkObjectCache: {fileID: 5431822323827494482}
+  CanChanged: 1
+  <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
+  _lookAtClosestPlayer: {fileID: 6933815877199090194}
+  _centerOriginal: {fileID: 1468167224052845714}
+  _canShoot: 1
+  _enemyRangeStateMachine: {fileID: 1730478988304149002}
+  _unitPlayerDetector: {fileID: 8592808331344791808}
+  _enemyNavMeshMove: {fileID: 6313323006063990987}
+  _randomPointRange: 4
+  _agent: {fileID: 6312057831647223199}
+--- !u!114 &4558837428846327332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5593438967731303971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6412177ed0d5a42a05a1da17096d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 5431822323827494482}
+  _networkObjectCache: {fileID: 0}
+  _checkRate: 0.02
+  _turnSpeed: 200
+  _lookAtBone: {fileID: 3205836839251728625}
 --- !u!1 &5707196593561349292
 GameObject:
   m_ObjectHideFlags: 0

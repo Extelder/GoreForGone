@@ -8,6 +8,7 @@ using UnityEngine;
 public class LookAtClosestPlayerNotIK : NetworkBehaviour
 {
     [SerializeField] private float _checkRate;
+    [SerializeField] private float _turnSpeed;
     [SerializeField] private Transform _lookAtBone;
     private CompositeDisposable _disposable = new CompositeDisposable();
 
@@ -15,10 +16,15 @@ public class LookAtClosestPlayerNotIK : NetworkBehaviour
     {
         Observable.Interval(TimeSpan.FromSeconds(_checkRate)).Subscribe(_ =>
         {
-            PlayerCharacter nearestCharacter = FindNearestPlayerCharacter(transform.position);
+            PlayerCharacter nearestCharacter = FindNearestPlayerCharacter(_lookAtBone.position);
             if (nearestCharacter == null)
                 return;
-            _lookAtBone.LookAt(nearestCharacter.LookAtPoint);
+            Vector3 direction = nearestCharacter.LookAtPoint.position - _lookAtBone.position;
+            direction.y = 0;
+            _lookAtBone.rotation = Quaternion.Slerp(
+                _lookAtBone.rotation,
+                Quaternion.LookRotation(direction),
+                _turnSpeed * Time.deltaTime);
         }).AddTo(_disposable);
     }
 

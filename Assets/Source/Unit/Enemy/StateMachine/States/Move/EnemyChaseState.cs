@@ -7,12 +7,15 @@ using UnityEngine.AI;
 public class EnemyChaseState : EnemyState
 {
     [SerializeField] private LookAtClosestPlayer _lookAtClosestPlayer;
+    [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private EnemyStateMachine _enemyStateMachine;
     [SerializeField] private EnemyNavMeshMove _enemyNavMeshMove;
     [SerializeField] private UnitPlayerDetector _unitPlayerDetector;
+    [SerializeField] private float _chaseSpeedMultiplier;
     
     [SerializeField] private float _updateTargetRate;
     public Transform Target { get; private set; }
+    private float _defaultSpeed;
     private Coroutine _losingPlayerCoroutine;
 
     public override void OnStartClient()
@@ -20,6 +23,7 @@ public class EnemyChaseState : EnemyState
         if (!base.IsServer)
             return;
         base.OnStartClient();
+        _defaultSpeed = _agent.speed;
         _unitPlayerDetector.PlayerLost += OnPlayerLost;
     }
 
@@ -41,6 +45,7 @@ public class EnemyChaseState : EnemyState
         if (!base.IsServer)
             return;
         _lookAtClosestPlayer.StartLookAt();
+        _agent.speed *= _chaseSpeedMultiplier;
         StopAllCoroutines();
         StartCoroutine(Chasing());
         CanChanged = false;
@@ -48,6 +53,7 @@ public class EnemyChaseState : EnemyState
 
     public override void Exit()
     {
+        _agent.speed = _defaultSpeed;
         _lookAtClosestPlayer.StopLookAt();
         StopAllCoroutines();
     }
@@ -65,14 +71,14 @@ public class EnemyChaseState : EnemyState
     {
         while (true)
         {
-            CallAnimations();
+            OnChasing();
             if (Target != null)
                 _enemyNavMeshMove.SetDestinationServer(Target.position);
             yield return new WaitForSeconds(_updateTargetRate);
         }
     }
-    
-    public virtual void CallAnimations()
+
+    public virtual void OnChasing()
     {
         EnemyAnimator.Run();
     }

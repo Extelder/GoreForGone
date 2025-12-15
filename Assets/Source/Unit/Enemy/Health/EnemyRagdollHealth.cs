@@ -8,8 +8,4 @@ using Random = UnityEngine.Random;
 
 public class EnemyRagdollHealth : EnemyHealth
 {
-    private void Update()
-    {
-        Debug.Log(CurrentValue);
-    }
 }
