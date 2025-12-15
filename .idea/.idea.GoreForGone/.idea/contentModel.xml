@@ -1766,6 +1766,7 @@
                 <e p="Blink" t="Include">
                   <e p="BlinkAbility.cs" t="Include" />
                   <e p="BlinkRing.cs" t="Include" />
+                  <e p="BlinkVisuals.cs" t="Include" />
                 </e>
                 <e p="PlayerRing.cs" t="Include" />
                 <e p="PlayerRingAnimation.cs" t="Include" />

@@ -15,6 +15,8 @@ public class BlinkRing : PlayerRing
 
     private GameObject _blinkGFX;
 
+    private Vector3 _targetPosition;
+
     private void Start()
     {
         _blinkGFX = Instantiate(_blinkToSpawn, transform.position, Quaternion.identity);
@@ -22,28 +24,34 @@ public class BlinkRing : PlayerRing
 
     protected override void OnRingAbilityBindStarted(InputAction.CallbackContext obj)
     {
-        _blinkGFX.SetActive(true);
         Observable.EveryUpdate().Subscribe(_ =>
         {
-            Vector3 targetPosition;
             if (Physics.Raycast(_raycastSettings.Origin.position, _raycastSettings.Origin.forward,
                 out RaycastHit hit, _raycastSettings.MaxDistance, _raycastSettings.LayerMask))
             {
-                targetPosition = hit.point + hit.normal * _offset;
+                _targetPosition = hit.point + hit.normal * _offset;
             }
             else
             {
-                targetPosition = _raycastSettings.Origin.position +
-                                 _raycastSettings.Origin.forward * _raycastSettings.MaxDistance;
+                _targetPosition = _raycastSettings.Origin.position +
+                                  _raycastSettings.Origin.forward * _raycastSettings.MaxDistance;
+                if (Physics.Raycast(_targetPosition, Vector3.down,
+                    out RaycastHit hit2, 1, _raycastSettings.LayerMask))
+                {
+                    _targetPosition = hit2.point + hit2.normal * _offset;
+                }
             }
 
-            _blinkGFX.transform.position = targetPosition;
+            _blinkGFX.transform.position = _targetPosition;
         }).AddTo(_disposable);
+        _blinkGFX.SetActive(true);
     }
 
     protected override void OnRingAbilityBindCanceled(InputAction.CallbackContext obj)
     {
+        PlayerCharacter.Instance.Teleport(_targetPosition);
         CancelAction();
+        _blinkGFX.transform.position = Vector3.zero;
     }
 
     protected override void CancelAction()

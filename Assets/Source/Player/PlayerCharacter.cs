@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class PlayerCharacter : NetworkBehaviour
 {
+    [field: SerializeField] public CharacterController CharacterController { get; private set; }
     [field: SerializeField] public PlayerController PlayerController { get; private set; }
     [field: SerializeField] public List<PlayerCharacter> Characters { get; private set; }
     [field: SerializeField] public Transform DropPoint { get; private set; }
@@ -65,6 +66,14 @@ public class PlayerCharacter : NetworkBehaviour
     {
         gameObject.SetActive(enabled);
         Debug.LogError(gameObject);
+    }
+
+    public void Teleport(Vector3 point)
+    {
+        CharacterController.enabled = false;
+        PlayerController.moveDirection.y = 0;
+        PlayerTransform.position = point;
+        CharacterController.enabled = true;
     }
 
 

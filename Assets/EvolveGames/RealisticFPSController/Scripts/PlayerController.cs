@@ -98,7 +98,7 @@ namespace EvolveGames
             RaycastHit CroughCheck;
             RaycastHit ObjectCheck;
 
-            if (!characterController.isGrounded && !isClimbing)
+            if (characterController.enabled && !characterController.isGrounded && !isClimbing)
             {
                 moveDirection.y -= gravity * Time.deltaTime;
             }
