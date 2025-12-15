@@ -20,26 +20,26 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0, z: -13.043479}
-        outSlope: {x: 0, y: 0, z: -13.043479}
+        inSlope: {x: 0, y: 0, z: 18}
+        outSlope: {x: 0, y: 0, z: 18}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.38333333
-        value: {x: 0, y: 0, z: -5}
-        inSlope: {x: 0, y: 0, z: -4.925995}
-        outSlope: {x: 0, y: 0, z: -4.925995}
+        time: 0.33333334
+        value: {x: 0, y: 0, z: 6}
+        inSlope: {x: 0, y: 0, z: 4.4999995}
+        outSlope: {x: 0, y: 0, z: 4.4999995}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.95
+        time: 1
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0, z: 3.1914892}
-        outSlope: {x: 0, y: 0, z: 3.1914892}
+        inSlope: {x: 0, y: 0, z: -9.000001}
+        outSlope: {x: 0, y: 0, z: -9.000001}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -47,7 +47,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BatametGfx
+    path: SteamylGfx
   m_PositionCurves:
   - curve:
       serializedVersion: 2
@@ -55,26 +55,26 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0.0032608695, y: 0.044217393, z: 0.010434783}
-        outSlope: {x: 0.0032608695, y: 0.044217393, z: 0.010434783}
+        inSlope: {x: 0.0015, y: 0.03, z: 0.0075}
+        outSlope: {x: 0.0015, y: 0.03, z: 0.0075}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.76666665
-        value: {x: 0.0025, y: 0.0339, z: 0.008}
-        inSlope: {x: 0.00063043484, y: 0.0085486965, z: 0.0020173914}
-        outSlope: {x: 0.00063043484, y: 0.0085486965, z: 0.0020173914}
+        time: 0.6666667
+        value: {x: 0.001, y: 0.02, z: 0.005}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 2.0166667
+        time: 1.3333334
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: -0.0019999999, y: -0.02712, z: -0.0064000003}
-        outSlope: {x: -0.0019999999, y: -0.02712, z: -0.0064000003}
+        inSlope: {x: -0.0015, y: -0.03, z: -0.0075}
+        outSlope: {x: -0.0015, y: -0.03, z: -0.0075}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -82,7 +82,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BatametGfx
+    path: SteamylGfx
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -94,7 +94,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 776965935
+      path: 2161661569
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -103,7 +103,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 776965935
+      path: 2161661569
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -117,7 +117,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.0166667
+    m_StopTime: 1.3333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -140,26 +140,26 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0.0032608695
-        outSlope: 0.0032608695
+        inSlope: 0.0015
+        outSlope: 0.0015
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.76666665
-        value: 0.0025
-        inSlope: 0.00063043484
-        outSlope: 0.00063043484
+        time: 0.6666667
+        value: 0.001
+        inSlope: 0
+        outSlope: 0
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 2.0166667
+        time: 1.3333334
         value: 0
-        inSlope: -0.0019999999
-        outSlope: -0.0019999999
+        inSlope: -0.0015
+        outSlope: -0.0015
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -168,7 +168,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: BatametGfx
+    path: SteamylGfx
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -179,26 +179,26 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0.044217393
-        outSlope: 0.044217393
+        inSlope: 0.03
+        outSlope: 0.03
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.76666665
-        value: 0.0339
-        inSlope: 0.0085486965
-        outSlope: 0.0085486965
+        time: 0.6666667
+        value: 0.02
+        inSlope: 0
+        outSlope: 0
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 2.0166667
+        time: 1.3333334
         value: 0
-        inSlope: -0.02712
-        outSlope: -0.02712
+        inSlope: -0.03
+        outSlope: -0.03
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -207,7 +207,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: BatametGfx
+    path: SteamylGfx
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -218,26 +218,26 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0.010434783
-        outSlope: 0.010434783
+        inSlope: 0.0075
+        outSlope: 0.0075
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.76666665
-        value: 0.008
-        inSlope: 0.0020173914
-        outSlope: 0.0020173914
+        time: 0.6666667
+        value: 0.005
+        inSlope: 0
+        outSlope: 0
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 2.0166667
+        time: 1.3333334
         value: 0
-        inSlope: -0.0064000003
-        outSlope: -0.0064000003
+        inSlope: -0.0075
+        outSlope: -0.0075
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -246,7 +246,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: BatametGfx
+    path: SteamylGfx
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -264,7 +264,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.38333333
+        time: 0.33333334
         value: 0
         inSlope: 0
         outSlope: 0
@@ -273,7 +273,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.95
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -285,7 +285,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: BatametGfx
+    path: SteamylGfx
     classID: 4
     script: {fileID: 0}
     flags: 16
@@ -303,7 +303,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.38333333
+        time: 0.33333334
         value: 0
         inSlope: 0
         outSlope: 0
@@ -312,7 +312,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.95
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -324,7 +324,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: BatametGfx
+    path: SteamylGfx
     classID: 4
     script: {fileID: 0}
     flags: 16
@@ -335,26 +335,26 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: -13.043479
-        outSlope: -13.043479
+        inSlope: 18
+        outSlope: 18
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.38333333
-        value: -5
-        inSlope: -4.925995
-        outSlope: -4.925995
+        time: 0.33333334
+        value: 6
+        inSlope: 4.4999995
+        outSlope: 4.4999995
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.95
+        time: 1
         value: 0
-        inSlope: 3.1914892
-        outSlope: 3.1914892
+        inSlope: -9.000001
+        outSlope: -9.000001
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -363,7 +363,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: BatametGfx
+    path: SteamylGfx
     classID: 4
     script: {fileID: 0}
     flags: 16
@@ -376,7 +376,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: BatametGfx
+    path: SteamylGfx
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -388,7 +388,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: BatametGfx
+    path: SteamylGfx
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -400,7 +400,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: BatametGfx
+    path: SteamylGfx
     classID: 4
     script: {fileID: 0}
     flags: 0
