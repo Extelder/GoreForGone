@@ -198,6 +198,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchBatamet"",
+                    ""type"": ""Button"",
+                    ""id"": ""5582d6e0-0a91-49cd-be44-b0611ff46102"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -376,6 +385,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""SwitchSteamyl"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9d68982-d14d-4a23-86ae-7cfd7f00686b"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchBatamet"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -402,6 +422,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_SwitchSword = m_Character.FindAction("SwitchSword", throwIfNotFound: true);
         m_Character_Reload = m_Character.FindAction("Reload", throwIfNotFound: true);
         m_Character_SwitchSteamyl = m_Character.FindAction("SwitchSteamyl", throwIfNotFound: true);
+        m_Character_SwitchBatamet = m_Character.FindAction("SwitchBatamet", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -494,6 +515,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_SwitchSword;
     private readonly InputAction m_Character_Reload;
     private readonly InputAction m_Character_SwitchSteamyl;
+    private readonly InputAction m_Character_SwitchBatamet;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -553,6 +575,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Character/SwitchSteamyl".
         /// </summary>
         public InputAction @SwitchSteamyl => m_Wrapper.m_Character_SwitchSteamyl;
+        /// <summary>
+        /// Provides access to the underlying input action "Character/SwitchBatamet".
+        /// </summary>
+        public InputAction @SwitchBatamet => m_Wrapper.m_Character_SwitchBatamet;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -615,6 +641,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchSteamyl.started += instance.OnSwitchSteamyl;
             @SwitchSteamyl.performed += instance.OnSwitchSteamyl;
             @SwitchSteamyl.canceled += instance.OnSwitchSteamyl;
+            @SwitchBatamet.started += instance.OnSwitchBatamet;
+            @SwitchBatamet.performed += instance.OnSwitchBatamet;
+            @SwitchBatamet.canceled += instance.OnSwitchBatamet;
         }
 
         /// <summary>
@@ -662,6 +691,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchSteamyl.started -= instance.OnSwitchSteamyl;
             @SwitchSteamyl.performed -= instance.OnSwitchSteamyl;
             @SwitchSteamyl.canceled -= instance.OnSwitchSteamyl;
+            @SwitchBatamet.started -= instance.OnSwitchBatamet;
+            @SwitchBatamet.performed -= instance.OnSwitchBatamet;
+            @SwitchBatamet.canceled -= instance.OnSwitchBatamet;
         }
 
         /// <summary>
@@ -799,5 +831,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchSteamyl(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchBatamet" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchBatamet(InputAction.CallbackContext context);
     }
 }
