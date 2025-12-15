@@ -42,15 +42,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SecondaryShoot",
-                    "type": "Button",
-                    "id": "ed09258c-c916-4574-9046-7dbe5f940165",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "e043c90b-a1ba-45db-8cb4-576075822fe9",
@@ -117,6 +108,24 @@
                     "name": "SwitchBatamet",
                     "type": "Button",
                     "id": "5582d6e0-0a91-49cd-be44-b0611ff46102",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RingAbility",
+                    "type": "Button",
+                    "id": "6d79f76a-56d9-4d6b-ac28-587101e9da4f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CancelAction",
+                    "type": "Button",
+                    "id": "c6a74c45-1634-4560-b3cb-8c547841cd1e",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -214,17 +223,6 @@
                 },
                 {
                     "name": "",
-                    "id": "eb58251f-1e85-4108-b546-0229c8b24c40",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SecondaryShoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "562db317-a935-48c9-acb9-b82959e6facc",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -308,6 +306,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "SwitchBatamet",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b32cdb2a-c7cd-46a7-ba71-56b023dc1c90",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RingAbility",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "05c71355-fec0-47a8-93f3-e072f5258671",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CancelAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5d0aa08-9713-4642-9b9e-fa64a9947037",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CancelAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

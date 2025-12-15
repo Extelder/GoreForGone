@@ -128,15 +128,6 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""SecondaryShoot"",
-                    ""type"": ""Button"",
-                    ""id"": ""ed09258c-c916-4574-9046-7dbe5f940165"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""e043c90b-a1ba-45db-8cb4-576075822fe9"",
@@ -203,6 +194,24 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""name"": ""SwitchBatamet"",
                     ""type"": ""Button"",
                     ""id"": ""5582d6e0-0a91-49cd-be44-b0611ff46102"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RingAbility"",
+                    ""type"": ""Button"",
+                    ""id"": ""6d79f76a-56d9-4d6b-ac28-587101e9da4f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CancelAction"",
+                    ""type"": ""Button"",
+                    ""id"": ""c6a74c45-1634-4560-b3cb-8c547841cd1e"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -300,17 +309,6 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""eb58251f-1e85-4108-b546-0229c8b24c40"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SecondaryShoot"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""562db317-a935-48c9-acb9-b82959e6facc"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
@@ -396,6 +394,39 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""SwitchBatamet"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b32cdb2a-c7cd-46a7-ba71-56b023dc1c90"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RingAbility"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""05c71355-fec0-47a8-93f3-e072f5258671"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CancelAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5d0aa08-9713-4642-9b9e-fa64a9947037"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CancelAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -414,7 +445,6 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_Vertical = m_Character.FindAction("Vertical", throwIfNotFound: true);
         m_Character_Jump = m_Character.FindAction("Jump", throwIfNotFound: true);
         m_Character_MainShoot = m_Character.FindAction("MainShoot", throwIfNotFound: true);
-        m_Character_SecondaryShoot = m_Character.FindAction("SecondaryShoot", throwIfNotFound: true);
         m_Character_Interact = m_Character.FindAction("Interact", throwIfNotFound: true);
         m_Character_OpenPanel = m_Character.FindAction("OpenPanel", throwIfNotFound: true);
         m_Character_Crouch = m_Character.FindAction("Crouch", throwIfNotFound: true);
@@ -423,6 +453,8 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_Reload = m_Character.FindAction("Reload", throwIfNotFound: true);
         m_Character_SwitchSteamyl = m_Character.FindAction("SwitchSteamyl", throwIfNotFound: true);
         m_Character_SwitchBatamet = m_Character.FindAction("SwitchBatamet", throwIfNotFound: true);
+        m_Character_RingAbility = m_Character.FindAction("RingAbility", throwIfNotFound: true);
+        m_Character_CancelAction = m_Character.FindAction("CancelAction", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -507,7 +539,6 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Vertical;
     private readonly InputAction m_Character_Jump;
     private readonly InputAction m_Character_MainShoot;
-    private readonly InputAction m_Character_SecondaryShoot;
     private readonly InputAction m_Character_Interact;
     private readonly InputAction m_Character_OpenPanel;
     private readonly InputAction m_Character_Crouch;
@@ -516,6 +547,8 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Reload;
     private readonly InputAction m_Character_SwitchSteamyl;
     private readonly InputAction m_Character_SwitchBatamet;
+    private readonly InputAction m_Character_RingAbility;
+    private readonly InputAction m_Character_CancelAction;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -543,10 +576,6 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Character/MainShoot".
         /// </summary>
         public InputAction @MainShoot => m_Wrapper.m_Character_MainShoot;
-        /// <summary>
-        /// Provides access to the underlying input action "Character/SecondaryShoot".
-        /// </summary>
-        public InputAction @SecondaryShoot => m_Wrapper.m_Character_SecondaryShoot;
         /// <summary>
         /// Provides access to the underlying input action "Character/Interact".
         /// </summary>
@@ -579,6 +608,14 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Character/SwitchBatamet".
         /// </summary>
         public InputAction @SwitchBatamet => m_Wrapper.m_Character_SwitchBatamet;
+        /// <summary>
+        /// Provides access to the underlying input action "Character/RingAbility".
+        /// </summary>
+        public InputAction @RingAbility => m_Wrapper.m_Character_RingAbility;
+        /// <summary>
+        /// Provides access to the underlying input action "Character/CancelAction".
+        /// </summary>
+        public InputAction @CancelAction => m_Wrapper.m_Character_CancelAction;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -617,9 +654,6 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @MainShoot.started += instance.OnMainShoot;
             @MainShoot.performed += instance.OnMainShoot;
             @MainShoot.canceled += instance.OnMainShoot;
-            @SecondaryShoot.started += instance.OnSecondaryShoot;
-            @SecondaryShoot.performed += instance.OnSecondaryShoot;
-            @SecondaryShoot.canceled += instance.OnSecondaryShoot;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
@@ -644,6 +678,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchBatamet.started += instance.OnSwitchBatamet;
             @SwitchBatamet.performed += instance.OnSwitchBatamet;
             @SwitchBatamet.canceled += instance.OnSwitchBatamet;
+            @RingAbility.started += instance.OnRingAbility;
+            @RingAbility.performed += instance.OnRingAbility;
+            @RingAbility.canceled += instance.OnRingAbility;
+            @CancelAction.started += instance.OnCancelAction;
+            @CancelAction.performed += instance.OnCancelAction;
+            @CancelAction.canceled += instance.OnCancelAction;
         }
 
         /// <summary>
@@ -667,9 +707,6 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @MainShoot.started -= instance.OnMainShoot;
             @MainShoot.performed -= instance.OnMainShoot;
             @MainShoot.canceled -= instance.OnMainShoot;
-            @SecondaryShoot.started -= instance.OnSecondaryShoot;
-            @SecondaryShoot.performed -= instance.OnSecondaryShoot;
-            @SecondaryShoot.canceled -= instance.OnSecondaryShoot;
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
@@ -694,6 +731,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchBatamet.started -= instance.OnSwitchBatamet;
             @SwitchBatamet.performed -= instance.OnSwitchBatamet;
             @SwitchBatamet.canceled -= instance.OnSwitchBatamet;
+            @RingAbility.started -= instance.OnRingAbility;
+            @RingAbility.performed -= instance.OnRingAbility;
+            @RingAbility.canceled -= instance.OnRingAbility;
+            @CancelAction.started -= instance.OnCancelAction;
+            @CancelAction.performed -= instance.OnCancelAction;
+            @CancelAction.canceled -= instance.OnCancelAction;
         }
 
         /// <summary>
@@ -776,13 +819,6 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMainShoot(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "SecondaryShoot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnSecondaryShoot(InputAction.CallbackContext context);
-        /// <summary>
         /// Method invoked when associated input action "Interact" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
@@ -838,5 +874,19 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchBatamet(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RingAbility" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRingAbility(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CancelAction" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCancelAction(InputAction.CallbackContext context);
     }
 }
