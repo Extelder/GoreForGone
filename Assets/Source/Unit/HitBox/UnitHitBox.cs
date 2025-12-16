@@ -7,7 +7,14 @@ using UnityEngine;
 
 public class UnitHitBox : HitBox
 {
-    [field :SerializeField] public EnemyHealth EnemyHealth;
+    [field: SerializeField] public EnemyHealth EnemyHealth;
+
+    public override void Visit(Projectile projectile)
+    {
+        base.Visit(projectile);
+        Hit(transform, projectile.Damage,
+            transform.position += new Vector3(0, 0.5f, 0));
+    }
 
     [ServerRpc(RequireOwnership = false)]
     public void HitWithRaycast(float damage, Vector3 point, Vector3 normal)
@@ -16,7 +23,9 @@ public class UnitHitBox : HitBox
         OnHitWithRaycastServer(point, normal);
     }
 
-    public virtual void OnHitWithRaycastServer(Vector3 point, Vector3 normal){}
+    public virtual void OnHitWithRaycastServer(Vector3 point, Vector3 normal)
+    {
+    }
 
     [ObserversRpc]
     public void HitWithRaycastObsrever(float damage, Vector3 point, Vector3 normal)
@@ -28,11 +37,13 @@ public class UnitHitBox : HitBox
     [ServerRpc(RequireOwnership = false)]
     public void Hit(Transform overlapCenter, float damage, Vector3 bloodPoint)
     {
-        HitObsrever(overlapCenter ,damage, bloodPoint);
+        HitObsrever(overlapCenter, damage, bloodPoint);
         OnHitServer(overlapCenter);
     }
-    
-    public virtual void OnHitServer(Transform overlapCenter){}
+
+    public virtual void OnHitServer(Transform overlapCenter)
+    {
+    }
 
     [ObserversRpc]
     public void HitObsrever(Transform overlapCenter, float damage, Vector3 bloodPoint)

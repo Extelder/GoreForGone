@@ -813,10 +813,10 @@ Transform:
   - {fileID: 1505152376054224021}
   - {fileID: 6602322313642978559}
   - {fileID: 1468167224052845714}
-  - {fileID: 7987767350543156508}
   - {fileID: 4299481522399134409}
   - {fileID: 522484446647177420}
   - {fileID: 5502708922381896961}
+  - {fileID: 7987767350543156508}
   - {fileID: 557731868388771085}
   m_Father: {fileID: 5769701117671835531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -866,7 +866,8 @@ MonoBehaviour:
   _lookAtClosestPlayer: {fileID: 6933815877199090194}
   _stopNavMesh: 1
   _agent: {fileID: 6312057831647223199}
-  _objectToSpawn: {fileID: 0}
+  _objectToSpawn: {fileID: 2536173665590176841, guid: 12fc3648795f4934fb7e5451a83a0887,
+    type: 3}
   _shootOrigin: {fileID: 7987767350543156508}
 --- !u!114 &3685032996049896506
 MonoBehaviour:
@@ -2684,6 +2685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7987767350543156508}
+  - component: {fileID: 6896086697356023404}
   m_Layer: 0
   m_Name: ShootOrigin
   m_TagString: Untagged
@@ -2699,13 +2701,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3732405041274037133}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0000000037252899, y: -0, z: -0.0000000037252899, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 1}
+  m_LocalRotation: {x: -0.0065536387, y: -0, z: -0, w: 0.99997854}
+  m_LocalPosition: {x: -0.076, y: 1.85, z: 1.104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4528869698230002673}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.751, y: 0, z: 0}
+--- !u!114 &6896086697356023404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732405041274037133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6412177ed0d5a42a05a1da17096d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 32
+  _addedNetworkObject: {fileID: 5431822323827494482}
+  _networkObjectCache: {fileID: 5431822323827494482}
+  _checkRate: 0.02
+  _turnSpeed: 20
+  _lookAtBone: {fileID: 7987767350543156508}
+  _offset: {x: 0, y: 0, z: 0}
+  _startOnEnable: 1
+  _maxLookAngle: 0
 --- !u!1 &3959993925527946984
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,7 +3037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 32
+  _componentIndexCache: 33
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
@@ -3863,6 +3886,7 @@ MonoBehaviour:
   - {fileID: 1975113228036107266}
   - {fileID: 2773467984410531964}
   - {fileID: 3883275249253385911}
+  - {fileID: 6896086697356023404}
   - {fileID: 4515082668265910315}
   InitializedParentNetworkBehaviour: {fileID: 112043184457160046}
   InitializedNestedNetworkObjects: []
@@ -3942,7 +3966,7 @@ MonoBehaviour:
   _enemyNavMeshMove: {fileID: 6313323006063990987}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _updateTargetRate: 0.2
-  _lostTime: 2
+  _lostTime: 3
 --- !u!114 &1608106652244185912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3981,11 +4005,11 @@ MonoBehaviour:
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
   _lookAtClosestPlayer: {fileID: 6933815877199090194}
-  _agent: {fileID: 0}
+  _agent: {fileID: 6312057831647223199}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyNavMeshMove: {fileID: 6313323006063990987}
   _unitPlayerDetector: {fileID: 8592808331344791808}
-  _chaseSpeedMultiplier: 0
+  _chaseSpeedMultiplier: 2
   _updateTargetRate: 0.2
   _unitShootPlayerDetector: {fileID: 8592808331344791808}
   _enemyRangeStateMachine: {fileID: 1730478988304149002}
@@ -4141,8 +4165,11 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   _checkRate: 0.02
-  _turnSpeed: 200
+  _turnSpeed: 10
   _lookAtBone: {fileID: 3205836839251728625}
+  _offset: {x: 0, y: 30, z: 0}
+  _startOnEnable: 0
+  _maxLookAngle: 100
 --- !u!1 &5707196593561349292
 GameObject:
   m_ObjectHideFlags: 0

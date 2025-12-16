@@ -22,7 +22,6 @@ public class EnemyShootState : EnemyState
         if (!base.IsServer)
             return;
         CanChanged = false;
-        Debug.Log("START SHOOTING");
         EnemyAnimator.Shoot();
         _agent.isStopped = _stopNavMesh;
         _agent.enabled = false;
@@ -53,6 +52,5 @@ public class EnemyShootState : EnemyState
         _lookAtClosestPlayerNotIK.StopLookAt();
         _lookAtClosestPlayer.StopLookAt();
         _agent.enabled = true;
-        Debug.Log("STOP SHOOTING");
     }
 }
