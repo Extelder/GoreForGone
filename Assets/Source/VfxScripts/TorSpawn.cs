@@ -7,6 +7,7 @@ using UnityEngine;
 public class TorSpawn : NetworkBehaviour
 {
     [SerializeField] private GameObject _models;
+    private Vector3 _startPos;
 
     public override void OnStartClient()
     {
@@ -25,14 +26,17 @@ public class TorSpawn : NetworkBehaviour
     {
         StartCoroutine(Hit());
     }
-
+    private void OnEnable()
+    {
+        _startPos = transform.position;
+    }
     private IEnumerator Hit()
     {
         while (true)
         {
-            _models.transform.localPosition += Vector3.forward * 9f * Time.deltaTime;
-            _models.transform.localScale += Vector3.one * 2f * Time.deltaTime;
-            if (_models.transform.localPosition.magnitude >= 100f)
+            _models.transform.position += _models.transform.forward * 4.2f * Time.deltaTime;
+            _models.transform.localScale += Vector3.one * 100f * Time.deltaTime;
+            if (Vector3.Distance(_models.transform.position, _startPos) >= 12f)
             {
                 Despawn();
                 yield break;
@@ -44,6 +48,6 @@ public class TorSpawn : NetworkBehaviour
 
     private void Despawn()
     {
-        if (IsServer) PlayerCharacter.Instance.Despawn();
+        if (IsServer) PlayerCharacter.Instance.ServerDeSpawnObject(gameObject);
     }
 }

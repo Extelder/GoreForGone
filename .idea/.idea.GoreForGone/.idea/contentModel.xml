@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\aferi\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\aferi\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_GoreForGone.686436049.00" t="ExcludeRecursive" />
-    <e p="C:\Users\aferi\AppData\Roaming\JetBrains\Rider2020.2\consoles\ide" t="IncludeRecursive" />
-    <e p="C:\Users\aferi\Documents\Project222\GoreForGone" t="IncludeRecursive">
+    <e p="C:\Users\The Witcher\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\The Witcher\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_GoreForGone.1685544525.00" t="ExcludeRecursive" />
+    <e p="C:\Users\The Witcher\AppData\Roaming\JetBrains\Rider2020.1\Extensions" t="IncludeRecursive" />
+    <e p="C:\Users\The Witcher\Documents\GitHub\GoreForGone" t="IncludeRecursive">
       <e p="AmimalWorld.csproj" t="IncludeRecursive" />
       <e p="AmimalWorld.Player.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
@@ -12,6 +12,18 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="BigRookGames" t="Include">
+          <e p="_AssetPacks" t="Include">
+            <e p="Stylized Weapon Pack" t="Include">
+              <e p="M4 Scoped Assault Rifle" t="Include">
+                <e p="README.txt" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="GunfireController.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Drakkar" t="Include">
           <e p="Common" t="Include">
             <e p="Attributes" t="Include">
@@ -1731,6 +1743,7 @@
                 <e p="OverlapAttack.cs" t="Include" />
                 <e p="PlayerAttack.cs" t="Include" />
                 <e p="PlayerAttackShake.cs" t="Include" />
+                <e p="PlayerAttackSpawnTor.cs" t="Include" />
                 <e p="RaycastAttack.cs" t="Include" />
                 <e p="RaycastHitAttackShake.cs" t="Include" />
                 <e p="TrailTest.cs" t="Include" />
@@ -1996,6 +2009,10 @@
             <e p="HitBox" t="Include">
               <e p="UnitHitBox.cs" t="Include" />
             </e>
+          </e>
+          <e p="VfxScripts" t="Include">
+            <e p="PlayVfx.cs" t="Include" />
+            <e p="TorSpawn.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
