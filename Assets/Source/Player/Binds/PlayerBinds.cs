@@ -225,6 +225,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Block"",
+                    ""type"": ""Button"",
+                    ""id"": ""d92d275f-a2b8-4fd1-8087-af15c17919f9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -469,6 +478,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""Lean"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e543ed95-5eae-4cdb-a2f5-a06baf003d81"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -498,6 +518,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_RingAbility = m_Character.FindAction("RingAbility", throwIfNotFound: true);
         m_Character_CancelAction = m_Character.FindAction("CancelAction", throwIfNotFound: true);
         m_Character_Lean = m_Character.FindAction("Lean", throwIfNotFound: true);
+        m_Character_Block = m_Character.FindAction("Block", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -593,6 +614,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_RingAbility;
     private readonly InputAction m_Character_CancelAction;
     private readonly InputAction m_Character_Lean;
+    private readonly InputAction m_Character_Block;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -665,6 +687,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Lean => m_Wrapper.m_Character_Lean;
         /// <summary>
+        /// Provides access to the underlying input action "Character/Block".
+        /// </summary>
+        public InputAction @Block => m_Wrapper.m_Character_Block;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Character; }
@@ -735,6 +761,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Lean.started += instance.OnLean;
             @Lean.performed += instance.OnLean;
             @Lean.canceled += instance.OnLean;
+            @Block.started += instance.OnBlock;
+            @Block.performed += instance.OnBlock;
+            @Block.canceled += instance.OnBlock;
         }
 
         /// <summary>
@@ -791,6 +820,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Lean.started -= instance.OnLean;
             @Lean.performed -= instance.OnLean;
             @Lean.canceled -= instance.OnLean;
+            @Block.started -= instance.OnBlock;
+            @Block.performed -= instance.OnBlock;
+            @Block.canceled -= instance.OnBlock;
         }
 
         /// <summary>
@@ -949,5 +981,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLean(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Block" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBlock(InputAction.CallbackContext context);
     }
 }

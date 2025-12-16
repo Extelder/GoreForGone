@@ -11,6 +11,7 @@ public class SwordAnimator : ItemAnimator
     [SerializeField] private string _chargingAttackBoolName;
     [SerializeField] private string _chargeAttackBoolName;
     [SerializeField] private string _hittedObjectBool;
+    [SerializeField] private string _blockBool;
 
     private int _currentAttackInt;
 
@@ -20,6 +21,7 @@ public class SwordAnimator : ItemAnimator
         SetAnimationBool(_attackBoolName, false);
         SetAnimationBool(_chargingAttackBoolName, false);
         SetAnimationBool(_chargeAttackBoolName, false);
+        SetAnimationBool(_blockBool, false);
     }
 
     public void RandomizeAtackAnimation()
@@ -42,6 +44,11 @@ public class SwordAnimator : ItemAnimator
     public void StartCharge()
     {
         SetAnimationBoolAndDisableOther(_chargingAttackBoolName);
+    }
+
+    public void Block()
+    {
+        SetAnimationBoolAndDisableOther(_blockBool);
     }
 
     public void ChargeAttack()

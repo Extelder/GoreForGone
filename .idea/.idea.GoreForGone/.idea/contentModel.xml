@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\The Witcher\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\The Witcher\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_GoreForGone.1685544525.00" t="ExcludeRecursive" />
-    <e p="C:\Users\The Witcher\AppData\Roaming\JetBrains\Rider2020.1\Extensions" t="IncludeRecursive" />
-    <e p="C:\Users\The Witcher\Documents\GitHub\GoreForGone" t="IncludeRecursive">
+    <e p="C:\Users\Nikola\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Nikola\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_GoreForGone.1305621880.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Nikola\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
+    <e p="D:\adobe\UnityProjects\GoreForGone" t="IncludeRecursive">
       <e p="AmimalWorld.csproj" t="IncludeRecursive" />
       <e p="AmimalWorld.Player.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
@@ -1274,6 +1274,16 @@
               </e>
             </e>
           </e>
+          <e p="Travis Game Assets" t="Include">
+            <e p="Hit Impact Effects" t="Include">
+              <e p="Demo Scene" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="HitImpactEffectsPreview.cs" t="Include" />
+                </e>
+              </e>
+              <e p="README.txt" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="ParrelSync" t="Include">
           <e p="Editor" t="Include">
@@ -1806,10 +1816,14 @@
                 <e p="StateMachine" t="Include">
                   <e p="State" t="Include">
                     <e p="SwordAttackState.cs" t="Include" />
+                    <e p="SwordBlockState.cs" t="Include" />
                     <e p="SwordChargeAttackState.cs" t="Include" />
                     <e p="SwordState.cs" t="Include" />
                   </e>
                   <e p="SwordStateMachine.cs" t="Include" />
+                </e>
+                <e p="VFX" t="Include">
+                  <e p="SwordChargeReadyVFX.cs" t="Include" />
                 </e>
               </e>
               <e p="TakeUpShake" t="Include">

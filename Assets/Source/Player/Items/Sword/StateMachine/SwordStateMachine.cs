@@ -8,6 +8,7 @@ public class SwordStateMachine : ItemStateMachine
 {
     [SerializeField] private SwordState _attackState;
     [SerializeField] private SwordState _chargeAttackState;
+    [SerializeField] private SwordState _blockState;
 
     [SerializeField] private float _waitForStartChargingTime;
 
@@ -17,6 +18,12 @@ public class SwordStateMachine : ItemStateMachine
     {
     }
 
+    public void BlockState(InputAction.CallbackContext callbackContext)
+    {
+        CurrentState.CanChanged = true;
+        ChangeState(_blockState);
+    }
+
     public void AttackState()
     {
         ChangeState(_attackState);
@@ -24,6 +31,8 @@ public class SwordStateMachine : ItemStateMachine
 
     public void ChargeAttackState()
     {
+        if (CurrentState == _blockState)
+            return;
         CurrentState.CanChanged = true;
         ChangeState(_chargeAttackState);
     }
@@ -48,6 +57,7 @@ public class SwordStateMachine : ItemStateMachine
         _initialized = true;
         playerCharacter.Binds.Character.MainShoot.started += OnMainShootStarted;
         playerCharacter.Binds.Character.MainShoot.canceled += OnMainShootCanceled;
+        playerCharacter.Binds.Character.Block.started += BlockState;
     }
 
 
@@ -57,6 +67,7 @@ public class SwordStateMachine : ItemStateMachine
             return;
         playerCharacter.Binds.Character.MainShoot.started -= OnMainShootStarted;
         playerCharacter.Binds.Character.MainShoot.canceled -= OnMainShootCanceled;
+        playerCharacter.Binds.Character.Block.started -= BlockState;
     }
 
     private IEnumerator WaitingForStartCharging()

@@ -13,6 +13,8 @@ public class SwordChargeAttackState : SwordState
 
     private bool _charged = false;
 
+    public event Action Charged;
+
     public override void Enter()
     {
         _charged = false;
@@ -31,6 +33,7 @@ public class SwordChargeAttackState : SwordState
     public void ChargeCompleate()
     {
         _charged = true;
+        Charged?.Invoke();
     }
 
     public void OnChargeAttackAnimationEnded()
