@@ -216,6 +216,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Lean"",
+                    ""type"": ""Button"",
+                    ""id"": ""f528c93c-3900-4935-8dbc-bb7aea1234c5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -427,6 +436,39 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""CancelAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""426b6667-e136-4bcc-b3a7-0d2ced7c74f0"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lean"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""29bb4d6a-8ec9-45bd-8fd4-4b5c79d5f15d"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lean"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""b4d327fa-0395-4e62-80c4-c9060f3c525c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lean"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -455,6 +497,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_SwitchBatamet = m_Character.FindAction("SwitchBatamet", throwIfNotFound: true);
         m_Character_RingAbility = m_Character.FindAction("RingAbility", throwIfNotFound: true);
         m_Character_CancelAction = m_Character.FindAction("CancelAction", throwIfNotFound: true);
+        m_Character_Lean = m_Character.FindAction("Lean", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -549,6 +592,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_SwitchBatamet;
     private readonly InputAction m_Character_RingAbility;
     private readonly InputAction m_Character_CancelAction;
+    private readonly InputAction m_Character_Lean;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -617,6 +661,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @CancelAction => m_Wrapper.m_Character_CancelAction;
         /// <summary>
+        /// Provides access to the underlying input action "Character/Lean".
+        /// </summary>
+        public InputAction @Lean => m_Wrapper.m_Character_Lean;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Character; }
@@ -684,6 +732,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @CancelAction.started += instance.OnCancelAction;
             @CancelAction.performed += instance.OnCancelAction;
             @CancelAction.canceled += instance.OnCancelAction;
+            @Lean.started += instance.OnLean;
+            @Lean.performed += instance.OnLean;
+            @Lean.canceled += instance.OnLean;
         }
 
         /// <summary>
@@ -737,6 +788,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @CancelAction.started -= instance.OnCancelAction;
             @CancelAction.performed -= instance.OnCancelAction;
             @CancelAction.canceled -= instance.OnCancelAction;
+            @Lean.started -= instance.OnLean;
+            @Lean.performed -= instance.OnLean;
+            @Lean.canceled -= instance.OnLean;
         }
 
         /// <summary>
@@ -888,5 +942,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCancelAction(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Lean" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLean(InputAction.CallbackContext context);
     }
 }

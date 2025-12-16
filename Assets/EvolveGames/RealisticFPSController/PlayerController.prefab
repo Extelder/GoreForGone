@@ -1209,6 +1209,7 @@ MonoBehaviour:
   isCrough:
     value: 0
   isRunning: 0
+  InstallFOV: 0
   Moving:
     value: 0
   vertical: 0
@@ -1218,6 +1219,7 @@ MonoBehaviour:
   WalkingValue: 0
   HelpCrouching: 0
   Crouching: 0
+  DefaultFOV: 0
 --- !u!114 &4434987455403460021
 MonoBehaviour:
   m_ObjectHideFlags: 0

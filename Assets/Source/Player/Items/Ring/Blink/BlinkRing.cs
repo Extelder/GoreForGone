@@ -30,6 +30,18 @@ public class BlinkRing : PlayerRing
                 out RaycastHit hit, _raycastSettings.MaxDistance, _raycastSettings.LayerMask))
             {
                 _targetPosition = hit.point + hit.normal * _offset;
+
+                Collider[] other = new Collider[20];
+                Physics.OverlapCapsuleNonAlloc(_targetPosition - new Vector3(0, 0.3f, 0),
+                    _targetPosition + new Vector3(0, 0.3f, 0), 0.4f, other);
+                for (int i = 0; i < other.Length; i++)
+                {
+                    if (other[i] != null)
+                    {
+                        Debug.Log(other[i].name);
+                        return;
+                    }
+                }
             }
             else
             {
@@ -39,19 +51,44 @@ public class BlinkRing : PlayerRing
                     out RaycastHit hit2, 1, _raycastSettings.LayerMask))
                 {
                     _targetPosition = hit2.point + hit2.normal * _offset;
+
+                    Collider[] other = new Collider[20];
+                    Physics.OverlapCapsuleNonAlloc(_targetPosition - new Vector3(0, 0.3f, 0),
+                        _targetPosition + new Vector3(0, 0.3f, 0), 0.4f, other);
+                    for (int i = 0; i < other.Length; i++)
+                    {
+                        if (other[i] != null)
+                        {
+                            Debug.Log(other[i].name);
+                            return;
+                        }
+                    }
                 }
             }
+
 
             _blinkGFX.transform.position = _targetPosition;
         }).AddTo(_disposable);
         _blinkGFX.SetActive(true);
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(_blinkGFX.transform.position - new Vector3(0, 0.5f, 0), .4f);
+        Gizmos.DrawWireSphere(_blinkGFX.transform.position + new Vector3(0, 0.5f, 0), 0.4f);
+    }
+
     protected override void OnRingAbilityBindCanceled(InputAction.CallbackContext obj)
     {
+        if (!_blinkGFX.activeInHierarchy)
+        {
+            _blinkGFX.transform.position = Vector3.zero;
+            CancelAction();
+            return;
+        }
+
         PlayerCharacter.Instance.Teleport(_targetPosition);
         CancelAction();
-        _blinkGFX.transform.position = Vector3.zero;
     }
 
     protected override void CancelAction()

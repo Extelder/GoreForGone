@@ -56,7 +56,7 @@ namespace EvolveGames
         float rotationX = 0;
         [HideInInspector] public bool isRunning = false;
         Vector3 InstallCameraMovement;
-        float InstallFOV;
+        public float InstallFOV;
         Camera cam;
         [HideInInspector] public ReactiveProperty<bool> Moving = new ReactiveProperty<bool>();
         [HideInInspector] public float vertical;
@@ -72,6 +72,8 @@ namespace EvolveGames
 
         public bool Crouching;
 
+        public float DefaultFOV;
+
         public override void OnStartClient()
         {
             if (!base.IsOwner)
@@ -86,6 +88,7 @@ namespace EvolveGames
             InstallFOV = cam.fieldOfView;
             RunningValue = RuningSpeed;
             RunningFOV = cam.fieldOfView + 10;
+            DefaultFOV = InstallFOV;
             installGravity = gravity;
             WalkingValue = walkingSpeed;
         }

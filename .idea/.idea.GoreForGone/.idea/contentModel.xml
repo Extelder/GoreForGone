@@ -1713,6 +1713,9 @@
             </e>
             <e p="DestroyIfNoOwner.cs" t="Include" />
             <e p="DestroyWithoutOwner.cs" t="Include" />
+            <e p="FOV" t="Include">
+              <e p="PlayerFOVChanger.cs" t="Include" />
+            </e>
             <e p="Health" t="Include">
               <e p="PlayerHealth.cs" t="Include" />
               <e p="PlayerHealthUI.cs" t="Include" />
@@ -1799,6 +1802,9 @@
               <e p="TPS" t="Include">
                 <e p="TPSItem.cs" t="Include" />
               </e>
+            </e>
+            <e p="Lean" t="Include">
+              <e p="PlayerLean.cs" t="Include" />
             </e>
             <e p="PlayerCharacter.cs" t="Include" />
             <e p="Rotation" t="Include">
