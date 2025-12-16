@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IWeaponVisitor
 {
     public void Visit(Projectile projectile);
+    public void Visit(MeleeTracer meleeTracer);
 }

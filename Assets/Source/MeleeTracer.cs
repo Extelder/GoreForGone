@@ -1,127 +1,126 @@
+using System;
 using System.Collections.Generic;
+using FishNet.Object;
+using UniRx;
 using UnityEngine;
 
-public interface IDamageable
+public class MeleeTracer : NetworkBehaviour
 {
-    void TakeDamage(float dmg, Vector3 hitPoint, Vector3 hitNormal, GameObject instigator);
-}
+    [field: SerializeField] public float Damage { get; private set; }
 
-public class MeleeTracer : MonoBehaviour
-{
+    [Range(2, 12)] [SerializeField] private int _segments = 6;
+
+    [SerializeField] private LayerMask _hitMask;
+    [SerializeField] private QueryTriggerInteraction _triggerInteraction = QueryTriggerInteraction.Ignore;
+
     [SerializeField] private GameObject _testHit;
+    [SerializeField] private Transform _bladeBase;
+    [SerializeField] private Transform _bladeTip;
+    [SerializeField] private float _radius = 0.08f;
+    
+    private Vector3[] _previousPoints;
+    private RaycastHit[] _hits;
+    private Collider[] _overlapColliders;
 
-    [Header("Blade points")] public Transform bladeBase;
-    public Transform bladeTip;
+    private Collider _sphereCastCollider;
 
-    [Header("Trace settings")] [Range(2, 12)]
-    public int segments = 6; // сколько точек вдоль клинка
+    private CompositeDisposable _disposable = new CompositeDisposable();
 
-    public float radius = 0.08f; // "толщина" хитбокса
-    public LayerMask hitMask;
-    public QueryTriggerInteraction triggerInteraction = QueryTriggerInteraction.Ignore;
+    readonly HashSet<Collider> _hitThisSwing = new HashSet<Collider>();
 
-    [Header("Damage")] public float damage = 25f;
-    public GameObject instigator; // обычно player
-
-    bool active;
-    Vector3[] prevPoints;
-    readonly HashSet<Collider> hitThisSwing = new HashSet<Collider>();
-
-    void Awake()
+    public override void OnStartClient()
     {
-        prevPoints = new Vector3[Mathf.Max(segments, 2)];
+        if (!IsServer)
+            return;
+        base.OnStartClient();
+        _previousPoints = new Vector3[Mathf.Max(_segments, 2)];
     }
 
-    // Animation Event
     public void BeginSwing()
     {
-        active = true;
-        hitThisSwing.Clear();
-        CacheCurrentPoints(prevPoints);
+        _hitThisSwing.Clear();
+        Swing();
+        CacheCurrentPoints(_previousPoints);
     }
 
-    // Animation Event
     public void EndSwing()
     {
-        active = false;
+        _disposable.Clear();
     }
 
-    void Update()
+    private void Swing()
     {
-        if (!active) return;
-
-        // Текущие точки клинка
-        Vector3[] currPoints = GetCurrentPointsTemp();
-
-        // Свип для каждой точки
-        for (int i = 0; i < currPoints.Length; i++)
+        Observable.Interval(TimeSpan.FromSeconds(0.02f)).Subscribe(_ =>
         {
-            Vector3 from = prevPoints[i];
-            Vector3 to = currPoints[i];
-            Vector3 delta = to - from;
-            float dist = delta.magnitude;
+            Vector3[] currentPoints = GetCurrentPointsTemp();
 
-            if (dist > 0.0005f)
+            for (int i = 0; i < currentPoints.Length; i++)
             {
-                Vector3 dir = delta / dist;
-                var hits = Physics.SphereCastAll(from, radius, dir, dist, hitMask, triggerInteraction);
+                Vector3 delta = currentPoints[i] - _previousPoints[i];
+                float distance = delta.magnitude;
 
-                foreach (var h in hits)
+                if (distance > 0.0005f)
                 {
-                    var col = h.collider;
-                    if (col == null) continue;
-                    if (hitThisSwing.Contains(col)) continue;
+                    Vector3 direction = delta / distance;
+                    _hits = Physics.SphereCastAll(_previousPoints[i], _radius, direction, distance, _hitMask,
+                        _triggerInteraction);
 
-                    hitThisSwing.Add(col);
+                    foreach (var hit in _hits)
+                    {
+                        var _sphereCastCollider = hit.collider;
+                        if (_sphereCastCollider == null) continue;
+                        if (_hitThisSwing.Contains(_sphereCastCollider)) continue;
 
-                    Instantiate(_testHit, h.point, Quaternion.identity);
-                    var dmgable = col.GetComponentInParent<IDamageable>();
-                    if (dmgable != null)
-                        dmgable.TakeDamage(damage, h.point, h.normal, instigator != null ? instigator : gameObject);
+                        _hitThisSwing.Add(_sphereCastCollider);
+
+                        //МЕТОЧКА ДЛЯ МЕНЯ - ВЫНЕСТИ В ХИТБОКС ОТДЕЛЬНО ЭТУ ХУЕТУ, ЕСЛИ ТЫ ЭТО ЧИТАЕШЬ, ТО ОТСОСИ САМОМУ СЕБЕ
+                        Instantiate(_testHit, hit.point, Quaternion.identity);
+                        if (_sphereCastCollider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
+                            visitor.Visit(this);
+                    }
+                }
+                else
+                {
+                    _overlapColliders =
+                        Physics.OverlapSphere(currentPoints[i], _radius, _hitMask, _triggerInteraction);
+                    foreach (var collider in _overlapColliders)
+                    {
+                        if (_hitThisSwing.Contains(collider)) continue;
+
+                        _hitThisSwing.Add(collider);
+
+                        Instantiate(_testHit, currentPoints[i], Quaternion.identity);
+                        if (collider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
+                            visitor.Visit(this);
+                    }
                 }
             }
-            else
-            {
-                // если движения почти нет, можно OverlapSphere, чтобы не "дырявило" на паузе
-                var cols = Physics.OverlapSphere(to, radius, hitMask, triggerInteraction);
-                foreach (var col in cols)
-                {
-                    if (hitThisSwing.Contains(col)) continue;
-                    hitThisSwing.Add(col);
 
-                    Instantiate(_testHit, to, Quaternion.identity);
-                    var dmgable = col.GetComponentInParent<IDamageable>();
-                    if (dmgable != null)
-                        dmgable.TakeDamage(damage, to, (to - transform.position).normalized,
-                            instigator != null ? instigator : gameObject);
-                }
-            }
-        }
-
-        // Сохраняем для следующего кадра
-        for (int i = 0; i < prevPoints.Length; i++)
-            prevPoints[i] = currPoints[i];
+            for (int i = 0; i < _previousPoints.Length; i++)
+                _previousPoints[i] = currentPoints[i];
+        }).AddTo(_disposable);
     }
 
-    Vector3[] GetCurrentPointsTemp()
+    private Vector3[] GetCurrentPointsTemp()
     {
-        // маленькая оптимизация: не аллоцировать каждый кадр — сделай поле currPoints.
-        // для простоты оставлю так:
-        var pts = new Vector3[Mathf.Max(segments, 2)];
-        CacheCurrentPoints(pts);
-        return pts;
+        var pointsAlongSword = new Vector3[Mathf.Max(_segments, 2)];
+        CacheCurrentPoints(pointsAlongSword);
+        return pointsAlongSword;
     }
 
-    void CacheCurrentPoints(Vector3[] buffer)
+    private void CacheCurrentPoints(Vector3[] pointAlongSword)
     {
-        int n = buffer.Length;
-        Vector3 a = bladeBase.position;
-        Vector3 b = bladeTip.position;
-
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < pointAlongSword.Length; i++)
         {
-            float t = (n == 1) ? 0f : (float) i / (n - 1);
-            buffer[i] = Vector3.Lerp(a, b, t);
+            float pointsDistribution = (pointAlongSword.Length == 1) ? 0f : (float) i / (pointAlongSword.Length - 1);
+            pointAlongSword[i] = Vector3.Lerp(_bladeBase.position, _bladeTip.position, pointsDistribution);
         }
+    }
+
+    private void OnDisable()
+    {
+        if (!IsServer)
+            return;
+        _disposable.Clear();
     }
 }

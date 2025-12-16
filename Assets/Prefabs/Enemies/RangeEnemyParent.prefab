@@ -556,11 +556,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 21
+  _componentIndexCache: 22
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &387341828921917174
 GameObject:
@@ -1277,11 +1277,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 23
+  _componentIndexCache: 24
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &1365028648312633618
 GameObject:
@@ -1675,11 +1675,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 29
+  _componentIndexCache: 30
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &2363283938974992901
 GameObject:
@@ -2271,11 +2271,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 27
+  _componentIndexCache: 28
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &3543205597739078406
 GameObject:
@@ -2457,11 +2457,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 31
+  _componentIndexCache: 32
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &3583807636436175965
 GameObject:
@@ -2638,11 +2638,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 28
+  _componentIndexCache: 29
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &3612337351531489937
 GameObject:
@@ -2701,7 +2701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3732405041274037133}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0065536387, y: -0, z: -0, w: 0.99997854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.076, y: 1.85, z: 1.104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2720,15 +2720,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a6412177ed0d5a42a05a1da17096d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 32
+  _componentIndexCache: 18
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   _checkRate: 0.02
-  _turnSpeed: 20
+  _turnSpeed: 1000
   _lookAtBone: {fileID: 7987767350543156508}
   _offset: {x: 0, y: 0, z: 0}
   _startOnEnable: 1
-  _maxLookAngle: 0
+  _maxLookAngle: 100
 --- !u!1 &3959993925527946984
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,7 +3041,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &4549354726750162793
 GameObject:
@@ -3330,11 +3330,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 30
+  _componentIndexCache: 31
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &4874484162283975106
 GameObject:
@@ -3480,11 +3480,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 26
+  _componentIndexCache: 27
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &4918707476178437563
 GameObject:
@@ -3630,11 +3630,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 19
+  _componentIndexCache: 20
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &4934182757932610492
 GameObject:
@@ -3872,6 +3872,7 @@ MonoBehaviour:
   - {fileID: 6933815877199090194}
   - {fileID: 4342776185444858396}
   - {fileID: 8592808331344791808}
+  - {fileID: 6896086697356023404}
   - {fileID: 2046748152486490482}
   - {fileID: 5252560741318120365}
   - {fileID: 8679968610607934703}
@@ -3886,7 +3887,6 @@ MonoBehaviour:
   - {fileID: 1975113228036107266}
   - {fileID: 2773467984410531964}
   - {fileID: 3883275249253385911}
-  - {fileID: 6896086697356023404}
   - {fileID: 4515082668265910315}
   InitializedParentNetworkBehaviour: {fileID: 112043184457160046}
   InitializedNestedNetworkObjects: []
@@ -4165,7 +4165,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   _checkRate: 0.02
-  _turnSpeed: 10
+  _turnSpeed: 20
   _lookAtBone: {fileID: 3205836839251728625}
   _offset: {x: 0, y: 30, z: 0}
   _startOnEnable: 0
@@ -4630,11 +4630,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 20
+  _componentIndexCache: 21
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &6793041202441587066
 GameObject:
@@ -4797,11 +4797,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 18
+  _componentIndexCache: 19
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &6967005209356085473
 GameObject:
@@ -4945,11 +4945,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 24
+  _componentIndexCache: 25
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &7017784413408298908
 GameObject:
@@ -5254,11 +5254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 25
+  _componentIndexCache: 26
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &7303728188210045668
 GameObject:
@@ -5531,11 +5531,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e95b5eeafecc44b8295e81ff69ec8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 22
+  _componentIndexCache: 23
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   EnemyHealth: {fileID: 5639973978490894316}
-  _enemyStateMachine: {fileID: 0}
+  _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &7847757022447746224
 GameObject:
@@ -5790,7 +5790,7 @@ MonoBehaviour:
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 1
-  <PrefabId>k__BackingField: 19
+  <PrefabId>k__BackingField: 20
   <SpawnableCollectionId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 16016882040979607248
   <SceneId>k__BackingField: 0

@@ -18,4 +18,5 @@ public class Pools : MonoBehaviour
     
     [field:SerializeField] public Pool BloodExplodePool { get; private set; }
     [field:SerializeField] public Pool BloodPool { get; private set; }
+    [field:SerializeField] public Pool ObjectHitPool { get; private set; }
 }
