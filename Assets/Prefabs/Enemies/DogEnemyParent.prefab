@@ -109,9 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7e5ba376e417441a787257f0a93b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 13
   _addedNetworkObject: {fileID: 7310859964512096409}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 7310859964512096409}
   _lookAtUpdateRate: 0.02
 --- !u!1 &2096292609542541488
 GameObject:
@@ -294,14 +294,14 @@ MonoBehaviour:
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 1
-  <PrefabId>k__BackingField: 14
+  <PrefabId>k__BackingField: 15
   <SpawnableCollectionId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 14476855785137961950
   <SceneId>k__BackingField: 0
   SerializedTransformProperties:
-    Position: {x: -51.06, y: 0.08404255, z: -24.29}
+    Position: {x: -51.06, y: 0, z: -24.29}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
-    Scale: {x: 1, y: 1, z: 1}
+    Scale: {x: 1.4154, y: 1.4154, z: 1.4154}
     IsValid: 1
 --- !u!1 &4556572951032833866
 GameObject:
@@ -570,6 +570,7 @@ MonoBehaviour:
   - {fileID: 2078083350094255546}
   - {fileID: 1887584541405589266}
   - {fileID: 4241117425974668597}
+  - {fileID: 8943171252360767723}
   InitializedParentNetworkBehaviour: {fileID: 6776033082511575460}
   InitializedNestedNetworkObjects: []
   RuntimeParentNetworkBehaviour: {fileID: 0}
