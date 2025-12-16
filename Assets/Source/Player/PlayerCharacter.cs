@@ -10,6 +10,7 @@ public class PlayerCharacter : NetworkBehaviour
 {
     [field: SerializeField] public CharacterController CharacterController { get; private set; }
     [field: SerializeField] public PlayerController PlayerController { get; private set; }
+    [field: SerializeField] public Collider Collider { get; private set; }
     [field: SerializeField] public List<PlayerCharacter> Characters { get; private set; }
     [field: SerializeField] public Transform DropPoint { get; private set; }
     [field: SerializeField] public Transform LookAtPoint { get; private set; }
@@ -28,7 +29,7 @@ public class PlayerCharacter : NetworkBehaviour
     {
         GameObject instance = Instantiate(spawnedObject, position, rotation);
 
-        ServerManager.Spawn(spawnedObject);
+        ServerManager.Spawn(instance);
     }
 
     public override void OnStartClient()
