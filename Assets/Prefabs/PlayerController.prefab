@@ -355,7 +355,7 @@ MonoBehaviour:
   Character: {fileID: 8850203819785511499}
   _animator: {fileID: 8334341270129933918}
   _switchItemTriggerName: Switch
-  _currentItem: {fileID: 1159872540403725062}
+  _currentItem: {fileID: 7184779801818268723}
 --- !u!1 &617478223946772787
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,12 +756,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961185372869489718}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.020928076, y: 0.016380453, z: 0.00034293247, w: 0.9996468}
+  m_LocalPosition: {x: -0.0539999, y: -0.39499998, z: 0.31200004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2638214509179665046}
+  m_Father: {fileID: 8903762659199966808}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3775855261128863189
 MonoBehaviour:
@@ -842,7 +842,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5781097125938424729}
-  - {fileID: 4376536768215978697}
   m_Father: {fileID: 4195816002362054784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219221854051955040
@@ -3440,7 +3439,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 0}
   itemObject: {fileID: 7184779801818268723}
   _itemSwitcher: {fileID: 183955970474002974}
-  _actionName: SwitchBlinkRing
+  _actionName: SwitchTimeStopRing
 --- !u!1 &3323216322527150945
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,12 +4194,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3895885512920150875}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.020928076, y: 0.016380453, z: 0.00034293247, w: 0.9996468}
+  m_LocalPosition: {x: -0.0539999, y: -0.39499998, z: 0.31200004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6565432584313976540}
+  m_Father: {fileID: 8903762659199966808}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1143318930769031369
 MonoBehaviour:
@@ -5004,6 +5003,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7645444171911746243}
+  - {fileID: 8903762659199966808}
   m_Father: {fileID: 8562933988281219265}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6225014387853826812
@@ -5282,6 +5282,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addToGlobalShakers: 1
+--- !u!1 &4981623100674872198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8903762659199966808}
+  m_Layer: 6
+  m_Name: Volumes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8903762659199966808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4981623100674872198}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4376536768215978697}
+  - {fileID: 8395934266072326990}
+  m_Father: {fileID: 2084700106972868751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4997870021163294121
 GameObject:
   m_ObjectHideFlags: 0
@@ -11003,7 +11036,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2379891153319656478}
-  - {fileID: 8395934266072326990}
   m_Father: {fileID: 7863862962849778390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7216302717717627502
@@ -22197,7 +22229,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c1d55b038e68141ad45717c68057f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _character: {fileID: 8850203819785511499}
+  _initialized: 0
   _idleAnimName: Idle
   _beginAnimName: BlinkBegin
   _stayAnimName: BlinkStay
@@ -22215,7 +22251,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96c36799bb5aa348829beca563b5567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _character: {fileID: 8850203819785511499}
+  _initialized: 0
   _postProcessVolume: {fileID: 1143318930769031369}
   _timeStopTime: 10
 --- !u!1 &3277007381744437706 stripped
@@ -40486,7 +40526,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c1d55b038e68141ad45717c68057f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _character: {fileID: 8850203819785511499}
+  _initialized: 1
   _idleAnimName: Idle
   _beginAnimName: BlinkBegin
   _stayAnimName: BlinkStay
@@ -40504,7 +40548,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9da4a473f95574890a94f5279287b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _character: {fileID: 8850203819785511499}
+  _initialized: 1
   _offset: 1
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
@@ -40525,7 +40573,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d4ce0168c16f24da1812937af5f59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _character: {fileID: 8850203819785511499}
+  _initialized: 1
   _postProcessVolume: {fileID: 3775855261128863189}
   _postProcessProfile: {fileID: 11400000, guid: 3282c787f0e4c124ca6d70bfcd2b68fb,
     type: 2}

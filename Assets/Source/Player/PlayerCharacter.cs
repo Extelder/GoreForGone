@@ -25,6 +25,8 @@ public class PlayerCharacter : NetworkBehaviour
 
     public static event Action<float> TimeValueChanged;
 
+    public float CurrentTime;
+
     [ServerRpc(RequireOwnership = false)]
     public void ServerSpawnObject(GameObject spawnedObject, Vector3 position, Quaternion rotation)
     {
@@ -79,6 +81,7 @@ public class PlayerCharacter : NetworkBehaviour
 
     public void OnTimeValueChanged(float value, PlayerCharacter investigator)
     {
+        CurrentTime = value;
         if (investigator != this)
         {
             if (value == 0)

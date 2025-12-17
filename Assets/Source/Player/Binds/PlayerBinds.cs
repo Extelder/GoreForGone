@@ -243,6 +243,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchTimeStopRing"",
+                    ""type"": ""Button"",
+                    ""id"": ""efbabff4-19df-4cd1-9542-b1d0d828249a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -509,6 +518,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""SwitchBlinkRing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a9c06a9-8e48-4bb1-acd8-311d050490ea"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchTimeStopRing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -540,6 +560,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_Lean = m_Character.FindAction("Lean", throwIfNotFound: true);
         m_Character_Block = m_Character.FindAction("Block", throwIfNotFound: true);
         m_Character_SwitchBlinkRing = m_Character.FindAction("SwitchBlinkRing", throwIfNotFound: true);
+        m_Character_SwitchTimeStopRing = m_Character.FindAction("SwitchTimeStopRing", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -637,6 +658,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Lean;
     private readonly InputAction m_Character_Block;
     private readonly InputAction m_Character_SwitchBlinkRing;
+    private readonly InputAction m_Character_SwitchTimeStopRing;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -717,6 +739,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @SwitchBlinkRing => m_Wrapper.m_Character_SwitchBlinkRing;
         /// <summary>
+        /// Provides access to the underlying input action "Character/SwitchTimeStopRing".
+        /// </summary>
+        public InputAction @SwitchTimeStopRing => m_Wrapper.m_Character_SwitchTimeStopRing;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Character; }
@@ -793,6 +819,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchBlinkRing.started += instance.OnSwitchBlinkRing;
             @SwitchBlinkRing.performed += instance.OnSwitchBlinkRing;
             @SwitchBlinkRing.canceled += instance.OnSwitchBlinkRing;
+            @SwitchTimeStopRing.started += instance.OnSwitchTimeStopRing;
+            @SwitchTimeStopRing.performed += instance.OnSwitchTimeStopRing;
+            @SwitchTimeStopRing.canceled += instance.OnSwitchTimeStopRing;
         }
 
         /// <summary>
@@ -855,6 +884,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchBlinkRing.started -= instance.OnSwitchBlinkRing;
             @SwitchBlinkRing.performed -= instance.OnSwitchBlinkRing;
             @SwitchBlinkRing.canceled -= instance.OnSwitchBlinkRing;
+            @SwitchTimeStopRing.started -= instance.OnSwitchTimeStopRing;
+            @SwitchTimeStopRing.performed -= instance.OnSwitchTimeStopRing;
+            @SwitchTimeStopRing.canceled -= instance.OnSwitchTimeStopRing;
         }
 
         /// <summary>
@@ -1027,5 +1059,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchBlinkRing(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchTimeStopRing" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchTimeStopRing(InputAction.CallbackContext context);
     }
 }

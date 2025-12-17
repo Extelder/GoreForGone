@@ -157,6 +157,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchTimeStopRing",
+                    "type": "Button",
+                    "id": "efbabff4-19df-4cd1-9542-b1d0d828249a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -421,6 +430,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SwitchBlinkRing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a9c06a9-8e48-4bb1-acd8-311d050490ea",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchTimeStopRing",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
