@@ -8,14 +8,9 @@ using UnityEngine.InputSystem;
 
 public abstract class ItemStateMachine : StateMachine
 {
-    [SerializeField] private bool _canInspect;
     [SerializeField] private PlayerCharacter _character;
     [SerializeField] private ItemState _idleState;
     [SerializeField] private ItemState _moveState;
-
-    [ShowIf(nameof(_canInspect))] [SerializeField]
-    private ItemState _inspectState;
-
 
     private CompositeDisposable _disposable = new CompositeDisposable();
 
@@ -43,14 +38,8 @@ public abstract class ItemStateMachine : StateMachine
 
             Idle();
         }).AddTo(_disposable);
-        if (_canInspect)
-            playerCharacter.Binds.Character.Inspect.performed += OnInspectPerformed;
     }
 
-    private void OnInspectPerformed(InputAction.CallbackContext obj)
-    {
-        ChangeState(_inspectState);
-    }
 
     protected virtual void OnDisableVirtual()
     {
@@ -62,8 +51,6 @@ public abstract class ItemStateMachine : StateMachine
             return;
         _disposable.Clear();
         playerCharacter.ClientStarted -= OnPlayerStarted;
-        if (_canInspect)
-            playerCharacter.Binds.Character.Inspect.performed += OnInspectPerformed;
         OnDisableVirtual();
     }
 

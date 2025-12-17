@@ -6,6 +6,5 @@ public class InspectItemState : ItemState
 {
     public override void Enter()
     {
-        Animator.Inspect();
     }
 }

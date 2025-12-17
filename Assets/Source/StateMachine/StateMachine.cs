@@ -1,3 +1,4 @@
+using System;
 using FishNet.Object;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class StateMachine : NetworkBehaviour
     [SerializeField] private bool _notStartOnEnable;
     [SerializeField] protected State _startState;
     public State CurrentState { get; protected set; }
+
+    public event Action<State> StatePrepareToChange;
 
     public void DefaultState()
     {
@@ -35,6 +38,7 @@ public class StateMachine : NetworkBehaviour
     {
         if (CurrentState.CanChanged && CurrentState != state)
         {
+            StatePrepareToChange?.Invoke(state);
             CurrentState.Exit();
             CurrentState = state;
             CurrentState.Enter();
