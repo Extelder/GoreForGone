@@ -1791,6 +1791,7 @@
                   <e p="ItemStateMachine.cs" t="Include" />
                   <e p="State" t="Include">
                     <e p="IdleItemState.cs" t="Include" />
+                    <e p="InspectItemState.cs" t="Include" />
                     <e p="MoveItemState.cs" t="Include" />
                   </e>
                 </e>

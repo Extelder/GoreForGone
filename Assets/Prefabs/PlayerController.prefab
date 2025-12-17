@@ -2663,6 +2663,7 @@ MonoBehaviour:
   - {fileID: 4346701592284120177}
   - {fileID: 5517520844624965550}
   - {fileID: 3102230044841871847}
+  CurrentTime: 0
 --- !u!114 &8894797833157323738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3610,6 +3611,7 @@ GameObject:
   - component: {fileID: 2379199125106380215}
   - component: {fileID: 6721857396306552242}
   - component: {fileID: 8084293451361396022}
+  - component: {fileID: 2417668739289936359}
   - component: {fileID: 8063021713056605021}
   - component: {fileID: 1142884246365371962}
   - component: {fileID: 4225821475361007860}
@@ -3699,9 +3701,11 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   _notStartOnEnable: 0
   _startState: {fileID: 6721857396306552242}
+  _canInspect: 1
   _character: {fileID: 8850203819785511499}
   _idleState: {fileID: 6721857396306552242}
   _moveState: {fileID: 8084293451361396022}
+  _inspectState: {fileID: 2417668739289936359}
   _attackState: {fileID: 1142884246365371962}
   _chargeAttackState: {fileID: 4225821475361007860}
   _blockState: {fileID: 8063021713056605021}
@@ -3721,6 +3725,7 @@ MonoBehaviour:
   <Animator>k__BackingField:
   - {fileID: 7322817708848602955}
   - {fileID: 2838781758704023402}
+  _inspectBool: IsInspecting
   _moveBool: IsMoving
   _attackBoolName: IsAttacking
   _randomAttackIntName: AttackRandom
@@ -3760,6 +3765,23 @@ MonoBehaviour:
   _componentIndexCache: 15
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
+  CanChanged: 1
+  <Animator>k__BackingField: {fileID: 2379199125106380215}
+--- !u!114 &2417668739289936359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391537686008428712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5f667ded4a065419068d005faa615a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 2379199125106380215}
 --- !u!114 &8063021713056605021
@@ -12251,6 +12273,7 @@ MonoBehaviour:
   <Animator>k__BackingField:
   - {fileID: 1965016084773849207}
   - {fileID: 2838781758704023402}
+  _inspectBool: 
   _moveBool: 
   _attackBoolName: IsAttacking
   _reloadBoolName: IsReloading
@@ -12271,9 +12294,11 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   _notStartOnEnable: 0
   _startState: {fileID: 7440915065128165889}
+  _canInspect: 0
   _character: {fileID: 8850203819785511499}
   _idleState: {fileID: 7440915065128165889}
   _moveState: {fileID: 2236453490574650750}
+  _inspectState: {fileID: 0}
   _attackState: {fileID: 6824411379768693437}
   _reloadState: {fileID: 4748397240653879400}
   _initialized: 1
@@ -12553,6 +12578,7 @@ MonoBehaviour:
   <Animator>k__BackingField:
   - {fileID: 275687778598319460}
   - {fileID: 2838781758704023402}
+  _inspectBool: 
   _moveBool: 
   _attackBoolName: IsAttacking
   _reloadBoolName: IsReloading
@@ -12573,9 +12599,11 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   _notStartOnEnable: 0
   _startState: {fileID: 6602929119874460934}
+  _canInspect: 0
   _character: {fileID: 8850203819785511499}
   _idleState: {fileID: 6602929119874460934}
   _moveState: {fileID: 352865685638200142}
+  _inspectState: {fileID: 0}
   _attackState: {fileID: 1757310414816766003}
   _reloadState: {fileID: 7416742223122146957}
   _initialized: 1

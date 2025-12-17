@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Sword/Sword.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Sword/Sword.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemAnimator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,6 +111,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Rebind/Key Rebind/RebindKey.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/FOV/PlayerFOVChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/DDOL.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/State/InspectItemState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/System/LookAt/Player/LookAtClosestPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/TPSItemAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Cursor/GameCursor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,6 +121,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Damagable/IWeaponVisitor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/EquipableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/State/IdleItemState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Blink/BlinkAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Drakkar/GameUtils/VISUALS/Trails/DrakkarTrail.cs" root0="FORCE_HIGHLIGHTING" />
@@ -126,8 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryEquipableItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/TPSItemSwitch.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Animator/PlayerAnimator.cs" />
@@ -177,6 +180,8 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/TimeStop/TimeStopRing.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/State/InspectItemState.cs" />
       </list>
     </option>
   </component>
@@ -232,7 +237,7 @@
       <workItem from="1765807394739" duration="8454000" />
       <workItem from="1765821844894" duration="801000" />
       <workItem from="1765886701188" duration="9830000" />
-      <workItem from="1765966684962" duration="8757000" />
+      <workItem from="1765966684962" duration="9029000" />
     </task>
     <servers />
   </component>
