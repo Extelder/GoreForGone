@@ -21,12 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/PlayerRing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/PlayerRing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/TimeStop/TimeStopRing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/TimeStop/TimeStopRing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Sword/Sword.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Sword/Sword.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunsStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/AnimatorItemSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryEquipableItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/BothHandsAnimatorItemSwitcher.cs" />
@@ -181,6 +176,7 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/PlayerRing.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/TimeStop/TimeStopRing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" />
       </list>
     </option>
   </component>
@@ -236,7 +232,7 @@
       <workItem from="1765807394739" duration="8454000" />
       <workItem from="1765821844894" duration="801000" />
       <workItem from="1765886701188" duration="9830000" />
-      <workItem from="1765966684962" duration="7884000" />
+      <workItem from="1765966684962" duration="8757000" />
     </task>
     <servers />
   </component>
