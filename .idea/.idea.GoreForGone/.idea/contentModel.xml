@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\aferi\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\aferi\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_GoreForGone.686436049.00" t="ExcludeRecursive" />
-    <e p="C:\Users\aferi\AppData\Roaming\JetBrains\Rider2020.2\consoles\ide" t="IncludeRecursive" />
-    <e p="C:\Users\aferi\Documents\Project222\GoreForGone" t="IncludeRecursive">
+    <e p="C:\Users\Nikola\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Nikola\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_GoreForGone.1305621880.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Nikola\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
+    <e p="D:\adobe\UnityProjects\GoreForGone" t="IncludeRecursive">
       <e p="AmimalWorld.csproj" t="IncludeRecursive" />
       <e p="AmimalWorld.Player.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.Player.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -1309,6 +1310,21 @@
           <e p="projectCloner.asmdef" t="Include" />
         </e>
         <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModuleEPOOutline.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+            </e>
+          </e>
           <e p="Textus" t="Include">
             <e p="SerializeReferenceUI" t="Include">
               <e p="Core" t="Include">
@@ -1807,6 +1823,9 @@
                 <e p="PlayerRing.cs" t="Include" />
                 <e p="PlayerRingAnimation.cs" t="Include" />
                 <e p="RingPostProccessVolume.cs" t="Include" />
+                <e p="TimeStop" t="Include">
+                  <e p="TimeStopRing.cs" t="Include" />
+                </e>
               </e>
               <e p="Switchers" t="Include">
                 <e p="AnimatorItemSwitcher.cs" t="Include" />
@@ -1946,6 +1965,10 @@
             <e p="Transform" t="Include">
               <e p="SaveAndReturnTransform.cs" t="Include" />
             </e>
+          </e>
+          <e p="Time" t="Include">
+            <e p="RigidbodyTimeAddicatble.cs" t="Include" />
+            <e p="TimeAddictableObject.cs" t="Include" />
           </e>
           <e p="Unit" t="Include">
             <e p="Animator" t="Include">

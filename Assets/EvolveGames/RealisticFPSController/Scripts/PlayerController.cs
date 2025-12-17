@@ -68,11 +68,15 @@ namespace EvolveGames
         bool WallDistance;
         [HideInInspector] public float WalkingValue;
 
+        [SerializeField] private PlayerCharacter _character;
+        
         public bool HelpCrouching;
 
         public bool Crouching;
 
         public float DefaultFOV;
+
+        private PlayerBinds _binds;
 
         public override void OnStartClient()
         {
@@ -111,7 +115,10 @@ namespace EvolveGames
 
             isRunning = !isCrough.Value ? (CanRunning ? Input.GetKey(KeyCode.LeftShift) : false) : false;
 
-            Vector3 direction = (forward * Input.GetAxis("Vertical")) + (right * Input.GetAxis("Horizontal"));
+            float horizontal = _character.Binds.Character.Horizontal.ReadValue<float>();
+            float vertical = _character.Binds.Character.Vertical.ReadValue<float>();
+            
+            Vector3 direction = (forward * vertical) + (right * horizontal);
             if (direction.magnitude > 1f) direction.Normalize();
 
             float currentSpeed = isRunning ? RunningValue : WalkingValue;

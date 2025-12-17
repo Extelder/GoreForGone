@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FishNet.Object;
 using UniRx;
 using UnityEngine;
 
-public class PlayerLean : MonoBehaviour
+public class PlayerLean : NetworkBehaviour
 {
     [SerializeField] private PlayerCharacter _character;
     [SerializeField] private Transform _camera;
@@ -35,6 +36,8 @@ public class PlayerLean : MonoBehaviour
 
     private void OnClientStarted()
     {
+        if (!base.IsOwner)
+            return;
         _binds = _character.Binds;
 
         _startLocalPos = _camera.localPosition;
@@ -47,7 +50,9 @@ public class PlayerLean : MonoBehaviour
 
     private void UpdateLean()
     {
-        float input = _binds.Character.Lean.ReadValue<float>(); // -1 .. 1
+        if (!base.IsOwner)
+            return;
+        float input = _binds.Character.Lean.ReadValue<float>();
 
         _targetLean = GetWallLimitedLean(input);
 

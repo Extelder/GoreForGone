@@ -23,19 +23,22 @@ public class PlayerCharacter : NetworkBehaviour
 
     public event Action ClientStarted;
 
+    public static event Action<float> TimeValueChanged;
+
+    public float CurrentTime;
+
     [ServerRpc(RequireOwnership = false)]
     public void ServerSpawnObject(GameObject spawnedObject, Vector3 position, Quaternion rotation)
     {
         GameObject instance = Instantiate(spawnedObject, position, rotation);
 
         ServerManager.Spawn(instance);
-        
     }
+
     [ServerRpc(RequireOwnership = false)]
     public void ServerDeSpawnObject(GameObject despawnedObject)
     {
         ServerManager.Despawn(despawnedObject);
-        
     }
 
     public override void OnStartClient()
@@ -56,6 +59,44 @@ public class PlayerCharacter : NetworkBehaviour
         }
 
         ClientStarted?.Invoke();
+    }
+
+    public void ChangeTimeValue(float value, PlayerCharacter investigator)
+    {
+        TimeValueChangedServer(value, investigator);
+    }
+
+    [ServerRpc]
+    public void TimeValueChangedServer(float value, PlayerCharacter investigator)
+    {
+        TimeValueChangedObserver(value, investigator);
+    }
+
+    [ObserversRpc]
+    public void TimeValueChangedObserver(float value, PlayerCharacter investigator)
+    {
+        PlayerCharacter.Instance.OnTimeValueChanged(value, investigator);
+        TimeValueChanged?.Invoke(value);
+    }
+
+    public void OnTimeValueChanged(float value, PlayerCharacter investigator)
+    {
+        CurrentTime = value;
+        if (investigator != this)
+        {
+            if (value == 0)
+            {
+                PlayerController.canMove = false;
+                Binds.Disable();
+            }
+            else
+            {
+                PlayerController.canMove = true;
+                Binds.Enable();
+            }
+
+            Debug.Log("Time Stop");
+        }
     }
 
     public override void OnStopClient()

@@ -30,8 +30,6 @@ public class MeleeTracer : NetworkBehaviour
 
     public override void OnStartClient()
     {
-        if (!IsServer)
-            return;
         base.OnStartClient();
         _previousPoints = new Vector3[Mathf.Max(_segments, 2)];
     }
@@ -119,8 +117,6 @@ public class MeleeTracer : NetworkBehaviour
 
     private void OnDisable()
     {
-        if (!IsServer)
-            return;
         _disposable.Clear();
     }
 }
