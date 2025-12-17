@@ -148,6 +148,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchBlinkRing",
+                    "type": "Button",
+                    "id": "f2b7842f-a300-4c00-8277-b57d097022a6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -264,7 +273,7 @@
                 {
                     "name": "",
                     "id": "2b6e954e-cd21-48d7-9cb7-6a9166c48a0f",
-                    "path": "<Keyboard>/leftCtrl",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -401,6 +410,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Block",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c64d0a96-d1b2-49ee-8583-1d0e19108780",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchBlinkRing",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

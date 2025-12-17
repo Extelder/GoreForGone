@@ -74,6 +74,8 @@ public class BlinkRing : PlayerRing
 
     private void OnDrawGizmosSelected()
     {
+        if (_blinkGFX == null)
+            return;
         Gizmos.DrawWireSphere(_blinkGFX.transform.position - new Vector3(0, 0.5f, 0), .4f);
         Gizmos.DrawWireSphere(_blinkGFX.transform.position + new Vector3(0, 0.5f, 0), 0.4f);
     }
@@ -94,6 +96,7 @@ public class BlinkRing : PlayerRing
     protected override void CancelAction()
     {
         _disposable?.Clear();
+
         _blinkGFX.SetActive(false);
     }
 }
