@@ -1216,6 +1216,7 @@ MonoBehaviour:
   horizontal: 0
   Lookvertical: 0
   Lookhorizontal: 0
+  impulseDamping: 8
   WalkingValue: 0
   _character: {fileID: 0}
   HelpCrouching: 0
