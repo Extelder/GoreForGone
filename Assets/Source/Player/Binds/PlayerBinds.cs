@@ -261,6 +261,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ScrollItems"",
+                    ""type"": ""Value"",
+                    ""id"": ""b88395fd-7123-4c03-b74c-128ab3d960ca"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -549,6 +558,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""Inspect"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2c6d0dff-ad3c-4d61-874b-109b5b8e0f57"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScrollItems"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -582,6 +602,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_SwitchBlinkRing = m_Character.FindAction("SwitchBlinkRing", throwIfNotFound: true);
         m_Character_SwitchTimeStopRing = m_Character.FindAction("SwitchTimeStopRing", throwIfNotFound: true);
         m_Character_Inspect = m_Character.FindAction("Inspect", throwIfNotFound: true);
+        m_Character_ScrollItems = m_Character.FindAction("ScrollItems", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -681,6 +702,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_SwitchBlinkRing;
     private readonly InputAction m_Character_SwitchTimeStopRing;
     private readonly InputAction m_Character_Inspect;
+    private readonly InputAction m_Character_ScrollItems;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -769,6 +791,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Inspect => m_Wrapper.m_Character_Inspect;
         /// <summary>
+        /// Provides access to the underlying input action "Character/ScrollItems".
+        /// </summary>
+        public InputAction @ScrollItems => m_Wrapper.m_Character_ScrollItems;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Character; }
@@ -851,6 +877,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Inspect.started += instance.OnInspect;
             @Inspect.performed += instance.OnInspect;
             @Inspect.canceled += instance.OnInspect;
+            @ScrollItems.started += instance.OnScrollItems;
+            @ScrollItems.performed += instance.OnScrollItems;
+            @ScrollItems.canceled += instance.OnScrollItems;
         }
 
         /// <summary>
@@ -919,6 +948,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Inspect.started -= instance.OnInspect;
             @Inspect.performed -= instance.OnInspect;
             @Inspect.canceled -= instance.OnInspect;
+            @ScrollItems.started -= instance.OnScrollItems;
+            @ScrollItems.performed -= instance.OnScrollItems;
+            @ScrollItems.canceled -= instance.OnScrollItems;
         }
 
         /// <summary>
@@ -1105,5 +1137,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInspect(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ScrollItems" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnScrollItems(InputAction.CallbackContext context);
     }
 }
