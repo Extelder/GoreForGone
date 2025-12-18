@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyReactState : EnemyState
+public class EnemyStunState : EnemyState
 {
     public override void Enter()
     {
         if (!base.IsServer)
             return;
-        CanChanged = false;
         EnemyAnimator.React();
+        CanChanged = false;
     }
 
     public void ReactAnimationEnd()

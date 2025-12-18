@@ -2817,6 +2817,7 @@ MonoBehaviour:
   _componentIndexCache: 3
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
+  <DamageMultiplier>k__BackingField: 1
   _health: {fileID: 5155498346024855214}
   _notActiveDelayAfterSpawn: 0
 --- !u!114 &5155498346024855214
@@ -3905,6 +3906,8 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 2379199125106380215}
+  _playerHitBox: {fileID: 5154392339956821574}
+  _blockDamageMultiplier: 0.5
 --- !u!114 &1142884246365371962
 MonoBehaviour:
   m_ObjectHideFlags: 0

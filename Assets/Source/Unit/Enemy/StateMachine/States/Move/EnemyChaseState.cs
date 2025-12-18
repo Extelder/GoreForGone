@@ -63,7 +63,6 @@ public class EnemyChaseState : EnemyState
         if (!base.IsServer)
             return;
         _unitPlayerDetector.PlayerLost -= OnPlayerLost;
-
         StopAllCoroutines();
     }
     

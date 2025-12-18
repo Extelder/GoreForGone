@@ -3837,7 +3837,9 @@ MonoBehaviour:
   _notStartOnEnable: 0
   _startState: {fileID: 6057627089984692456}
   _canReact: 1
+  _canBeStunned: 1
   _react: {fileID: 2251303931789843650}
+  _stun: {fileID: 0}
   _attack: {fileID: 3685032996049896506}
   _patrol: {fileID: 6057627089984692456}
   _chase: {fileID: 3301590952156455937}

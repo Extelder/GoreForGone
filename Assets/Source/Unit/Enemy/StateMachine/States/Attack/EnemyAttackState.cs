@@ -12,7 +12,6 @@ public class EnemyAttackState : EnemyState
     [SerializeField] private bool _stopNavMesh = true;
     [SerializeField] private NavMeshAgent _agent;
     [field: SerializeField] public EnemyDamage Damage { get; private set; }
-
     public PlayerHitBox PlayerHitBox { get; private set; }
 
     public override void Enter()
@@ -39,6 +38,20 @@ public class EnemyAttackState : EnemyState
         if (!base.IsServer)
             return;
         PlayerHitBox?.TakeDamage(Damage.GetDamage());
+    }
+
+    public void CanBeParried()
+    {
+        if (PlayerHitBox == null)
+            return;
+        PlayerHitBox.TryParry(true, _enemyStateMachine);
+    }
+
+    public void CanNotBeParried()
+    {
+        if (PlayerHitBox == null)
+            return;
+        PlayerHitBox.TryParry(false, _enemyStateMachine);
     }
 
     public virtual void OnPlayerDetected(PlayerHitBox hitBox)
