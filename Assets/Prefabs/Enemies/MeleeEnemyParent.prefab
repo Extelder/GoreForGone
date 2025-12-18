@@ -243,6 +243,7 @@ MonoBehaviour:
   _componentIndexCache: 23
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -456,6 +457,7 @@ MonoBehaviour:
   _componentIndexCache: 17
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -696,6 +698,7 @@ MonoBehaviour:
   _componentIndexCache: 26
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -2205,6 +2208,7 @@ MonoBehaviour:
   _componentIndexCache: 22
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -2387,6 +2391,7 @@ MonoBehaviour:
   _componentIndexCache: 19
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -2680,6 +2685,7 @@ MonoBehaviour:
   _componentIndexCache: 24
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -2861,6 +2867,7 @@ MonoBehaviour:
   _componentIndexCache: 27
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -3498,6 +3505,7 @@ MonoBehaviour:
   _componentIndexCache: 15
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -3917,6 +3925,7 @@ MonoBehaviour:
   _componentIndexCache: 18
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -4417,6 +4426,7 @@ MonoBehaviour:
   _componentIndexCache: 28
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -4957,6 +4967,7 @@ MonoBehaviour:
   _componentIndexCache: 20
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -5138,6 +5149,7 @@ MonoBehaviour:
   _componentIndexCache: 25
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -5528,6 +5540,7 @@ MonoBehaviour:
   _componentIndexCache: 21
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -5743,6 +5756,7 @@ MonoBehaviour:
   _componentIndexCache: 29
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
@@ -6028,6 +6042,7 @@ MonoBehaviour:
   _componentIndexCache: 16
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
+  <EnemyHealth>k__BackingField: {fileID: 0}
   EnemyHealth: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
