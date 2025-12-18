@@ -32,6 +32,7 @@ public class TorSpawn : NetworkBehaviour
     private void Play()
     {
         if (IsServer) PlayObserver();
+        PlayerCharacter.Instance.PlayerController.AddImpulse(-transform.forward, 4f);
     }
 
     [ObserversRpc]
