@@ -50,7 +50,7 @@ public class TorSpawn : NetworkBehaviour
         while (true)
         {
             _models.transform.position += _models.transform.forward * 10f * Time.deltaTime;
-            _models.transform.localScale += Vector3.one * 250f * Time.deltaTime;
+            _models.transform.localScale += Vector3.one * 280f * Time.deltaTime;
             float dist = Vector3.Distance(_models.transform.position, _startPos);
             float t = Mathf.Clamp01(dist / 9f);
             SetAlpha(Mathf.Lerp(1f, 0f, t));
