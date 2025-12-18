@@ -174,5 +174,5 @@ MonoBehaviour:
   SerializedTransformProperties:
     Position: {x: -10.093186, y: 0.00000011920929, z: 5.381467}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
-    Scale: {x: 10, y: 10, z: 10}
+    Scale: {x: 1, y: 1, z: 1}
     IsValid: 1

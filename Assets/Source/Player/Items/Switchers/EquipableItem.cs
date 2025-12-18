@@ -24,7 +24,6 @@ public class EquipableItem : NetworkBehaviour
             return;
         _initialized = true;
         _itemSwitcher.Character.Binds.FindAction(_actionName, true).performed += OnEquipActionPerformed;
-        Debug.LogError("Subsribed");
     }
 
     protected virtual void OnEquipActionPerformed(InputAction.CallbackContext obj)
@@ -43,7 +42,6 @@ public class EquipableItem : NetworkBehaviour
     {
         if (!_itemSwitcher.Character.IsOwner)
             return;
-        Debug.LogError("Decribe");
         _itemSwitcher.Character.ClientStarted -= OnClienStarted;
         _itemSwitcher.Character.Binds.FindAction(_actionName, true).performed -= OnEquipActionPerformed;
     }

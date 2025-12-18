@@ -63,6 +63,10 @@ namespace EvolveGames
         [HideInInspector] public float horizontal;
         [HideInInspector] public float Lookvertical;
         [HideInInspector] public float Lookhorizontal;
+        [Header("Impulse")]
+        [SerializeField] private float impulseDamping = 8f;
+
+        private Vector3 impulseVelocity = Vector3.zero;
         float RunningValue;
         float installGravity;
         bool WallDistance;
@@ -136,7 +140,8 @@ namespace EvolveGames
             {
                 moveDirection.y = jumpSpeed;
             }
-
+            moveDirection += impulseVelocity;
+            impulseVelocity *= Mathf.Exp(-impulseDamping * Time.deltaTime);
             characterController.Move(moveDirection * Time.deltaTime);
 
             Moving.Value = direction.magnitude > 0.1f;
@@ -185,6 +190,15 @@ namespace EvolveGames
                 Items.ani.SetBool("Hide", WallDistance);
                 Items.DefiniteHide = WallDistance;
             }
+        }
+        
+        public void AddImpulse(Vector3 direction, float force)
+        {
+            if (!IsOwner) return;
+
+            direction.y = 0f;
+
+            impulseVelocity += direction.normalized * force;
         }
 
         public void Crouch()
