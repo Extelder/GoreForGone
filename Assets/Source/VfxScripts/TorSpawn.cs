@@ -6,22 +6,26 @@ using UnityEngine;
 
 public class TorSpawn : NetworkBehaviour
 {
+    [SerializeField] private float _force = 6f;
     [SerializeField] private GameObject _models;
     private Vector3 _startPos;
     static readonly int AlphaID = Shader.PropertyToID("_Alpha");
     Renderer rend;
     MaterialPropertyBlock mpb;
+
     void Awake()
     {
         rend = GetComponent<Renderer>();
         mpb = new MaterialPropertyBlock();
     }
+
     public void SetAlpha(float alpha)
     {
         rend.GetPropertyBlock(mpb);
         mpb.SetFloat(AlphaID, alpha);
         rend.SetPropertyBlock(mpb);
     }
+
     public override void OnStartClient()
     {
         Play();
@@ -32,7 +36,7 @@ public class TorSpawn : NetworkBehaviour
     private void Play()
     {
         if (IsServer) PlayObserver();
-        PlayerCharacter.Instance.PlayerController.AddImpulse(-transform.forward, 4f);
+        PlayerCharacter.Instance.PlayerController.AddImpulse(-PlayerCharacter.Instance.Camera.forward, _force);
     }
 
     [ObserversRpc]

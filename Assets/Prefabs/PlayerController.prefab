@@ -3451,6 +3451,7 @@ GameObject:
   - component: {fileID: 7884882234553414732}
   - component: {fileID: 8334341270129933918}
   - component: {fileID: 183955970474002974}
+  - component: {fileID: 1410536453116972293}
   m_Layer: 6
   m_Name: LeftHand
   m_TagString: Untagged
@@ -3512,6 +3513,21 @@ MonoBehaviour:
   _animator: {fileID: 8334341270129933918}
   _switchItemTriggerName: Switch
   _currentItem: {fileID: 7184779801818268723}
+--- !u!114 &1410536453116972293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546786926476423679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dfaa1a8ab07cd6478836cd468b34004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character: {fileID: 8850203819785511499}
+  _animator: {fileID: 8334341270129933918}
+  _moveBoolName: IsMoving
 --- !u!1 &617478223946772787
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,6 +5777,7 @@ MonoBehaviour:
   horizontal: 0
   Lookvertical: 0
   Lookhorizontal: 0
+  impulseDamping: 8
   WalkingValue: 0
   _character: {fileID: 8850203819785511499}
   HelpCrouching: 0
@@ -8881,6 +8898,7 @@ GameObject:
   - component: {fileID: 7450052265611648079}
   - component: {fileID: 8198087532832823545}
   - component: {fileID: 5259980523085335229}
+  - component: {fileID: 3244341414701547121}
   m_Layer: 6
   m_Name: RightHand
   m_TagString: Untagged
@@ -8896,8 +8914,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5227871377941143599}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41999984, y: 0.120000005, z: -0.24000001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.4199998, y: 0.12, z: -0.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8961,6 +8979,21 @@ MonoBehaviour:
   - {fileID: 3959848556196091400}
   - {fileID: 6257043144171720706}
   - {fileID: 6287383268767906452}
+--- !u!114 &3244341414701547121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5227871377941143599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dfaa1a8ab07cd6478836cd468b34004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character: {fileID: 8850203819785511499}
+  _animator: {fileID: 7450052265611648079}
+  _moveBoolName: IsMoving
 --- !u!1 &5307444275219163097
 GameObject:
   m_ObjectHideFlags: 0

@@ -1834,6 +1834,7 @@
                 <e p="BothHandsAnimatorItemSwitcher.cs" t="Include" />
                 <e p="BothHandsSwitcher.cs" t="Include" />
                 <e p="EquipableItem.cs" t="Include" />
+                <e p="PlayerMoveAnimation.cs" t="Include" />
                 <e p="ScrollItems.cs" t="Include" />
                 <e p="TPSItemSwitch.cs" t="Include" />
               </e>
