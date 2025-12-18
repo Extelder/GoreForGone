@@ -24,7 +24,7 @@ public class ItemInspectHandler : MonoBehaviour
         _animator.SetBool(_inspectAnimationBool, false);
     }
 
-    private bool _initialized;
+    [SerializeField] private bool _initialized;
 
     private void OnEnable()
     {

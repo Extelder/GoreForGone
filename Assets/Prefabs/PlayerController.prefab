@@ -3887,6 +3887,7 @@ MonoBehaviour:
   - {fileID: 6721857396306552242}
   _animator: {fileID: 7322817708848602955}
   _inspectAnimationBool: IsInspecting
+  _initialized: 0
 --- !u!114 &8063021713056605021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12334,6 +12335,7 @@ GameObject:
   - component: {fileID: 3040920375408837113}
   - component: {fileID: 2478394510222133073}
   - component: {fileID: 7793353037630432367}
+  - component: {fileID: 6956647400855411137}
   m_Layer: 6
   m_Name: Batamet
   m_TagString: Untagged
@@ -12581,6 +12583,26 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
   _vfx: {fileID: 5058621755589335668}
+--- !u!114 &6956647400855411137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655485219512766367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94faa8dbd1b382c4b818fdcb0baf7cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character: {fileID: 8850203819785511499}
+  _itemMachine: {fileID: 4206032340393279341}
+  _ignoreStates:
+  - {fileID: 7440915065128165889}
+  - {fileID: 2236453490574650750}
+  _animator: {fileID: 1965016084773849207}
+  _inspectAnimationBool: IsInspecting
+  _initialized: 1
 --- !u!1 &8680806349242491420
 GameObject:
   m_ObjectHideFlags: 0
@@ -12636,6 +12658,7 @@ GameObject:
   - component: {fileID: 8470412651926805851}
   - component: {fileID: 2499035054513874896}
   - component: {fileID: 3897689843744032465}
+  - component: {fileID: 6224049561357569806}
   m_Layer: 6
   m_Name: Steamyl
   m_TagString: Untagged
@@ -12882,6 +12905,26 @@ MonoBehaviour:
   _playerAttack: {fileID: 281646376648966845}
   _model: {fileID: 3615100321832529042, guid: 4331d0c6e9d1eb74d93dfb326722d167, type: 3}
   _SpawnEmpty: {fileID: 3529075897352710779}
+--- !u!114 &6224049561357569806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705086290949544445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94faa8dbd1b382c4b818fdcb0baf7cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character: {fileID: 8850203819785511499}
+  _itemMachine: {fileID: 7110903117401195538}
+  _ignoreStates:
+  - {fileID: 6602929119874460934}
+  - {fileID: 352865685638200142}
+  _animator: {fileID: 275687778598319460}
+  _inspectAnimationBool: IsInspecting
+  _initialized: 1
 --- !u!1 &8708044670003183317
 GameObject:
   m_ObjectHideFlags: 0
@@ -19772,17 +19815,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2b2dc00f17063504ebf1a7c9824b5a89,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.74986213
+      value: 0.7498621
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b2dc00f17063504ebf1a7c9824b5a89,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.053147275
+      value: 0.05314728
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b2dc00f17063504ebf1a7c9824b5a89,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.65945596
+      value: 0.659456
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b2dc00f17063504ebf1a7c9824b5a89,
         type: 3}
