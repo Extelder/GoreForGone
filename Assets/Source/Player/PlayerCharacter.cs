@@ -10,6 +10,7 @@ public class PlayerCharacter : NetworkBehaviour
 {
     [field: SerializeField] public CharacterController CharacterController { get; private set; }
     [field: SerializeField] public PlayerController PlayerController { get; private set; }
+    [field: SerializeField] public PlayerHitBox PlayerHitBox { get; private set; }
     [field: SerializeField] public List<PlayerCharacter> Characters { get; private set; }
     [field: SerializeField] public Transform DropPoint { get; private set; }
     [field: SerializeField] public Transform LookAtPoint { get; private set; }

@@ -35,6 +35,7 @@ public class PlayerHitBox : NetworkBehaviour
     {
         if (!_active)
             return;
+        Debug.Log(DamageMultiplier);
         damage *= DamageMultiplier;
         TakeDamageObserver(damage, _health);
     }

@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MeleeEnemyParent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Check/PlayerCheckOnEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Check/PlayerCheckOnEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Health/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Health/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Shield/ShieldRing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Shield/ShieldRing.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordBlockState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordBlockState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,8 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/States/Move/EnemyChaseState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitPlayerDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Eyes/UnitShootPlayerDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Blink/BlinkAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Blink/Blink.cs" />
@@ -161,7 +158,6 @@
         <option value="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Lean/PlayerLean.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/PlayerRing.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/TimeStop/TimeStopRing.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" />
@@ -183,14 +179,17 @@
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/Death/EnemyRagdollDeath.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/HitBox/EnemyRagdollHitBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/HitBox/DamageableHitBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Shield/ShieldRing.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Switchers/ScrollItems.cs" />
         <option value="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/MovementEffects.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemInspectHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/TPS/TPSItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Blink/BlinkRing.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordBlockState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Check/PlayerCheckOnEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordBlockState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Health/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Shield/ShieldRing.cs" />
       </list>
     </option>
   </component>

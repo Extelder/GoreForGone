@@ -7,18 +7,19 @@ using UnityEngine.InputSystem;
 
 public class SwordBlockState : SwordState
 {
-    [SerializeField] private PlayerHitBox _playerHitBox;
     [SerializeField] private PlayerCheckOnEnemy _playerCheckOnEnemy;
     [SerializeField] private float _blockDamageMultiplier;
     private bool _enemyDetected;
     private float _defaultDamageMultiplier;
     private EnemyStateMachine _parriableEnemyStateMachine;
+    private PlayerHitBox _playerHitBox;
     private bool _succesfullyParried;
     private CompositeDisposable _disposable = new CompositeDisposable();
 
     public override void OnStartClient()
     {
         base.OnStartClient();
+        _playerHitBox = PlayerCharacter.Instance.PlayerHitBox;
         _playerHitBox.TryParryAttack += OnAttackTriedParry;
     }
 
