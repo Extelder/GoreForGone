@@ -5973,8 +5973,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7702035875457966945}
   m_HandleRect: {fileID: 7652854564816982087}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.27724618
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -53859,6 +53859,8 @@ MonoBehaviour:
   _character: {fileID: 8850203819785511499}
   _initialized: 1
   _shieldGFX: {fileID: 5068621457308402140}
+  _playerCheckOnEnemy: {fileID: 6622829219170894128}
+  _checkRate: 0.02
 --- !u!1 &5112638649908663687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8360950568830709185, guid: cadd09adecb992e4eb203135d9ae62c3,
