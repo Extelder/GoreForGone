@@ -7,17 +7,15 @@ using UnityEngine;
 
 public class UnitHitBox : DamageableHitBox
 {
-    [field: SerializeField] public EnemyHealth EnemyHealth;
-
     public override void Visit(Projectile projectile)
     {
-        Hit(transform, projectile.Damage,
+        Hit(transform.position, projectile.Damage,
             transform.position += new Vector3(0, 0.5f, 0));
     }
 
     public override void Visit(MeleeTracer meleeTracer)
     {
-        Hit(transform, meleeTracer.Damage,
+        Hit(meleeTracer.BladeTip.position, meleeTracer.Damage,
             transform.position += new Vector3(0, 0.5f, 0));
     }
 }

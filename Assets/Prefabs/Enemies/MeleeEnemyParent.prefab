@@ -243,8 +243,7 @@ MonoBehaviour:
   _componentIndexCache: 23
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &826180791048193332
@@ -457,8 +456,7 @@ MonoBehaviour:
   _componentIndexCache: 17
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &1082174434559541373
@@ -698,8 +696,7 @@ MonoBehaviour:
   _componentIndexCache: 26
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &1470694623800683112
@@ -1086,9 +1083,7 @@ MonoBehaviour:
   _notStartOnEnable: 0
   _startState: {fileID: 3267962048877064940}
   _canReact: 1
-  _canBeStunned: 1
   _react: {fileID: 7495431915161495442}
-  _stun: {fileID: 530489284829523029}
   _attack: {fileID: 5673645725494037242}
   _patrol: {fileID: 3267962048877064940}
   _chase: {fileID: 8637123730057827057}
@@ -2210,8 +2205,7 @@ MonoBehaviour:
   _componentIndexCache: 22
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &4329326437305177444
@@ -2393,8 +2387,7 @@ MonoBehaviour:
   _componentIndexCache: 19
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &4982863553684199925
@@ -2687,8 +2680,7 @@ MonoBehaviour:
   _componentIndexCache: 24
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &5434150014020596419
@@ -2869,8 +2861,7 @@ MonoBehaviour:
   _componentIndexCache: 27
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &5649990677183733622
@@ -3507,8 +3498,7 @@ MonoBehaviour:
   _componentIndexCache: 15
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &6702666661637087795
@@ -3521,7 +3511,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5964033304733565501}
   - component: {fileID: 7312812686504036354}
-  - component: {fileID: 530489284829523029}
   - component: {fileID: 7495431915161495442}
   - component: {fileID: 5673645725494037242}
   - component: {fileID: 2748574308057981467}
@@ -3580,23 +3569,6 @@ MonoBehaviour:
   _idleAnimationInt: IdleVariants
   _maxAttackVariantsCount: 3
   _maxIdleVariantsCount: 3
---- !u!114 &530489284829523029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6702666661637087795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6868f0bc2816ce04788ae7d63ae82888, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 255
-  _addedNetworkObject: {fileID: 5321795895709937702}
-  _networkObjectCache: {fileID: 0}
-  CanChanged: 1
-  <EnemyAnimator>k__BackingField: {fileID: 7312812686504036354}
 --- !u!114 &7495431915161495442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3614,6 +3586,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 7312812686504036354}
+  _enemyStateMachine: {fileID: 5441908053369012830}
 --- !u!114 &5673645725494037242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3945,8 +3918,7 @@ MonoBehaviour:
   _componentIndexCache: 18
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &7053407601647755864
@@ -4446,8 +4418,7 @@ MonoBehaviour:
   _componentIndexCache: 28
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &7677615066518128236
@@ -4987,8 +4958,7 @@ MonoBehaviour:
   _componentIndexCache: 20
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &8295916945285618477
@@ -5169,8 +5139,7 @@ MonoBehaviour:
   _componentIndexCache: 25
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &8519253010574495664
@@ -5560,8 +5529,7 @@ MonoBehaviour:
   _componentIndexCache: 21
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &8708981849777424551
@@ -5776,8 +5744,7 @@ MonoBehaviour:
   _componentIndexCache: 29
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &8784249351811926416
@@ -6062,7 +6029,6 @@ MonoBehaviour:
   _componentIndexCache: 16
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
-  <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 7936331052377203981}
+  <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
   _enemyRagdollDeath: {fileID: 7086868011342556062}

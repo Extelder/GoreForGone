@@ -13,6 +13,7 @@ public class EnemyAttackState : EnemyState
     [SerializeField] private NavMeshAgent _agent;
     [field: SerializeField] public EnemyDamage Damage { get; private set; }
     public PlayerHitBox PlayerHitBox { get; private set; }
+    private PlayerHitBox _lastDetectedPlayerHitBox;
 
     public override void Enter()
     {
@@ -20,7 +21,6 @@ public class EnemyAttackState : EnemyState
             return;
         _lookAtClosestPlayer.StartLookAt();
         CanChanged = false;
-        Debug.Log("ATTACK");
         EnemyAnimator.Attack();
         _agent.isStopped = _stopNavMesh;
         if (!_agent.isStopped)
@@ -31,6 +31,8 @@ public class EnemyAttackState : EnemyState
     {
         _lookAtClosestPlayer.StopLookAt();
         _chaseState.StopAllCoroutines();
+        if (_stopNavMesh)
+            _agent.isStopped = false;
     }
 
     public void PerformAttack()
@@ -42,16 +44,22 @@ public class EnemyAttackState : EnemyState
 
     public void CanBeParried()
     {
+        if (!base.IsServer)
+            return;
         if (PlayerHitBox == null)
             return;
-        PlayerHitBox.TryParry(true, _enemyStateMachine);
+        _lastDetectedPlayerHitBox = PlayerHitBox;
+        _lastDetectedPlayerHitBox.TryParry(true, _enemyStateMachine);
     }
 
     public void CanNotBeParried()
     {
-        if (PlayerHitBox == null)
+        if (!base.IsServer)
             return;
-        PlayerHitBox.TryParry(false, _enemyStateMachine);
+        if (_lastDetectedPlayerHitBox == null)
+            return;
+        _lastDetectedPlayerHitBox.TryParry(false, _enemyStateMachine);
+        _lastDetectedPlayerHitBox = null;
     }
 
     public virtual void OnPlayerDetected(PlayerHitBox hitBox)
@@ -65,8 +73,6 @@ public class EnemyAttackState : EnemyState
     {
         if (!base.IsServer)
             return;
-        if (_stopNavMesh)
-            _agent.isStopped = false;
         CanChanged = true;
         _enemyStateMachine.ChaseLastDetectedCreature();
     }

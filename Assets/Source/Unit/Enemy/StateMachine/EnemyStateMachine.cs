@@ -7,12 +7,8 @@ using UnityEngine;
 public class EnemyStateMachine : StateMachine
 {
     [SerializeField] private bool _canReact;
-    [SerializeField] private bool _canBeStunned = true;
-
     [ShowIf(nameof(_canReact))] [SerializeField]
     private EnemyState _react;
-    [ShowIf(nameof(_canBeStunned))] [SerializeField]
-    private EnemyState _stun;
     [SerializeField] private EnemyState _attack;
     [SerializeField] private EnemyState _patrol;
     [SerializeField] private EnemyChaseState _chase;
@@ -28,16 +24,6 @@ public class EnemyStateMachine : StateMachine
         ChangeState(_react);
     }
 
-    public void Stun()
-    {
-        if (!base.IsServer)
-            return;
-        if (!_canBeStunned)
-            return;
-        CurrentState.CanChanged = true;
-        ChangeState(_stun);
-    }
-    
     public void Inspect(Vector3 targetPosition)
     {
         if (!base.IsServer)

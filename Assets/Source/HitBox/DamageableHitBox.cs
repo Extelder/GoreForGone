@@ -32,21 +32,23 @@ public abstract class DamageableHitBox : HitBox
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void Hit(Transform overlapCenter, float damage, Vector3 patriclePoint)
+    public void Hit(Vector3 overlapCenter, float damage, Vector3 patriclePoint)
     {
         HitObsrever(overlapCenter, damage, patriclePoint);
         OnHitServer(overlapCenter);
     }
 
-    public virtual void OnHitServer(Transform overlapCenter){}
+    public virtual void OnHitServer(Vector3 overlapCenter)
+    {
+    }
 
     [ObserversRpc]
-    public void HitObsrever(Transform overlapCenter, float damage, Vector3 patriclePoint)
+    public void HitObsrever(Vector3 overlapCenter, float damage, Vector3 patriclePoint)
     {
         OnHitObserver(overlapCenter, damage, patriclePoint);
     }
 
-    public virtual void OnHitObserver(Transform overlapCenter, float damage, Vector3 patriclePoint)
+    public virtual void OnHitObserver(Vector3 overlapCenter, float damage, Vector3 patriclePoint)
     {
         //Pools.Instance.BloodPool.GetFreeElement(patriclePoint, Quaternion.identity);
         EnemyHealth.TakeDamage(damage);

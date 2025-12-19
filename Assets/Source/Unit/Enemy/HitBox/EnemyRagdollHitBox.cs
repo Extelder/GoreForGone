@@ -10,14 +10,11 @@ using Random = UnityEngine.Random;
 public class EnemyRagdollHitBox : EnemyHitBox
 {
     [SerializeField] private EnemyRagdollDeath _enemyRagdollDeath;
-    
-    private Transform _overlapCenter;
-    private Vector3 _hitPoint;
-    private bool _hittedByRaycast;
 
+    private Vector3 _hitPoint;
     private CompositeDisposable _disposable = new CompositeDisposable();
-    
-    
+
+
     public override void OnStartClient()
     {
         if (!base.IsServer)
@@ -32,37 +29,22 @@ public class EnemyRagdollHitBox : EnemyHitBox
         }).AddTo(_disposable);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Hit(transform, 50, transform.position);
-        }
-    }
-
     private void OnEnemyDead()
     {
-        if (_hittedByRaycast)
-        {
-            _enemyRagdollDeath.Death(_hitPoint);
-            return;
-        }
-        _enemyRagdollDeath.Death(_overlapCenter);
+        _enemyRagdollDeath.Death(_hitPoint);
     }
-    
+
 
     public override void OnHitWithRaycastServer(Vector3 point, Vector3 normal)
     {
         base.OnHitWithRaycastServer(point, normal);
-        _hittedByRaycast = true;
         _hitPoint = point;
     }
 
-    public override void OnHitServer(Transform overlapCenter)
+    public override void OnHitServer(Vector3 overlapCenter)
     {
         base.OnHitServer(overlapCenter);
-        _hittedByRaycast = false;
-        _overlapCenter = overlapCenter;
+        _hitPoint = overlapCenter;
     }
 
     private void OnDisable()

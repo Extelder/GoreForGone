@@ -34,7 +34,7 @@ public class SwordBlockState : SwordState
         {
             Debug.Log("SUCCESFULLY PARRIED");
             _playerHitBox.DamageMultiplier = 0;
-            _parriableEnemyStateMachine.Stun();   
+            _parriableEnemyStateMachine.React();   
             return;
         }
         _playerHitBox.DamageMultiplier = _blockDamageMultiplier;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyReactState : EnemyState
 {
+    [SerializeField] private EnemyStateMachine _enemyStateMachine;
+    
     public override void Enter()
     {
         if (!base.IsServer)
@@ -15,5 +17,7 @@ public class EnemyReactState : EnemyState
     public void ReactAnimationEnd()
     {
         CanChanged = true;
+        _enemyStateMachine.ChaseLastDetectedCreature();
+        Debug.Log("CHASE LAST");
     }
 }

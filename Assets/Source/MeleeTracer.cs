@@ -7,6 +7,7 @@ using UnityEngine;
 public class MeleeTracer : NetworkBehaviour
 {
     [field: SerializeField] public float Damage { get; private set; }
+    [field :SerializeField] public Transform BladeTip { get; private set; }
 
     [Range(2, 12)] [SerializeField] private int _segments = 6;
 
@@ -15,7 +16,6 @@ public class MeleeTracer : NetworkBehaviour
 
     [SerializeField] private GameObject _testHit;
     [SerializeField] private Transform _bladeBase;
-    [SerializeField] private Transform _bladeTip;
     [SerializeField] private float _radius = 0.08f;
     
     private Vector3[] _previousPoints;
@@ -111,7 +111,7 @@ public class MeleeTracer : NetworkBehaviour
         for (int i = 0; i < pointAlongSword.Length; i++)
         {
             float pointsDistribution = (pointAlongSword.Length == 1) ? 0f : (float) i / (pointAlongSword.Length - 1);
-            pointAlongSword[i] = Vector3.Lerp(_bladeBase.position, _bladeTip.position, pointsDistribution);
+            pointAlongSword[i] = Vector3.Lerp(_bladeBase.position, BladeTip.position, pointsDistribution);
         }
     }
 

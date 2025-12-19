@@ -15,7 +15,7 @@ public class EnemyHitBox : UnitHitBox
         _enemyStateMachine.React();
     }
 
-    public override void OnHitServer(Transform overlapCenter)
+    public override void OnHitServer(Vector3 overlapCenter)
     {
         base.OnHitServer(overlapCenter);
         _enemyStateMachine.React();

@@ -16,35 +16,6 @@ public class EnemyRagdollDeath : NetworkBehaviour
     [SerializeField] private RagdollOperations _ragdollOperations;
     [SerializeField] private float _explosionForce = 100;
 
-    public void Death(Transform explosionPoint)
-    {
-        StopAllCoroutines();
-        _ragdollParent.parent = null;
-        _ragdollParent.SetParent(null);
-
-        _enemyAnimator.DisableAllBools();
-        _ragdollOperations.EnableRagdoll();
-
-        int rand = Random.Range(0, 20);
-        var headChance = rand >= 17;
-        if (headChance)
-        {
-            _headBone.transform.localScale = Vector3.zero;
-            _setActiveObject.SetActiveServer(_head, true);
-        }
-
-        _ragdollOperations.AddExplosionForce(_explosionForce, explosionPoint.position, 20, 1,
-            ForceMode.Impulse);
-
-
-        for (int i = 0; i < _skinnedMeshRenderer.Length; i++)
-        {
-            _skinnedMeshRenderer[i].updateWhenOffscreen = true;
-        }
-
-        StartCoroutine(DestroyingRagdoll());
-    }    
-    
     public void Death(Vector3 explosionPoint)
     {
         StopAllCoroutines();

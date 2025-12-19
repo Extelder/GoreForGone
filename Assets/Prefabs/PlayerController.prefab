@@ -7261,7 +7261,8 @@ MonoBehaviour:
   _componentIndexCache: 27
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
-  <Damage>k__BackingField: 0
+  <Damage>k__BackingField: 10
+  <BladeTip>k__BackingField: {fileID: 2288109379392463550}
   _segments: 6
   _hitMask:
     serializedVersion: 2
@@ -7269,7 +7270,6 @@ MonoBehaviour:
   _triggerInteraction: 1
   _testHit: {fileID: 8999251131182062514}
   _bladeBase: {fileID: 5274666369331310796}
-  _bladeTip: {fileID: 2288109379392463550}
   _radius: 0.08
 --- !u!114 &5086027981211635378
 MonoBehaviour:
