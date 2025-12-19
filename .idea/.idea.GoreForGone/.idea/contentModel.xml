@@ -1793,6 +1793,9 @@
             <e p="Binds" t="Include">
               <e p="PlayerBinds.cs" t="Include" />
             </e>
+            <e p="Check" t="Include">
+              <e p="PlayerCheckOnEnemy.cs" t="Include" />
+            </e>
             <e p="DestroyIfNoOwner.cs" t="Include" />
             <e p="DestroyWithoutOwner.cs" t="Include" />
             <e p="FOV" t="Include">

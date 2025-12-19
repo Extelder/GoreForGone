@@ -1361,7 +1361,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   _setActiveObject: {fileID: 8302117989175062325}
   _enemyAnimator: {fileID: 7312812686504036354}
-  _ragdollParent: {fileID: 4382993530062869454}
+  _ragdollParent: {fileID: 5964033304733565501}
   _skinnedMeshRenderer:
   - {fileID: 934418949995639113}
   - {fileID: 4343404030559712405}
