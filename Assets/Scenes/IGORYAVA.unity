@@ -297,12 +297,6 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: ab97ec7e95188204d90424bdd425eda9, type: 2}
   m_BuildHeightMesh: 0
---- !u!4 &739471409 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5964033304733565501, guid: b2d727d4ccb0c404f9126afb03219bd2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1764661419}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1002233866
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,11 +722,6 @@ PrefabInstance:
       propertyPath: <SceneId>k__BackingField
       value: 4261411678
       objectReference: {fileID: 0}
-    - target: {fileID: 7086868011342556062, guid: b2d727d4ccb0c404f9126afb03219bd2,
-        type: 3}
-      propertyPath: _ragdollParent
-      value: 
-      objectReference: {fileID: 739471409}
     - target: {fileID: 8784249351811926416, guid: b2d727d4ccb0c404f9126afb03219bd2,
         type: 3}
       propertyPath: m_Name
