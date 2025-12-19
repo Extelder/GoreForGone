@@ -6512,7 +6512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
-    <MaxDistance>k__BackingField: 3
+    <MaxDistance>k__BackingField: 5
     <LayerMask>k__BackingField:
       serializedVersion: 2
       m_Bits: 256

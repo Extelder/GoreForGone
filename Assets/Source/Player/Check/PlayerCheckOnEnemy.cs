@@ -10,7 +10,7 @@ public class PlayerCheckOnEnemy : MonoBehaviour
     
     public bool EnemyDetected()
     {
-        bool hitted = Physics.Raycast(_raycastSettings.Origin.position, Vector3.forward, out RaycastHit hit,
+        bool hitted = Physics.Raycast(_raycastSettings.Origin.position, _raycastSettings.Origin.forward, out RaycastHit hit,
             _raycastSettings.MaxDistance, _raycastSettings.LayerMask);
         Debug.DrawRay(_raycastSettings.Origin.position, Vector3.forward * _raycastSettings.MaxDistance);
         if (hitted)
