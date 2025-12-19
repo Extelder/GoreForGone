@@ -54405,6 +54405,8 @@ MonoBehaviour:
   _initialized: 1
   _shieldGFX: {fileID: 5068621457308402140}
   _shieldTPS: {fileID: 755817644409343839}
+  _playerCheckOnEnemy: {fileID: 6622829219170894128}
+  _checkRate: 0.02
 --- !u!1 &5112638649908663687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8360950568830709185, guid: cadd09adecb992e4eb203135d9ae62c3,
