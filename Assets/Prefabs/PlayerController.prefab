@@ -7480,6 +7480,7 @@ GameObject:
   - component: {fileID: 8888721914433366851}
   - component: {fileID: 7169528851611438995}
   - component: {fileID: 3435534757263887646}
+  - component: {fileID: 4792575560537785573}
   m_Layer: 6
   m_Name: PlayerController
   m_TagString: GameController
@@ -7881,6 +7882,24 @@ MonoBehaviour:
     fullScreen: 1
     width: 0
     height: 0
+--- !u!114 &4792575560537785573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511069914338435829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61211b68cce8614b977a970fff4f9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _raycastSettings:
+    <Origin>k__BackingField: {fileID: 81716164454465600}
+    <MaxDistance>k__BackingField: 5
+    <LayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 256
 --- !u!1 &2627139808834250169
 GameObject:
   m_ObjectHideFlags: 0
@@ -9731,6 +9750,7 @@ MonoBehaviour:
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 2379199125106380215}
   _playerHitBox: {fileID: 5154392339956821574}
+  _playerCheckOnEnemy: {fileID: 4792575560537785573}
   _blockDamageMultiplier: 0.5
 --- !u!114 &1142884246365371962
 MonoBehaviour:
@@ -59347,7 +59367,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: V
+      value: "\u041C"
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -59761,7 +59781,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: T
+      value: "\u0415"
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -60816,7 +60836,7 @@ PrefabInstance:
     - target: {fileID: 6557647708507388437, guid: 98134a5fc3494e144b8419510b6e4a29,
         type: 3}
       propertyPath: m_Text
-      value: E
+      value: "\u0423"
       objectReference: {fileID: 0}
     - target: {fileID: 8461417888642342839, guid: 98134a5fc3494e144b8419510b6e4a29,
         type: 3}

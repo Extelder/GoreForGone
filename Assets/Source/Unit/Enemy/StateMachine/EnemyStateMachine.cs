@@ -36,7 +36,7 @@ public class EnemyStateMachine : StateMachine
     {
         if (!base.IsServer)
             return;
-        if (CurrentState == _attack)
+        if (CurrentState == _attack || CurrentState == _react)
             return;
         CurrentState.CanChanged = true;
         ChangeState(_attack);

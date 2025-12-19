@@ -7,7 +7,9 @@ using UnityEngine.InputSystem;
 public class SwordBlockState : SwordState
 {
     [SerializeField] private PlayerHitBox _playerHitBox;
+    [SerializeField] private PlayerCheckOnEnemy _playerCheckOnEnemy;
     [SerializeField] private float _blockDamageMultiplier;
+    private bool _enemyDetected;
     private float _defaultDamageMultiplier;
     private EnemyStateMachine _parriableEnemyStateMachine;
     private bool _succesfullyParried;
@@ -30,12 +32,16 @@ public class SwordBlockState : SwordState
         Animator.Block();
         CanChanged = false;
         PlayerCharacter.Instance.Binds.Character.Block.canceled += OnBlockCancelled;
+        Debug.Log(_succesfullyParried + "Parried");
         if (_succesfullyParried)
         {
-            Debug.Log("SUCCESFULLY PARRIED");
-            _playerHitBox.DamageMultiplier = 0;
-            _parriableEnemyStateMachine.React();   
-            return;
+            Debug.Log(_playerCheckOnEnemy.EnemyDetected() + "Detected");
+            if (_playerCheckOnEnemy.EnemyDetected())
+            {
+                _playerHitBox.DamageMultiplier = 0;
+                _parriableEnemyStateMachine.React();
+                return;
+            }
         }
         _playerHitBox.DamageMultiplier = _blockDamageMultiplier;
     }

@@ -49,6 +49,7 @@ public class EnemyAttackState : EnemyState
         if (PlayerHitBox == null)
             return;
         _lastDetectedPlayerHitBox = PlayerHitBox;
+        Debug.Log("CAN BE PARRIED");
         _lastDetectedPlayerHitBox.TryParry(true, _enemyStateMachine);
     }
 
@@ -58,6 +59,7 @@ public class EnemyAttackState : EnemyState
             return;
         if (_lastDetectedPlayerHitBox == null)
             return;
+        Debug.Log("CANT BE PARRIED");
         _lastDetectedPlayerHitBox.TryParry(false, _enemyStateMachine);
         _lastDetectedPlayerHitBox = null;
     }
