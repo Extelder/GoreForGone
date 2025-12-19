@@ -49,8 +49,10 @@ public class SwordBlockState : SwordState
                 _playerHitBox.DamageMultiplier = 0;
                 _parriableEnemyStateMachine.React();
             }
+
             return;
         }
+
         _playerHitBox.DamageMultiplier = _blockDamageMultiplier;
     }
 
@@ -63,6 +65,8 @@ public class SwordBlockState : SwordState
 
     private void OnDisable()
     {
+        if (!base.IsOwner)
+            return;
         PlayerCharacter.Instance.Binds.Character.Block.canceled -= OnBlockCancelled;
         _disposable.Clear();
         _playerHitBox.TryParryAttack -= OnAttackTriedParry;

@@ -117,6 +117,19 @@ public class PlayerCharacter : NetworkBehaviour
         Debug.LogError(gameObject);
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    public void SetObjectEnableServerWithValidation(GameObject needObject, bool enabled)
+    {
+        SetObjectEnableObserverValidation(needObject, enabled);
+    }
+
+    [ObserversRpc]
+    public void SetObjectEnableObserverValidation(GameObject gameObject, bool enabled)
+    {
+        if (gameObject != null)
+            gameObject.SetActive(enabled);
+    }
+
     public void Teleport(Vector3 point)
     {
         CharacterController.enabled = false;

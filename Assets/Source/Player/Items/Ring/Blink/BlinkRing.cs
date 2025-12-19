@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FishNet.Object;
 using UniRx;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,17 +14,7 @@ public class BlinkRing : PlayerRing
 
     private CompositeDisposable _disposable = new CompositeDisposable();
 
-    private GameObject _blinkGFX;
-
     private Vector3 _targetPosition;
-
-    public override void OnStartClient()
-    {
-        if (!base.IsOwner)
-            return;
-        _blinkGFX = Instantiate(_blinkToSpawn, transform.position, Quaternion.identity);
-        PlayerCharacter.Instance.ServerManager.Spawn(_blinkGFX);
-    }
 
     protected override void OnRingAbilityBindStarted(InputAction.CallbackContext obj)
     {
@@ -69,26 +60,19 @@ public class BlinkRing : PlayerRing
                 }
             }
 
-            _blinkGFX.transform.position = _targetPosition;
+            _blinkToSpawn.transform.position = _targetPosition;
         }).AddTo(_disposable);
 
-        PlayerCharacter.Instance.SetObjectEnableServer(_blinkGFX, true);
-        _blinkGFX.SetActive(true);
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (_blinkGFX == null)
-            return;
-        Gizmos.DrawWireSphere(_blinkGFX.transform.position - new Vector3(0, 0.5f, 0), .4f);
-        Gizmos.DrawWireSphere(_blinkGFX.transform.position + new Vector3(0, 0.5f, 0), 0.4f);
+     
+        PlayerCharacter.Instance.SetObjectEnableServer(_blinkToSpawn, true);
+        _blinkToSpawn.SetActive(true);
     }
 
     protected override void OnRingAbilityBindCanceled(InputAction.CallbackContext obj)
     {
-        if (!_blinkGFX.activeInHierarchy)
+        if (!_blinkToSpawn.activeInHierarchy)
         {
-            _blinkGFX.transform.position = Vector3.zero;
+            _blinkToSpawn.transform.position = Vector3.zero;
             CancelAction();
             return;
         }
@@ -103,7 +87,10 @@ public class BlinkRing : PlayerRing
             return;
         _disposable?.Clear();
 
-        PlayerCharacter.Instance.SetObjectEnableServer(_blinkGFX, false);
-        _blinkGFX.SetActive(false);
+        if (_blinkToSpawn == null)
+            return;
+        if (PlayerCharacter.Instance != null && PlayerCharacter.Instance.IsOwner)
+            PlayerCharacter.Instance.SetObjectEnableServer(_blinkToSpawn, false);
+        _blinkToSpawn.SetActive(false);
     }
 }

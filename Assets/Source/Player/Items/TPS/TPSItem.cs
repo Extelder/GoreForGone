@@ -6,21 +6,42 @@ using UnityEngine;
 
 public class TPSItem : NetworkBehaviour
 {
+    [SerializeField] private PlayerCharacter _character;
     [SerializeField] private GameObject _tpsItem;
+
+    // private void OnEnable()
+    // {
+    //     ;
+    // }
+
+    [SerializeField] private bool _initialized;
+    private void Awake()
+    {
+        _character.ClientStarted += OnClientStarted;
+    }
 
     private void OnEnable()
     {
-        if (base.IsOwner)
-            PlayerCharacter.Instance?.SetObjectEnableServer(_tpsItem, true);
+        if (!_initialized)
+            return;
+        if (!base.IsOwner)
+            return;
+        OnClientStarted();
+    }
 
-        _tpsItem.SetActive(true);
+    private void OnClientStarted()
+    {
+        if (!base.IsOwner)
+            return;
+        _initialized = true;
+        _character.SetObjectEnableServer(_tpsItem, true);
     }
 
     private void OnDisable()
     {
-        if (base.IsOwner)
-            PlayerCharacter.Instance?.SetObjectEnableServer(_tpsItem, false);
-
-        _tpsItem.SetActive(false);
+        if (!base.IsOwner)
+            return;
+        _character.ClientStarted -= OnClientStarted;
+        _character.SetObjectEnableServer(_tpsItem, false);
     }
 }
