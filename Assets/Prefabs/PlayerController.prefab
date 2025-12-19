@@ -6113,6 +6113,7 @@ GameObject:
   - component: {fileID: 5155498346024855214}
   - component: {fileID: 8888721914433366851}
   - component: {fileID: 7169528851611438995}
+  - component: {fileID: 6622829219170894128}
   m_Layer: 6
   m_Name: PlayerController
   m_TagString: GameController
@@ -6497,6 +6498,24 @@ MonoBehaviour:
   _overrideType: 2
   _updateHostVisibility: 1
   _observerConditions: []
+--- !u!114 &6622829219170894128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511069914338435829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61211b68cce8614b977a970fff4f9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _raycastSettings:
+    <Origin>k__BackingField: {fileID: 81716164454465600}
+    <MaxDistance>k__BackingField: 3
+    <LayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 256
 --- !u!1 &2629957807456015676
 GameObject:
   m_ObjectHideFlags: 0
@@ -7580,6 +7599,7 @@ MonoBehaviour:
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 2379199125106380215}
   _playerHitBox: {fileID: 5154392339956821574}
+  _playerCheckOnEnemy: {fileID: 6622829219170894128}
   _blockDamageMultiplier: 0.5
 --- !u!114 &1142884246365371962
 MonoBehaviour:
