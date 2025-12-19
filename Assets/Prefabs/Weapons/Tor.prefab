@@ -122,6 +122,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 2819073539019315233}
   _networkObjectCache: {fileID: 2819073539019315233}
+  _force: 6
   _models: {fileID: 3615100321832529042}
 --- !u!114 &2819073539019315233
 MonoBehaviour:

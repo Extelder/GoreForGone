@@ -784,7 +784,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 7310859964512096409}
   _networkObjectCache: {fileID: 7310859964512096409}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 594967075639881903}
   _enemyStateMachine: {fileID: 4939999432092044139}
 --- !u!114 &594967075639881903
 MonoBehaviour:
@@ -2961,6 +2960,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 7310859964512096409}
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 4460148357399550991}
+  _enemyStateMachine: {fileID: 0}
 --- !u!114 &4565206343058936163
 MonoBehaviour:
   m_ObjectHideFlags: 0

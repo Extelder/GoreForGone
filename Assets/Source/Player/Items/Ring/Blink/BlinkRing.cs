@@ -17,9 +17,12 @@ public class BlinkRing : PlayerRing
 
     private Vector3 _targetPosition;
 
-    private void Start()
+    public override void OnStartClient()
     {
+        if (!base.IsOwner)
+            return;
         _blinkGFX = Instantiate(_blinkToSpawn, transform.position, Quaternion.identity);
+        PlayerCharacter.Instance.ServerManager.Spawn(_blinkGFX);
     }
 
     protected override void OnRingAbilityBindStarted(InputAction.CallbackContext obj)
@@ -66,9 +69,10 @@ public class BlinkRing : PlayerRing
                 }
             }
 
-
             _blinkGFX.transform.position = _targetPosition;
         }).AddTo(_disposable);
+
+        PlayerCharacter.Instance.SetObjectEnableServer(_blinkGFX, true);
         _blinkGFX.SetActive(true);
     }
 
@@ -95,8 +99,11 @@ public class BlinkRing : PlayerRing
 
     protected override void CancelAction()
     {
+        if (!base.IsOwner)
+            return;
         _disposable?.Clear();
 
+        PlayerCharacter.Instance.SetObjectEnableServer(_blinkGFX, false);
         _blinkGFX.SetActive(false);
     }
 }

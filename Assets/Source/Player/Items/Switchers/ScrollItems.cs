@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class ScrollItems : MonoBehaviour
 {
     [SerializeField] private float _scrollCooldown;
-    
+
     [SerializeField] private PlayerCharacter _character;
     [SerializeField] private EquipableItem[] _equipableItems;
 
@@ -22,6 +22,8 @@ public class ScrollItems : MonoBehaviour
 
     private void OnClientStarted()
     {
+        if (!_character.IsOwner)
+            return;
         _character.Binds.Character.ScrollItems.started += OnScrollItemsStarted;
     }
 
@@ -58,6 +60,8 @@ public class ScrollItems : MonoBehaviour
 
     private void OnDisable()
     {
+        if (!_character.IsOwner)
+            return;
         _character.Binds.Character.ScrollItems.started -= OnScrollItemsStarted;
         _character.ClientStarted -= OnClientStarted;
     }

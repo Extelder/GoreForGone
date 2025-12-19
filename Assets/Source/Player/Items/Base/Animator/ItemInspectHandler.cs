@@ -45,12 +45,16 @@ public class ItemInspectHandler : MonoBehaviour
 
     private void OnClientStarted()
     {
+        if (!_character.IsOwner)
+            return;
         _initialized = true;
         _character.Binds.Character.Inspect.performed += OnInpectPerformed;
     }
 
     private void OnDisable()
     {
+        if (!_character.IsOwner)
+            return;
         _itemMachine.StatePrepareToChange -= OnStateChanged;
 
         _character.Binds.Character.Inspect.performed -= OnInpectPerformed;

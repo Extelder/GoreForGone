@@ -560,7 +560,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &387341828921917174
@@ -910,6 +909,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5431822323827494482}
   CanChanged: 1
   <EnemyAnimator>k__BackingField: {fileID: 6070784542374125603}
+  _enemyStateMachine: {fileID: 0}
 --- !u!95 &3860379163906930713
 Animator:
   serializedVersion: 5
@@ -1282,7 +1282,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &1365028648312633618
@@ -1681,7 +1680,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &2363283938974992901
@@ -2278,7 +2276,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &3543205597739078406
@@ -2465,7 +2462,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &3583807636436175965
@@ -2647,7 +2643,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &3612337351531489937
@@ -3047,7 +3042,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &4549354726750162793
@@ -3341,7 +3335,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &4874484162283975106
@@ -3492,7 +3485,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &4918707476178437563
@@ -3643,7 +3635,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &4934182757932610492
@@ -3837,9 +3828,7 @@ MonoBehaviour:
   _notStartOnEnable: 0
   _startState: {fileID: 6057627089984692456}
   _canReact: 1
-  _canBeStunned: 1
   _react: {fileID: 2251303931789843650}
-  _stun: {fileID: 0}
   _attack: {fileID: 3685032996049896506}
   _patrol: {fileID: 6057627089984692456}
   _chase: {fileID: 3301590952156455937}
@@ -4646,7 +4635,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &6793041202441587066
@@ -4814,7 +4802,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &6967005209356085473
@@ -4963,7 +4950,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &7017784413408298908
@@ -5273,7 +5259,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &7303728188210045668
@@ -5551,7 +5536,6 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5431822323827494482}
   _networkObjectCache: {fileID: 5431822323827494482}
   <EnemyHealth>k__BackingField: {fileID: 0}
-  EnemyHealth: {fileID: 5639973978490894316}
   _enemyStateMachine: {fileID: 1730478988304149002}
   _enemyRagdollDeath: {fileID: 2607044128974167468}
 --- !u!1 &7847757022447746224
