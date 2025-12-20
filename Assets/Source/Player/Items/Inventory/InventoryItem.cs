@@ -1,22 +1,21 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using EvolveGames;
 using UnityEngine;
 
 public class InventoryItem : MonoBehaviour
 {
-    [SerializeField] private HandsSmooth _handsSmooth;
+    [field: SerializeField] public ItemData ItemData { get; private set; }
 
-    private void OnEnable()
-    {
-        _handsSmooth.enabled = false;
-        GameCursor.Instance.Show();
-    }
+    [SerializeField] private GameObject[] _items;
 
-    private void OnDisable()
+    private int _count = 0;
+
+    public void AddItem()
     {
-        _handsSmooth.enabled = true;
-        GameCursor.Instance.ToPrevState();
+        _count++;
+        for (int i = 0; i < _count; i++)
+        {
+            _items[i].SetActive(true);
+        }
     }
 }
