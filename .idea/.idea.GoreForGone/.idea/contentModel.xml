@@ -1852,7 +1852,10 @@
                 <e p="InventoryEquipableItem.cs" t="Include" />
                 <e p="InventoryItem.cs" t="Include" />
                 <e p="InventoryLookAt.cs" t="Include" />
+                <e p="InventoryOpenClose.cs" t="Include" />
                 <e p="InventorySwitch.cs" t="Include" />
+                <e p="PlayerInventory.cs" t="Include" />
+                <e p="PlayerInventoryItem.cs" t="Include" />
                 <e p="QuickInventoryItem" t="Include">
                   <e p="QuickInventoryItem.cs" t="Include" />
                 </e>
