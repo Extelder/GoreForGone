@@ -799,6 +799,11 @@ PrefabInstance:
       propertyPath: <SceneId>k__BackingField
       value: 4261411678
       objectReference: {fileID: 0}
+    - target: {fileID: 7647196874391245567, guid: b2d727d4ccb0c404f9126afb03219bd2,
+        type: 3}
+      propertyPath: <SceneId>k__BackingField
+      value: 4294962958
+      objectReference: {fileID: 0}
     - target: {fileID: 8784249351811926416, guid: b2d727d4ccb0c404f9126afb03219bd2,
         type: 3}
       propertyPath: m_Name

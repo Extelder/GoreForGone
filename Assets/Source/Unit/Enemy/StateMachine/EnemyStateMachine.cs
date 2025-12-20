@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FishNet.Object;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -14,10 +15,15 @@ public class EnemyStateMachine : StateMachine
     [SerializeField] private EnemyChaseState _chase;
     [SerializeField] private EnemyInspectState _inspect;
 
+    [ServerRpc(RequireOwnership = false)]
     public void React()
     {
-        if (!base.IsServer)
-            return;
+        ReactObserver();
+    }
+
+    [ObserversRpc]
+    public void ReactObserver()
+    {
         if (!_canReact)
             return;
         CurrentState.CanChanged = true;

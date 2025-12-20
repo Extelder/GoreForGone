@@ -25,9 +25,16 @@ public class PlayerHitBox : NetworkBehaviour
         _active = true;
     }
 
+    [ServerRpc(RequireOwnership = false)]
     public void TryParry(bool canParry, EnemyStateMachine parriableEnemy)
     {
-        TryParryAttack?.Invoke(canParry, parriableEnemy);   
+        TryParryObserver(canParry, parriableEnemy);
+    }
+
+    [ObserversRpc]
+    public void TryParryObserver(bool canParry, EnemyStateMachine parriableEnemy)
+    {
+        TryParryAttack?.Invoke(canParry, parriableEnemy);
     }
 
     [ServerRpc(RequireOwnership = false)]

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FishNet.Object;
 using UniRx;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -46,6 +47,7 @@ public class SwordBlockState : SwordState
             Debug.Log(_enemyDetected + "Detected");
             if (_enemyDetected)
             {
+                Debug.Log("SEND ENEMY NAHUY");
                 _playerHitBox.DamageMultiplier = 0;
                 _parriableEnemyStateMachine.React();
             }
