@@ -100,6 +100,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2819073539019315233}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 612823417507bad4c8120deb838b035e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1984686589580571289}
   m_SourcePrefab: {fileID: 100100000, guid: 612823417507bad4c8120deb838b035e, type: 3}
 --- !u!1 &3615100321832529042 stripped
 GameObject:
@@ -124,6 +128,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 2819073539019315233}
   _force: 6
   _models: {fileID: 3615100321832529042}
+  _damage: 0
 --- !u!114 &2819073539019315233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +173,7 @@ MonoBehaviour:
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 1
-  <PrefabId>k__BackingField: 16
+  <PrefabId>k__BackingField: 15
   <SpawnableCollectionId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 13932217304970477341
   <SceneId>k__BackingField: 0
@@ -177,3 +182,24 @@ MonoBehaviour:
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     Scale: {x: 1, y: 1, z: 1}
     IsValid: 1
+--- !u!135 &1984686589580571289
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615100321832529042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.0144279
+  m_Center: {x: 0, y: 0, z: -0.0020697117}

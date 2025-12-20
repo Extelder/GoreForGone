@@ -8,6 +8,7 @@ public class TorSpawn : NetworkBehaviour
 {
     [SerializeField] private float _force = 6f;
     [SerializeField] private GameObject _models;
+    [SerializeField] private float _damage;
     private Vector3 _startPos;
     static readonly int AlphaID = Shader.PropertyToID("_Alpha");
     Renderer rend;
@@ -36,7 +37,6 @@ public class TorSpawn : NetworkBehaviour
     private void Play()
     {
         if (IsServer) PlayObserver();
-        PlayerCharacter.Instance.PlayerController.AddImpulse(-PlayerCharacter.Instance.Camera.forward, _force);
     }
 
     [ObserversRpc]
@@ -72,5 +72,15 @@ public class TorSpawn : NetworkBehaviour
     private void Despawn()
     {
         if (IsServer) PlayerCharacter.Instance.ServerDeSpawnObject(gameObject);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (IsServer)
+        {
+            if (other.TryGetComponent<EnemyHealth>(out var enemyHealth))
+            {
+                enemyHealth.TakeDamage(_damage);
+            }
+        }
     }
 }

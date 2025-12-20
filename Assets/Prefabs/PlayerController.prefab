@@ -26686,9 +26686,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12e9f9548a749a1429131484b04a17cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _playerAttack: {fileID: 281646376648966845}
   _model: {fileID: 3615100321832529042, guid: 4331d0c6e9d1eb74d93dfb326722d167, type: 3}
+  _force: 6
   _SpawnEmpty: {fileID: 3529075897352710779}
+  _playerCharacter: {fileID: 8850203819785511499}
 --- !u!114 &6224049561357569806
 MonoBehaviour:
   m_ObjectHideFlags: 0

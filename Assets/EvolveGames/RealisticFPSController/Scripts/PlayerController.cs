@@ -195,10 +195,11 @@ namespace EvolveGames
         public void AddImpulse(Vector3 direction, float force)
         {
             if (!IsOwner) return;
-
             direction.y = 0f;
 
             impulseVelocity += direction.normalized * force;
+            Debug.Log("OKK");
+            Debug.Log(impulseVelocity);
         }
 
         public void Crouch()
