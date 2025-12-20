@@ -245,7 +245,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &826180791048193332
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +457,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &1082174434559541373
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +696,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &1470694623800683112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1326,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <MaxValue>k__BackingField: 100
   <CurrentValue>k__BackingField: 0
+  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!114 &8302117989175062325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,7 +1358,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 5321795895709937702}
   _networkObjectCache: {fileID: 5321795895709937702}
   _setActiveObject: {fileID: 8302117989175062325}
-  _enemyAnimator: {fileID: 7312812686504036354}
+  _enemyAnimator: {fileID: 2748574308057981467}
   _ragdollParent: {fileID: 5964033304733565501}
   _skinnedMeshRenderer:
   - {fileID: 934418949995639113}
@@ -1371,7 +1369,7 @@ MonoBehaviour:
   _head: {fileID: 5416052972039724601}
   _enemyParent: {fileID: 2666665440864816844}
   _ragdollOperations: {fileID: 4914710692745959247}
-  _explosionForce: 100
+  _explosionForce: 10
 --- !u!1 &2368852558403437988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,7 +2205,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &4329326437305177444
 GameObject:
   m_ObjectHideFlags: 0
@@ -2389,7 +2386,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &4982863553684199925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,7 +2678,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &5434150014020596419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2863,7 +2858,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &5649990677183733622
 GameObject:
   m_ObjectHideFlags: 0
@@ -3500,7 +3494,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &6702666661637087795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3920,7 +3913,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &7053407601647755864
 GameObject:
   m_ObjectHideFlags: 0
@@ -4420,7 +4412,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &7677615066518128236
 GameObject:
   m_ObjectHideFlags: 0
@@ -4960,7 +4951,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &8295916945285618477
 GameObject:
   m_ObjectHideFlags: 0
@@ -5141,7 +5131,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &8519253010574495664
 GameObject:
   m_ObjectHideFlags: 0
@@ -5531,7 +5520,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &8708981849777424551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5746,7 +5734,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}
 --- !u!1 &8784249351811926416
 GameObject:
   m_ObjectHideFlags: 0
@@ -6031,4 +6018,3 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 5321795895709937702}
   <EnemyHealth>k__BackingField: {fileID: 7936331052377203981}
   _enemyStateMachine: {fileID: 5441908053369012830}
-  _enemyRagdollDeath: {fileID: 7086868011342556062}

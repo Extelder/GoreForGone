@@ -783,7 +783,7 @@ MonoBehaviour:
   _componentIndexCache: 6
   _addedNetworkObject: {fileID: 7310859964512096409}
   _networkObjectCache: {fileID: 7310859964512096409}
-  <EnemyHealth>k__BackingField: {fileID: 0}
+  <EnemyHealth>k__BackingField: {fileID: 594967075639881903}
   _enemyStateMachine: {fileID: 4939999432092044139}
 --- !u!114 &594967075639881903
 MonoBehaviour:

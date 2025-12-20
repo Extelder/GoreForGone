@@ -7,12 +7,13 @@ using UnityEngine;
 
 public class EnemyHealth : Health
 {
-    public ReactiveProperty<bool> Dead { get; private set; } = new ReactiveProperty<bool>();
-
+    public Vector3 HitPoint { get; set; }
+    
     public override void Death()
+    {}
+
+    public virtual void GetHitPoint(Vector3 hitPoint)
     {
-        if (Dead.Value)
-            return;
-        Dead.Value = true;
+        HitPoint = hitPoint;
     }
 }

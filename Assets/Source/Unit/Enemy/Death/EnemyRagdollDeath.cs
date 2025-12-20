@@ -7,7 +7,7 @@ using UnityEngine;
 public class EnemyRagdollDeath : NetworkBehaviour
 {
     [SerializeField] private SetActiveObject _setActiveObject;
-    [SerializeField] private EnemyAnimator _enemyAnimator;
+    [SerializeField] private Animator _enemyAnimator;
     [SerializeField] private Transform _ragdollParent;
     [SerializeField] private SkinnedMeshRenderer[] _skinnedMeshRenderer;
     [SerializeField] private Transform _headBone;
@@ -22,7 +22,7 @@ public class EnemyRagdollDeath : NetworkBehaviour
         _ragdollParent.parent = null;
         _ragdollParent.SetParent(null);
 
-        _enemyAnimator.DisableAllBools();
+        _enemyAnimator.enabled = false;
         _ragdollOperations.EnableRagdoll();
 
         int rand = Random.Range(0, 20);

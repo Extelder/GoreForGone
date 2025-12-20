@@ -9,48 +9,22 @@ using Random = UnityEngine.Random;
 
 public class EnemyRagdollHitBox : EnemyHitBox
 {
-    [SerializeField] private EnemyRagdollDeath _enemyRagdollDeath;
-
     private Vector3 _hitPoint;
-    private CompositeDisposable _disposable = new CompositeDisposable();
-
-
-    public override void OnStartClient()
-    {
-        if (!base.IsServer)
-            return;
-        base.OnStartClient();
-        EnemyHealth.Dead.Subscribe(_ =>
-        {
-            if (EnemyHealth.Dead.Value)
-            {
-                OnEnemyDead();
-            }
-        }).AddTo(_disposable);
-    }
-
-    private void OnEnemyDead()
-    {
-        _enemyRagdollDeath.Death(_hitPoint);
-    }
-
 
     public override void OnHitWithRaycastServer(Vector3 point, Vector3 normal)
     {
         base.OnHitWithRaycastServer(point, normal);
-        _hitPoint = point;
+        SetHealthHitPoint(point);
     }
 
     public override void OnHitServer(Vector3 overlapCenter)
     {
         base.OnHitServer(overlapCenter);
-        _hitPoint = overlapCenter;
+        SetHealthHitPoint(overlapCenter);
     }
 
-    private void OnDisable()
+    private void SetHealthHitPoint(Vector3 hitPoint)
     {
-        if (!base.IsServer)
-            return;
-        _disposable.Clear();
+        EnemyHealth.GetHitPoint(hitPoint);
     }
 }
