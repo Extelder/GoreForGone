@@ -128,7 +128,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 2819073539019315233}
   _force: 6
   _models: {fileID: 3615100321832529042}
-  _damage: 0
+  _damage: 5
 --- !u!114 &2819073539019315233
 MonoBehaviour:
   m_ObjectHideFlags: 0

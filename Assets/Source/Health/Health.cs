@@ -44,11 +44,6 @@ public abstract class Health : NetworkBehaviour
         Death();
     }
 
-    private void Update()
-    {
-        Debug.Log(CurrentValue + gameObject.name);
-    }
-
     public void Heal(float value)
     {
         if (IsDead())
