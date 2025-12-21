@@ -8240,6 +8240,8 @@ MonoBehaviour:
   - {fileID: 4346701592284120177}
   - {fileID: 5517520844624965550}
   - {fileID: 3102230044841871847}
+  <InteractMaterial>k__BackingField: {fileID: 2100000, guid: 35b0543b0c338a34f931de5eea61c71e,
+    type: 2}
   CurrentTime: 1
 --- !u!114 &8894797833157323738
 MonoBehaviour:
@@ -8434,8 +8436,8 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
   _camera: {fileID: 81716164454465600}
-  _capsuleHeight: 0.05
-  _capsuleRadius: 0.31
+  _capsuleHeight: 0.23
+  _capsuleRadius: 0.43
   _distance: 1.88
   _capsuleLayerMask:
     serializedVersion: 2
@@ -61609,7 +61611,7 @@ PrefabInstance:
     - target: {fileID: 6557647708507388437, guid: 98134a5fc3494e144b8419510b6e4a29,
         type: 3}
       propertyPath: m_Text
-      value: E
+      value: F
       objectReference: {fileID: 0}
     - target: {fileID: 8461417888642342839, guid: 98134a5fc3494e144b8419510b6e4a29,
         type: 3}

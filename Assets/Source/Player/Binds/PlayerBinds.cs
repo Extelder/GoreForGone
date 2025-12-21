@@ -373,7 +373,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""562db317-a935-48c9-acb9-b82959e6facc"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

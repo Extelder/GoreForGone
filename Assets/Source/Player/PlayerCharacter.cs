@@ -20,6 +20,7 @@ public class PlayerCharacter : NetworkBehaviour
     [field: SerializeField] public Transform Camera;
     [field: SerializeField] public Shaker Shaker { get; private set; }
     [field: SerializeField] public GameObject[] _thirdPerson;
+    [field: SerializeField] public Material InteractMaterial { get; private set; }
 
     public static PlayerCharacter Instance { get; private set; }
 
