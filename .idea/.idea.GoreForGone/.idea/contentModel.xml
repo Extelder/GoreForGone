@@ -1857,6 +1857,7 @@
               <e p="Damagable" t="Include">
                 <e p="IWeaponVisitor.cs" t="Include" />
               </e>
+              <e p="GlowStickItem.cs" t="Include" />
               <e p="Gun" t="Include">
                 <e p="GunAnimator.cs" t="Include" />
                 <e p="GunAttackState.cs" t="Include" />

@@ -297,6 +297,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GlowStick"",
+                    ""type"": ""Button"",
+                    ""id"": ""bd32c0fc-79a5-4188-b0a1-d40801442ac9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -629,6 +638,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""Drop"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d40ffc9c-56ce-4731-a6fb-6a80062ff708"",
+                    ""path"": ""<Keyboard>/leftAlt"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GlowStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -666,6 +686,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_SwitchShieldRing = m_Character.FindAction("SwitchShieldRing", throwIfNotFound: true);
         m_Character_SwitchSpritz = m_Character.FindAction("SwitchSpritz", throwIfNotFound: true);
         m_Character_Drop = m_Character.FindAction("Drop", throwIfNotFound: true);
+        m_Character_GlowStick = m_Character.FindAction("GlowStick", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -769,6 +790,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_SwitchShieldRing;
     private readonly InputAction m_Character_SwitchSpritz;
     private readonly InputAction m_Character_Drop;
+    private readonly InputAction m_Character_GlowStick;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -873,6 +895,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Drop => m_Wrapper.m_Character_Drop;
         /// <summary>
+        /// Provides access to the underlying input action "Character/GlowStick".
+        /// </summary>
+        public InputAction @GlowStick => m_Wrapper.m_Character_GlowStick;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Character; }
@@ -967,6 +993,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Drop.started += instance.OnDrop;
             @Drop.performed += instance.OnDrop;
             @Drop.canceled += instance.OnDrop;
+            @GlowStick.started += instance.OnGlowStick;
+            @GlowStick.performed += instance.OnGlowStick;
+            @GlowStick.canceled += instance.OnGlowStick;
         }
 
         /// <summary>
@@ -1047,6 +1076,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @Drop.started -= instance.OnDrop;
             @Drop.performed -= instance.OnDrop;
             @Drop.canceled -= instance.OnDrop;
+            @GlowStick.started -= instance.OnGlowStick;
+            @GlowStick.performed -= instance.OnGlowStick;
+            @GlowStick.canceled -= instance.OnGlowStick;
         }
 
         /// <summary>
@@ -1261,5 +1293,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDrop(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "GlowStick" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnGlowStick(InputAction.CallbackContext context);
     }
 }
