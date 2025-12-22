@@ -279,6 +279,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchSpritz"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d110ff2-e541-44a7-8ac6-623cdbe32240"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -589,6 +598,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""SwitchShieldRing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1ad7ea21-d00a-4a00-a61b-8aa45582acf7"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchSpritz"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -624,6 +644,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_Inspect = m_Character.FindAction("Inspect", throwIfNotFound: true);
         m_Character_ScrollItems = m_Character.FindAction("ScrollItems", throwIfNotFound: true);
         m_Character_SwitchShieldRing = m_Character.FindAction("SwitchShieldRing", throwIfNotFound: true);
+        m_Character_SwitchSpritz = m_Character.FindAction("SwitchSpritz", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -725,6 +746,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Inspect;
     private readonly InputAction m_Character_ScrollItems;
     private readonly InputAction m_Character_SwitchShieldRing;
+    private readonly InputAction m_Character_SwitchSpritz;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -821,6 +843,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @SwitchShieldRing => m_Wrapper.m_Character_SwitchShieldRing;
         /// <summary>
+        /// Provides access to the underlying input action "Character/SwitchSpritz".
+        /// </summary>
+        public InputAction @SwitchSpritz => m_Wrapper.m_Character_SwitchSpritz;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Character; }
@@ -909,6 +935,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchShieldRing.started += instance.OnSwitchShieldRing;
             @SwitchShieldRing.performed += instance.OnSwitchShieldRing;
             @SwitchShieldRing.canceled += instance.OnSwitchShieldRing;
+            @SwitchSpritz.started += instance.OnSwitchSpritz;
+            @SwitchSpritz.performed += instance.OnSwitchSpritz;
+            @SwitchSpritz.canceled += instance.OnSwitchSpritz;
         }
 
         /// <summary>
@@ -983,6 +1012,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchShieldRing.started -= instance.OnSwitchShieldRing;
             @SwitchShieldRing.performed -= instance.OnSwitchShieldRing;
             @SwitchShieldRing.canceled -= instance.OnSwitchShieldRing;
+            @SwitchSpritz.started -= instance.OnSwitchSpritz;
+            @SwitchSpritz.performed -= instance.OnSwitchSpritz;
+            @SwitchSpritz.canceled -= instance.OnSwitchSpritz;
         }
 
         /// <summary>
@@ -1183,5 +1215,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchShieldRing(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchSpritz" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchSpritz(InputAction.CallbackContext context);
     }
 }
