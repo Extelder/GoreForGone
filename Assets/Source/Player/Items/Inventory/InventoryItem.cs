@@ -16,6 +16,12 @@ public class InventoryItem : MonoBehaviour
 
     public void AddItem()
     {
+        if (_count + 1 > _items.Length)
+        {
+            Drop();
+            return;
+        }
+
         _count++;
         for (int i = 0; i < _count; i++)
         {
@@ -39,9 +45,14 @@ public class InventoryItem : MonoBehaviour
     private void OnDropPerformed(InputAction.CallbackContext obj)
     {
         Debug.Log("DROp");
-        PlayerCharacter.Instance.PlayerDrop.DropItem(ItemData);
+        Drop();
         _items[_count - 1].gameObject.SetActive(false);
         _count--;
+    }
+
+    public void Drop()
+    {
+        PlayerCharacter.Instance.PlayerDrop.DropItem(ItemData);
     }
 
     public void DeSelect()
