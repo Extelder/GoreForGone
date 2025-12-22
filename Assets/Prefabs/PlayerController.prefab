@@ -14624,6 +14624,7 @@ GameObject:
   - component: {fileID: 6622829219170894128}
   - component: {fileID: 5226415604508073142}
   - component: {fileID: 3183964401098910886}
+  - component: {fileID: 2387408794554850268}
   m_Layer: 6
   m_Name: PlayerController
   m_TagString: GameController
@@ -14779,6 +14780,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
   <CharacterController>k__BackingField: {fileID: 7227039927629204336}
+  <ParticlesHandler>k__BackingField: {fileID: 2387408794554850268}
   <PlayerInventory>k__BackingField: {fileID: 4601411567646122672}
   <PlayerController>k__BackingField: {fileID: 6075849525127307848}
   <PlayerDrop>k__BackingField: {fileID: 3183964401098910886}
@@ -15075,6 +15077,20 @@ MonoBehaviour:
     <LayerMask>k__BackingField:
       serializedVersion: 2
       m_Bits: 1
+--- !u!114 &2387408794554850268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511069914338435829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9c118899548c489641ae2a864ae7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <BloodParticle>k__BackingField: {fileID: 6012561182997966478, guid: fc3b35c8aa4031c40a1bc5ab4119930f,
+    type: 3}
 --- !u!1 &2572947729459832082
 GameObject:
   m_ObjectHideFlags: 0
@@ -38304,7 +38320,6 @@ GameObject:
   - component: {fileID: 7440915065128165889}
   - component: {fileID: 2236453490574650750}
   - component: {fileID: 5394000128328574201}
-  - component: {fileID: 7739115176293189040}
   - component: {fileID: 6824411379768693437}
   - component: {fileID: 4748397240653879400}
   - component: {fileID: 3040920375408837113}
@@ -38312,6 +38327,7 @@ GameObject:
   - component: {fileID: 7793353037630432367}
   - component: {fileID: 6956647400855411137}
   - component: {fileID: 484024009730918990}
+  - component: {fileID: 5435447699280267107}
   m_Layer: 6
   m_Name: Batamet
   m_TagString: Untagged
@@ -38458,31 +38474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackShakes:
-  - <Attack>k__BackingField: {fileID: 7739115176293189040}
+  - <Attack>k__BackingField: {fileID: 484024009730918990}
     <Preset>k__BackingField: {fileID: 11400000, guid: f89b35471b35b2f4db38298d54ba21b5,
       type: 2}
---- !u!114 &7739115176293189040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8655485219512766367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 255
-  _addedNetworkObject: {fileID: 8894797833157323738}
-  _networkObjectCache: {fileID: 0}
-  _hitEffect: {fileID: 0}
-  _raycastSettings:
-    <Origin>k__BackingField: {fileID: 81716164454465600}
-    <MaxDistance>k__BackingField: 3
-    <LayerMask>k__BackingField:
-      serializedVersion: 2
-      m_Bits: 1
 --- !u!114 &6824411379768693437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38600,6 +38594,29 @@ MonoBehaviour:
   _projectile: {fileID: 4136762407050785333, guid: e158314b02a0f2e489b7e4b8a03155f2,
     type: 3}
   _spawnOrigin: {fileID: 4779677762931489292}
+--- !u!114 &5435447699280267107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655485219512766367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  _hitEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b,
+    type: 3}
+  _raycastSettings:
+    <Origin>k__BackingField: {fileID: 81716164454465600}
+    <MaxDistance>k__BackingField: 10
+    <LayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 1
 --- !u!1 &8680806349242491420
 GameObject:
   m_ObjectHideFlags: 0
@@ -38649,7 +38666,6 @@ GameObject:
   - component: {fileID: 6602929119874460934}
   - component: {fileID: 352865685638200142}
   - component: {fileID: 8180274829567853210}
-  - component: {fileID: 281646376648966845}
   - component: {fileID: 1757310414816766003}
   - component: {fileID: 7416742223122146957}
   - component: {fileID: 8470412651926805851}
@@ -38657,6 +38673,7 @@ GameObject:
   - component: {fileID: 3897689843744032465}
   - component: {fileID: 6224049561357569806}
   - component: {fileID: 559028839567230195}
+  - component: {fileID: 981115776793981153}
   m_Layer: 6
   m_Name: Steamyl
   m_TagString: Untagged
@@ -38803,31 +38820,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackShakes:
-  - <Attack>k__BackingField: {fileID: 281646376648966845}
+  - <Attack>k__BackingField: {fileID: 3897689843744032465}
     <Preset>k__BackingField: {fileID: 11400000, guid: 98d98d94c3a5d8346bade0539210ef0b,
       type: 2}
---- !u!114 &281646376648966845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8705086290949544445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 255
-  _addedNetworkObject: {fileID: 8894797833157323738}
-  _networkObjectCache: {fileID: 0}
-  _hitEffect: {fileID: 0}
-  _raycastSettings:
-    <Origin>k__BackingField: {fileID: 81716164454465600}
-    <MaxDistance>k__BackingField: 3
-    <LayerMask>k__BackingField:
-      serializedVersion: 2
-      m_Bits: 1
 --- !u!114 &1757310414816766003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38947,6 +38942,29 @@ MonoBehaviour:
   _projectile: {fileID: 4136762407050785333, guid: e158314b02a0f2e489b7e4b8a03155f2,
     type: 3}
   _spawnOrigin: {fileID: 4779677762931489292}
+--- !u!114 &981115776793981153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705086290949544445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  _hitEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b,
+    type: 3}
+  _raycastSettings:
+    <Origin>k__BackingField: {fileID: 81716164454465600}
+    <MaxDistance>k__BackingField: 10
+    <LayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 1
 --- !u!1 &8708044670003183317
 GameObject:
   m_ObjectHideFlags: 0

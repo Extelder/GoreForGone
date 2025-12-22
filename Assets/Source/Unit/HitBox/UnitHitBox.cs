@@ -10,12 +10,12 @@ public class UnitHitBox : DamageableHitBox
     public override void Visit(Projectile projectile)
     {
         Hit(transform.position, projectile.Damage,
-            transform.position += new Vector3(0, 0.5f, 0));
+            transform.position);
     }
 
     public override void Visit(MeleeTracer meleeTracer)
     {
         Hit(meleeTracer.BladeTip.position, meleeTracer.Damage,
-            transform.position += new Vector3(0, 0.5f, 0));
+            transform.position += new Vector3(0.5f, 0, 0));
     }
 }

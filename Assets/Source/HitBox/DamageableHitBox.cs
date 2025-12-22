@@ -27,7 +27,7 @@ public abstract class DamageableHitBox : HitBox
 
     public virtual void OnHitWithRaycastObserver(float damage, Vector3 patriclePoint, Vector3 normal)
     {
-        //Pools.Instance.BloodPool.GetFreeElement(patriclePoint, Quaternion.LookRotation(normal));
+        PlayerCharacter.Instance.ServerSpawnObject(PlayerCharacter.Instance.ParticlesHandler.BloodParticle, patriclePoint, Quaternion.LookRotation(normal));
         EnemyHealth.TakeDamage(damage);
     }
 
@@ -50,7 +50,7 @@ public abstract class DamageableHitBox : HitBox
 
     public virtual void OnHitObserver(Vector3 overlapCenter, float damage, Vector3 patriclePoint)
     {
-        //Pools.Instance.BloodPool.GetFreeElement(patriclePoint, Quaternion.identity);
+        PlayerCharacter.Instance.ServerSpawnObject(PlayerCharacter.Instance.ParticlesHandler.BloodParticle, patriclePoint, Quaternion.identity);
         EnemyHealth.TakeDamage(damage);
     }
 }
