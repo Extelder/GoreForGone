@@ -9,6 +9,7 @@ using UnityEngine;
 public class PlayerCharacter : NetworkBehaviour
 {
     [field: SerializeField] public CharacterController CharacterController { get; private set; }
+    [field: SerializeField] public ParticlesHandler ParticlesHandler { get; private set; }
     [field: SerializeField] public PlayerInventory PlayerInventory { get; private set; }
     [field: SerializeField] public PlayerController PlayerController { get; private set; }
     [field: SerializeField] public PlayerDrop PlayerDrop { get; private set; }
