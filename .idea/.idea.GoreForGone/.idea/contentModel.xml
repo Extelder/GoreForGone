@@ -1848,9 +1848,16 @@
                   </e>
                 </e>
               </e>
+              <e p="Consumable" t="Include">
+                <e p="ConsumableActivate.cs" t="Include" />
+                <e p="ConsumableAnimator.cs" t="Include" />
+                <e p="ConsumableState.cs" t="Include" />
+                <e p="ConsumableStateMachine.cs" t="Include" />
+              </e>
               <e p="Damagable" t="Include">
                 <e p="IWeaponVisitor.cs" t="Include" />
               </e>
+              <e p="GlowStickItem.cs" t="Include" />
               <e p="Gun" t="Include">
                 <e p="GunAnimator.cs" t="Include" />
                 <e p="GunAttackState.cs" t="Include" />
