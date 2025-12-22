@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Nikola\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Nikola\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_GoreForGone.1305621880.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Nikola\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
-    <e p="D:\adobe\UnityProjects\GoreForGone" t="IncludeRecursive">
+    <e p="C:\Users\aferi\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\aferi\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_GoreForGone.686436049.00" t="ExcludeRecursive" />
+    <e p="C:\Users\aferi\AppData\Roaming\JetBrains\Rider2020.2\consoles\ide" t="IncludeRecursive" />
+    <e p="C:\Users\aferi\Documents\Project222\GoreForGone" t="IncludeRecursive">
       <e p="AmimalWorld.csproj" t="IncludeRecursive" />
       <e p="AmimalWorld.Player.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
@@ -1762,6 +1762,11 @@
             <e p="ShowCursorOnEnableGameobject.cs" t="Include" />
           </e>
           <e p="Environment" t="Include">
+            <e p="Electrifieable" t="Include">
+              <e p="ElectrifiableItem.cs" t="Include" />
+              <e p="ElectrifiableItemAnimatable.cs" t="Include" />
+              <e p="IElectrifiable.cs" t="Include" />
+            </e>
             <e p="HitBox" t="Include">
               <e p="ObjectHitBox.cs" t="Include" />
             </e>
@@ -1817,6 +1822,7 @@
                 <e p="OverlapAttack.cs" t="Include" />
                 <e p="PlayerAttack.cs" t="Include" />
                 <e p="PlayerAttackShake.cs" t="Include" />
+                <e p="PlayerAttackSpawnProjectile.cs" t="Include" />
                 <e p="PlayerAttackSpawnTor.cs" t="Include" />
                 <e p="RaycastAttack.cs" t="Include" />
                 <e p="RaycastHitAttackShake.cs" t="Include" />
@@ -1914,6 +1920,12 @@
               <e p="PlayerLean.cs" t="Include" />
             </e>
             <e p="PlayerCharacter.cs" t="Include" />
+            <e p="Projectile" t="Include">
+              <e p="ElectralizableProjectile" t="Include">
+                <e p="PlayerElectrolizableProjectile.cs" t="Include" />
+              </e>
+              <e p="PlayerProjectile.cs" t="Include" />
+            </e>
             <e p="Rotation" t="Include">
               <e p="PlayerRotation.cs" t="Include" />
             </e>

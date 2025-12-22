@@ -10,40 +10,56 @@ public abstract class Projectile : NetworkBehaviour
     [SerializeField] private OverlapSettings _overlapSettings;
     [SerializeField] private float _cooldowmToDespawn;
     private Collider[] _colliders;
-    private bool _canExplode = true;
+    public bool CanExplode { get; private set; } = true;
     private void OnCollisionEnter(Collision other)
     {
-        if (!_canExplode)
-            return;
-        Explode();
+        OnCollisionEnterVirtual(other);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!_canExplode)
-            return;
-        Explode();
+        OnTriggerEnterVirtual(other);
     }
 
-    private void Explode()
+    public virtual void OnCollisionEnterVirtual(Collision other)
     {
+        if (!CanExplode)
+            return;
+        Explode();   
+    }
+
+    public virtual void OnTriggerEnterVirtual(Collider other)
+    {
+        if (!CanExplode)
+            return;
+        Explode();   
+    }
+
+    public void Explode()
+    {
+        CanExplode = false;
         _colliders = new Collider[_overlapSettings.Size];
         Overlap();
         foreach (var other in _colliders)
         {
             if (other == null)
                 continue;
-            if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
-            {
-                visitor.Visit(this);
-            }
-            if (other.TryGetComponent<PlayerHitBox>(out PlayerHitBox playerHitBox))
-            {
-                playerHitBox.TakeDamage(Damage);
-            }
+            CheckOnComponents(other);
         }
 
         ServerDespawn();
+    }
+
+    public virtual void CheckOnComponents(Collider other)
+    {
+        if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
+        {
+            visitor.Visit(this);
+        }
+        if (other.TryGetComponent<PlayerHitBox>(out PlayerHitBox playerHitBox))
+        {
+            playerHitBox.TakeDamage(Damage);
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -61,7 +77,7 @@ public abstract class Projectile : NetworkBehaviour
     private IEnumerator Despawning()
     {
         yield return new WaitForSeconds(_cooldowmToDespawn);
-        _canExplode = true;
+        CanExplode = true;
         Despawn();
     }
 
@@ -75,5 +91,12 @@ public abstract class Projectile : NetworkBehaviour
     {
         _overlapSettings.Size = Physics.OverlapSphereNonAlloc(_overlapSettings.Origin.position,
             _overlapSettings.SphereRadius, _colliders, _overlapSettings.LayerMask);
+    }
+
+    private void OnDisable()
+    {
+        if (!base.IsOwner)
+            return;
+        CanExplode = false;
     }
 }
