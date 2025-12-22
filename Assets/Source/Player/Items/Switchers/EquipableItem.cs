@@ -1,4 +1,4 @@
- using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FishNet.Object;
@@ -11,11 +11,18 @@ public class EquipableItem : NetworkBehaviour
     [SerializeField] protected AnimatorItemSwitcher _itemSwitcher;
     [SerializeField] private string _actionName;
 
+    [field: SerializeField] public bool Unlocked { get; private set; } = true;
+
     private bool _initialized;
 
     private void Awake()
     {
         _itemSwitcher.Character.ClientStarted += OnClienStarted;
+    }
+
+    public void Unlock()
+    {
+        Unlocked = true;
     }
 
     private void OnClienStarted()
@@ -33,6 +40,9 @@ public class EquipableItem : NetworkBehaviour
 
     public void Equip()
     {
+        if (!Unlocked)
+            return;
+
         if (itemObject.activeInHierarchy == false)
             _itemSwitcher.SwitchItem(itemObject);
     }

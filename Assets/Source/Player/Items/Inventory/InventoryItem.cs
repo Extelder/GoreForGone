@@ -29,7 +29,7 @@ public class InventoryItem : MonoBehaviour
         }
     }
 
-    public void Select()
+    public virtual void Select()
     {
         for (int i = 0; i < _items.Length; i++)
         {
@@ -55,7 +55,7 @@ public class InventoryItem : MonoBehaviour
         PlayerCharacter.Instance.PlayerDrop.DropItem(ItemData);
     }
 
-    public void DeSelect()
+    public virtual void DeSelect()
     {
         for (int i = 0; i < _items.Length; i++)
         {

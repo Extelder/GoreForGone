@@ -7,6 +7,7 @@
     <e p="D:\adobe\UnityProjects\GoreForGone" t="IncludeRecursive">
       <e p="AmimalWorld.csproj" t="IncludeRecursive" />
       <e p="AmimalWorld.Player.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.Player.csproj" t="IncludeRecursive" />
@@ -1363,6 +1364,14 @@
               <e p="README.txt" t="Include" />
             </e>
           </e>
+          <e p="MeshCombiner" t="Include">
+            <e p="Editor" t="Include">
+              <e p="MeshCombinerEditor.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="MeshCombiner.cs" t="Include" />
+            </e>
+          </e>
           <e p="Textus" t="Include">
             <e p="SerializeReferenceUI" t="Include">
               <e p="Core" t="Include">
@@ -1877,6 +1886,8 @@
                 <e p="QuickInventoryItem" t="Include">
                   <e p="QuickInventoryItem.cs" t="Include" />
                 </e>
+                <e p="USeInventoryItem.cs" t="Include" />
+                <e p="UseInventoryItem1.cs" t="Include" />
               </e>
               <e p="Ring" t="Include">
                 <e p="Blink" t="Include">
