@@ -22,11 +22,21 @@
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player/Items/Apple.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player/Items/Apple.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Binds/PlayerBinds.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +100,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Blink/BlinkAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Drakkar/GameUtils/VISUALS/Trails/DrakkarTrail.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/StateMachine/ItemStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryItemSelector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Unit/Animator/UnitMultiAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Health/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,6 +116,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Sword/VFX/SwordChargeReadyVFX.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Attack/TrailTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/MovementEffects.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QuickOutline/Scripts/Outline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.12/Editor/Drawing/Views/PropertyNodeView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Base/Animator/ItemCrouchHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MilkShake/Scripts/IShakeParameters.cs" root0="FORCE_HIGHLIGHTING" />
@@ -119,6 +131,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunReloadState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunAttackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Drop/PlayerDrop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FishNet/Runtime/Object/NetworkBehaviour/NetworkBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunsStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -149,12 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Gun/GunAttackState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Ring/Blink/BlinkVisuals.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/FOV/PlayerFOVChanger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordChargeAttackState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/VFX/SwordChargeReadyVFX.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/Animator/SwordAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/SwordStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Pool/Pools.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/HitBox/HitBox.cs" />
@@ -198,8 +205,14 @@
         <option value="$PROJECT_DIR$/Assets/Source/Player/HitBox/PlayerHitBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Sword/StateMachine/State/SwordBlockState.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Unit/Enemy/StateMachine/EnemyStateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Item/Interact/InteractItemWithHighlight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Drop/PlayerDrop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/PlayerCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Bootstrap/IShit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Bootstrap/IMegaShit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Bootstrap/Pupab.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Player/Items/Inventory/InventoryItemSelector.cs" />
       </list>
     </option>
   </component>
@@ -260,7 +273,8 @@
       <workItem from="1766058704994" duration="4892000" />
       <workItem from="1766149475574" duration="2848000" />
       <workItem from="1766238540050" duration="5327000" />
-      <workItem from="1766315434894" duration="905000" />
+      <workItem from="1766315434894" duration="1522000" />
+      <workItem from="1766402532880" duration="5036000" />
     </task>
     <servers />
   </component>
@@ -289,10 +303,10 @@
       <screen x="0" y="0" width="2560" height="1394" />
     </state>
     <state x="900" y="272" key="FileChooserDialogImpl/-1440.534.1440.854/0.0.2560.1394@0.0.2560.1394" timestamp="1766161332454" />
-    <state x="742" y="153" key="RiderGenerateDialog" timestamp="1765912374453">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="989" y="205" key="RiderGenerateDialog" timestamp="1766407961869">
+      <screen x="0" y="0" width="2560" height="1394" />
     </state>
-    <state x="989" y="205" key="RiderGenerateDialog/-1440.534.1440.854/0.0.2560.1394@0.0.2560.1394" timestamp="1765475581385" />
+    <state x="989" y="205" key="RiderGenerateDialog/-1440.534.1440.854/0.0.2560.1394@0.0.2560.1394" timestamp="1766407961869" />
     <state x="742" y="153" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1765912374453" />
     <state x="939" y="213" key="RollbackChangesDialog" timestamp="1765370776338">
       <screen x="0" y="0" width="2560" height="1394" />
@@ -302,10 +316,10 @@
       <screen x="0" y="0" width="2560" height="1394" />
     </state>
     <state x="92" y="92" width="2376" height="1210" key="VCS.FileHistoryDialog/-1440.534.1440.854/0.0.2560.1394@0.0.2560.1394" timestamp="1766150126376" />
-    <state x="512" y="229" width="1535" height="936" key="find.popup" timestamp="1766161340932">
+    <state x="512" y="229" width="1535" height="936" key="find.popup" timestamp="1766406005612">
       <screen x="0" y="0" width="2560" height="1394" />
     </state>
-    <state x="512" y="229" width="1535" height="936" key="find.popup/-1440.534.1440.854/0.0.2560.1394@0.0.2560.1394" timestamp="1766161340932" />
+    <state x="512" y="229" width="1535" height="936" key="find.popup/-1440.534.1440.854/0.0.2560.1394@0.0.2560.1394" timestamp="1766406005612" />
     <state x="684" y="317" key="run.anything.popup" timestamp="1765566509523">
       <screen x="0" y="0" width="2560" height="1394" />
     </state>

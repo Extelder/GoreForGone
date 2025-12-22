@@ -279,6 +279,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Drop"",
+                    ""type"": ""Button"",
+                    ""id"": ""bc5cb917-92ec-4934-98d7-be77483bdab7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -589,6 +598,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""SwitchShieldRing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f37d0b40-7b0e-47e3-a46e-4b01c228d0de"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -624,6 +644,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_Inspect = m_Character.FindAction("Inspect", throwIfNotFound: true);
         m_Character_ScrollItems = m_Character.FindAction("ScrollItems", throwIfNotFound: true);
         m_Character_SwitchShieldRing = m_Character.FindAction("SwitchShieldRing", throwIfNotFound: true);
+        m_Character_Drop = m_Character.FindAction("Drop", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -725,6 +746,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Inspect;
     private readonly InputAction m_Character_ScrollItems;
     private readonly InputAction m_Character_SwitchShieldRing;
+    private readonly InputAction m_Character_Drop;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -821,6 +843,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @SwitchShieldRing => m_Wrapper.m_Character_SwitchShieldRing;
         /// <summary>
+        /// Provides access to the underlying input action "Character/Drop".
+        /// </summary>
+        public InputAction @Drop => m_Wrapper.m_Character_Drop;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Character; }
@@ -909,6 +935,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchShieldRing.started += instance.OnSwitchShieldRing;
             @SwitchShieldRing.performed += instance.OnSwitchShieldRing;
             @SwitchShieldRing.canceled += instance.OnSwitchShieldRing;
+            @Drop.started += instance.OnDrop;
+            @Drop.performed += instance.OnDrop;
+            @Drop.canceled += instance.OnDrop;
         }
 
         /// <summary>
@@ -983,6 +1012,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchShieldRing.started -= instance.OnSwitchShieldRing;
             @SwitchShieldRing.performed -= instance.OnSwitchShieldRing;
             @SwitchShieldRing.canceled -= instance.OnSwitchShieldRing;
+            @Drop.started -= instance.OnDrop;
+            @Drop.performed -= instance.OnDrop;
+            @Drop.canceled -= instance.OnDrop;
         }
 
         /// <summary>
@@ -1183,5 +1215,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchShieldRing(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Drop" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDrop(InputAction.CallbackContext context);
     }
 }

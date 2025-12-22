@@ -1799,6 +1799,9 @@
             </e>
             <e p="DestroyIfNoOwner.cs" t="Include" />
             <e p="DestroyWithoutOwner.cs" t="Include" />
+            <e p="Drop" t="Include">
+              <e p="PlayerDrop.cs" t="Include" />
+            </e>
             <e p="FOV" t="Include">
               <e p="PlayerFOVChanger.cs" t="Include" />
             </e>
@@ -1852,6 +1855,7 @@
               <e p="Inventory" t="Include">
                 <e p="InventoryEquipableItem.cs" t="Include" />
                 <e p="InventoryItem.cs" t="Include" />
+                <e p="InventoryItemSelector.cs" t="Include" />
                 <e p="InventoryLookAt.cs" t="Include" />
                 <e p="InventoryOpenClose.cs" t="Include" />
                 <e p="InventorySwitch.cs" t="Include" />
