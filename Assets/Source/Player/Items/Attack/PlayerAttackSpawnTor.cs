@@ -4,27 +4,22 @@ using System.Collections.Generic;
 using FishNet.Object;
 using UnityEngine;
 
-public class PlayerAttackSpawnTor : NetworkBehaviour
+public class PlayerAttackSpawnTor : PlayerAttack
 {
-    [SerializeField] private PlayerAttack _playerAttack;
     [SerializeField] private GameObject _model;
     [SerializeField] private float _force = 6f;
-    [SerializeField] private GameObject _SpawnEmpty;
+    [SerializeField] private Transform _spawnEmpty;
 
-    public override void OnStartClient()
+    public void SpawnTor()
     {
-        _playerAttack.Performed += OnPerformed;
-    }
-
-    private void OnDisable()
-    {
-        _playerAttack.Performed -= OnPerformed;
-    }
-
-    private void OnPerformed()
-    {
-        if (!base.IsOwner) return;
-        PlayerCharacter.Instance.ServerSpawnObject(_model, _SpawnEmpty.transform.position, _SpawnEmpty.transform.rotation);
+        if (!base.IsOwner)
+            return;
+        StartAttack?.Invoke();
+        PlayerCharacter.Instance.ServerSpawnObject(_model, _spawnEmpty.position, _spawnEmpty.rotation);
         PlayerCharacter.Instance.PlayerController.AddImpulse(-PlayerCharacter.Instance.Camera.forward, _force);
+        Performed?.Invoke();
     }
+    
+    public override event Action Performed;
+    public override event Action StartAttack;
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FishNet.Object;
@@ -11,6 +12,11 @@ public class EnemyHealth : Health
     
     public override void Death()
     {}
+
+    private void Update()
+    {
+        Debug.Log(CurrentValue);
+    }
 
     public virtual void GetHitPoint(Vector3 hitPoint)
     {

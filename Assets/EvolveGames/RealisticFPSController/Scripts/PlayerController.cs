@@ -198,8 +198,6 @@ namespace EvolveGames
             direction.y = 0f;
 
             impulseVelocity += direction.normalized * force;
-            Debug.Log("OKK");
-            Debug.Log(impulseVelocity);
         }
 
         public void Crouch()
