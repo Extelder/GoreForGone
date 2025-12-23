@@ -9,7 +9,7 @@ public class PlayerAttackSpawnTor : PlayerAttack
     [SerializeField] private GameObject _model;
     [SerializeField] private float _force = 6f;
     [SerializeField] private Transform _spawnEmpty;
-    [SerializeField] private ParticleSystem _vfx;
+    [SerializeField] private PlayVfx _vfx;
 
     public void SpawnTor()
     {
@@ -21,7 +21,7 @@ public class PlayerAttackSpawnTor : PlayerAttack
         _vfx.Play();
         Performed?.Invoke();
     }
-    
+
     public override event Action Performed;
     public override event Action StartAttack;
 }

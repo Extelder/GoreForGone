@@ -16,7 +16,6 @@ public class PlayerAttackSpawnProjectile : PlayerAttack
         if (!base.IsOwner)
             return;
         StartAttack?.Invoke();
-        PlayerCharacter.Instance.ServerSpawnObject(_projectile, _spawnOrigin.position, _spawnOrigin.rotation);
         Performed?.Invoke();
     }
 }
