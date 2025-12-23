@@ -8,7 +8,7 @@ public class PlayVfx : NetworkBehaviour
     [SerializeField] private ParticleSystem _vfx;
     
     [ServerRpc(RequireOwnership = false)]
-    private void Play()
+    public void Play()
     {
         PlayObserver();
     }
