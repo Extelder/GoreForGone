@@ -3,13 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OverlapAttack : PlayerAttack
+public class OverlapAttack : PlayerDamageableAttack
 {
     [SerializeField] private Transform _attackOrigin;
 
     [SerializeField] private OverlapSettings _overlapSettings;
-
-    [SerializeField] private GameObject _testAttackShit;
 
     public override event Action Performed;
     public override event Action StartAttack;
@@ -28,9 +26,12 @@ public class OverlapAttack : PlayerAttack
         {
             if (other == null)
                 continue;
-            Vector3 hitPoint = other.ClosestPointOnBounds(_attackOrigin.position);
-            Vector3 normal = (hitPoint - _overlapSettings.Origin.position).normalized;
-            Instantiate(_testAttackShit, hitPoint, Quaternion.LookRotation(normal));
+            if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
+            {
+                Vector3 hitPoint = other.ClosestPointOnBounds(_attackOrigin.position);
+                Vector3 normal = (hitPoint - _overlapSettings.Origin.position).normalized;
+                visitor.Visit(this ,hitPoint, normal);
+            }
         }
     }
 
