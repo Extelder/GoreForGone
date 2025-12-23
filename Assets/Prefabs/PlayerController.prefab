@@ -6608,7 +6608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1481347877977383551
 Transform:
   m_ObjectHideFlags: 0
@@ -18575,7 +18575,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
   <Damage>k__BackingField: 10
-  _bladeTip: {fileID: 0}
+  _bladeTip: {fileID: 2288109379392463550}
   _segments: 6
   _hitMask:
     serializedVersion: 2
@@ -51114,7 +51114,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: "\u0427"
+      value: X
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -82033,7 +82033,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: "\u0418"
+      value: B
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -86241,7 +86241,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: "\u041C"
+      value: V
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -87549,7 +87549,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: "\u0415"
+      value: T
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -88539,7 +88539,7 @@ PrefabInstance:
     - target: {fileID: 6557647708507388437, guid: 98134a5fc3494e144b8419510b6e4a29,
         type: 3}
       propertyPath: m_Text
-      value: "\u0410"
+      value: F
       objectReference: {fileID: 0}
     - target: {fileID: 8461417888642342839, guid: 98134a5fc3494e144b8419510b6e4a29,
         type: 3}
