@@ -13,12 +13,6 @@ public class UnitHitBox : DamageableHitBox
             transform.position);
     }
 
-    public override void Visit(MeleeTracer meleeTracer)
-    {
-        Hit(meleeTracer.BladeTip.position, meleeTracer.Damage,
-            transform.position += new Vector3(0.5f, 0, 0));
-    }
-
     public override void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint, Vector3 normal)
     {
         HitWithRaycast(playerDamageableAttack.Damage, hitPoint, 

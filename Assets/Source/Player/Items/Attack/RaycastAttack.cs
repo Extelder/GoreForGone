@@ -36,7 +36,10 @@ public class RaycastAttack : PlayerDamageableAttack
             if (_hit.collider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
             {
                 visitor.Visit(this, _hit.point);
+                Hitted?.Invoke();
+                return;
             }
+            PlayerCharacter.Instance.ServerSpawnObject(PlayerCharacter.Instance.ParticlesHandler.ObjectHitParticle, _hit.point, Quaternion.LookRotation(_hit.normal));
             Hitted?.Invoke();
         }
     }

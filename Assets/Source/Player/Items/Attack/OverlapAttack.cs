@@ -26,12 +26,14 @@ public class OverlapAttack : PlayerDamageableAttack
         {
             if (other == null)
                 continue;
+            Vector3 hitPoint = other.ClosestPointOnBounds(_attackOrigin.position);
+            Vector3 normal = (hitPoint - _overlapSettings.Origin.position).normalized;
             if (other.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
             {
-                Vector3 hitPoint = other.ClosestPointOnBounds(_attackOrigin.position);
-                Vector3 normal = (hitPoint - _overlapSettings.Origin.position).normalized;
                 visitor.Visit(this ,hitPoint, normal);
+                return;
             }
+            PlayerCharacter.Instance.ServerSpawnObject(PlayerCharacter.Instance.ParticlesHandler.ObjectHitParticle, hitPoint, Quaternion.identity);
         }
     }
 

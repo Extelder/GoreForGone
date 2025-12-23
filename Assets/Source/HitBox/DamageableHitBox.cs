@@ -8,7 +8,6 @@ public abstract class DamageableHitBox : HitBox
     [field: SerializeField] public EnemyHealth EnemyHealth { get; private set; }
     
     public abstract override void Visit(Projectile projectile);
-    public abstract override void Visit(MeleeTracer meleeTracer);
     public abstract override void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint, Vector3 normal);
     
     [ServerRpc(RequireOwnership = false)]
