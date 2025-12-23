@@ -87,6 +87,30 @@ public class PlayerAnimator : NetworkBehaviour
         _animator.ResetTrigger(name);
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    public void PlayAnimationServer(string name, int layer)
+    {
+        PlayAnimationObservers(name, layer);
+    }
+
+    [ObserversRpc]
+    public void PlayAnimationObservers(string name, int layer)
+    {
+        _animator.Play(name, layer);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void CrossfadeAnimationServer(string name, float duration, int layer)
+    {
+        CrossfadeyAnimationObservers(name, duration, layer);
+    }
+
+    [ObserversRpc]
+    public void CrossfadeyAnimationObservers(string name, float duration, int layer)
+    {
+        _animator.CrossFade(name, duration, layer);
+    }
+
     public void Equip(int id)
     {
         EquipServer(id);

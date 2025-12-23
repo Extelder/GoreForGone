@@ -10,10 +10,12 @@ public class PlayerRingAnimation : PlayerRing
     [SerializeField] private string _performedAnimName;
 
     [SerializeField] private Animator _animator;
+    [SerializeField] private PlayerAnimator _tpsAnimator;
 
     protected override void OnRingAbilityBindCanceled(InputAction.CallbackContext obj)
     {
         _animator.Play(_performedAnimName);
+        _tpsAnimator.PlayAnimationServer(_performedAnimName, 2);
     }
 
     protected override void OnRingAbilityBindPerformed(InputAction.CallbackContext obj)
@@ -23,8 +25,10 @@ public class PlayerRingAnimation : PlayerRing
     protected override void OnRingAbilityBindStarted(InputAction.CallbackContext obj)
     {
         _animator.Play(_beginAnimName);
+        _tpsAnimator.PlayAnimationServer(_beginAnimName, 2);
 
         _animator.CrossFade(_stayAnimName, 0.5f);
+        _tpsAnimator.CrossfadeAnimationServer(_stayAnimName, 0.5f, 2);
     }
 
     protected override void CancelAction()
