@@ -15476,6 +15476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <BloodParticle>k__BackingField: {fileID: 6012561182997966478, guid: fc3b35c8aa4031c40a1bc5ab4119930f,
     type: 3}
+  <ObjectHitParticle>k__BackingField: {fileID: 6370549035291045415, guid: ab6f5542e2654814c96170f931a73ae0,
+    type: 3}
 --- !u!1 &2572947729459832082
 GameObject:
   m_ObjectHideFlags: 0
@@ -18195,6 +18197,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
+  <Damage>k__BackingField: 0
   _attackOrigin: {fileID: 5477065883418264137}
   _overlapSettings:
     <Origin>k__BackingField: {fileID: 482536710588428925}
@@ -18203,7 +18206,6 @@ MonoBehaviour:
       m_Bits: 0
     <SphereRadius>k__BackingField: 0.77
     <Size>k__BackingField: 3
-  _testAttackShit: {fileID: 8999251131182062514}
 --- !u!114 &5730667865821055410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18238,7 +18240,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
-  _hitEffect: {fileID: 8999251131182062514}
+  <Damage>k__BackingField: 23
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
     <MaxDistance>k__BackingField: 3
@@ -18322,7 +18324,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _triggerInteraction: 1
-  _testHit: {fileID: 8999251131182062514}
   _bladeBase: {fileID: 5274666369331310796}
   _radius: 0.08
 --- !u!114 &5086027981211635378
@@ -44008,8 +44009,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
-  _hitEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b,
-    type: 3}
+  <Damage>k__BackingField: 0
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
     <MaxDistance>k__BackingField: 10
@@ -44356,8 +44356,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
-  _hitEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b,
-    type: 3}
+  <Damage>k__BackingField: 0
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
     <MaxDistance>k__BackingField: 10
