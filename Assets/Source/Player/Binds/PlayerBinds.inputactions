@@ -204,6 +204,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "SwitchSoda",
+                    "type": "Button",
+                    "id": "a81a95d7-44b9-4d4b-b980-fdf976d0137b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Drop",
                     "type": "Button",
                     "id": "6af3c476-bf12-4822-9fe7-bb1bc0ae25d4",
@@ -548,6 +557,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SwitchSpritz",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0d19f5da-d3d9-4b38-8e04-05698432acd7",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchSoda",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -290,6 +290,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""SwitchSoda"",
+                    ""type"": ""Button"",
+                    ""id"": ""a81a95d7-44b9-4d4b-b980-fdf976d0137b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Drop"",
                     ""type"": ""Button"",
                     ""id"": ""6af3c476-bf12-4822-9fe7-bb1bc0ae25d4"",
@@ -639,6 +648,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""0d19f5da-d3d9-4b38-8e04-05698432acd7"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchSoda"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""ca138f1b-0288-413e-a1ae-1068852dd32f"",
                     ""path"": ""<Keyboard>/g"",
                     ""interactions"": """",
@@ -705,6 +725,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_ScrollItems = m_Character.FindAction("ScrollItems", throwIfNotFound: true);
         m_Character_SwitchShieldRing = m_Character.FindAction("SwitchShieldRing", throwIfNotFound: true);
         m_Character_SwitchSpritz = m_Character.FindAction("SwitchSpritz", throwIfNotFound: true);
+        m_Character_SwitchSoda = m_Character.FindAction("SwitchSoda", throwIfNotFound: true);
         m_Character_Drop = m_Character.FindAction("Drop", throwIfNotFound: true);
         m_Character_GlowStick = m_Character.FindAction("GlowStick", throwIfNotFound: true);
         m_Character_SwitchDesintegration = m_Character.FindAction("SwitchDesintegration", throwIfNotFound: true);
@@ -810,6 +831,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_ScrollItems;
     private readonly InputAction m_Character_SwitchShieldRing;
     private readonly InputAction m_Character_SwitchSpritz;
+    private readonly InputAction m_Character_SwitchSoda;
     private readonly InputAction m_Character_Drop;
     private readonly InputAction m_Character_GlowStick;
     private readonly InputAction m_Character_SwitchDesintegration;
@@ -912,6 +934,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Character/SwitchSpritz".
         /// </summary>
         public InputAction @SwitchSpritz => m_Wrapper.m_Character_SwitchSpritz;
+        /// <summary>
+        /// Provides access to the underlying input action "Character/SwitchSoda".
+        /// </summary>
+        public InputAction @SwitchSoda => m_Wrapper.m_Character_SwitchSoda;
         /// <summary>
         /// Provides access to the underlying input action "Character/Drop".
         /// </summary>
@@ -1016,6 +1042,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchSpritz.started += instance.OnSwitchSpritz;
             @SwitchSpritz.performed += instance.OnSwitchSpritz;
             @SwitchSpritz.canceled += instance.OnSwitchSpritz;
+            @SwitchSoda.started += instance.OnSwitchSoda;
+            @SwitchSoda.performed += instance.OnSwitchSoda;
+            @SwitchSoda.canceled += instance.OnSwitchSoda;
             @Drop.started += instance.OnDrop;
             @Drop.performed += instance.OnDrop;
             @Drop.canceled += instance.OnDrop;
@@ -1102,6 +1131,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @SwitchSpritz.started -= instance.OnSwitchSpritz;
             @SwitchSpritz.performed -= instance.OnSwitchSpritz;
             @SwitchSpritz.canceled -= instance.OnSwitchSpritz;
+            @SwitchSoda.started -= instance.OnSwitchSoda;
+            @SwitchSoda.performed -= instance.OnSwitchSoda;
+            @SwitchSoda.canceled -= instance.OnSwitchSoda;
             @Drop.started -= instance.OnDrop;
             @Drop.performed -= instance.OnDrop;
             @Drop.canceled -= instance.OnDrop;
@@ -1318,6 +1350,13 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchSpritz(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchSoda" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchSoda(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Drop" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
