@@ -8,7 +8,6 @@ public abstract class HitBox : NetworkBehaviour, IWeaponVisitor
 {
     public abstract void Visit(Projectile projectile);
 
-    public abstract void Visit(MeleeTracer meleeTracer);
     public abstract void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint, Vector3 normal);
     public abstract void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint);
 
