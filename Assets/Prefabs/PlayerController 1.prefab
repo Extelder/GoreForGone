@@ -3549,6 +3549,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _hitEffect: {fileID: 0}
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
@@ -4588,6 +4591,7 @@ MonoBehaviour:
   itemObject: {fileID: 3632558054252121361}
   _itemSwitcher: {fileID: 8198087532832823545}
   _actionName: SwitchSpritz
+  <Unlocked>k__BackingField: 0
 --- !u!1 &881271347688451653
 GameObject:
   m_ObjectHideFlags: 0
@@ -8590,9 +8594,12 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
   <CharacterController>k__BackingField: {fileID: 7227039927629204336}
+  <ParticlesHandler>k__BackingField: {fileID: 0}
   <PlayerInventory>k__BackingField: {fileID: 4601411567646122672}
   <PlayerController>k__BackingField: {fileID: 6075849525127307848}
+  <PlayerDrop>k__BackingField: {fileID: 0}
   <PlayerHitBox>k__BackingField: {fileID: 5154392339956821574}
+  <PlayerCollider>k__BackingField: {fileID: 0}
   <Characters>k__BackingField:
   - {fileID: 8850203819785511499}
   <DropPoint>k__BackingField: {fileID: 2162771873653310200}
@@ -10272,6 +10279,7 @@ MonoBehaviour:
   itemObject: {fileID: 7184779801818268723}
   _itemSwitcher: {fileID: 183955970474002974}
   _actionName: SwitchTimeStopRing
+  <Unlocked>k__BackingField: 1
 --- !u!1 &3250981985869693881
 GameObject:
   m_ObjectHideFlags: 0
@@ -10867,6 +10875,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a1f403e33c153499649218f8df6db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _attackOrigin: {fileID: 5477065883418264137}
   _overlapSettings:
     <Origin>k__BackingField: {fileID: 482536710588428925}
@@ -10907,6 +10918,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _hitEffect: {fileID: 8999251131182062514}
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
@@ -12365,6 +12379,7 @@ MonoBehaviour:
   itemObject: {fileID: 1159872540403725062}
   _itemSwitcher: {fileID: 183955970474002974}
   _actionName: SwitchBlinkRing
+  <Unlocked>k__BackingField: 1
 --- !u!1 &4196471558194245272
 GameObject:
   m_ObjectHideFlags: 0
@@ -17870,7 +17885,7 @@ GameObject:
   - component: {fileID: 1139140531432167727}
   - component: {fileID: 7723346820339321301}
   m_Layer: 0
-  m_Name: AppleItem
+  m_Name: CanItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17905,6 +17920,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01824c7465f68b2479044d309dbc11a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitTargetPoint: {fileID: 0}
+  _hint: {fileID: 0}
   <ItemData>k__BackingField: {fileID: 11400000, guid: 4695ba057f2503e45b799d25ff81f9fb,
     type: 2}
   _items:
@@ -23064,6 +23081,7 @@ MonoBehaviour:
   itemObject: {fileID: 6690324454787715361}
   _itemSwitcher: {fileID: 8198087532832823545}
   _actionName: SwitchSteamyl
+  <Unlocked>k__BackingField: 1
 --- !u!1 &6081492464256839921
 GameObject:
   m_ObjectHideFlags: 0
@@ -23431,6 +23449,7 @@ MonoBehaviour:
   itemObject: {fileID: 669558582760241518}
   _itemSwitcher: {fileID: 183955970474002974}
   _actionName: SwitchShieldRing
+  <Unlocked>k__BackingField: 1
 --- !u!1 &6229076689966914371
 GameObject:
   m_ObjectHideFlags: 0
@@ -25875,6 +25894,7 @@ MonoBehaviour:
   itemObject: {fileID: 8893040682827964136}
   _itemSwitcher: {fileID: 4937011902172155157}
   _actionName: SwitchInventory
+  <Unlocked>k__BackingField: 1
 --- !u!114 &4601411567646122672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26078,6 +26098,7 @@ MonoBehaviour:
   itemObject: {fileID: 4318847078328734549}
   _itemSwitcher: {fileID: 8198087532832823545}
   _actionName: SwitchBatamet
+  <Unlocked>k__BackingField: 1
 --- !u!1 &8106118197138040957
 GameObject:
   m_ObjectHideFlags: 0
@@ -26129,6 +26150,7 @@ MonoBehaviour:
   itemObject: {fileID: 1962854676415007543}
   _itemSwitcher: {fileID: 8198087532832823545}
   _actionName: SwitchSword
+  <Unlocked>k__BackingField: 1
 --- !u!1 &8115499033765483208
 GameObject:
   m_ObjectHideFlags: 0
@@ -27056,6 +27078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _hitEffect: {fileID: 0}
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
@@ -27379,6 +27404,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
   _hitEffect: {fileID: 0}
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
@@ -27464,10 +27492,9 @@ MonoBehaviour:
   _componentIndexCache: 43
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
-  _playerAttack: {fileID: 281646376648966845}
   _model: {fileID: 3615100321832529042, guid: 4331d0c6e9d1eb74d93dfb326722d167, type: 3}
   _force: 6
-  _SpawnEmpty: {fileID: 3529075897352710779}
+  _spawnEmpty: {fileID: 0}
 --- !u!114 &6224049561357569806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27674,7 +27701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7500881749728903303
 Transform:
   m_ObjectHideFlags: 0
