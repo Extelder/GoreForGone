@@ -220,6 +220,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchDesintegration",
+                    "type": "Button",
+                    "id": "886c6785-94b0-4b6c-a6d0-8e65a7f8f11e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -561,6 +570,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "GlowStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1cdf8572-9713-42f8-a8f3-8a718a3116f6",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchDesintegration",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

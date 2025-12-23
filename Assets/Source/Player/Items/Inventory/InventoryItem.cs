@@ -12,21 +12,33 @@ public class InventoryItem : MonoBehaviour
 
     [SerializeField] private InventoryItemSelector[] _items;
 
-    private int _count = 0;
+    public int Count { get; private set; } = 0;
 
     public void AddItem()
     {
-        if (_count + 1 > _items.Length)
+        if (Count + 1 > _items.Length)
         {
             Drop();
             return;
         }
 
-        _count++;
-        for (int i = 0; i < _count; i++)
+        Count++;
+        for (int i = 0; i < Count; i++)
         {
             _items[i].gameObject.SetActive(true);
         }
+    }
+
+    public bool TrySpendItem()
+    {
+        if (Count == 0)
+        {
+            return false;
+        }
+
+        _items[Count - 1].gameObject.SetActive(false);
+        Count--;
+        return true;
     }
 
     public virtual void Select()
@@ -46,8 +58,8 @@ public class InventoryItem : MonoBehaviour
     {
         Debug.Log("DROp");
         Drop();
-        _items[_count - 1].gameObject.SetActive(false);
-        _count--;
+        _items[Count - 1].gameObject.SetActive(false);
+        Count--;
     }
 
     public void Drop()

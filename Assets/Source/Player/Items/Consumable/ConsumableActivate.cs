@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class ConsumableActivate : ConsumableState
 {
+    [SerializeField] private AnimatorItemSwitcher _animatorItemSwitcher;
+    [SerializeField] private UseInventoryItem1 _useInventoryItem;
     [SerializeField] private float _continueAttackCheckRate;
 
     private CompositeDisposable _disposable = new CompositeDisposable();
@@ -48,8 +50,13 @@ public class ConsumableActivate : ConsumableState
         _disposable.Clear();
     }
 
-    public void GunAnimationEnd()
+    public void ConsumeAnimationEnd()
     {
+        if (_useInventoryItem.Count == 0)
+        {
+            _animatorItemSwitcher.ReturnToPrevItem();
+        }
+
         CanChanged = !_conntinueAttacking;
     }
 }

@@ -306,6 +306,15 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchDesintegration"",
+                    ""type"": ""Button"",
+                    ""id"": ""886c6785-94b0-4b6c-a6d0-8e65a7f8f11e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -649,6 +658,17 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
                     ""action"": ""GlowStick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1cdf8572-9713-42f8-a8f3-8a718a3116f6"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchDesintegration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -687,6 +707,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         m_Character_SwitchSpritz = m_Character.FindAction("SwitchSpritz", throwIfNotFound: true);
         m_Character_Drop = m_Character.FindAction("Drop", throwIfNotFound: true);
         m_Character_GlowStick = m_Character.FindAction("GlowStick", throwIfNotFound: true);
+        m_Character_SwitchDesintegration = m_Character.FindAction("SwitchDesintegration", throwIfNotFound: true);
     }
 
     ~@PlayerBinds()
@@ -791,6 +812,7 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_SwitchSpritz;
     private readonly InputAction m_Character_Drop;
     private readonly InputAction m_Character_GlowStick;
+    private readonly InputAction m_Character_SwitchDesintegration;
     /// <summary>
     /// Provides access to input actions defined in input action map "Character".
     /// </summary>
@@ -899,6 +921,10 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @GlowStick => m_Wrapper.m_Character_GlowStick;
         /// <summary>
+        /// Provides access to the underlying input action "Character/SwitchDesintegration".
+        /// </summary>
+        public InputAction @SwitchDesintegration => m_Wrapper.m_Character_SwitchDesintegration;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Character; }
@@ -996,6 +1022,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @GlowStick.started += instance.OnGlowStick;
             @GlowStick.performed += instance.OnGlowStick;
             @GlowStick.canceled += instance.OnGlowStick;
+            @SwitchDesintegration.started += instance.OnSwitchDesintegration;
+            @SwitchDesintegration.performed += instance.OnSwitchDesintegration;
+            @SwitchDesintegration.canceled += instance.OnSwitchDesintegration;
         }
 
         /// <summary>
@@ -1079,6 +1108,9 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
             @GlowStick.started -= instance.OnGlowStick;
             @GlowStick.performed -= instance.OnGlowStick;
             @GlowStick.canceled -= instance.OnGlowStick;
+            @SwitchDesintegration.started -= instance.OnSwitchDesintegration;
+            @SwitchDesintegration.performed -= instance.OnSwitchDesintegration;
+            @SwitchDesintegration.canceled -= instance.OnSwitchDesintegration;
         }
 
         /// <summary>
@@ -1300,5 +1332,12 @@ public partial class @PlayerBinds: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnGlowStick(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchDesintegration" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchDesintegration(InputAction.CallbackContext context);
     }
 }

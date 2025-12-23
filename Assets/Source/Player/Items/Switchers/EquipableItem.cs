@@ -25,6 +25,11 @@ public class EquipableItem : NetworkBehaviour
         Unlocked = true;
     }
 
+    public void Lock()
+    {
+        Unlocked = false;
+    }
+
     private void OnClienStarted()
     {
         if (!_itemSwitcher.Character.IsOwner)
