@@ -1836,6 +1836,7 @@
                 <e p="PlayerAttackShake.cs" t="Include" />
                 <e p="PlayerAttackSpawnProjectile.cs" t="Include" />
                 <e p="PlayerAttackSpawnTor.cs" t="Include" />
+                <e p="PlayerDamageableAttack.cs" t="Include" />
                 <e p="RaycastAttack.cs" t="Include" />
                 <e p="RaycastHitAttackShake.cs" t="Include" />
                 <e p="TrailTest.cs" t="Include" />

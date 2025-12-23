@@ -9,6 +9,7 @@ public abstract class DamageableHitBox : HitBox
     
     public abstract override void Visit(Projectile projectile);
     public abstract override void Visit(MeleeTracer meleeTracer);
+    public abstract override void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint, Vector3 normal);
     
     [ServerRpc(RequireOwnership = false)]
     public void HitWithRaycast(float damage, Vector3 patriclePoint, Vector3 normal)

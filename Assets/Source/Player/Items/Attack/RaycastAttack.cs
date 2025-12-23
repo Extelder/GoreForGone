@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RaycastAttack : PlayerAttack
+public class RaycastAttack : PlayerDamageableAttack
 {
-    [SerializeField] private GameObject _hitEffect;
     [SerializeField] private RaycastSettings _raycastSettings;
 
     public override event Action Performed;
@@ -34,7 +33,10 @@ public class RaycastAttack : PlayerAttack
         if (Physics.Raycast(_raycastSettings.Origin.position, _raycastSettings.Origin.forward, out _hit,
             _raycastSettings.MaxDistance, _raycastSettings.LayerMask))
         {
-            Instantiate(_hitEffect, _hit.point, Quaternion.identity);
+            if (_hit.collider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
+            {
+                visitor.Visit(this, _hit.point);
+            }
             Hitted?.Invoke();
         }
     }

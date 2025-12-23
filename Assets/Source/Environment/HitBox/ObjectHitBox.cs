@@ -7,23 +7,34 @@ public class ObjectHitBox : HitBox
 {
     public override void Visit(Projectile projectile)
     {
-        Hit(transform, transform.position += new Vector3(0, 0.5f, 0));
+        Hit(transform.position, transform.position);
     }
 
     public override void Visit(MeleeTracer meleeTracer)
     {
-        Hit(transform, transform.position += new Vector3(0, 0.5f, 0));
+        Hit(meleeTracer.BladeTip.position, transform.position);
     }
 
-    public override void OnHitObserver(Transform overlapCenter, Vector3 patriclePoint)
+    public override void Visit(PlayerDamageableAttack playerDamageableAttackVector3, Vector3 hitPoint, Vector3 normal)
+    {
+        HitWithRaycast(hitPoint, normal);
+        Debug.Log("RAYCAST");
+    }
+
+    public override void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint)
+    {
+        Hit(hitPoint, hitPoint);
+    }
+
+    public override void OnHitObserver(Vector3 overlapCenter, Vector3 patriclePoint)
     {
         base.OnHitObserver(overlapCenter, patriclePoint);
-        Pools.Instance.ObjectHitPool.GetFreeElement(patriclePoint, Quaternion.identity);
+        PlayerCharacter.Instance.ServerSpawnObject(PlayerCharacter.Instance.ParticlesHandler.ObjectHitParticle, patriclePoint, Quaternion.identity);
     }
 
     public override void OnHitWithRaycastObserver(Vector3 patriclePoint, Vector3 normal)
     {
         base.OnHitWithRaycastObserver(patriclePoint, normal);
-        Pools.Instance.ObjectHitPool.GetFreeElement(patriclePoint, Quaternion.LookRotation(normal));
+        PlayerCharacter.Instance.ServerSpawnObject(PlayerCharacter.Instance.ParticlesHandler.ObjectHitParticle, patriclePoint, Quaternion.LookRotation(normal));
     }
 }

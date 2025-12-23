@@ -14,7 +14,6 @@ public class MeleeTracer : NetworkBehaviour
     [SerializeField] private LayerMask _hitMask;
     [SerializeField] private QueryTriggerInteraction _triggerInteraction = QueryTriggerInteraction.Ignore;
 
-    [SerializeField] private GameObject _testHit;
     [SerializeField] private Transform _bladeBase;
     [SerializeField] private float _radius = 0.08f;
     
@@ -71,8 +70,6 @@ public class MeleeTracer : NetworkBehaviour
 
                         _hitThisSwing.Add(_sphereCastCollider);
 
-                        //МЕТОЧКА ДЛЯ МЕНЯ - ВЫНЕСТИ В ХИТБОКС ОТДЕЛЬНО ЭТУ ХУЕТУ, ЕСЛИ ТЫ ЭТО ЧИТАЕШЬ, ТО ОТСОСИ САМОМУ СЕБЕ
-                        Instantiate(_testHit, hit.point, Quaternion.identity);
                         if (_sphereCastCollider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
                             visitor.Visit(this);
                     }
@@ -87,7 +84,6 @@ public class MeleeTracer : NetworkBehaviour
 
                         _hitThisSwing.Add(collider);
 
-                        Instantiate(_testHit, currentPoints[i], Quaternion.identity);
                         if (collider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
                             visitor.Visit(this);
                     }
