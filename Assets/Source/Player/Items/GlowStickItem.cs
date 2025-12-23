@@ -38,6 +38,6 @@ public class GlowStickItem : NetworkBehaviour
 
     public void Enable()
     {
-        _setActiveObject.SetActiveServer(_light, !_light.active);
+        _setActiveObject.SetActiveServer(_light, !_light.activeSelf);
     }
 }
