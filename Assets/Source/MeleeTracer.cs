@@ -4,10 +4,11 @@ using FishNet.Object;
 using UniRx;
 using UnityEngine;
 
-public class MeleeTracer : NetworkBehaviour
+public class MeleeTracer : PlayerDamageableAttack
 {
-    [field: SerializeField] public float Damage { get; private set; }
-    [field :SerializeField] public Transform BladeTip { get; private set; }
+    public override event Action Performed;
+    public override event Action StartAttack;
+    [SerializeField] private Transform _bladeTip;
 
     [Range(2, 12)] [SerializeField] private int _segments = 6;
 
@@ -37,11 +38,13 @@ public class MeleeTracer : NetworkBehaviour
     {
         _hitThisSwing.Clear();
         Swing();
+        StartAttack?.Invoke();
         CacheCurrentPoints(_previousPoints);
     }
 
     public void EndSwing()
     {
+        Performed?.Invoke();
         _disposable.Clear();
     }
 
@@ -71,7 +74,11 @@ public class MeleeTracer : NetworkBehaviour
                         _hitThisSwing.Add(_sphereCastCollider);
 
                         if (_sphereCastCollider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
-                            visitor.Visit(this);
+                        {
+                            visitor.Visit(this, _bladeTip.position);
+                            return;
+                        }
+                        PlayerCharacter.Instance.ServerSpawnObject(PlayerCharacter.Instance.ParticlesHandler.ObjectHitParticle, _bladeTip.position, Quaternion.LookRotation(_bladeTip.position));
                     }
                 }
                 else
@@ -85,7 +92,11 @@ public class MeleeTracer : NetworkBehaviour
                         _hitThisSwing.Add(collider);
 
                         if (collider.TryGetComponent<IWeaponVisitor>(out IWeaponVisitor visitor))
-                            visitor.Visit(this);
+                        {
+                            visitor.Visit(this, _bladeTip.position);
+                            return;
+                        }
+                        PlayerCharacter.Instance.ServerSpawnObject(PlayerCharacter.Instance.ParticlesHandler.ObjectHitParticle, _bladeTip.position, Quaternion.LookRotation(_bladeTip.position));
                     }
                 }
             }
@@ -107,7 +118,7 @@ public class MeleeTracer : NetworkBehaviour
         for (int i = 0; i < pointAlongSword.Length; i++)
         {
             float pointsDistribution = (pointAlongSword.Length == 1) ? 0f : (float) i / (pointAlongSword.Length - 1);
-            pointAlongSword[i] = Vector3.Lerp(_bladeBase.position, BladeTip.position, pointsDistribution);
+            pointAlongSword[i] = Vector3.Lerp(_bladeBase.position, _bladeTip.position, pointsDistribution);
         }
     }
 

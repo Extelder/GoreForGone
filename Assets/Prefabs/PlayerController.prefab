@@ -18219,7 +18219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackShakes:
-  - <Attack>k__BackingField: {fileID: 5535369931849835367}
+  - <Attack>k__BackingField: {fileID: 1879318776228558722}
     <Preset>k__BackingField: {fileID: 11400000, guid: 613692a7efd43104c863ff02fe78fcc5,
       type: 2}
   - <Attack>k__BackingField: {fileID: 6024647691525676535}
@@ -18318,7 +18318,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
   <Damage>k__BackingField: 10
-  <BladeTip>k__BackingField: {fileID: 2288109379392463550}
+  _bladeTip: {fileID: 2288109379392463550}
   _segments: 6
   _hitMask:
     serializedVersion: 2
