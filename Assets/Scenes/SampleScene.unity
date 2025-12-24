@@ -1182,7 +1182,7 @@ PrefabInstance:
     - target: {fileID: 3599359805172185496, guid: 0779e79e433e98145b616d0bd81ff20c,
         type: 3}
       propertyPath: _breakDistance
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3951567159797676640, guid: 0779e79e433e98145b616d0bd81ff20c,
         type: 3}

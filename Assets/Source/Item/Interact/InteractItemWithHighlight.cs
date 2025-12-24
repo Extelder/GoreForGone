@@ -14,8 +14,6 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
 
     private bool _detected;
 
-    private ConfigurableJoint joint;
-
     private CompositeDisposable _disposable = new CompositeDisposable();
 
     public override void Interact()
@@ -52,43 +50,56 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
         _meshRenderer.materials = _defaultMaterials;
     }
 
+    private ConfigurableJoint joint;
+    private Rigidbody grabRb;
+
     public void StartGrab()
     {
+        GameObject grabTarget = new GameObject("GrabTarget");
+        grabTarget.transform.position = PlayerCharacter.Instance.PlayerInteract.GrabPoint.position;
+
+        grabRb = grabTarget.AddComponent<Rigidbody>();
+        grabRb.isKinematic = true;
+        grabRb.interpolation = RigidbodyInterpolation.Interpolate;
+
         joint = gameObject.AddComponent<ConfigurableJoint>();
-        joint.connectedBody = null;
+        joint.connectedBody = grabRb;
+
         joint.autoConfigureConnectedAnchor = false;
         joint.anchor = Vector3.zero;
-        joint.xMotion = ConfigurableJointMotion.Limited;
-        joint.yMotion = ConfigurableJointMotion.Limited;
-        joint.zMotion = ConfigurableJointMotion.Limited;
+        joint.connectedAnchor = Vector3.zero;
 
-        SoftJointLimit limit = new SoftJointLimit();
-        limit.limit = 0.2f;
-        joint.linearLimit = limit;
+        joint.xMotion = ConfigurableJointMotion.Free;
+        joint.yMotion = ConfigurableJointMotion.Free;
+        joint.zMotion = ConfigurableJointMotion.Free;
 
-        JointDrive drive = new JointDrive();
-        drive.positionSpring = 400f;     
-        drive.positionDamper = 80f;
-        drive.maximumForce = 1500f;    
+        joint.linearLimit = new SoftJointLimit
+        {
+            limit = 0.05f
+        };
+
+        JointDrive drive = new JointDrive
+        {
+            positionSpring = 150f,
+            positionDamper = 30f,
+            maximumForce = Mathf.Infinity
+        };
 
         joint.xDrive = drive;
         joint.yDrive = drive;
         joint.zDrive = drive;
 
-
         Observable.EveryFixedUpdate().Subscribe(_ =>
         {
             Vector3 grabPos = PlayerCharacter.Instance.PlayerInteract.GrabPoint.position;
-
-            joint.connectedAnchor = grabPos;
+            grabRb.MovePosition(grabPos);
 
             float delta = Vector3.Distance(transform.position, grabPos);
             if (delta > _breakDistance)
                 StopGrab();
-
         }).AddTo(_disposable);
-
     }
+
 
     private void OnDisable()
     {
