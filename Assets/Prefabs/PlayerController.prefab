@@ -15391,6 +15391,7 @@ MonoBehaviour:
   <PlayerController>k__BackingField: {fileID: 6075849525127307848}
   <PlayerDrop>k__BackingField: {fileID: 3183964401098910886}
   <PlayerHitBox>k__BackingField: {fileID: 5154392339956821574}
+  <PlayerInteract>k__BackingField: {fileID: 8888721914433366851}
   <PlayerCollider>k__BackingField: {fileID: 7227039927629204336}
   <Characters>k__BackingField:
   - {fileID: 8850203819785511499}
@@ -15612,6 +15613,7 @@ MonoBehaviour:
   _rayLayerMask:
     serializedVersion: 2
     m_Bits: 129
+  <GrabPoint>k__BackingField: {fileID: 665706857634923622}
 --- !u!114 &7169528851611438995
 MonoBehaviour:
   m_ObjectHideFlags: 0

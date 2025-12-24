@@ -12,9 +12,13 @@ public class PlayerInteract : NetworkBehaviour
     [SerializeField] private LayerMask _capsuleLayerMask;
     [SerializeField] private LayerMask _rayLayerMask;
 
+    [field: SerializeField] public Transform GrabPoint { get; private set; }
+
     private IInteractable _interactable;
 
     private Vector3 _interactPosition;
+
+    private Rigidbody _grabbedObject;
 
     public override void OnStartClient()
     {
@@ -40,7 +44,7 @@ public class PlayerInteract : NetworkBehaviour
 
     private void Update()
     {
-        if(!base.IsOwner)
+        if (!base.IsOwner)
             return;
         Vector3 origin = _camera.transform.position;
         Vector3 direction = _camera.transform.forward;
