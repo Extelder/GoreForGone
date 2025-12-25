@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FishNet.Object;
 using UniRx;
 using UnityEngine;
 
@@ -15,6 +16,10 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
     private Rigidbody _rigidbody;
 
     private bool _detected;
+
+    private bool _handled;
+
+    private PlayerCharacter _character;
 
     private CompositeDisposable _disposable = new CompositeDisposable();
 
@@ -59,8 +64,24 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
     private ConfigurableJoint joint;
     private Rigidbody grabRb;
 
+    [ServerRpc(RequireOwnership = false)]
+    public void SetHandledServer(bool value, PlayerCharacter investigator)
+    {
+        SetHandledObserver(value, investigator);
+    }
+
+    [ObserversRpc]
+    public void SetHandledObserver(bool value, PlayerCharacter investigator)
+    {
+        _character = investigator;
+        _handled = value;
+    }
+
     public void StartGrab()
     {
+        if (_handled)
+            return;
+        SetHandledServer(true, PlayerCharacter.Instance);
         _rigidbody.useGravity = false;
         _rigidbody.angularDrag = 100;
         GameObject grabTarget = new GameObject("GrabTarget");
@@ -116,9 +137,13 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
 
     public void StopGrab()
     {
-        _rigidbody.angularDrag = 0;
-        _rigidbody.useGravity = true;
-        _disposable.Clear();
-        Destroy(joint);
+        if (_handled && _character == PlayerCharacter.Instance)
+        {
+            SetHandledServer(false, null);
+            _rigidbody.angularDrag = 0;
+            _rigidbody.useGravity = true;
+            _disposable.Clear();
+            Destroy(joint);
+        }
     }
 }
