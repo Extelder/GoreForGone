@@ -72,14 +72,20 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
         SetHandledObserver(value, investigator);
     }
 
+    private IEnumerator RecoverInteract()
+    {
+        yield return new WaitForSeconds(1);
+        _handled = false;
+    }
+
     [ObserversRpc]
     public void SetHandledObserver(bool value, PlayerCharacter investigator)
     {
         _character = investigator;
-        _handled = value;
 
-        if (!_handled)
+        if (value == false)
         {
+            StartCoroutine(RecoverInteract());
             _rigidbody.angularDrag = 0;
             _rigidbody.useGravity = true;
             _disposable.Clear();
@@ -87,6 +93,7 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
             return;
         }
 
+        _handled = true;
         _rigidbody.useGravity = false;
         _rigidbody.angularDrag = 100;
         GameObject grabTarget = new GameObject("GrabTarget");
