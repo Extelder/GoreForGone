@@ -12,14 +12,20 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
 
     private Material[] _defaultMaterials;
 
+    private Rigidbody _rigidbody;
+
     private bool _detected;
 
     private CompositeDisposable _disposable = new CompositeDisposable();
 
+    private void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+    }
+
     public override void Interact()
     {
-        StartGrab();
-        //Item.Interact();
+        Item.Interact();
     }
 
     public override void Detected()
@@ -55,6 +61,8 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
 
     public void StartGrab()
     {
+        _rigidbody.useGravity = false;
+        _rigidbody.angularDrag = 100;
         GameObject grabTarget = new GameObject("GrabTarget");
         grabTarget.transform.position = PlayerCharacter.Instance.PlayerInteract.GrabPoint.position;
 
@@ -108,6 +116,8 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
 
     public void StopGrab()
     {
+        _rigidbody.angularDrag = 0;
+        _rigidbody.useGravity = true;
         _disposable.Clear();
         Destroy(joint);
     }

@@ -1042,11 +1042,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spritze
       objectReference: {fileID: 0}
-    - target: {fileID: 3599359805172185496, guid: 0779e79e433e98145b616d0bd81ff20c,
-        type: 3}
-      propertyPath: _breakDistance
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3951567159797676640, guid: 0779e79e433e98145b616d0bd81ff20c,
         type: 3}
       propertyPath: WasActiveDuringEdit
@@ -1056,11 +1051,6 @@ PrefabInstance:
         type: 3}
       propertyPath: <SceneId>k__BackingField
       value: 3019036487
-      objectReference: {fileID: 0}
-    - target: {fileID: 3951567159797676640, guid: 0779e79e433e98145b616d0bd81ff20c,
-        type: 3}
-      propertyPath: NetworkBehaviours.Array.data[0]
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1207,7 +1197,7 @@ PrefabInstance:
     - target: {fileID: 5226708420730010125, guid: 0779e79e433e98145b616d0bd81ff20c,
         type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5226708420730010125, guid: 0779e79e433e98145b616d0bd81ff20c,
         type: 3}
@@ -1442,11 +1432,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Can
       objectReference: {fileID: 0}
-    - target: {fileID: 6137169852098443493, guid: da6f8673b0ec111478c398addfa6b055,
-        type: 3}
-      propertyPath: _breakDistance
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7463035410960260171, guid: da6f8673b0ec111478c398addfa6b055,
         type: 3}
       propertyPath: WasActiveDuringEdit
@@ -1574,11 +1559,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Soda
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570897627605342635, guid: 9ff9b426e3652e245b0565ef826f1240,
-        type: 3}
-      propertyPath: _breakDistance
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6961391502529042277, guid: 9ff9b426e3652e245b0565ef826f1240,
         type: 3}

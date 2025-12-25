@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using FishNet.Object;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,16 +16,53 @@ public class PlayerInteract : NetworkBehaviour
     [field: SerializeField] public Transform GrabPoint { get; private set; }
 
     private IInteractable _interactable;
+    private IGrabbable _grabbable;
 
     private Vector3 _interactPosition;
 
     private Rigidbody _grabbedObject;
 
+    private bool _grabbed;
+
     public override void OnStartClient()
     {
         if (!base.IsOwner)
             return;
-        PlayerCharacter.Instance.Binds.Character.Interact.performed += TryInteract;
+        //   PlayerCharacter.Instance.Binds.Character.Interact.performed += TryInteract;
+        PlayerCharacter.Instance.Binds.Character.Interact.started += StartTryGrabbing;
+        PlayerCharacter.Instance.Binds.Character.Interact.canceled += StopTryGrabbing;
+    }
+
+    private void StopTryGrabbing(InputAction.CallbackContext obj)
+    {
+        if (!_grabbed)
+        {
+            TryInteract(new InputAction.CallbackContext());
+        }
+
+        StopAllCoroutines();
+    }
+
+    private IEnumerator WaitingForGrab()
+    {
+        yield return new WaitForSeconds(1f);
+        if (_grabbable != null)
+        {
+            _grabbed = true;
+            _grabbable.StartGrab();
+        }
+    }
+
+    private void StartTryGrabbing(InputAction.CallbackContext obj)
+    {
+        if (_grabbed && _grabbable != null)
+        {
+            _grabbable.StopGrab();
+        }
+
+        _grabbed = false;
+        StopAllCoroutines();
+        StartCoroutine(WaitingForGrab());
     }
 
     private void TryInteract(InputAction.CallbackContext obj)
@@ -39,7 +77,9 @@ public class PlayerInteract : NetworkBehaviour
     {
         if (!base.IsOwner)
             return;
-        PlayerCharacter.Instance.Binds.Character.Interact.performed -= TryInteract;
+        PlayerCharacter.Instance.Binds.Character.Interact.started -= StartTryGrabbing;
+        PlayerCharacter.Instance.Binds.Character.Interact.canceled -= StopTryGrabbing;
+        //     PlayerCharacter.Instance.Binds.Character.Interact.performed -= TryInteract;
     }
 
     private void Update()
@@ -60,6 +100,12 @@ public class PlayerInteract : NetworkBehaviour
             {
                 Debug.DrawRay(origin, (hit.point - origin) * _distance, Color.green);
 
+
+                if (hit.collider.TryGetComponent<IGrabbable>(out IGrabbable Grabbable))
+                {
+                    _grabbable = Grabbable;
+                }
+
                 if (hit.collider.TryGetComponent<IInteractable>(out IInteractable interactable))
                 {
                     if (_interactable != null)
@@ -79,6 +125,10 @@ public class PlayerInteract : NetworkBehaviour
 
                     return;
                 }
+            }
+            else
+            {
+                _grabbable = null;
             }
         }
 

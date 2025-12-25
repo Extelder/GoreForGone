@@ -152,7 +152,7 @@ MonoBehaviour:
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 1
-  <PrefabId>k__BackingField: 8
+  <PrefabId>k__BackingField: 11
   <SpawnableCollectionId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 7781879188716941982
   <SceneId>k__BackingField: 0
@@ -178,6 +178,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 7463035410960260171}
   Item:
     rid: 8347887488983629824
+  _breakDistance: 1
   _meshRenderer: {fileID: 1764634078564155467}
   references:
     version: 2
@@ -211,6 +212,6 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
