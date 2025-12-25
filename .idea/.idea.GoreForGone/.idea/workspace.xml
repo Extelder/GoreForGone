@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Can.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Can.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Soda.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Soda.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Spritze.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Spritze.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Item/Interact/InteractItemWithHighlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Item/Interact/InteractItemWithHighlight.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

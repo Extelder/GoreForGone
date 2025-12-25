@@ -30,6 +30,8 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
 
     public override void Interact()
     {
+        if (_handled)
+            return;
         Item.Interact();
     }
 
@@ -75,17 +77,20 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
     {
         _character = investigator;
         _handled = value;
-    }
 
-    public void StartGrab()
-    {
-        if (_handled)
+        if (!_handled)
+        {
+            _rigidbody.angularDrag = 0;
+            _rigidbody.useGravity = true;
+            _disposable.Clear();
+            Destroy(joint);
             return;
-        SetHandledServer(true, PlayerCharacter.Instance);
+        }
+
         _rigidbody.useGravity = false;
         _rigidbody.angularDrag = 100;
         GameObject grabTarget = new GameObject("GrabTarget");
-        grabTarget.transform.position = PlayerCharacter.Instance.PlayerInteract.GrabPoint.position;
+        grabTarget.transform.position = investigator.PlayerInteract.GrabPoint.position;
 
         grabRb = grabTarget.AddComponent<Rigidbody>();
         grabRb.isKinematic = true;
@@ -120,7 +125,7 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
 
         Observable.EveryFixedUpdate().Subscribe(_ =>
         {
-            Vector3 grabPos = PlayerCharacter.Instance.PlayerInteract.GrabPoint.position;
+            Vector3 grabPos = investigator.PlayerInteract.GrabPoint.position;
             grabRb.MovePosition(grabPos);
 
             float delta = Vector3.Distance(transform.position, grabPos);
@@ -129,6 +134,12 @@ public class InteractItemWithHighlight : InteractItem, IGrabbable
         }).AddTo(_disposable);
     }
 
+    public void StartGrab()
+    {
+        if (_handled)
+            return;
+        SetHandledServer(true, PlayerCharacter.Instance);
+    }
 
     private void OnDisable()
     {
