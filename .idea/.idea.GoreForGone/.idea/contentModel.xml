@@ -1874,6 +1874,7 @@
               <e p="GlowStickItem.cs" t="Include" />
               <e p="GlowStickLight.cs" t="Include" />
               <e p="Gun" t="Include">
+                <e p="GunAmmo.cs" t="Include" />
                 <e p="GunAnimator.cs" t="Include" />
                 <e p="GunAttackState.cs" t="Include" />
                 <e p="GunReloadState.cs" t="Include" />

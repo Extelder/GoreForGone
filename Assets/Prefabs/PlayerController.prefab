@@ -44993,6 +44993,7 @@ MonoBehaviour:
   _attackState: {fileID: 6824411379768693437}
   _reloadState: {fileID: 4748397240653879400}
   _initialized: 1
+  <CanShoot>k__BackingField: 1
 --- !u!114 &278111564927616576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45072,6 +45073,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 7137454823191086619}
+  _gunsStateMachine: {fileID: 4206032340393279341}
   _continueAttackCheckRate: 0
 --- !u!114 &4748397240653879400
 MonoBehaviour:
@@ -45252,6 +45254,7 @@ GameObject:
   - component: {fileID: 559028839567230195}
   - component: {fileID: 981115776793981153}
   - component: {fileID: 1175811343429123193}
+  - component: {fileID: 8246118867833118678}
   m_Layer: 6
   m_Name: Steamyl
   m_TagString: Untagged
@@ -45339,6 +45342,7 @@ MonoBehaviour:
   _attackState: {fileID: 1757310414816766003}
   _reloadState: {fileID: 7416742223122146957}
   _initialized: 1
+  <CanShoot>k__BackingField: 1
 --- !u!114 &3571771154105571426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45418,6 +45422,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 4715449588171915103}
+  _gunsStateMachine: {fileID: 7110903117401195538}
   _continueAttackCheckRate: 0
 --- !u!114 &7416742223122146957
 MonoBehaviour:
@@ -45559,6 +45564,23 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
   _vfx: {fileID: 5735126427909623736}
+--- !u!114 &8246118867833118678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705086290949544445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701065f0b46fa804ebe27e14df02a0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gunsStateMachine: {fileID: 7110903117401195538}
+  _attack: {fileID: 3897689843744032465}
+  _maxAmmo: 6
+  _minAmmo: 0
+  _fullOnStart: 1
 --- !u!1 &8708044670003183317
 GameObject:
   m_ObjectHideFlags: 0

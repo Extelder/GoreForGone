@@ -11,12 +11,16 @@ public class GunsStateMachine : ItemStateMachine
 
     [SerializeField] private bool _initialized;
 
+    [field: SerializeField] public bool CanShoot { get; set; } = true;
+
     public override void OnInitializeted()
     {
     }
 
     public void AttackState()
     {
+        if (!CanShoot)
+            return;
         ChangeState(_attackState);
     }
 

@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GunAttackState : GunState
 {
+    [SerializeField] private GunsStateMachine _gunsStateMachine;
     [SerializeField] private float _continueAttackCheckRate;
 
     private CompositeDisposable _disposable = new CompositeDisposable();
@@ -50,6 +51,12 @@ public class GunAttackState : GunState
 
     public void GunAnimationEnd()
     {
+        if (!_gunsStateMachine.CanShoot)
+        {
+            CanChanged = true;
+            return;
+        }
+
         CanChanged = !_conntinueAttacking;
     }
 }
