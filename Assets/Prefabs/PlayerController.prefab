@@ -53690,6 +53690,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5179843164128673317}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cadd09adecb992e4eb203135d9ae62c3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4959914874507851062}
     - targetCorrespondingSourceObject: {fileID: 4831018558786363571, guid: cadd09adecb992e4eb203135d9ae62c3,
         type: 3}
       insertIndex: -1
@@ -53845,6 +53849,34 @@ MonoBehaviour:
   _performedAnimName: DesintegrationCancelled
   _animator: {fileID: 1614492015003321926}
   _tpsAnimator: {fileID: 7753987564216776635}
+--- !u!114 &4959914874507851062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265545105364973023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec788c136872134c824250d8473488d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 8894797833157323738}
+  _networkObjectCache: {fileID: 0}
+  _character: {fileID: 8850203819785511499}
+  _initialized: 1
+  <Damage>k__BackingField: 10
+  _raycastSettings:
+    <Origin>k__BackingField: {fileID: 81716164454465600}
+    <MaxDistance>k__BackingField: 100
+    <LayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 1
+  _spawnObject: {fileID: 4987231895681924044, guid: 50eaf98293bf8bc4bb21e1d3426abf44,
+    type: 3}
+  _maxOffsetCount: 16
+  _offset: 0.02
 --- !u!1 &331544321011260081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8360950568830709185, guid: cadd09adecb992e4eb203135d9ae62c3,

@@ -13,6 +13,11 @@ public class UnitHitBox : DamageableHitBox
             transform.position);
     }
 
+    public override void Visit(DesintegrationRing desintegrationRing, Vector3 hitPoint, Vector3 normal)
+    {
+        HitWithRaycast(desintegrationRing.Damage, hitPoint, normal);
+    }
+
     public override void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint, Vector3 normal)
     {
         HitWithRaycast(playerDamageableAttack.Damage, hitPoint, 

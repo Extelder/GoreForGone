@@ -10,6 +10,11 @@ public class ObjectHitBox : HitBox
         Hit(transform.position, transform.position);
     }
 
+    public override void Visit(DesintegrationRing desintegrationRing, Vector3 hitPoint, Vector3 normal)
+    {
+        HitWithRaycast(hitPoint, normal);
+    }
+
     public override void Visit(PlayerDamageableAttack playerDamageableAttackVector3, Vector3 hitPoint, Vector3 normal)
     {
         HitWithRaycast(hitPoint, normal);
