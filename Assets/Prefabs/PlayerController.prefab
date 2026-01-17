@@ -10419,6 +10419,7 @@ Transform:
   - {fileID: 665706857634923622}
   - {fileID: 7060069188162328891}
   - {fileID: 4779677762931489292}
+  - {fileID: 9144376002810529263}
   - {fileID: 2450468176613234451}
   m_Father: {fileID: 1463206946978802918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30216,6 +30217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitTargetPoint: {fileID: 8518891336934482976}
   _hint: {fileID: 5318923630345223295}
+  _haveMaxItemCount: 0
+  _maxItemCount: 0
   <ItemData>k__BackingField: {fileID: 11400000, guid: 4695ba057f2503e45b799d25ff81f9fb,
     type: 2}
   _items:
@@ -36649,6 +36652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitTargetPoint: {fileID: 6423932467089684980}
   _hint: {fileID: 5318923630345223295}
+  _haveMaxItemCount: 0
+  _maxItemCount: 0
   <ItemData>k__BackingField: {fileID: 11400000, guid: 87cb960bde7c9f24c84454cba54ed851,
     type: 2}
   _items:
@@ -42128,6 +42133,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _equipableItem: {fileID: 2225270363645363319}
   _inventoryItem: {fileID: 5133563899838066495}
+--- !u!1 &7531533673121891787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9144376002810529263}
+  m_Layer: 6
+  m_Name: ProjectileSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9144376002810529263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531533673121891787}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0.465}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 81716164454465600}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7533768828127526590
 GameObject:
   m_ObjectHideFlags: 0
@@ -43890,6 +43926,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitTargetPoint: {fileID: 3147556975092560096}
   _hint: {fileID: 5318923630345223295}
+  _haveMaxItemCount: 0
+  _maxItemCount: 0
   <ItemData>k__BackingField: {fileID: 11400000, guid: ebed440f0091e554abe15660c88fda0b,
     type: 2}
   _items:
@@ -45767,7 +45805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7500881749728903303
 Transform:
   m_ObjectHideFlags: 0
@@ -53868,7 +53906,7 @@ MonoBehaviour:
   _initialized: 1
   <Damage>k__BackingField: 10
   _raycastSettings:
-    <Origin>k__BackingField: {fileID: 81716164454465600}
+    <Origin>k__BackingField: {fileID: 9144376002810529263}
     <MaxDistance>k__BackingField: 100
     <LayerMask>k__BackingField:
       serializedVersion: 2

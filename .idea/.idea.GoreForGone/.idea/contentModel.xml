@@ -1882,6 +1882,7 @@
                 <e p="GunState.cs" t="Include" />
               </e>
               <e p="Inventory" t="Include">
+                <e p="AmmoInventoryChanger.cs" t="Include" />
                 <e p="InventoryEquipableItem.cs" t="Include" />
                 <e p="InventoryItem.cs" t="Include" />
                 <e p="InventoryItemSelector.cs" t="Include" />

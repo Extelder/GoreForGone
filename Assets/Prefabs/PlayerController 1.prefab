@@ -3453,6 +3453,8 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 5078154009587145017}
+  _animatorItemSwitcher: {fileID: 0}
+  _useInventoryItem: {fileID: 0}
   _continueAttackCheckRate: 0
 --- !u!95 &3776525977489873688
 Animator:
@@ -3552,7 +3554,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
-  _hitEffect: {fileID: 0}
+  <Damage>k__BackingField: 0
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
     <MaxDistance>k__BackingField: 3
@@ -6686,7 +6688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1001251340555693779
 Transform:
   m_ObjectHideFlags: 0
@@ -8966,6 +8968,7 @@ MonoBehaviour:
   <PlayerController>k__BackingField: {fileID: 6075849525127307848}
   <PlayerDrop>k__BackingField: {fileID: 0}
   <PlayerHitBox>k__BackingField: {fileID: 5154392339956821574}
+  <PlayerInteract>k__BackingField: {fileID: 0}
   <PlayerCollider>k__BackingField: {fileID: 0}
   <Characters>k__BackingField:
   - {fileID: 8850203819785511499}
@@ -9199,6 +9202,7 @@ MonoBehaviour:
   _rayLayerMask:
     serializedVersion: 2
     m_Bits: 129
+  <GrabPoint>k__BackingField: {fileID: 0}
 --- !u!114 &7169528851611438995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11245,6 +11249,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
+  <Damage>k__BackingField: 0
   _attackOrigin: {fileID: 5477065883418264137}
   _overlapSettings:
     <Origin>k__BackingField: {fileID: 482536710588428925}
@@ -11253,7 +11258,6 @@ MonoBehaviour:
       m_Bits: 0
     <SphereRadius>k__BackingField: 0.77
     <Size>k__BackingField: 3
-  _testAttackShit: {fileID: 8999251131182062514}
 --- !u!114 &5730667865821055410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11288,7 +11292,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
-  _hitEffect: {fileID: 8999251131182062514}
+  <Damage>k__BackingField: 0
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
     <MaxDistance>k__BackingField: 3
@@ -11366,13 +11370,12 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 8894797833157323738}
   <Damage>k__BackingField: 10
-  <BladeTip>k__BackingField: {fileID: 2288109379392463550}
+  _bladeTip: {fileID: 0}
   _segments: 6
   _hitMask:
     serializedVersion: 2
     m_Bits: 1
   _triggerInteraction: 1
-  _testHit: {fileID: 8999251131182062514}
   _bladeBase: {fileID: 5274666369331310796}
   _radius: 0.08
 --- !u!114 &5086027981211635378
@@ -27755,6 +27758,7 @@ MonoBehaviour:
   _attackState: {fileID: 6824411379768693437}
   _reloadState: {fileID: 4748397240653879400}
   _initialized: 1
+  <CanShoot>k__BackingField: 1
 --- !u!114 &278111564927616576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27832,7 +27836,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
-  _hitEffect: {fileID: 0}
+  <Damage>k__BackingField: 0
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
     <MaxDistance>k__BackingField: 3
@@ -27856,6 +27860,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 7137454823191086619}
+  _gunsStateMachine: {fileID: 0}
   _continueAttackCheckRate: 0
 --- !u!114 &4748397240653879400
 MonoBehaviour:
@@ -28081,6 +28086,7 @@ MonoBehaviour:
   _attackState: {fileID: 1757310414816766003}
   _reloadState: {fileID: 7416742223122146957}
   _initialized: 1
+  <CanShoot>k__BackingField: 1
 --- !u!114 &3571771154105571426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28158,7 +28164,7 @@ MonoBehaviour:
   _componentIndexCache: 255
   _addedNetworkObject: {fileID: 8894797833157323738}
   _networkObjectCache: {fileID: 0}
-  _hitEffect: {fileID: 0}
+  <Damage>k__BackingField: 0
   _raycastSettings:
     <Origin>k__BackingField: {fileID: 81716164454465600}
     <MaxDistance>k__BackingField: 3
@@ -28182,6 +28188,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 4715449588171915103}
+  _gunsStateMachine: {fileID: 0}
   _continueAttackCheckRate: 0
 --- !u!114 &7416742223122146957
 MonoBehaviour:
@@ -28246,6 +28253,7 @@ MonoBehaviour:
   _model: {fileID: 3615100321832529042, guid: 4331d0c6e9d1eb74d93dfb326722d167, type: 3}
   _force: 6
   _spawnEmpty: {fileID: 0}
+  _vfx: {fileID: 0}
 --- !u!114 &6224049561357569806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38685,6 +38693,7 @@ MonoBehaviour:
   _stayAnimName: BlinkStay
   _performedAnimName: TimeStopPerformed
   _animator: {fileID: 8892931357673699732}
+  _tpsAnimator: {fileID: 0}
 --- !u!114 &5173696931762919024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56123,6 +56132,7 @@ MonoBehaviour:
   _stayAnimName: ShieldStay
   _performedAnimName: DesintegrationCancelled
   _animator: {fileID: 5004269982113153347}
+  _tpsAnimator: {fileID: 0}
 --- !u!1 &5540452239963807565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8360950568830709185, guid: cadd09adecb992e4eb203135d9ae62c3,
@@ -59361,6 +59371,7 @@ MonoBehaviour:
   _stayAnimName: ShieldStay
   _performedAnimName: ShieldCancelRing
   _animator: {fileID: 7640743211787304221}
+  _tpsAnimator: {fileID: 0}
 --- !u!114 &5089200944142416011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64281,6 +64292,7 @@ MonoBehaviour:
   _stayAnimName: BlinkStay
   _performedAnimName: BlinkPerformed
   _animator: {fileID: 6863752006818534885}
+  _tpsAnimator: {fileID: 0}
 --- !u!114 &7308857306615923012
 MonoBehaviour:
   m_ObjectHideFlags: 0

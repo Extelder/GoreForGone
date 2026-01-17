@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,8 @@ public class InventoryItem : MonoBehaviour
 {
     [SerializeField] private Transform _hitTargetPoint;
     [SerializeField] private GameObject _hint;
+    [SerializeField] private bool _haveMaxItemCount;
+    [ShowIf(nameof(_haveMaxItemCount))] [SerializeField] private int _maxItemCount;
     [field: SerializeField] public ItemData ItemData { get; private set; }
 
     [SerializeField] private InventoryItemSelector[] _items;
@@ -38,6 +41,18 @@ public class InventoryItem : MonoBehaviour
 
         _items[Count - 1].gameObject.SetActive(false);
         Count--;
+        return true;
+    }
+
+    public bool TrySetItemCount(int value)
+    {
+        if (value > _maxItemCount)
+        {
+            Count = _maxItemCount;
+            return false;
+        }
+
+        Count = value;
         return true;
     }
 

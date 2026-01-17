@@ -15,6 +15,7 @@ public class GunAmmo : MonoBehaviour
 
     public event Action<int> ValueChanged;
     public event Action<int> Spended;
+    public event Action<int> Gained;
 
     private void Start()
     {
@@ -70,10 +71,12 @@ public class GunAmmo : MonoBehaviour
         {
             CurrentAmmo += value;
             ValueChanged?.Invoke(CurrentAmmo);
+            Gained?.Invoke(CurrentAmmo);
             return;
         }
 
         CurrentAmmo = _maxAmmo;
+        Gained?.Invoke(CurrentAmmo);
         ValueChanged?.Invoke(CurrentAmmo);
     }
 }
