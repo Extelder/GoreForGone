@@ -1882,7 +1882,6 @@
                 <e p="GunState.cs" t="Include" />
               </e>
               <e p="Inventory" t="Include">
-                <e p="AmmoInventoryChanger.cs" t="Include" />
                 <e p="InventoryEquipableItem.cs" t="Include" />
                 <e p="InventoryItem.cs" t="Include" />
                 <e p="InventoryItemSelector.cs" t="Include" />
@@ -10294,6 +10293,19 @@
       <e p="Unity.Postprocessing.Runtime.csproj" t="IncludeRecursive" />
       <e p="Unity.Postprocessing.Runtime.Player.csproj" t="IncludeRecursive" />
       <e p="Unity.Postprocessing.Runtime.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.AddOns.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.AssetIdRemapUtility.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.Csg.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.Csg.Player.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.KdTree.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.KdTree.Player.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.Player.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.Poly2Tri.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.Poly2Tri.Player.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.Stl.csproj" t="IncludeRecursive" />
+      <e p="Unity.ProBuilder.Stl.Player.csproj" t="IncludeRecursive" />
       <e p="Unity.RenderPipelines.Core.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.RenderPipelines.Core.Editor.Tests.csproj" t="IncludeRecursive" />
       <e p="Unity.RenderPipelines.Core.Runtime.csproj" t="IncludeRecursive" />
