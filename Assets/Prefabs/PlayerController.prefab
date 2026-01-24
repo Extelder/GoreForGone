@@ -15332,6 +15332,7 @@ MonoBehaviour:
   HideDistance: 1.5
   LayerMaskInt: 1
   CroughKey: 99
+  VaultKey: 32
   SensetivityMultiplier: 1
   characterController: {fileID: 0}
   moveDirection: {x: 0, y: 0, z: 0}
@@ -15351,6 +15352,9 @@ MonoBehaviour:
   HelpCrouching: 0
   Crouching: 0
   DefaultFOV: 0
+  ledgeCheckDistance: 2.53
+  ledgeCheckHeight: 2.19
+  vaultSpeed: 3
 --- !u!136 &1573800099402627035
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -51301,7 +51305,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: "\u0427"
+      value: X
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -82574,7 +82578,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: "\u0418"
+      value: B
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -86782,7 +86786,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: "\u041C"
+      value: V
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -88090,7 +88094,7 @@ PrefabInstance:
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
       propertyPath: m_Text
-      value: "\u0415"
+      value: T
       objectReference: {fileID: 0}
     - target: {fileID: 8279916314319315260, guid: c2a26e3e9dd552f41beef151c79bd92d,
         type: 3}
@@ -89084,7 +89088,7 @@ PrefabInstance:
     - target: {fileID: 6557647708507388437, guid: 98134a5fc3494e144b8419510b6e4a29,
         type: 3}
       propertyPath: m_Text
-      value: "\u0410"
+      value: F
       objectReference: {fileID: 0}
     - target: {fileID: 8461417888642342839, guid: 98134a5fc3494e144b8419510b6e4a29,
         type: 3}
