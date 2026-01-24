@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8305b02c-26ac-41ce-b052-22e51a7a0e16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoreForGone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/PlayerController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/PlayerController.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EvolveGames/RealisticFPSController/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

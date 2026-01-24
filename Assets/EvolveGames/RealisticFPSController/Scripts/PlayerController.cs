@@ -48,6 +48,7 @@ namespace EvolveGames
         [Space(20)]
         [Header("Input")]
         [SerializeField] KeyCode CroughKey = KeyCode.LeftControl;
+        [SerializeField] KeyCode VaultKey = KeyCode.E; // клавиша для залезания
 
         public float SensetivityMultiplier = 1f;
 
@@ -87,6 +88,12 @@ namespace EvolveGames
         // 🔹 TOGGLE ПРИСЕД
         private bool crouchToggle = false;
 
+        // 🔹 LEDGE / VAULT
+        [SerializeField] private float ledgeCheckDistance = 1f;
+        [SerializeField] private float ledgeCheckHeight = 1.5f;
+        [SerializeField] private float vaultSpeed = 5f;
+        private bool isVaulting = false;
+
         public override void OnStartClient()
         {
             if (!IsOwner) return;
@@ -116,7 +123,7 @@ namespace EvolveGames
             RaycastHit CroughCheck;
             RaycastHit ObjectCheck;
 
-            if (characterController.enabled && !characterController.isGrounded && !isClimbing)
+            if (characterController.enabled && !characterController.isGrounded && !isClimbing && !isVaulting)
                 moveDirection.y -= gravity * Time.deltaTime;
 
             Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -124,7 +131,6 @@ namespace EvolveGames
 
             isRunning = !isCrough.Value ? (CanRunning ? Input.GetKey(KeyCode.LeftShift) : false) : false;
 
-            // 🔹 оставляем горизонталь и вертикаль как глобальные переменные
             horizontal = _character.Binds.Character.Horizontal.ReadValue<float>();
             vertical = _character.Binds.Character.Vertical.ReadValue<float>();
 
@@ -139,10 +145,12 @@ namespace EvolveGames
                 RunningValue = WalkingValue;
 
             float movementDirectionY = moveDirection.y;
+
+            // 🔹 Логика движения
             moveDirection = direction * currentSpeed;
             moveDirection.y = movementDirectionY;
 
-            if (Input.GetButton("Jump") && canMove && characterController.isGrounded && !isClimbing)
+            if (Input.GetButton("Jump") && canMove && characterController.isGrounded && !isClimbing && !isVaulting)
                 moveDirection.y = jumpSpeed;
 
             moveDirection += impulseVelocity;
@@ -183,7 +191,6 @@ namespace EvolveGames
             }
             else
             {
-                // проверка, можно ли встать
                 if (!Physics.Raycast(
                         GetComponentInChildren<Camera>().transform.position,
                         transform.TransformDirection(Vector3.up),
@@ -215,6 +222,76 @@ namespace EvolveGames
                 Items.ani.SetBool("Hide", WallDistance);
                 Items.DefiniteHide = WallDistance;
             }
+
+            // 🔹 VAULT / LEDGE GRAB
+            if (!isVaulting && Input.GetKeyDown(VaultKey))
+            {
+                TryVault();
+            }
+        }
+
+        private void TryVault()
+        {
+            RaycastHit hitForward;
+            Vector3 origin = transform.position + Vector3.up * 0.5f;
+
+            if (Physics.Raycast(origin, transform.forward, out hitForward, ledgeCheckDistance))
+            {
+                Vector3 topPos = hitForward.point + Vector3.up * ledgeCheckHeight;
+
+                if (!Physics.CheckBox(topPos, new Vector3(0.5f, 1f, 0.5f)))
+                {
+                    StartCoroutine(VaultToPosition(topPos));
+                }
+            }
+        }
+
+        private IEnumerator VaultToPosition(Vector3 targetPos)
+        {
+            isVaulting = true;
+            characterController.enabled = false;
+
+            Vector3 startPos = transform.position;
+            float elapsed = 0f;
+            float duration = Vector3.Distance(startPos, targetPos) / vaultSpeed;
+
+            while (elapsed < duration)
+            {
+                transform.position = Vector3.Lerp(startPos, targetPos, elapsed / duration);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            transform.position = targetPos;
+            characterController.enabled = true;
+            isVaulting = false;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!IsOwner) return;
+
+            if (other.CompareTag("Ladder") && CanClimbing)
+            {
+                CanRunning = false;
+                isClimbing = true;
+                WalkingValue /= 2;
+                Items.Hide(true);
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (!IsOwner) return;
+
+            if (other.CompareTag("Ladder") && CanClimbing)
+            {
+                CanRunning = true;
+                isClimbing = false;
+                WalkingValue *= 2;
+                Items.ani.SetBool("Hide", false);
+                Items.Hide(false);
+            }
         }
 
         public void AddImpulse(Vector3 direction, float force)
@@ -239,19 +316,6 @@ namespace EvolveGames
             Crouching = false;
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (!IsOwner) return;
-
-            if (other.CompareTag("Ladder") && CanClimbing)
-            {
-                CanRunning = false;
-                isClimbing = true;
-                WalkingValue /= 2;
-                Items.Hide(true);
-            }
-        }
-
         private void OnTriggerStay(Collider other)
         {
             if (!IsOwner) return;
@@ -263,20 +327,6 @@ namespace EvolveGames
                     Input.GetAxis("Vertical") * Speed * (-Camera.localRotation.x / 1.7f),
                     0
                 );
-            }
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            if (!IsOwner) return;
-
-            if (other.CompareTag("Ladder") && CanClimbing)
-            {
-                CanRunning = true;
-                isClimbing = false;
-                WalkingValue *= 2;
-                Items.ani.SetBool("Hide", false);
-                Items.Hide(false);
             }
         }
     }

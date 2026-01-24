@@ -1206,6 +1206,7 @@ MonoBehaviour:
   HideDistance: 1.5
   LayerMaskInt: 1
   CroughKey: 306
+  VaultKey: 101
   SensetivityMultiplier: 1
   characterController: {fileID: 0}
   moveDirection: {x: 0, y: 0, z: 0}
@@ -1225,6 +1226,9 @@ MonoBehaviour:
   HelpCrouching: 0
   Crouching: 0
   DefaultFOV: 0
+  ledgeCheckDistance: 1
+  ledgeCheckHeight: 1.5
+  vaultSpeed: 5
 --- !u!114 &4434987455403460021
 MonoBehaviour:
   m_ObjectHideFlags: 0
