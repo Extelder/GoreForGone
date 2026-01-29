@@ -20,7 +20,12 @@ public class ObjectHitBox : HitBox
         HitWithRaycast(hitPoint, normal);
     }
 
-    public override void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint)
+    public override void Visit(SwordRaycastAttack swordRaycastAttack, Vector3 hitPoint)
+    {
+        Hit(hitPoint, hitPoint);
+    }
+
+    public override void Visit(MeleeTracer meleeTracer, Vector3 hitPoint)
     {
         Hit(hitPoint, hitPoint);
     }

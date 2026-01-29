@@ -10,7 +10,8 @@ public abstract class HitBox : NetworkBehaviour, IWeaponVisitor
     public abstract void Visit(DesintegrationRing desintegrationRing, Vector3 hitPoint, Vector3 normal);
 
     public abstract void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint, Vector3 normal);
-    public abstract void Visit(PlayerDamageableAttack playerDamageableAttack, Vector3 hitPoint);
+    public abstract void Visit(SwordRaycastAttack SwordRaycastAttack, Vector3 hitPoint);
+    public abstract void Visit(MeleeTracer meleeTracer, Vector3 hitPoint);
 
     [ServerRpc(RequireOwnership = false)]
     public void HitWithRaycast(Vector3 patriclePoint, Vector3 normal)

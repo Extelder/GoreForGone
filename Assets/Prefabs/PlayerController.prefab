@@ -10010,8 +10010,8 @@ Transform:
   m_GameObject: {fileID: 1966358513754802772}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.964, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0067561, y: -1.037, z: -0.01432}
+  m_LocalScale: {x: 1.079131, y: 1.079131, z: 1.079131}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4401280548652729309}
@@ -15313,10 +15313,10 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   Camera: {fileID: 2084700106972868751}
   Items: {fileID: 0}
-  walkingSpeed: 3
-  CroughSpeed: 1
-  RuningSpeed: 4
-  jumpSpeed: 6
+  walkingSpeed: 4
+  CroughSpeed: 2
+  RuningSpeed: 5
+  jumpSpeed: 7
   lookSpeed: 1.03
   lookXLimit: 80
   RunningFOV: 105
@@ -15326,7 +15326,7 @@ MonoBehaviour:
   timeToRunning: 2
   canMove: 1
   CanRunning: 1
-  CanClimbing: 1
+  CanClimbing: 0
   Speed: 2.35
   CanHideDistanceWall: 0
   HideDistance: 1.5
@@ -15349,7 +15349,7 @@ MonoBehaviour:
   impulseDamping: 8
   WalkingValue: 0
   _character: {fileID: 8850203819785511499}
-  HelpCrouching: 0
+  HelpCrouching: 1
   Crouching: 0
   DefaultFOV: 0
   ledgeCheckDistance: 2.53
@@ -18213,7 +18213,7 @@ GameObject:
   - component: {fileID: 6846807900578132324}
   - component: {fileID: 5535369931849835367}
   - component: {fileID: 5730667865821055410}
-  - component: {fileID: 6024647691525676535}
+  - component: {fileID: 6612038458476514156}
   - component: {fileID: 8533996127482048919}
   - component: {fileID: 8537175094023747150}
   - component: {fileID: 1989014784684823443}
@@ -18433,7 +18433,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 8894797833157323738}
   CanChanged: 1
   <Animator>k__BackingField: {fileID: 2379199125106380215}
-  _swordChargeAttack: {fileID: 6024647691525676535}
+  _swordChargeAttack: {fileID: 6612038458476514156}
 --- !u!114 &6846807900578132324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18489,10 +18489,10 @@ MonoBehaviour:
   - <Attack>k__BackingField: {fileID: 5535369931849835367}
     <Preset>k__BackingField: {fileID: 11400000, guid: 613692a7efd43104c863ff02fe78fcc5,
       type: 2}
-  - <Attack>k__BackingField: {fileID: 6024647691525676535}
+  - <Attack>k__BackingField: {fileID: 6612038458476514156}
     <Preset>k__BackingField: {fileID: 11400000, guid: 4c8b354c97338384cac190918b3619d3,
       type: 2}
---- !u!114 &6024647691525676535
+--- !u!114 &6612038458476514156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18501,7 +18501,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3391537686008428712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aee823987d563924b99b81f52a8d7f23, type: 3}
+  m_Script: {fileID: 11500000, guid: 99538406f3e4d5442869d3e2cc00b01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _componentIndexCache: 255
@@ -18527,7 +18527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shakePreset: {fileID: 11400000, guid: f51c5861189c18042ba4252f3ead58c3, type: 2}
-  _raycastAttack: {fileID: 6024647691525676535}
+  _raycastAttack: {fileID: 6612038458476514156}
 --- !u!114 &8537175094023747150
 MonoBehaviour:
   m_ObjectHideFlags: 0

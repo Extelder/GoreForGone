@@ -11,10 +11,10 @@ public class PlayerFootstepSounds : NetworkBehaviour
     [SerializeField] private HeadBob _headBob;
     [SerializeField] private PlayerSoundPlayAndMix _playerSoundPlayAndMix;
     [SerializeField] private float _checkRate;
-    
+
     private CompositeDisposable _checkDisposable = new CompositeDisposable();
     private CompositeDisposable _soundPlayDisposable = new CompositeDisposable();
-    
+
     public override void OnStartClient()
     {
         base.OnStartClient();
@@ -25,6 +25,7 @@ public class PlayerFootstepSounds : NetworkBehaviour
                 OnMoving();
                 return;
             }
+
             _soundPlayDisposable.Clear();
         }).AddTo(_checkDisposable);
     }
@@ -33,6 +34,8 @@ public class PlayerFootstepSounds : NetworkBehaviour
     {
         Observable.Interval(TimeSpan.FromSeconds(_checkRate)).Subscribe(_ =>
         {
+            if (PlayerCharacter.Instance.PlayerController.isCrough.Value)
+                return;
             _playerSoundPlayAndMix.SoundPlayServer();
         }).AddTo(_soundPlayDisposable);
     }
